@@ -1,0 +1,78 @@
+#!/bin/bash
+xhost +
+function build {
+	docker build -t thesis .
+}
+
+function startsim {
+    clean gazebo
+    clean rvizlimo
+    clean terminal
+    clean roscore
+	docker compose up -d roscore terminal rviz gazebo
+}
+
+function terminal {
+    sudo docker compose up -d roscore terminal
+	sudo docker exec -it terminal /bin/zsh
+}
+
+function clean {
+    PREFIX=$1
+    shift
+    if [ -z "$PREFIX" ]
+    then
+        echo "Please provide a prefix."
+        exit 1
+    fi
+    
+    CONTAINERS=$(docker ps -q --filter name=$PREFIX*)
+    
+    if [ -n "$CONTAINERS" ]; then
+        echo "$CONTAINERS" | xargs docker rm -f
+    else
+        echo "No containers found matching the filter criteria."
+    fi
+}
+
+function stop {
+    docker compose down
+    clean thesis
+}
+
+
+function help {
+    echo "$0 <task> <args>"
+    echo "Tasks:"
+    compgen -A function | cat -n
+}
+
+function PRINT_MENU()
+{
+    echo -e "\e[1;10H Menu"
+    echo -e "1.Build images"
+    echo -e "2.Start sim"
+    echo -e "3.Start terminal"
+    echo -e "4.Stop"
+
+    echo -n "Your chose(1-5):"
+}
+
+PRINT_MENU
+
+read CHOOSE
+
+case "${CHOOSE}" in
+    1)
+    build
+    ;;
+    2)
+    startsim
+    ;;
+    3) 
+    terminal
+    ;;
+    4)
+    stop
+    ;;
+esac    

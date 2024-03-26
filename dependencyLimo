@@ -1,0 +1,45 @@
+#!/bin/bash
+function dependency {
+    sudo apt-get install -y \
+    ros-melodic-tf2-geometry-msgs \
+    ros-melodic-catkin-virtualenv \
+    ros-melodic-ros-control \
+    ros-melodic-ros-controllers \
+    ros-melodic-rosparam-shortcuts \
+    ros-melodic-image-geometry \
+    ros-melodic-robot-pose-ekf \
+    ros-melodic-navigation\
+    ros-melodic-gmapping\
+    ros-melodic-behaviortree-cpp-v3\
+    python3-catkin-tools \
+    ros-melodic-roslint\
+    ros-melodic-gazebo-msgs\
+    ros-melodic-gazebo-dev\
+    ros-melodic-pcl-ros
+}  
+function build {
+    cd ROS
+    catkin build --cmake-args -DCMAKE_BUILD_TYPE=Release
+    source ./devel/setup.bash
+}  
+
+function PRINT_MENU()
+{
+    echo -e "\e[1;10H Menu"
+    echo -e "1.Dep install"
+    echo -e "2.Build"
+
+    echo -n "Your chose(1-2):"
+}
+PRINT_MENU
+
+read CHOOSE
+
+case "${CHOOSE}" in
+    1)
+    dependency
+    ;;
+    2)
+    build
+    ;;
+esac    
