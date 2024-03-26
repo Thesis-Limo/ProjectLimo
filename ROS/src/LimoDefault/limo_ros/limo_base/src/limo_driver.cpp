@@ -342,32 +342,31 @@ void LimoDriver::twistCmdCallback(const geometry_msgs::TwistConstPtr& msg) {
             break;
         }
         case MODE_ACKERMANN: {
-            setMotionCommand(msg->linear.x, msg->angular.z, 0, 0);
-            // double r = msg->linear.x / msg->angular.z;
-            // if(fabs(r) < track_/2.0)
-            // {
-            //     if(r==0)r = msg->angular.z/fabs(msg->angular.z)*(track_/2.0+0.01);
-            //     else r = r/fabs(r)*(track_/2.0+0.01);
-            // }
-            // double central_angle = std::atan(wheelbase_ / r);
-            // double inner_angle = convertCentralAngleToInner(central_angle);
+            double r = msg->linear.x / msg->angular.z;
+            if(fabs(r) < track_/2.0)
+            {
+                if(r==0)r = msg->angular.z/fabs(msg->angular.z)*(track_/2.0+0.01);
+                else r = r/fabs(r)*(track_/2.0+0.01);
+            }
+            double central_angle = std::atan(wheelbase_ / r);
+            double inner_angle = convertCentralAngleToInner(central_angle);
 
-            // if (inner_angle > max_inner_angle_) {
-            //     inner_angle = max_inner_angle_;
-            // }
-            // if (inner_angle < -max_inner_angle_) {
-            //     inner_angle = -max_inner_angle_;
-            // }
+            if (inner_angle > max_inner_angle_) {
+                inner_angle = max_inner_angle_;
+            }
+            if (inner_angle < -max_inner_angle_) {
+                inner_angle = -max_inner_angle_;
+            }
 
-            // double steering_angle;
-            // if (inner_angle > 0) {
-            //     steering_angle = inner_angle / right_angle_scale_;
-            // }
-            // else {
-            //     steering_angle = inner_angle / right_angle_scale_;
-            // }
+            double steering_angle;
+            if (inner_angle > 0) {
+                steering_angle = inner_angle / right_angle_scale_;
+            }
+            else {
+                steering_angle = inner_angle / right_angle_scale_;
+            }
 
-            // setMotionCommand(msg->linear.x, 0, 0, steering_angle);
+            setMotionCommand(msg->linear.x, 0, 0, steering_angle);
             break;
         }
         case MODE_MCNAMU: {
@@ -450,10 +449,6 @@ void LimoDriver::publishOdometry(double stamp, double linear_velocity,
             break;
         }
         case MODE_ACKERMANN: {
-              vx = linear_velocity;
-            vy = 0;
-            wz = angular_velocity;
-            break;
             double inner_angle = steering_angle;
             double r = wheelbase_ / std::tan(std::fabs(inner_angle)) + track_ / 2.0;
             double central_angle  = convertInnerAngleToCentral(inner_angle);
