@@ -8,7 +8,7 @@ BT::NodeStatus BatteryCheck::tick()
 {   
     if(BatteryLevel < 0)
         return BT::NodeStatus::RUNNING;
-    else if (BatteryLevel < 100)
+    else if (BatteryLevel < 10)
         return BT::NodeStatus::FAILURE;
     return BT::NodeStatus::SUCCESS;
 }

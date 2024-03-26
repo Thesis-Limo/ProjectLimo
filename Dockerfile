@@ -73,7 +73,8 @@ RUN echo 'export PATH="'"/home/$(id -un)/.local/bin"':$PATH''"' >> ~/.zshrc && \
     echo "alias limo=\"cd /home/thesis/ROS/\"" >> ~/.zshrc && \
     echo "alias cbuild='catkin build --cmake-args -DCMAKE_BUILD_TYPE=Release'" >> ~/.zshrc && \ 
     echo "source /opt/ros/melodic/setup.zsh" >> ~/.zshrc  &&\
-    echo "source /home/thesis/ROS/devel/setup.zsh" >> ~/.zshrc 
+    echo "source /home/thesis/ROS/devel/setup.zsh" >> ~/.zshrc &&\
+    echo "alias rvizlimo='rviz -d /home/thesis/ROS/src/ugv_sim/limo/limo_description/rviz/model_display.rviz'">> ~/.zshrc
 
 #add folder structure
 WORKDIR /home/thesis

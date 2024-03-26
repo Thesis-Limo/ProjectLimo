@@ -15,14 +15,12 @@
     </BehaviorTree>
     
     <BehaviorTree ID="RobotMove">
-        <Parallel failure_threshold="1" success_threshold="1"> 
-            <Sequence name="Movement">
-                <SubTree ID="Emergency"/>
-                <SubTree ID="TargetCheck"/>
-                <SubTree ID="Moving"/>
-            </Sequence>
+        <Sequence name="Movement">
             <Action ID="TrackObject"/>
-        </Parallel>
+            <SubTree ID="Emergency"/>
+            <SubTree ID="TargetCheck"/>
+            <SubTree ID="Moving"/>
+        </Sequence>
     </BehaviorTree>
 
     <BehaviorTree ID="Emergency">

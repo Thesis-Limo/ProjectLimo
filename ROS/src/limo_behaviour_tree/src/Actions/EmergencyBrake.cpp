@@ -15,7 +15,7 @@ BT::NodeStatus EmergencyBrake::tick()
   msg.angular.y = 0.0;
   msg.angular.z = 0.0;
   EmergencyBrakePub.publish(msg);
-  //ROS_INFO("sendMessage");
+  ROS_INFO("emergency brake");
   return BT::NodeStatus::SUCCESS;
 }
 void EmergencyBrake::halt(){

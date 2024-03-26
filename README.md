@@ -1,2 +1,0 @@
-# ProjectLimo
-Thesisproject Limo

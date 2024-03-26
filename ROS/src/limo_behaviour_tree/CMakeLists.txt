@@ -17,6 +17,7 @@ limo_base
   nav_msgs
   std_srvs
   geometry_msgs
+  message_generation
 )
 
 
@@ -61,11 +62,10 @@ limo_base
 # )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+add_service_files(
+  FILES
+  TypeObjectTracking.srv
+)
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -75,10 +75,11 @@ limo_base
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs  # Or other packages containing msgs
-# )
+ generate_messages(
+   DEPENDENCIES
+   geometry_msgs
+   std_msgs  # Or other packages containing msgs
+ )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -113,6 +114,7 @@ catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES limo_behaviour_tree
  CATKIN_DEPENDS roscpp limo_base
+ message_runtime
 #  DEPENDS system_lib
 )
 
@@ -145,12 +147,12 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 
-file(GLOB srcs src/Actions/*.cpp src/Conditions/*.cpp include/Actions/*.h include/Conditions/*.h*)
+file(GLOB srcs include/position.hpp src/Actions/*.cpp src/Conditions/*.cpp include/Actions/*.h include/Conditions/*.h*)
 
 #add_executable(limo_behaviour_tree ${srcs})
 ##Reminder to myself, if we add an new cpp file add it for executable as well.
  add_executable(
-   ${PROJECT_NAME}_node src/limo_behaviour_tree.cpp
+   ${PROJECT_NAME} src/limo_behaviour_tree.cpp
    tree.xml
    ${srcs}
  )
@@ -164,9 +166,9 @@ file(GLOB srcs src/Actions/*.cpp src/Conditions/*.cpp include/Actions/*.h includ
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(${PROJECT_NAME}_node ${catkin_EXPORTED_TARGETS})
+add_dependencies(${PROJECT_NAME} ${catkin_EXPORTED_TARGETS})
 ## Specify libraries to link a library or executable target against
-target_link_libraries(${PROJECT_NAME}_node
+target_link_libraries(${PROJECT_NAME}
   ${catkin_LIBRARIES}
 )
 

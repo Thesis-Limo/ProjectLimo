@@ -12,3 +12,7 @@
 # How to run pipeline in Limo
 After sync with the limo, with the github,
 Run the file dependencyLimo, here you first need to run the dependency if changed, then run the build. So then the build is finished and start running the pipeline
+
+# Adding dependency from apt-get install
+* add to the dockerfile
+* add to the dependencyLimo file
