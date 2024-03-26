@@ -1,0 +1,63 @@
+ <root BTCPP_format="4" >
+    <BehaviorTree ID="MainTree">
+
+        <Sequence name="root">
+            <SubTree ID="BatteryCheckTree"/>
+            <SubTree ID="RobotMove"/>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="BatteryCheckTree">
+        <Fallback>
+            <Condition ID="BatteryCheck"/>
+            <Action ID="EmergencyBrake"/>
+        </Fallback>
+    </BehaviorTree>
+    
+    <BehaviorTree ID="RobotMove">
+        <Parallel failure_threshold="1" success_threshold="1"> 
+            <Sequence name="Movement">
+                <SubTree ID="Emergency"/>
+                <SubTree ID="TargetCheck"/>
+                <SubTree ID="Moving"/>
+            </Sequence>
+            <Action ID="TrackObject"/>
+        </Parallel>
+    </BehaviorTree>
+
+    <BehaviorTree ID="Emergency">
+        <Sequence>
+            <Condition ID="MinDistance"/>
+            <Fallback name="DistanceBased">
+                <Sequence>
+                    <Condition ID="SpeedNotZero"/>
+                    <Action ID="EmergencyBrake"/>
+                </Sequence>
+                <Sequence>
+                    <Condition ID="SpeedZero"/>
+                    <Action ID="RotateAround"/>
+                </Sequence>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+    
+    <BehaviorTree ID="TargetCheck">
+        <Fallback name="TargetCheck">
+            <Condition ID="TargetFound"/>
+            <Action ID="RotateAround"/>
+        </Fallback>
+    </BehaviorTree>
+    
+    <BehaviorTree ID="Moving">
+        <Fallback name="Moving">
+            <Sequence>
+                <Condition ID="ToCloseToTarget"/>
+                <Action ID="MoveBack"/>
+            </Sequence>
+            <Sequence>
+                <Condition ID="CloseEnoughToTarget"/>
+                <Action ID="MoveToTarget"/>
+            </Sequence>
+        </Fallback>
+    </BehaviorTree>
+ </root>
