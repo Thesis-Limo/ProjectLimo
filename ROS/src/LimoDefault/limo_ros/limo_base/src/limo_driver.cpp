@@ -374,7 +374,9 @@ void LimoDriver::twistCmdCallback(const geometry_msgs::TwistConstPtr& msg) {
             break;
         }
         default:
-            ROS_INFO("motion mode not supported in receive cmd_vel");
+            //TODO CHANGE THIS
+            setMotionCommand(msg->linear.x, msg->angular.z, 0, 0);
+            //ROS_INFO("motion mode not supported in receive cmd_vel");
             break;
     }
 }
