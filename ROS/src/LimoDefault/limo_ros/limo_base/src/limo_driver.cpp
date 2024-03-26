@@ -44,7 +44,7 @@ LimoDriver::LimoDriver()  {
     private_nh.param<bool>("use_mcnamu", use_mcnamu_, false);
 
     if(use_mcnamu_) {
-        motion_mode_ = MODE_MCNAMU;
+        motion_mode_ = MODE_FOUR_DIFF;
     }
 
     odom_publisher_ = nh.advertise<nav_msgs::Odometry>("/odom", 50, true);
@@ -190,7 +190,7 @@ void LimoDriver::parseFrame(const LimoFrame& frame) {
             uint16_t error_code = ((frame.data[5] & 0xff) | (frame.data[4] << 8));
 
             if (!use_mcnamu_) {
-                motion_mode_ = frame.data[6];
+                //motion_mode_ = frame.data[6];
             }
 
             processErrorCode(error_code);
