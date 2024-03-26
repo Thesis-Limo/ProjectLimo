@@ -9,3 +9,13 @@ install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
 _deps
+
+devel/
+logs/
+build/
+bin/
+lib/
+msg_gen/
+srv_gen/
+
+CATKIN_IGNORE
