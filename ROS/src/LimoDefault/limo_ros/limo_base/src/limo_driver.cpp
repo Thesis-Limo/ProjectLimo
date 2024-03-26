@@ -450,6 +450,10 @@ void LimoDriver::publishOdometry(double stamp, double linear_velocity,
             break;
         }
         case MODE_ACKERMANN: {
+              vx = linear_velocity;
+            vy = 0;
+            wz = angular_velocity;
+            break;
             double inner_angle = steering_angle;
             double r = wheelbase_ / std::tan(std::fabs(inner_angle)) + track_ / 2.0;
             double central_angle  = convertInnerAngleToCentral(inner_angle);
