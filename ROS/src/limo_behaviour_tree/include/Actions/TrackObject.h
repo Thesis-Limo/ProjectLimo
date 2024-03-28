@@ -1,7 +1,6 @@
 #include "behaviortree_cpp_v3/condition_node.h"
 #include "behaviortree_cpp_v3/action_node.h"
 #include <ros/ros.h>
-#include "position.hpp"
 
 using namespace BT;
 
@@ -12,10 +11,10 @@ private:
   ros::ServiceClient client;
 public:
   TrackObject(const std::string& name, const NodeConfiguration& conf);
-
+  void Initialize(const ros::NodeHandle& nodehandle);
   NodeStatus tick() override;
   static auto providedPorts() -> PortsList {
-    return {OutputPort<Position3D>("goal")};
+    return {};
   }
   void halt() override ;
 };

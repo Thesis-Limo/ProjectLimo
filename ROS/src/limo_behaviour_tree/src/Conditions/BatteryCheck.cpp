@@ -1,16 +1,21 @@
 #include "BatteryCheck.h"
 BatteryCheck::BatteryCheck(const std::string& name, const BT::NodeConfiguration& conf)
-    :BT::ConditionNode(name, conf), nh("")
+    :BT::ConditionNode(name, conf)
+{}
+
+void BatteryCheck::Initialize(const ros::NodeHandle& nodehandle)
 {
+    nh = nodehandle;
     sub = nh.subscribe("/limo_status", 1000,&BatteryCheck::BatteryCallBack, this);
 }
-BT::NodeStatus BatteryCheck::tick()
+
+NodeStatus BatteryCheck::tick()
 {   
     if(BatteryLevel < 0)
-        return BT::NodeStatus::RUNNING;
+        return NodeStatus::RUNNING;
     else if (BatteryLevel < 10)
-        return BT::NodeStatus::FAILURE;
-    return BT::NodeStatus::SUCCESS;
+        return NodeStatus::FAILURE;
+    return NodeStatus::SUCCESS;
 }
 void BatteryCheck::BatteryCallBack(const limo_base::LimoStatus& msgs)
 {

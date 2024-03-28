@@ -15,12 +15,12 @@
     </BehaviorTree>
     
     <BehaviorTree ID="RobotMove">
-        <Sequence name="Movement">
-            <Action ID="TrackObject"/>
+        <Fallback name="Movement">
+            <!-- <Action ID="TrackObject"/> -->
             <SubTree ID="Emergency"/>
             <SubTree ID="TargetCheck"/>
             <SubTree ID="Moving"/>
-        </Sequence>
+        </Fallback>
     </BehaviorTree>
 
     <BehaviorTree ID="Emergency">
@@ -40,10 +40,10 @@
     </BehaviorTree>
     
     <BehaviorTree ID="TargetCheck">
-        <Fallback name="TargetCheck">
-            <Condition ID="TargetFound"/>
+        <Sequence name="TargetCheck">
+            <Condition ID="TargetNotFound"/>
             <Action ID="RotateAround"/>
-        </Fallback>
+        </Sequence>
     </BehaviorTree>
     
     <BehaviorTree ID="Moving">

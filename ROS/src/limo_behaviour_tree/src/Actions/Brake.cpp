@@ -1,8 +1,11 @@
 #include "Brake.h"
 #include "std_srvs/Empty.h"
 Brake::Brake(const std::string& name, const NodeConfiguration& conf)
-    :ActionNodeBase(name, conf), nh("")
+    :ActionNodeBase(name, conf)
+{}
+void Brake::Initialize(const ros::NodeHandle& nodehandle)
 {
+    nh = nodehandle;
     client = nh.serviceClient<std_srvs::Empty>("/BT/Brake");
 }
 NodeStatus Brake::tick()

@@ -5,14 +5,15 @@
 
 using namespace BT;
 
-class TargetFound: public ConditionNode
+class TargetNotFound: public ConditionNode
 {
 private:
     ros::NodeHandle nh; 
     ros::Subscriber subTarget;
     //void Callback();
 public:
-    TargetFound(const std::string& name, const NodeConfiguration& conf);
+    TargetNotFound(const std::string& name, const NodeConfiguration& conf);
+    void Initialize(const ros::NodeHandle& nodehandle);
     NodeStatus tick() override;
     static PortsList providedPorts(){return {};}
 };

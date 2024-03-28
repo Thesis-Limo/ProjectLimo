@@ -1,11 +1,16 @@
 #include "EmergencyBrake.h"
 #include <geometry_msgs/Twist.h>
 EmergencyBrake::EmergencyBrake(const std::string& name, const BT::NodeConfiguration& conf)
-: BT::ActionNodeBase(name, conf), nh("")
+: BT::ActionNodeBase(name, conf)
 {
+}
+void EmergencyBrake::Initialize(const ros::NodeHandle& nodehandle)
+{
+  nh = nodehandle;
   EmergencyBrakePub = nh.advertise<geometry_msgs::Twist>("cmd_vel", 100);
 }
-BT::NodeStatus EmergencyBrake::tick()
+
+NodeStatus EmergencyBrake::tick()
 {  
   geometry_msgs::Twist msg;
   msg.linear.x = 0;
@@ -16,7 +21,7 @@ BT::NodeStatus EmergencyBrake::tick()
   msg.angular.z = 0.0;
   EmergencyBrakePub.publish(msg);
   ROS_INFO("emergency brake");
-  return BT::NodeStatus::SUCCESS;
+  return NodeStatus::SUCCESS;
 }
 void EmergencyBrake::halt(){
   }

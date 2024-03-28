@@ -1,13 +1,19 @@
 #include "SpeedNotZero.h"
 
 SpeedNotZero::SpeedNotZero(const std::string& name, const NodeConfiguration& conf)
-    :BT::ConditionNode(name, conf), nh("")
+    :BT::ConditionNode(name, conf)
 {
     prevPos.x = __FLT_MAX__;
+}
+void SpeedNotZero::Initialize(const ros::NodeHandle& nodehandle)
+{
+    nh = nodehandle;
     sub = nh.subscribe<nav_msgs::Odometry>("/odom",100, &SpeedNotZero::CallBackOdom, this);
 }
+
 NodeStatus SpeedNotZero::tick()
 {
+    ROS_INFO("not suppose to be");
     if(speedSqr > 0)
         return NodeStatus::SUCCESS;
     return NodeStatus::FAILURE;

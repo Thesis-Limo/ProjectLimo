@@ -15,6 +15,8 @@ private:
 public:
     void BatteryCallBack(const limo_base::LimoStatus& msgs);
     BatteryCheck(const std::string& name, const BT::NodeConfiguration& conf);
+    void Initialize(const ros::NodeHandle& nodehandle);
+
     BT::NodeStatus tick() override;
     static BT::PortsList providedPorts(){return {};}
 };

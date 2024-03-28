@@ -15,6 +15,7 @@ private:
     void CallBackPoints(const PointCloud::ConstPtr& msg);
 public:
     MinDistance(const std::string& name, const BT::NodeConfiguration& conf);
+    void Initialize(const ros::NodeHandle& nodehandle);
     BT::NodeStatus tick() override;
     static BT::PortsList providedPorts(){return {};}
 };

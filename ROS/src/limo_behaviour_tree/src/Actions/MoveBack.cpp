@@ -5,7 +5,6 @@ MoveBack::MoveBack(const std::string& name, const BT::NodeConfiguration& conf)
 {}
 BT::NodeStatus MoveBack::tick()
 {
-    ROS_INFO("ddd");
     return BT::NodeStatus::SUCCESS;
 }
 void MoveBack::halt(){

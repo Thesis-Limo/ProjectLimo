@@ -1,9 +1,13 @@
 #include "SpeedZero.h"
 using namespace BT;
 SpeedZero::SpeedZero(const std::string& name, const NodeConfiguration& conf)
-    :ConditionNode(name, conf), nh("")
+    :ConditionNode(name, conf)
 {
     prevPos.x = __FLT_MAX__;
+}
+void SpeedZero::Initialize(const ros::NodeHandle& nodehandle)
+{
+    nh = nodehandle;
     sub = nh.subscribe<nav_msgs::Odometry>("/odom",100, &SpeedZero::CallBackOdom, this);
 }
 NodeStatus SpeedZero::tick()

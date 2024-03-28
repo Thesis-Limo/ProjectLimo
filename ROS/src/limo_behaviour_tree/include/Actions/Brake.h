@@ -11,8 +11,7 @@ private:
   ros::ServiceClient client;
 public:
   Brake(const std::string& name, const BT::NodeConfiguration& conf);
-  Brake() = delete;
-
+  void Initialize(const ros::NodeHandle& nodehandle);
   BT::NodeStatus tick() override;
   static auto providedPorts() -> PortsList {
     return {BT::InputPort<std::string>("message")};

@@ -16,6 +16,7 @@ private:
     void CallBackOdom(const nav_msgs::Odometry::ConstPtr& msg);
 public:
     SpeedNotZero(const std::string& name, const NodeConfiguration& conf);
+    void Initialize(const ros::NodeHandle& nodehandle);
     NodeStatus tick() override;
     static PortsList providedPorts(){return {};}
 };
