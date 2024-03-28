@@ -64,7 +64,7 @@ int main(int argc, char* argv[])
     };
     BT::applyRecursiveVisitor(tree.rootNode(),visitor);
     // Apply the visitor to ALL the nodes of the tree
-    ros::Rate r(100); // 10 hz
+    ros::Rate r(10); // 10 hz
 
     NodeStatus status = NodeStatus::RUNNING;
     while (ros::ok())
