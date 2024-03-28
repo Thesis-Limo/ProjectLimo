@@ -9,6 +9,7 @@ void MinDistance::Initialize(const ros::NodeHandle& nodehandle)
 {
     nh = nodehandle;
     sub = nh.subscribe<PointCloud>("/camera/depth/points",100, &MinDistance::CallBackPoints, this);
+    minDistance = nh.param<float>("minDistanceWhenBraking",0.25f);
 }
 NodeStatus MinDistance::tick()
 {

@@ -12,7 +12,7 @@ private:
     ros::Subscriber subPosition;
     Point3D currentPos;
     Point3D targetPos;
-    float distanceToDecideToClose = 1;
+    float distanceToDecideToClose;
 
     void CallBackTarget(const geometry_msgs::Point::ConstPtr& msg);
     void CallBackPosition(const nav_msgs::Odometry::ConstPtr& msg);

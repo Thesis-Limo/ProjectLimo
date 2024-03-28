@@ -10,7 +10,7 @@ class MinDistance: public ConditionNode
 private:
     ros::NodeHandle nh;
     ros::Subscriber sub;
-    float minDistance = 0.25f;
+    float minDistance;
     float currentDistance = __FLT_MAX__;
     void CallBackPoints(const PointCloud::ConstPtr& msg);
 public:

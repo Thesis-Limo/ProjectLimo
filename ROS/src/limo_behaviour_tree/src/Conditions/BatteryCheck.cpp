@@ -7,13 +7,15 @@ void BatteryCheck::Initialize(const ros::NodeHandle& nodehandle)
 {
     nh = nodehandle;
     sub = nh.subscribe("/limo_status", 1000,&BatteryCheck::BatteryCallBack, this);
+    maxBatteryVoltage = nh.param<float>("minBatteryVoltage",12.6);
+    batteryToLow = nh.param<float>("batteryToLow",10);
 }
 
 NodeStatus BatteryCheck::tick()
 {   
     if(BatteryLevel < 0)
         return NodeStatus::RUNNING;
-    else if (BatteryLevel < 10)
+    else if (BatteryLevel < batteryToLow)
         return NodeStatus::FAILURE;
     return NodeStatus::SUCCESS;
 }

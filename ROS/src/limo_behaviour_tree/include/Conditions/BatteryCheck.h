@@ -8,7 +8,8 @@ class BatteryCheck: public ConditionNode
 {
 private:
     int BatteryLevel = -1;
-    float maxBatteryVoltage = 12.6;
+    float maxBatteryVoltage;
+    float batteryToLow;
     ros::NodeHandle nh;
     ros::Subscriber sub;
     

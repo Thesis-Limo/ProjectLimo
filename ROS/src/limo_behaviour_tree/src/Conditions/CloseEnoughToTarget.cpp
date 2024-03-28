@@ -9,6 +9,7 @@ void CloseEnoughToTarget::Initialize(const ros::NodeHandle& nodehandle)
     nh = nodehandle;
     subTarget = nh.subscribe<geometry_msgs::Point>("/goal", 100, &CloseEnoughToTarget::CallBackTarget, this);
     subPosition = nh.subscribe<nav_msgs::Odometry>("/odom", 100, &CloseEnoughToTarget::CallBackPosition, this);
+    distanceToClose = nh.param<float>("distanceToCloseToTarget", 1);
 }
 NodeStatus CloseEnoughToTarget::tick()
 {

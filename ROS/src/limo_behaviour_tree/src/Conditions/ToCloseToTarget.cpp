@@ -8,6 +8,7 @@ void ToCloseToTarget::Initialize(const ros::NodeHandle& nodehandle)
     nh = nodehandle;
     subTarget = nh.subscribe<geometry_msgs::Point>("/goal", 100, &ToCloseToTarget::CallBackTarget, this);
     subPosition = nh.subscribe<nav_msgs::Odometry>("/odom", 100, &ToCloseToTarget::CallBackPosition, this);
+    distanceToDecideToClose = nh.param<float>("distanceToDecideToClose",1);
 }
 NodeStatus ToCloseToTarget::tick()
 {
@@ -18,7 +19,6 @@ NodeStatus ToCloseToTarget::tick()
     
     if(toTarget.DistanceSqrt() < distanceToDecideToClose * distanceToDecideToClose)
     {
-
         return NodeStatus::SUCCESS;
     }
     return NodeStatus::FAILURE;

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="minBatteryVoltage" default="12.6"/>
+    <arg name="batteryToLow" default="10"/>
+    <arg name="distanceToCloseToTarget" default="1"/>
+    <arg name="distanceToDecideToClose" default="1"/>
+    <arg name="minDistanceWhenBraking" default="0.25"/>
+
+    <node name="limo_behaviour_tree" pkg="limo_behaviour_tree" type="limo_behaviour_tree" output="screen">
+        <param name="minBatteryVoltage" value="$(arg minBatteryVoltage)"/>
+        <param name="batteryToLow" value="$(arg batteryToLow)"/>
+        <param name="distanceToCloseToTarget" value="$(arg distanceToCloseToTarget)"/>
+        <param name="distanceToDecideToClose" value="$(arg distanceToDecideToClose)"/>
+        <param name="minDistanceWhenBraking" value="$(arg minDistanceWhenBraking)"/>
+    </node>
+</launch>

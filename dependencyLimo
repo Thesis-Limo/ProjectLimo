@@ -15,7 +15,9 @@ function dependency {
     ros-melodic-roslint\
     ros-melodic-gazebo-msgs\
     ros-melodic-gazebo-dev\
-    ros-melodic-pcl-ros
+    ros-melodic-pcl-ros\
+    ros-melodic-libuvc-camera\
+    ros-melodic-rgbd-launch
 }  
 function build {
     cd ROS
