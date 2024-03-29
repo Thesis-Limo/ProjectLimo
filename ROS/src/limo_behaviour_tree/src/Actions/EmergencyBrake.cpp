@@ -1,5 +1,5 @@
 #include "EmergencyBrake.h"
-#include <geometry_msgs/Twist.h>
+#include <limo_motion_controller/movementController.h>
 EmergencyBrake::EmergencyBrake(const std::string& name, const BT::NodeConfiguration& conf)
 : BT::ActionNodeBase(name, conf)
 {
@@ -7,18 +7,14 @@ EmergencyBrake::EmergencyBrake(const std::string& name, const BT::NodeConfigurat
 void EmergencyBrake::Initialize(const ros::NodeHandle& nodehandle)
 {
   nh = nodehandle;
-  EmergencyBrakePub = nh.advertise<geometry_msgs::Twist>("cmd_vel", 100);
+  EmergencyBrakePub = nh.advertise<limo_motion_controller::movementController>("/limo_movement", 100);
 }
 
 NodeStatus EmergencyBrake::tick()
-{  
-  geometry_msgs::Twist msg;
-  msg.linear.x = 0;
-  msg.linear.y = 0;
-  msg.linear.z = 0; 
-  msg.angular.x = 0.0;
-  msg.angular.y = 0.0;
-  msg.angular.z = 0.0;
+{ 
+  limo_motion_controller::movementController msg;
+  msg.speed = 0;
+  msg.angle = 0;
   EmergencyBrakePub.publish(msg);
   ROS_INFO("emergency brake");
   return NodeStatus::SUCCESS;

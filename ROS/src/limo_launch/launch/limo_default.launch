@@ -4,5 +4,5 @@
         <arg name="pub_odom_tf" default="true" />
     </include>
 
-    <include file="$(find astra_camera)/launch/dabai_u3.launch" output="screen"/>
+    <include file="$(find astra_camera)/launch/dabai_u3.launch"/>
 </launch>

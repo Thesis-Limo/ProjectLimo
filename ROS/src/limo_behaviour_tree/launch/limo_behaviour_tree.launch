@@ -13,4 +13,6 @@
         <param name="distanceToDecideToClose" value="$(arg distanceToDecideToClose)"/>
         <param name="minDistanceWhenBraking" value="$(arg minDistanceWhenBraking)"/>
     </node>
+    <include file="$(find limo_motion_controller)/launch/Controller.launch"/>
+
 </launch>
