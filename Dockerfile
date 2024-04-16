@@ -4,15 +4,17 @@ FROM nvidia/cudagl:11.1.1-base-ubuntu18.04
 # Minimal setup
 
 RUN apt-get update && apt-get -y install --no-install-recommends \
-    python3 \
-    python3-pip
-
+    python3.8
 RUN apt-get update\
     && apt-get -y install --no-install-recommends \
     wget \
     g++ \
     lsb-release\
     locales
+
+RUN apt install python3.8-distutils -y
+RUN wget https://bootstrap.pypa.io/get-pip.py
+RUN python3.8 get-pip.py
 
 RUN dpkg-reconfigure locales
 ARG DEBIAN_FRONTEND=noninteractive
@@ -50,8 +52,9 @@ RUN apt-get update && apt-get install -y\
     ros-melodic-libuvc-camera
 
 #pip installations
-#COPY requirements.txt requirements.txt
-#RUN pip install -r requirements.txt
+RUN pip3 install --upgrade pip
+COPY requirements.txt requirements.txt
+RUN pip3 install --ignore-installed -r requirements.txt
 
 #setup env variables for display
 ENV NVIDIA_VISIBLE_DEVICES \

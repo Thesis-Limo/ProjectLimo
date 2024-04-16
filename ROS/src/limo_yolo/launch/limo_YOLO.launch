@@ -1,0 +1,4 @@
+<launch> 
+  <node name="camera_feed_caster" pkg="limo_yolo" type="camera_feed_caster.py" output="screen"/>
+  <node name="camera_feed_processor" pkg="limo_yolo" type="camera_feed_processor.py" output="screen"/>
+</launch>
