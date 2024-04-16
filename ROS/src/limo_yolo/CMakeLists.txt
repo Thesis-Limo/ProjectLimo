@@ -103,7 +103,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES limo_yolo
-#  CATKIN_DEPENDS rospy
+  CATKIN_DEPENDS rospy
 #  DEPENDS system_lib
 )
 
