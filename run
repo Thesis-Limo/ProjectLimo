@@ -13,7 +13,7 @@ function startsim {
 }
 
 function terminal {
-    sudo docker compose up -d roscore terminal
+    sudo docker compose up -d terminal
 	sudo docker exec -it terminal /bin/zsh
 }
 
