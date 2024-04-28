@@ -14,7 +14,7 @@ public:
   void Initialize(const ros::NodeHandle& nodehandle);
   BT::NodeStatus tick() override;
   static auto providedPorts() -> PortsList {
-    return {BT::InputPort<std::string>("message")};
+    return {};
   }
   void halt() override ;
 };

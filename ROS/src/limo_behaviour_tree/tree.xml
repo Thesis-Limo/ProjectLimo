@@ -1,6 +1,5 @@
  <root BTCPP_format="4" >
     <BehaviorTree ID="MainTree">
-
         <Sequence name="root">
             <SubTree ID="BatteryCheckTree"/>
             <SubTree ID="RobotMove"/>
@@ -15,14 +14,28 @@
     </BehaviorTree>
     
     <BehaviorTree ID="RobotMove">
-        <Fallback name="Movement">
-            <!-- <Action ID="TrackObject"/> -->
+        <Parallel name="Movement" success_threshold="2">
+            <SubTree ID="TrackingObject"/>
+            <SubTree ID="MovementRobot"/>
+        </Parallel>
+    </BehaviorTree>
+    
+    <BehaviorTree ID="TrackingObject">
+        <Sequence>
+            <Action ID="TrackObject"/>
+            <Condition ID="ObjectFound"/>
+            <Action ID="CreatePath"/>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="MovementRobot">
+        <Fallback>
             <SubTree ID="Emergency"/>
             <SubTree ID="TargetCheck"/>
             <SubTree ID="Moving"/>
         </Fallback>
     </BehaviorTree>
-
+    
     <BehaviorTree ID="Emergency">
         <Sequence>
             <Condition ID="MinDistance"/>
@@ -33,7 +46,7 @@
                 </Sequence>
                 <Sequence>
                     <Condition ID="SpeedZero"/>
-                    <Action ID="RotateAround"/>
+                    <Action ID="MoveBack"/>
                 </Sequence>
             </Fallback>
         </Sequence>
@@ -41,8 +54,11 @@
     
     <BehaviorTree ID="TargetCheck">
         <Sequence name="TargetCheck">
-            <Condition ID="TargetNotFound"/>
-            <Action ID="RotateAround"/>
+            <Condition ID="CheckPath"/>
+            <Sequence>
+                <Condition ID="TargetNotFound"/>
+                <Action ID="RotateAround"/>
+            </Sequence>
         </Sequence>
     </BehaviorTree>
     

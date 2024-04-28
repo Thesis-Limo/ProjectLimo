@@ -13,6 +13,8 @@ void BatteryCheck::Initialize(const ros::NodeHandle& nodehandle)
 
 NodeStatus BatteryCheck::tick()
 {   
+    std::cout << BatteryLevel <<  "--batteryOK\n";
+
     if(BatteryLevel < 0)
         return NodeStatus::RUNNING;
     else if (BatteryLevel < batteryToLow)

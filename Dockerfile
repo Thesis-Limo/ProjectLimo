@@ -12,7 +12,8 @@ RUN apt-get update\
     wget \
     g++ \
     lsb-release\
-    locales
+    locales \
+    nano
 
 RUN dpkg-reconfigure locales
 ARG DEBIAN_FRONTEND=noninteractive

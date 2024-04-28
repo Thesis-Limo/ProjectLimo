@@ -14,6 +14,10 @@
 #include "SpeedZero.h"
 #include "TargetNotFound.h"
 #include "ToCloseToTarget.h"
+#include "ObjectFound.h"
+#include "CheckPath.h"
+#include "CreatePath.h"
+
 
 
 int main(int argc, char* argv[])
@@ -36,6 +40,9 @@ int main(int argc, char* argv[])
     factory.registerNodeType<SpeedZero>("SpeedZero");
     factory.registerNodeType<TargetNotFound>("TargetNotFound");
     factory.registerNodeType<ToCloseToTarget>("ToCloseToTarget");
+    factory.registerNodeType<ObjectFound>("ObjectFound");
+    factory.registerNodeType<CheckPath>("CheckPath");
+    factory.registerNodeType<CreatePath>("CreatePath");
 
     factory.registerBehaviorTreeFromFile(ros::package::getPath("limo_behaviour_tree") + "/tree.xml");
     auto tree = factory.createTree("MainTree");
@@ -60,6 +67,12 @@ int main(int argc, char* argv[])
         else if (auto currentNode = dynamic_cast<ToCloseToTarget*>(node))
             currentNode->Initialize(nh);
         else if (auto currentNode = dynamic_cast<MoveToTarget*>(node))
+            currentNode->Initialize(nh);
+        else if (auto currentNode = dynamic_cast<ObjectFound*>(node))
+            currentNode->Initialize(nh);
+        else if (auto currentNode = dynamic_cast<CheckPath*>(node))
+            currentNode->Initialize(nh);
+        else if (auto currentNode = dynamic_cast<CreatePath*>(node))
             currentNode->Initialize(nh);
     };
     BT::applyRecursiveVisitor(tree.rootNode(),visitor);
