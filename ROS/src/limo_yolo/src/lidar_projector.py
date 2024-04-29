@@ -42,6 +42,7 @@ class LIDARCameraOverlay:
             lidar_msg (sensor_msgs/LaserScan): currentlaserscan
         """
         print("works")
+        return
         if(self.yoloInfoBack):
             print("start yolo with image")
             self.currentImage = image_msg.data

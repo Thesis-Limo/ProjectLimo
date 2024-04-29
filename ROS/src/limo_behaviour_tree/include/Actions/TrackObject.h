@@ -8,6 +8,7 @@ class TrackObject: public ActionNodeBase
 private:
   ros::NodeHandle nh;
   ros::ServiceClient client;
+  int currentTargetID = 0;
 public:
   TrackObject(const std::string& name, const NodeConfiguration& conf);
   void Initialize(const ros::NodeHandle& nodehandle);

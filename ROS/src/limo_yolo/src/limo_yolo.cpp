@@ -1,65 +1,27 @@
-// #include <ros/ros.h>
-// #include <ros/package.h>
-// //#include "YoloProjection.h"
-
-
-
-// #include <sensor_msgs/Image.h>
-// #include <sensor_msgs/CameraInfo.h>
-// #include <sensor_msgs/LaserScan.h>
-// #include <message_filters/subscriber.h>
-// #include <message_filters/time_synchronizer.h>
-
-// using message_filters::TimeSynchronizer;
-// using namespace sensor_msgs;
-// void sync_cb(const Image::ConstPtr &img_msg, const Image::ConstPtr &md_msg)
-// {
-//     ROS_INFO("tesss");
-
-// }
-// int main(int argc, char* argv[])
-// {
-//     ros::init(argc, argv,"limo_yolo");
-//     ros::NodeHandle nh;
-//     //YoloProjection pro(nh);
-//     //ros::Rate r(10); 
-//     message_filters::Subscriber<Image> image_sub(nh, "/camera/rgb/image_raw", 1);
-//     message_filters::Subscriber<Image> metadata_sub(nh, "/scan", 1);
-//     TimeSynchronizer<Image, Image> sync(image_sub, metadata_sub, 10);
-//     sync.registerCallback(boost::bind(&sync_cb, _1, _2));
-//     ros::spin();
-
-//     return 0;
-// }
-
-
+#include <ros/ros.h>
+#include <ros/package.h>
+#include "YoloProjection.h"
+#include <message_filters/sync_policies/approximate_time.h>
 #include <message_filters/subscriber.h>
-#include <message_filters/time_synchronizer.h>
-#include <sensor_msgs/Image.h>
-#include <sensor_msgs/CameraInfo.h>
 
-using namespace sensor_msgs;
-using namespace message_filters;
-
-void callback(const ImageConstPtr& image, const CameraInfoConstPtr& cam_info)
-{
-  // Solve all of perception here...
-  ROS_INFO("tesss");
-
+YoloProjection* pro = nullptr;
+void callback(const sensor_msgs::Image::ConstPtr& img, const sensor_msgs::LaserScan::ConstPtr& laser){
+    pro->CallbackImageAndLidar(*img, *laser);
 }
-
-int main(int argc, char** argv)
+int main(int argc, char* argv[])
 {
-  ros::init(argc, argv, "vision_node");
+    ros::init(argc, argv,"limo_yolo");
+    ros::NodeHandle nh("");
+    pro = new YoloProjection(nh);
+    ros::Rate r(10); 
+    message_filters::Subscriber<Image> image_sub(nh, "/camera/rgb/image_raw", 1);
+    message_filters::Subscriber<LaserScan> info_sub(nh, "/scan", 1);
+    typedef message_filters::sync_policies::ApproximateTime<sensor_msgs::Image, sensor_msgs::LaserScan> MySyncPolicy;
+    message_filters::Synchronizer<MySyncPolicy> sync(MySyncPolicy(10), image_sub, info_sub);
 
-  ros::NodeHandle nh;
+    sync.registerCallback(boost::bind(&callback, _1, _2));
 
-  message_filters::Subscriber<Image> image_sub(nh, "/camera/rgb/image_raw", 1);
-  message_filters::Subscriber<CameraInfo> info_sub(nh, "/camera/rgb/camera_info", 1);
-  TimeSynchronizer<Image, CameraInfo> sync(image_sub, info_sub, 10);
-  sync.registerCallback(boost::bind(&callback, _1, _2));
+    ros::spin();
 
-  ros::spin();
-
-  return 0;
+    return 0;
 }
