@@ -17,6 +17,7 @@ RUN apt-get update\
 
 RUN dpkg-reconfigure locales
 ARG DEBIAN_FRONTEND=noninteractive
+
 #
 # Install ROS melodic
 #
@@ -48,6 +49,8 @@ RUN apt-get update && apt-get install -y\
     ros-melodic-gazebo-msgs\
     ros-melodic-gazebo-dev\
     ros-melodic-pcl-ros\
+    ros-melodic-libuvc-camera\
+    ros-melodic-rgbd-launch
     ros-melodic-libuvc-camera\
     ros-melodic-rgbd-launch
 

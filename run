@@ -13,9 +13,7 @@ function startsim {
 }
 
 function terminal {
-    clean terminal
-    clean rviz
-    sudo docker compose up -d terminal rviz
+    sudo docker compose up -d terminal
 	sudo docker exec -it terminal /bin/zsh
 }
 function rviz {
