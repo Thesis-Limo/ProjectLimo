@@ -5,6 +5,7 @@
     <arg name="distanceToCloseToTarget" default="1"/>
     <arg name="distanceToDecideToClose" default="1"/>
     <arg name="minDistanceWhenBraking" default="0.25"/>
+    <arg name="currentTargetID" default="39"/>
 
     <node name="limo_behaviour_tree" pkg="limo_behaviour_tree" type="limo_behaviour_tree" output="screen">
         <param name="minBatteryVoltage" value="$(arg minBatteryVoltage)"/>

@@ -5,4 +5,5 @@
     </include>
 
     <include file="$(find astra_camera)/launch/dabai_u3.launch"/>
+    <include file="$(find ydlidar_ros)/launch/X2L.launch"/>
 </launch>
