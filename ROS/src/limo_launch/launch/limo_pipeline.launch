@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find limo_base)/launch/limo_base.launch">
+        <arg name="pub_odom_tf" default="true" />
+    </include>
+    <include file="$(find astra_camera)/launch/dabai_u3.launch"/>
+    <include file="$(find limo_behaviour_tree)/launch/limo_behaviour_tree.launch"/>
+
+</launch>
