@@ -12,14 +12,19 @@ void SpeedNotZero::Initialize(const ros::NodeHandle& nodehandle)
 }
 
 NodeStatus SpeedNotZero::tick()
+/*
+ * checks if speed is more then 0 or not
+*/
 {
-    ROS_INFO("not suppose to be");
     if(speedSqr > 0)
         return NodeStatus::SUCCESS;
     return NodeStatus::FAILURE;
 }
 
 void SpeedNotZero::CallBackOdom(const nav_msgs::Odometry::ConstPtr& msg)
+/*
+ * checks the current position and updates the current velocity based on the previous position
+*/
 {
     ros::Time currentTime = msg->header.stamp;
     geometry_msgs::Point currentPos = msg->pose.pose.position;

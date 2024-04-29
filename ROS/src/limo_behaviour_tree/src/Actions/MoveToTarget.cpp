@@ -11,6 +11,9 @@ void MoveToTarget::Initialize(const ros::NodeHandle& nodehandle)
 }
 
 NodeStatus MoveToTarget::tick()
+/*
+ * currently this is debug code need to change
+*/
 {
   limo_motion_controller::movementController msg;
   msg.speed = 0.3;

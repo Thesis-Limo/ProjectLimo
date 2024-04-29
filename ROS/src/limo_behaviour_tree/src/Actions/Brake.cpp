@@ -9,6 +9,9 @@ void Brake::Initialize(const ros::NodeHandle& nodehandle)
     client = nh.serviceClient<std_srvs::Empty>("/BT/Brake");
 }
 NodeStatus Brake::tick()
+/*
+ * calls service for tracking with name /BT/Brake to execute braking
+*/
 {
     std_srvs::Empty srv;
     std::cout << "Braking" << std::endl;

@@ -9,9 +9,10 @@ void CreatePath::Initialize(const ros::NodeHandle& nodehandle)
     client = nh.serviceClient<limo_behaviour_tree::EndGoal>("/GoalPos");
 }
 NodeStatus CreatePath::tick()
+/*
+ * Gets information form the previous condition and calls function /GoalPos, so that it can calculate the trajectory
+*/
 {
-    std::cout << "NOOO" << std::endl;
-
     auto res = getInput<Point3D>("goal");
     if( !res )
     {

@@ -12,6 +12,9 @@ void TrackObject::Initialize(const ros::NodeHandle& nodehandle)
 }
 
 BT::NodeStatus TrackObject::tick()
+/*
+ * calls service for tracking with name /BT/FindObject
+*/
 {
   limo_behaviour_tree::TypeObjectTracking srv;
   srv.request.objectID = 0;

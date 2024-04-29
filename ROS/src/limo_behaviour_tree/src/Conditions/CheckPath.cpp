@@ -11,6 +11,9 @@ void CheckPath::Initialize(const ros::NodeHandle& nodehandle)
 }
 
 NodeStatus CheckPath::tick()
+/*
+ * TODO needs to be implemented
+*/
 {   
     return NodeStatus::SUCCESS;
 }

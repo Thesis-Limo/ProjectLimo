@@ -12,9 +12,10 @@ void BatteryCheck::Initialize(const ros::NodeHandle& nodehandle)
 }
 
 NodeStatus BatteryCheck::tick()
+/*
+ * creturns failure if the battery is below a certain percentage
+*/
 {   
-    std::cout << BatteryLevel <<  "--batteryOK\n";
-
     if(BatteryLevel < 0)
         return NodeStatus::RUNNING;
     else if (BatteryLevel < batteryToLow)

@@ -12,6 +12,9 @@ void MinDistance::Initialize(const ros::NodeHandle& nodehandle)
     minDistance = nh.param<float>("minDistanceWhenBraking",0.25f);
 }
 NodeStatus MinDistance::tick()
+/*
+ * if the current distance is to close to the object then return success
+*/
 {
     if(currentDistance < minDistance)
         return NodeStatus::SUCCESS;
@@ -19,6 +22,9 @@ NodeStatus MinDistance::tick()
     return NodeStatus::FAILURE;
 }
 void MinDistance::CallBackPoints(const PointCloud::ConstPtr&  msg)
+/*
+ * checks every pixel from the depth camera and looks for closest distance
+*/
 {
     float minDistance = __FLT_MAX__;
     BOOST_FOREACH (const pcl::PointXYZ& pt, msg->points){

@@ -11,6 +11,9 @@ void EmergencyBrake::Initialize(const ros::NodeHandle& nodehandle)
 }
 
 NodeStatus EmergencyBrake::tick()
+/*
+ * Calls the movement controller with current speed and angle velocity, to (0,0)
+*/
 { 
   limo_motion_controller::movementController msg;
   msg.speed = 0;
