@@ -1,4 +1,8 @@
 <launch> 
-  <node name="camera_feed_caster" pkg="limo_yolo" type="camera_feed_caster.py" output="screen"/>
-  <node name="camera_feed_processor" pkg="limo_yolo" type="camera_feed_processor.py" output="screen"/>
+  <node name="limo_yolo_conv" pkg="limo_yolo" type="limo_yolo" output="screen"/>
+
+  <!-- <include file="$(find darknet_ros)/launch/yolo_v4_tiny.launch">
+    <arg name="image" value="/camera/yolo_input" />
+  </include> -->
+  
 </launch>

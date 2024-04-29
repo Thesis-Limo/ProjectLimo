@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(limo_yolo)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
 
@@ -8,7 +10,11 @@ project(limo_yolo)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  rospy
+  roscpp
+  limo_behaviour_tree
+  darknet_ros_msgs
+  cv_bridge
+  tf2_ros
 )
 
 ## System dependencies are found with CMake's conventions
@@ -103,7 +109,9 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES limo_yolo
-  CATKIN_DEPENDS rospy
+  CATKIN_DEPENDS roscpp
+  darknet_ros
+  limo_behaviour_tree
 #  DEPENDS system_lib
 )
 
@@ -114,7 +122,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+  include
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -131,7 +139,16 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/Limo_YOLO_node.cpp)
+
+file(GLOB srcs include/*.h src/*.cpp*)
+
+#add_executable(limo_behaviour_tree ${srcs})
+##Reminder to myself, if we add an new cpp file add it for executable as well.
+ add_executable(
+   ${PROJECT_NAME} src/limo_yolo.cpp
+   ${srcs}
+ )
+
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -139,14 +156,14 @@ include_directories(
 ## e.g. "rosrun someones_pkg node" instead of "rosrun someones_pkg someones_pkg_node"
 # set_target_properties(${PROJECT_NAME}_node PROPERTIES OUTPUT_NAME node PREFIX "")
 
-## Add cmake target dependencies of the executable
-## same as for the library above
-# add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# Add cmake target dependencies of the executable
+# same as for the library above
+add_dependencies(${PROJECT_NAME} ${catkin_EXPORTED_TARGETS})
 
-## Specify libraries to link a library or executable target against
-# target_link_libraries(${PROJECT_NAME}_node
-#   ${catkin_LIBRARIES}
-# )
+# Specify libraries to link a library or executable target against
+target_link_libraries(${PROJECT_NAME}
+  ${catkin_LIBRARIES}
+)
 
 #############
 ## Install ##
