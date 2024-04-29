@@ -16,6 +16,11 @@ function terminal {
     sudo docker compose up -d terminal
 	sudo docker exec -it terminal /bin/zsh
 }
+function rviz {
+    clean rviz
+    sudo docker compose up -d rviz
+	sudo docker exec -it rviz /bin/zsh
+}
 
 function clean {
     PREFIX=$1
@@ -36,7 +41,7 @@ function clean {
 }
 
 function stop {
-    docker compose down
+    sudo docker compose down
     clean thesis
 }
 
@@ -53,7 +58,8 @@ function PRINT_MENU()
     echo -e "1.Build images"
     echo -e "2.Start sim"
     echo -e "3.Start terminal"
-    echo -e "4.Stop"
+    echo -e "4.Start rviz"
+    echo -e "5.Stop"
 
     echo -n "Your chose(1-5):"
 }
@@ -73,6 +79,9 @@ case "${CHOOSE}" in
     terminal
     ;;
     4)
+    rviz
+    ;;
+    5)
     stop
     ;;
 esac    
