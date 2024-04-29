@@ -12,6 +12,9 @@ void CloseEnoughToTarget::Initialize(const ros::NodeHandle& nodehandle)
     distanceToClose = nh.param<float>("distanceToCloseToTarget", 1);
 }
 NodeStatus CloseEnoughToTarget::tick()
+/*
+ * checks if the target is at a certain distance in front.
+*/
 {
     if(targetPos.x >= __FLT_MAX__ || currentPos.x >= __FLT_MAX__)
         return NodeStatus::RUNNING;
