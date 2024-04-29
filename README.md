@@ -14,3 +14,15 @@
 
 After sync with the limo, with the github,
 Run the file dependencyLimo, here you first need to run the dependency if changed, then run the build. So then the build is finished and start running the pipeline
+
+# How to run without sim and rviz
+
+You can run the environment in docker and use rviz and the simulator on your pc that provide the information to docker. Run the file
+
+```bash
+./run
+```
+
+select NoSim, and then roscore and terminal will be started. For easy use build inside this container, it has the dependencies needed to build it.
+
+Then gazebo and rviz can be started on the pc without using docker.

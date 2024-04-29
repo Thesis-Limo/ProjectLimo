@@ -16,6 +16,12 @@ function terminal {
     sudo docker compose up -d terminal
 	sudo docker exec -it terminal /bin/zsh
 }
+
+function startNosim {
+    sudo docker compose up -d terminal roscore
+	sudo docker exec -it terminal /bin/zsh
+}
+
 function rviz {
     clean rviz
     sudo docker compose up -d rviz
@@ -59,9 +65,10 @@ function PRINT_MENU()
     echo -e "2.Start sim"
     echo -e "3.Start terminal"
     echo -e "4.Start rviz"
-    echo -e "5.Stop"
+    echo -e "5.Start noSim"
+    echo -e "6.Stop"
 
-    echo -n "Your chose(1-5):"
+    echo -n "Your chose(1-6):"
 }
 
 PRINT_MENU
@@ -82,6 +89,9 @@ case "${CHOOSE}" in
     rviz
     ;;
     5)
+    startNosim
+    ;;
+    6)
     stop
     ;;
 esac    
