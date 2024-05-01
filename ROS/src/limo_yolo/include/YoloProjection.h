@@ -9,8 +9,20 @@
 #include <limo_behaviour_tree/TypeObjectTracking.h>
 #include <cv_bridge/cv_bridge.h>
 
+#include <chrono>
+#include <queue>
+#include "position.hpp"
 using namespace sensor_msgs;
 using namespace cv_bridge;
+
+struct DataFrame
+{
+    uint32_t seq;
+    LaserScan lidar;
+    Image currentImage;
+};
+
+
 class YoloProjection
 {
 private:
@@ -24,10 +36,16 @@ private:
     CameraInfo cameraInfo;
     cv::Mat K;
     int objectId;
-    bool gotInfoBackFromYolo = false;
 
-    std::vector<uint8_t> currentImage;
-    LaserScan currentLidarScan;
+    std::queue<DataFrame> pushedFrames;
+    DataFrame current;
+    int id;
+
+    std::string baseLinkFrame;
+    std::string laserFrame;
+    std::string cameraFrame;
+    
+    std::vector<Point3D> ConvertToLidar(const LaserScan& laser);
 
 public:
     YoloProjection(const ros::NodeHandle& nodehandle);

@@ -51,7 +51,9 @@ RUN apt-get update && apt-get install -y\
     ros-melodic-gazebo-dev\
     ros-melodic-pcl-ros\
     ros-melodic-libuvc-camera\
-    ros-melodic-rgbd-launch
+    ros-melodic-rgbd-launch\
+    ros-melodic-opencv-apps
+
 
 #pip installations
 #COPY requirements.txt requirements.txt

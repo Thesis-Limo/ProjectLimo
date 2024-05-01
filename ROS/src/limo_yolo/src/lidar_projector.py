@@ -8,6 +8,7 @@ from sensor_msgs.msg import Image, CameraInfo, LaserScan
 from cv_bridge import CvBridge, CvBridgeError
 from geometry_msgs.msg import PointStamped, Point
 import time
+from darknet_ros_msgs import BoundingBoxes
 
 class LIDARCameraOverlay:
     def __init__(self):
@@ -17,12 +18,14 @@ class LIDARCameraOverlay:
         #self.tf_buffer = tf2_ros.Buffer()
         #self.tf_listener = tf2_ros.TransformListener(self.tf_buffer)
 
+        self.sub = rospy.Subscriber("/darknet_ros/bounding_boxes",BoundingBoxes, self.callback_yolo_result)
         # Set up message filters for approximate time synchronization
         self.image_sub = message_filters.Subscriber("/camera/rgb/image_raw", Image)
         self.lidar_sub = message_filters.Subscriber("/scan", LaserScan)
         self.ts = message_filters.ApproximateTimeSynchronizer([self.image_sub, self.lidar_sub], 10, 0.1, allow_headerless=True)
         self.ts.registerCallback(self.callback_image_and_lidar)
         self.pub = rospy.Publisher("/camera/yolo_input", Image, queue_size=10)
+        self.sub = rospy.Subscriber("/darknet_ros/bounding_boxes",BoundingBoxes, self.callback_yolo_result)
         print("haha")
         # self.yoloImagePub = rospy.Publisher("/camera/yolo_input", Image, queue_size=10)
         # self.yoloInfoBack = False

@@ -17,14 +17,20 @@
 
 
   <buildtool_depend>catkin</buildtool_depend> 
+  <build_depend>image_transport</build_depend>
   <build_depend>cv_bridge</build_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>darknet_ros</build_depend>
   <build_depend>limo_behaviour_tree</build_depend>
+
+  <depend>libopencv-dev</depend>
+
+  <build_export_depend>image_transport</build_export_depend>
   <build_export_depend>cv_bridge</build_export_depend>
   <build_export_depend>roscpp</build_export_depend>
   <build_export_depend>darknet_ros</build_export_depend>
   <build_export_depend>limo_behaviour_tree</build_export_depend>
+  <exec_depend>image_transport</exec_depend>
   <exec_depend>cv_bridge</exec_depend>
   <exec_depend>roscpp</exec_depend>
 

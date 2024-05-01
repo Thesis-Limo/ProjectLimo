@@ -1,0 +1,8 @@
+<launch> 
+  <node name="limo_yolo_conv" pkg="limo_yolo" type="limo_yolo" output="screen"/>
+
+  <!-- <include file="$(find darknet_ros)/launch/yolo_v4_tiny.launch">
+    <arg name="image" value="/camera/yolo_input" />
+  </include> -->
+  
+</launch>
