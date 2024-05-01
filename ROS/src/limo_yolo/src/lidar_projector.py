@@ -7,7 +7,7 @@ import message_filters
 from sensor_msgs.msg import Image, CameraInfo, LaserScan
 from cv_bridge import CvBridge, CvBridgeError
 from geometry_msgs.msg import PointStamped, Point
-
+import time
 
 class LIDARCameraOverlay:
     def __init__(self):
@@ -22,12 +22,14 @@ class LIDARCameraOverlay:
         self.lidar_sub = message_filters.Subscriber("/scan", LaserScan)
         self.ts = message_filters.ApproximateTimeSynchronizer([self.image_sub, self.lidar_sub], 10, 0.1, allow_headerless=True)
         self.ts.registerCallback(self.callback_image_and_lidar)
+        self.pub = rospy.Publisher("/camera/yolo_input", Image, queue_size=10)
         print("haha")
         # self.yoloImagePub = rospy.Publisher("/camera/yolo_input", Image, queue_size=10)
         # self.yoloInfoBack = False
         # self.PosObject = rospy.Publisher("/ObjectPos", Point, queue_size=10)
         # self.target = rospy.Service("/TrackID", TypeObjectTracking, self.switch_target)
-
+        self.start = time.time()
+        self.yoloInfoBack = True
 
         # self.camera_info = rospy.wait_for_message("/camera/rgb/camera_info", CameraInfo)
         # self.K = np.array(self.camera_info.K).reshape((3, 3))
@@ -41,7 +43,11 @@ class LIDARCameraOverlay:
             image_msg (sensor_msgs/Image): current image
             lidar_msg (sensor_msgs/LaserScan): currentlaserscan
         """
-        print("works")
+        if(self.yoloInfoBack):
+            print("time start")
+            self.start = time.time()
+            self.yoloInfoBack = False
+            self.pub.publish(image_msg)
         return
         if(self.yoloInfoBack):
             print("start yolo with image")
@@ -51,16 +57,18 @@ class LIDARCameraOverlay:
             self.yoloImagePub.publish(image_msg)
 
     def callback_yolo_result(self, boundingboxes):
-        items=[]
-        for box in boundingboxes.bounding_boxes:
-            if(box.id != self.objectID): continue
-            items.append(box.Class)
-        print("finished yolo with ", len(items), " items found")
-        targetPos = Point
-        targetPos.x = 0
-        targetPos.y = 0
-        targetPos.z = 0
-        self.PosObject.publish(targetPos) 
+        end = time.time()
+        print("time: " , end-self.start)
+        # items=[]
+        # for box in boundingboxes.bounding_boxes:
+        #     if(box.id != self.objectID): continue
+        #     items.append(box.Class)
+        # print("finished yolo with ", len(items), " items found")
+        # targetPos = Point
+        # targetPos.x = 0
+        # targetPos.y = 0
+        # targetPos.z = 0
+        # self.PosObject.publish(targetPos) 
         self.yoloInfoBack = True
     
     def switch_target(self, object):
