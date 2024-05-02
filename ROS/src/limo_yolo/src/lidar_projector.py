@@ -7,35 +7,38 @@ import message_filters
 from cv_bridge import CvBridge, CvBridgeError
 #   from limo_behaviour_tree import TypeObjectTracking 
 from sensor_msgs.msg import  LaserScan,CameraInfo,Image
-from geometry_msgs.msg import PointStamped, Point
+from geometry_msgs.msg import PointStamped
 import time
 from darknet_ros_msgs.msg import BoundingBoxes
 import tf2_ros,  tf2_geometry_msgs
 
 import Queue
+from limo_behaviour_tree import TypeObjectTracking 
 
 class LIDARCameraOverlay:
     def __init__(self):
         rospy.init_node('lidar_camera_overlay')
 
+        self.tfBuffer = tf2_ros.Buffer()           # Creates a frame buffer
+        tf2_ros.TransformListener(self.tfBuffer)
+        self.pushedFrames = Queue.Queue()
         self.bridge = CvBridge()
-        #self.tf_buffer = tf2_ros.Buffer()
-        #self.tf_listener = tf2_ros.TransformListener(self.tf_buffer)
+        self.id = 0
+        self.ObjectId = 41
+        self.showImg = False
+        self.service = rospy.Service('/TrackID',TypeObjectTracking, self.switchTarget)
         self.image_sub = message_filters.Subscriber("/camera/rgb/image_raw", Image)
         self.lidar_sub = message_filters.Subscriber("/scan", LaserScan)
         self.ts = message_filters.ApproximateTimeSynchronizer([self.image_sub, self.lidar_sub], 10, 0.1, allow_headerless=True)
         self.ts.registerCallback(self.callback_image_and_lidar)
         
         # Set up message filters for approximate time synchronization
-        self.pub = rospy.Publisher("/points", transformedLidarPoints, queue_size=10)
+        # self.pub = rospy.Publisher("/points", transformedLidarPoints, queue_size=10)
         self.yolopub = rospy.Publisher("/camera/yolo_input", Image, queue_size=10)
         self.sub = rospy.Subscriber("/darknet_ros/bounding_boxes",BoundingBoxes, self.callback)
-        self.id = 0
-        self.pushedFrames = Queue.Queue()
         self.camera_info = rospy.wait_for_message("/camera/rgb/camera_info", CameraInfo)
         self.K = np.array(self.camera_info.K).reshape((3, 3))
-        self.tfBuffer = tf2_ros.Buffer()           # Creates a frame buffer
-        tf2_ros.TransformListener(self.tfBuffer)
+    
 
 
     def callback_image_and_lidar(self, image_msg, lidar_msg):
@@ -43,6 +46,9 @@ class LIDARCameraOverlay:
         self.yolopub.publish(image_msg)
         self.pushedFrames.put(p)
         self.id+=1
+       
+    def switchTarget(self,req):
+        self.ObjectId = req.objectID
 
     def callback(self, darknet): 
         if(self.pushedFrames.qsize() <= 0): return
@@ -51,14 +57,24 @@ class LIDARCameraOverlay:
             img = self.pushedFrames.get()
         while img[0] > darknet.image_header.seq:
             img = self.pushedFrames.get()
-        print(img[0])
-        try:
-            cv_image = self.bridge.imgmsg_to_cv2(img[2], "bgr8")
-        except CvBridgeError as e:
-            rospy.logerr(e)
-            return
-
-        image = cv_image.copy()
+        boundingbox=None
+        for i in darknet.bounding_boxes:
+            print(i.id)
+            if(i.id != self.ObjectId): 
+                continue
+            boundingbox = i
+        if boundingbox is None: return
+        print("start")
+        if(self.showImg):
+            try:
+                cv_image = self.bridge.imgmsg_to_cv2(img[2], "bgr8")
+            except CvBridgeError as e:
+                rospy.logerr(e)
+                return
+    
+        self.pixels = []
+        if(self.showImg):
+            image = cv_image.copy()
         min_dist = img[1].range_min
         max_dist = img[1].range_max
 
@@ -74,7 +90,6 @@ class LIDARCameraOverlay:
                 lidar_point.point.z = 0
 
                 try:
-                #transformed_point = self.tl.transformPoint("camera_rgb_frame", lidar_point)
                     transformed_point = self.tfBuffer.transform(lidar_point, "camera_rgb_optical_frame", rospy.Duration(1.0))
                     pt = [transformed_point.point.x, transformed_point.point.y, transformed_point.point.z]
                     pixel = np.dot(self.K, pt)
@@ -82,13 +97,17 @@ class LIDARCameraOverlay:
                 
                     color = self.distance_to_color(distance, min_dist, max_dist)
 
-                    if 0 <= pixel[0] < image.shape[1] and 0 <= pixel[1] < image.shape[0]:
-                        cv2.circle(image, (int(pixel[0]), int(pixel[1])), 5, color, -1)
+                    if boundingbox.xmin <= pixel[0] < boundingbox.xmax and boundingbox.ymin <= pixel[1] < boundingbox.ymax:
+                        self.pixels.append((pixel[0], pixel[1]))
+                        if(self.showImg):
+                            cv2.circle(image, (int(pixel[0]), int(pixel[1])), 5, color, -1)
                 except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException) as ex:
                     rospy.logwarn("Could not get transform: %s" % ex)
-
-        cv2.imshow("LIDAR Camera Overlay", image)
-        cv2.waitKey(1)
+        
+        if(self.showImg):
+            cv2.imshow("LIDAR Camera Overlay", image)
+            cv2.waitKey(1)
+       
     def distance_to_color(self, distance, min_dist, max_dist):
         normalized = (distance - min_dist) / (max_dist - min_dist)
         color_hsv = np.array([[[(1-normalized) * 120, 255, (1-normalized) * 120]]], dtype=np.uint8)

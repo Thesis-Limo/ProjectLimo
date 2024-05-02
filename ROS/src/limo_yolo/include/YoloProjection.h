@@ -9,6 +9,7 @@
 #include <limo_behaviour_tree/TypeObjectTracking.h>
 #include <cv_bridge/cv_bridge.h>
 #include "image_geometry/pinhole_camera_model.h"
+#include "limo_yolo/transformedLidarPoints.h"
 
 #include <chrono>
 #include <queue>
@@ -19,7 +20,7 @@ using namespace cv_bridge;
 struct DataFrame
 {
     uint32_t seq;
-    LaserScan lidar;
+    limo_yolo::transformedLidarPoints lidar;
     Image currentImage;
 };
 
@@ -50,7 +51,7 @@ private:
 
 public:
     YoloProjection(const ros::NodeHandle& nodehandle);
-    void CallbackImageAndLidar(const Image& image, const LaserScan& laser);
+    void CallbackImageAndLidar(const Image& image, const limo_yolo::transformedLidarPoints& laser);
     void CallbackYoloResult(const darknet_ros_msgs::BoundingBoxes::ConstPtr& bounding_boxes);
     bool SwitchTarget(limo_behaviour_tree::TypeObjectTracking::Request& req, limo_behaviour_tree::TypeObjectTracking::Response& res);
 };
