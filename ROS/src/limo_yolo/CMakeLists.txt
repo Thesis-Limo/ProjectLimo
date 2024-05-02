@@ -18,6 +18,9 @@ find_package(catkin REQUIRED COMPONENTS
   image_transport
   tf2_ros
   image_geometry
+  geometry_msgs
+  message_runtime
+  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -54,11 +57,12 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
+add_message_files(
+   FILES
+   transformedLidarPoints.msg
 #   Message1.msg
 #   Message2.msg
-# )
+ )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -75,10 +79,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs  # Or other packages containing msgs
-# )
+generate_messages(
+  DEPENDENCIES
+  geometry_msgs  # Or other packages containing msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -117,6 +121,7 @@ catkin_package(
   limo_behaviour_tree
   image_transport
   image_geometry
+  message_runtime
 #  DEPENDS system_lib
 )
 
