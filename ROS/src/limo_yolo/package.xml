@@ -24,6 +24,7 @@
   <build_depend>limo_behaviour_tree</build_depend>
 
   <depend>libopencv-dev</depend>
+  <depend>image_geometry</depend>
 
   <build_export_depend>image_transport</build_export_depend>
   <build_export_depend>cv_bridge</build_export_depend>

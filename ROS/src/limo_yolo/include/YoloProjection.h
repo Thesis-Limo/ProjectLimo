@@ -8,6 +8,7 @@
 #include <darknet_ros_msgs/BoundingBoxes.h>
 #include <limo_behaviour_tree/TypeObjectTracking.h>
 #include <cv_bridge/cv_bridge.h>
+#include "image_geometry/pinhole_camera_model.h"
 
 #include <chrono>
 #include <queue>
@@ -33,9 +34,8 @@ private:
     ros::Publisher posObjectPub;
     ros::ServiceServer targetService;
     ros::Subscriber sub;
-    CameraInfo cameraInfo;
-    cv::Mat K;
     int objectId;
+    image_geometry::PinholeCameraModel cam_model_;
 
     std::queue<DataFrame> pushedFrames;
     DataFrame current;
@@ -44,6 +44,7 @@ private:
     std::string baseLinkFrame;
     std::string laserFrame;
     std::string cameraFrame;
+    //tf::StampedTransform transform;
     
     std::vector<Point3D> ConvertToLidar(const LaserScan& laser);
 

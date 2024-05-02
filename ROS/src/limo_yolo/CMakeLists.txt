@@ -17,6 +17,7 @@ find_package(catkin REQUIRED COMPONENTS
   cv_bridge
   image_transport
   tf2_ros
+  image_geometry
 )
 
 ## System dependencies are found with CMake's conventions
@@ -115,6 +116,7 @@ catkin_package(
   darknet_ros
   limo_behaviour_tree
   image_transport
+  image_geometry
 #  DEPENDS system_lib
 )
 
