@@ -3,6 +3,7 @@ import math
 import threading
 import rospy
 from limo_motion_controller.msg import movementController
+from nav_msgs.msg import Odometry
 import time
 
 import matplotlib.pyplot as plt
@@ -65,14 +66,19 @@ class MotionPlanner:
         state = state or self.initial_state
 
         start = time.time()
-        for _ in range(SIM_LOOP):
-            state, path, goal_reached = self.run_frenet_iteration(
-                csp, state, tx, ty, self.obstacleList
-            )
-            self.motion_plan.append(path)
+        #for _ in range(SIM_LOOP):
+        state, path, _ = self.run_frenet_iteration(
+            csp, state, tx, ty, self.obstacleList
+        )
 
-            if goal_reached:
-                break
+        steering_angle = math.atan2(WHEELBASE * path.c[1], 1.0)
+        v = movementController()
+        v.speed = path.s_d[1]
+        v.angle = steering_angle
+        pub.publish(v)
+            #break
+            # if goal_reached:
+            #     break
 
         self.planning_done = True
         end = time.time()
@@ -168,6 +174,7 @@ def convert_lidar_data_to_2d_points(file_path):
 
 goal = Pose(x=2.0, y=4.0, yaw=90)
 pub = []
+position = Pose(0,0,0)
 def callback(lidar_msg):
     obstacle = []
     s = time.time()
@@ -182,29 +189,34 @@ def callback(lidar_msg):
             y = distance * np.sin(angle)
             obstacle.append((x,y))
     obst =np.array(obstacle)
-    planner = MotionPlanner(goal, obstacleList=obst)
+    planner = MotionPlanner(goal, obstacleList=obst, start_pose=position)
     planner.plan()
-    idx = 0
+    #idx = 0
 
-    while True:
-        if idx < 1 and idx < len(planner.motion_plan):
-            path = planner.motion_plan[idx]
-            speed = path.s_d[1]
-            curvature = path.c[1]
-            steering_angle = math.atan2(WHEELBASE * curvature, 1.0)
-            v = movementController()
-            v.speed = speed
-            v.angle = steering_angle
-            pub.publish(v)
-            print(
-                f"Speed = {speed:.2f} m/s^2, Steering Angle = {steering_angle:.2f} radians\n"
-            )
-            e = time.time()
-            print(e-s)
-            idx += 1
-            return
+    # while True:
+    #     if idx < 1 and idx < len(planner.motion_plan):
+    #         path = planner.motion_plan[idx]
+    #         speed = path.s_d[1]
+    #         curvature = path.c[1]
+    #         steering_angle = math.atan2(WHEELBASE * curvature, 1.0)
+    #         v = movementController()
+    #         v.speed = speed
+    #         v.angle = steering_angle
+    #         pub.publish(v)
+    #         print(
+    #             f"Speed = {speed:.2f} m/s^2, Steering Angle = {steering_angle:.2f} radians\n"
+    #         )
+    #         e = time.time()
+    #         print(e-s)
+    #         idx += 1
+    #         return
+        
+def c(odom):
+    position.x = odom.pose.pose.position.x
+    position.y = odom.pose.pose.position.y
 if __name__ == "__main__":
     rospy.init_node('lidar_camera_overlay')
     s = rospy.Subscriber("/scan", LaserScan, callback)
+    k = rospy.Subscriber("/odom", Odometry, c)
     pub = rospy.Publisher("/limo_movement", movementController, queue_size=100)
     rospy.spin()
