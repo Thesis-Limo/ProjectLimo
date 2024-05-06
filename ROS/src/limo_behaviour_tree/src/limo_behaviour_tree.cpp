@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
 {
     ros::init(argc, argv,"limo_behaviour_tree");
 
-    ros::NodeHandle nh("");
+    ros::NodeHandle nh("~");
     BehaviorTreeFactory factory;
 
     factory.registerNodeType<Brake>("Brake");
@@ -46,12 +46,13 @@ int main(int argc, char* argv[])
 
     factory.registerBehaviorTreeFromFile(ros::package::getPath("limo_behaviour_tree") + "/tree.xml");
     auto tree = factory.createTree("MainTree");
-    auto visitor = [nh](TreeNode* node)
+    ros::Rate r(10); // 10 hz
+    auto visitor = [nh,r](TreeNode* node)
     {
         if (auto currentNode = dynamic_cast<Brake*>(node))
             currentNode->Initialize(nh);
         else if (auto currentNode = dynamic_cast<EmergencyBrake*>(node))
-            currentNode->Initialize(nh);
+            currentNode->Initialize(nh, r);
         else if (auto currentNode = dynamic_cast<TrackObject*>(node))
             currentNode->Initialize(nh);
         else if (auto currentNode = dynamic_cast<BatteryCheck*>(node))
@@ -77,7 +78,6 @@ int main(int argc, char* argv[])
     };
     BT::applyRecursiveVisitor(tree.rootNode(),visitor);
     // Apply the visitor to ALL the nodes of the tree
-    ros::Rate r(10); // 10 hz
 
     NodeStatus status = NodeStatus::RUNNING;
     while (ros::ok())

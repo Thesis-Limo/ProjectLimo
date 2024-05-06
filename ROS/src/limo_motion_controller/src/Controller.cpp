@@ -10,7 +10,9 @@ Controller::Controller(const ros::NodeHandle& nodehandle)
     minSpeed = nh.param<float>("minSpeed",-1.2);
     maxSpeed = nh.param<float>("maxSpeed",1.2);
     wheelBase = nh.param<float>("wheelBase",0.2);
+    ROS_INFO("%f", minSpeed);
     backUpMotion = new Motion{0,0,-1,0,0,0};
+    overrideMotionPlan = nullptr;
 }
 
 void Controller::CallBackMovement(const limo_motion_controller::MovementController::ConstPtr& msg)
@@ -24,6 +26,7 @@ void Controller::CallBackMovement(const limo_motion_controller::MovementControll
         currentM->currentDuration = currentTime;
         currentTime = 0;
     }
+    ROS_INFO("addOverride");
 }
 void Controller::CallBackMotionPlan(const limo_motion_controller::MotionPlan::ConstPtr& msg)
 {
@@ -60,7 +63,7 @@ void Controller::UpdateMovement()
         {
             currentTime = currentTime - currentM->duration;
             motionPlan.pop();
-            ROS_LOG("Next");
+            ROS_INFO("Next");
             delete currentM;
             if (motionPlan.size() <=0)
                 currentM = backUpMotion;

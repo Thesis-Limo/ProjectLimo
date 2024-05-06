@@ -5,6 +5,7 @@ if __name__ == '__main__':
     rospy.init_node('limo_motionplan_publisher')
     pub = rospy.Publisher('/limo_motionplan', MotionPlan, queue_size=10)
     rate = rospy.Rate(10) # 10hz
+    angle = 0.7
     while not rospy.is_shutdown():
         rate.sleep()
         rate.sleep()
@@ -14,17 +15,17 @@ if __name__ == '__main__':
         plan = MotionPlan()
         cont = MovementController()
         cont.speed = 1
-        cont.angle = 0
+        cont.angle = angle
         cont.duration = 1
         plan.sequence.append(cont)
         cont = MovementController()
         cont.speed = 1
-        cont.angle = 1
+        cont.angle = angle
         cont.duration = 1
         plan.sequence.append(cont)
         cont = MovementController()
         cont.speed = 1
-        cont.angle = 1
+        cont.angle =angle
         cont.duration = 5
         plan.sequence.append(cont)
         cont = MovementController()
