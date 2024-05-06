@@ -8,10 +8,10 @@ class EmergencyBrake: public ActionNodeBase
 private:
   ros::NodeHandle nh;
   ros::Publisher EmergencyBrakePub;
-  ros::Rate currentRate;
+  float currentRate;
 public:
   EmergencyBrake(const std::string& name, const BT::NodeConfiguration& conf);
-  void Initialize(const ros::NodeHandle& nodehandle, ros::Rate rate);
+  void Initialize(const ros::NodeHandle& nodehandle, float duration);
   BT::NodeStatus tick() override;
   static auto providedPorts() -> PortsList {
     return {BT::InputPort<std::string>("message")};

@@ -19,7 +19,10 @@ void Controller::CallBackMovement(const limo_motion_controller::MovementControll
 {
     //Overwriting the currentMotionPlan
     //calculating the turning radius and sending information to the cmd_vel 
-    overrideMotionPlan = new Motion{msg->angle, msg->speed, msg->duration,currentSpeed, currentSteeringAngle,0};
+    float angle = msg->angle;
+    if (angle == __FLT_MAX__) 
+        angle = currentSteeringAngle;
+    overrideMotionPlan = new Motion{angle, msg->speed, msg->duration,currentSpeed, currentSteeringAngle,0};
     if(motionPlan.size() > 0)
     {
         Motion* currentM = motionPlan.front();

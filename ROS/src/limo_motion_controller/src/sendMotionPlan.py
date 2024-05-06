@@ -21,11 +21,6 @@ if __name__ == '__main__':
         cont = MovementController()
         cont.speed = 1
         cont.angle = angle
-        cont.duration = 1
-        plan.sequence.append(cont)
-        cont = MovementController()
-        cont.speed = 1
-        cont.angle =angle
         cont.duration = 5
         plan.sequence.append(cont)
         cont = MovementController()

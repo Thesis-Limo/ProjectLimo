@@ -4,11 +4,11 @@ EmergencyBrake::EmergencyBrake(const std::string& name, const BT::NodeConfigurat
 : BT::ActionNodeBase(name, conf), currentRate(4)
 {
 }
-void EmergencyBrake::Initialize(const ros::NodeHandle& nodehandle, ros::Rate rate)
+void EmergencyBrake::Initialize(const ros::NodeHandle& nodehandle, float duration)
 {
   nh = nodehandle;
   EmergencyBrakePub = nh.advertise<limo_motion_controller::MovementController>("/limo_movement", 100);
-  currentRate = rate;
+  currentRate = duration;
 }
 
 NodeStatus EmergencyBrake::tick()
@@ -18,8 +18,8 @@ NodeStatus EmergencyBrake::tick()
 { 
   limo_motion_controller::MovementController msg;
   msg.speed = 0;
-  msg.angle = 0;
-  msg.duration = currentRate.cycleTime().toSec();
+  msg.angle = __FLT_MAX__;
+  msg.duration = currentRate;
   EmergencyBrakePub.publish(msg);
   ROS_INFO("emergency brake");
   return NodeStatus::SUCCESS;
