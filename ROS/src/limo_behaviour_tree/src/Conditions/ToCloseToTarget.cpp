@@ -16,7 +16,7 @@ NodeStatus ToCloseToTarget::tick()
 */
 {
     if(targetPos.x >= __FLT_MAX__ || currentPos.x >= __FLT_MAX__)
-        return NodeStatus::RUNNING;
+        return NodeStatus::FAILURE;
 
     Point3D toTarget = targetPos - currentPos;
     
