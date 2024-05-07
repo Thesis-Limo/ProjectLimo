@@ -1,8 +1,15 @@
 <launch> 
-  <node name="limo_yolo_conv" pkg="limo_yolo" type="limo_yolo" output="screen"/>
+  <arg name="scan" default="/limo/scan"/>
+  <arg name="cameraImage" default="/limo/color/image_raw"/>
+  <arg name="infoCamera" default="/limo/color/camera_info"/>
+  <node name="limo_yolo_conv" pkg="limo_yolo" type="limo_yolo" output="screen">
+    <param name="scan" value="$(arg scan)"/>
+    <param name="cameraImage" value="$(arg cameraImage)"/>
+    <param name="infoCamera" value="$(arg infoCamera)"/>
+  </node>
 
-  <!-- <include file="$(find darknet_ros)/launch/yolo_v4_tiny.launch">
+  <include file="$(find darknet_ros)/launch/yolo_v4_tiny.launch">
     <arg name="image" value="/camera/yolo_input" />
-  </include> -->
+  </include>
   
 </launch>

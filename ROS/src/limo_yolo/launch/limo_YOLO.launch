@@ -2,10 +2,11 @@
   <arg name="baseLinkFrame" default="base_link" />
   <arg name="laserFrame" default="laser_link" />
   <arg name="cameraFrame" default="camera_rgb_optical_frame" />
-
+<!-- 
   <node name="limo_yolo_conv" pkg="limo_yolo" type="lidar_projector.py" output="screen">
   
-  </node>
+  </node> -->
+  <node name="limo_yolo" pkg="limo_yolo" type="limo_yolo" output="screen"/>
 
   <include file="$(find darknet_ros)/launch/yolo_v4_tiny.launch">
     <arg name="image" value="/camera/yolo_input" />

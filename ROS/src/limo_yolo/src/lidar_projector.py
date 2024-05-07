@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import rospy
-from limo_yolo.msg import transformedLidarPoints
 import cv2
 import numpy as np
 import message_filters
