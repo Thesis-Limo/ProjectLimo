@@ -35,7 +35,7 @@ private:
     ros::Publisher posObjectPub;
     ros::ServiceServer targetService;
     ros::Subscriber sub;
-    int objectId = 39;
+    int objectId;
     image_geometry::PinholeCameraModel cam_model_;
 
     std::queue<DataFrame> pushedFrames;
@@ -44,9 +44,9 @@ private:
 
     float colorFOV = 71;
     CameraInfo cameraInfo;
+    std::string laserFrame;
+    std::string baseLinkFrame;
     
-    std::vector<Point3D> ConvertToLidar(const LaserScan& laser);
-
 public:
     YoloProjection(const ros::NodeHandle& nodehandle);
     void CallbackImageAndLidar(const Image& image, const LaserScan& laser);

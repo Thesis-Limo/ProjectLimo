@@ -19,8 +19,6 @@ find_package(catkin REQUIRED COMPONENTS
   tf2_ros
   image_geometry
   geometry_msgs
-  # message_runtime
-  # message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -121,7 +119,6 @@ catkin_package(
   limo_behaviour_tree
   image_transport
   image_geometry
-  # message_runtime
 #  DEPENDS system_lib
 )
 

@@ -6,7 +6,6 @@
 
 YoloProjection* pro = nullptr;
 void callback(const sensor_msgs::Image::ConstPtr& img, const sensor_msgs::LaserScan::ConstPtr& laser){
-    std::cout << "jaaj\n";
     pro->CallbackImageAndLidar(*img, *laser);
     
 }
@@ -18,7 +17,6 @@ int main(int argc, char* argv[])
     ros::Rate r(10); 
     std::string scanTopic = nh.param<std::string>("scan", "/scan");
     std::string cameraImage = nh.param<std::string>("cameraImage", "/camera/rgb/image_raw");
-    std::cout << (cameraImage) <<"\n";
 
     message_filters::Subscriber<Image> image_sub(nh, cameraImage, 1);
     message_filters::Subscriber<LaserScan> info_sub(nh,scanTopic, 1);
