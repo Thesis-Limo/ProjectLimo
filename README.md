@@ -28,7 +28,7 @@ select NoSim, and then roscore and terminal will be started. For easy use build 
 Then gazebo and rviz can be started on the pc without using docker.
 # run limo
 ```bash
-roslaunch limo_launch limo_default
+roslaunch limo_launch limo_default.launch 
 ```
 This will run the default settings, with Lidar and camera attached
 ```bash
