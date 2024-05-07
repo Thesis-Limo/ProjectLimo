@@ -27,3 +27,14 @@ You can run the environment in docker and use rviz and the simulator on your pc 
 select NoSim, and then roscore and terminal will be started. For easy use build inside this container, it has the dependencies needed to build it.
 
 Then gazebo and rviz can be started on the pc without using docker.
+# run limo
+```bash
+roslaunch limo_launch limo_default.launch 
+```
+This will run the default settings, with Lidar and camera attached
+```bash
+roslaunch limo_motion_controller Controller.launch
+```
+This will run the controller to get access to the driver, to push the motion plan the topic is called /limo_motionplan
+# github ssh certification on limo
+2868

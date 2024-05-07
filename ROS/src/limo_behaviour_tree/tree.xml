@@ -2,7 +2,7 @@
     <BehaviorTree ID="MainTree">
         <Sequence name="root">
             <SubTree ID="BatteryCheckTree"/>
-            <SubTree ID="RobotMove"/>
+            <SubTree ID="MovementRobot"/>
         </Sequence>
     </BehaviorTree>
 
@@ -16,7 +16,6 @@
     <BehaviorTree ID="RobotMove">
         <Parallel name="Movement" success_threshold="2">
             <SubTree ID="TrackingObject"/>
-            <SubTree ID="MovementRobot"/>
         </Parallel>
     </BehaviorTree>
     
@@ -31,8 +30,8 @@
     <BehaviorTree ID="MovementRobot">
         <Fallback>
             <SubTree ID="Emergency"/>
-            <SubTree ID="TargetCheck"/>
-            <SubTree ID="Moving"/>
+            <!-- <SubTree ID="TargetCheck"/> -->
+            <!-- <SubTree ID="Moving"/> -->
         </Fallback>
     </BehaviorTree>
     
@@ -63,10 +62,10 @@
     </BehaviorTree>
     
     <BehaviorTree ID="Moving">
-        <Fallback name="Moving">
+        <Fallback name="MM">
             <Sequence>
                 <Condition ID="ToCloseToTarget"/>
-                <Action ID="MoveBack"/>
+                <Action ID="MoveBack"/> 
             </Sequence>
             <Sequence>
                 <Condition ID="CloseEnoughToTarget"/>

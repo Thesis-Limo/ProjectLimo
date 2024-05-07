@@ -18,13 +18,13 @@ BT::NodeStatus TrackObject::tick()
 {
   limo_behaviour_tree::TypeObjectTracking srv;
   srv.request.objectID = 0;
-  std::cout << "tracking" << std::endl;
   if(client.call(srv))
   {
     if(srv.response.position.x >= __FLT_MAX__)
       return NodeStatus::RUNNING;
     return NodeStatus::SUCCESS;
   }
+
   return NodeStatus::FAILURE;
 }
 void TrackObject::halt(){
