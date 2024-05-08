@@ -1,7 +1,7 @@
 <launch> 
   <arg name="baseLinkFrame" default="base_link" />
   <arg name="laserFrame" default="laser_link" />
-  <arg name="ObjectId" default="39" />
+  <arg name="ObjectId" default="39"/>
 
   <node name="limo_yolo" pkg="limo_yolo" type="limo_yolo" output="screen">
     <param name="baseLinkFrame" value="$(arg baseLinkFrame)"/>

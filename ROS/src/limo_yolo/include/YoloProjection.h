@@ -32,7 +32,7 @@ private:
     tf2_ros::Buffer buffer;
     tf2_ros::TransformListener listenerTransform;
     ros::Publisher yoloImagePub;
-    ros::Publisher posObjectPub;
+    ros::Publisher mapPub;
     ros::ServiceServer targetService;
     ros::Subscriber sub;
     int objectId;
@@ -46,6 +46,7 @@ private:
     CameraInfo cameraInfo;
     std::string laserFrame;
     std::string baseLinkFrame;
+    const std::vector<geometry_msgs::PointStamped>& ConvertToLidar(const LaserScan& laser, const float& startAngleObject, const float& endAngleObject);
     
 public:
     YoloProjection(const ros::NodeHandle& nodehandle);

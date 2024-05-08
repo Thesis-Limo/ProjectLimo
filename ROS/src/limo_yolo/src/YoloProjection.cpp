@@ -6,22 +6,23 @@
 #include <geometry_msgs/TransformStamped.h>
 #include <vector>
 #include <darknet_ros_msgs/BoundingBox.h>
+#include "limo_yolo/map.h"
 
 YoloProjection::YoloProjection(const ros::NodeHandle& nodehandle):
     listenerTransform(buffer), nh(nodehandle), id(0)
 {
 
     yoloImagePub = nh.advertise<Image>("/camera/yolo_input",10);
-    posObjectPub = nh.advertise<geometry_msgs::PointStamped>("/ObjectPos",10);
+    mapPub = nh.advertise<limo_yolo::map>("/map",10);
     targetService = nh.advertiseService("/TrackID", &YoloProjection::SwitchTarget, this);
     sub = nh.subscribe<darknet_ros_msgs::BoundingBoxes>("/darknet_ros/bounding_boxes",100,&YoloProjection::CallbackYoloResult, this);
     std::string infoCamera = nh.param<std::string>("infoCamera", "/camera/rgb/camera_info");
-    objectId = nh.param<float>("ObjectId", "39");
+    objectId = nh.param<float>("ObjectId", 39);
     baseLinkFrame = nh.param<std::string>("baseLinkFrame", "base_link");
     laserFrame = nh.param<std::string>("laserFrame", "laser_link");
 
     cameraInfo = *(ros::topic::waitForMessage<CameraInfo>(infoCamera));
-    ROS_INFO("finishedInit");
+    ROS_INFO("finishedInit with %i", objectId);
 }
 
 void YoloProjection::CallbackImageAndLidar(const Image& image, const LaserScan& laser)
@@ -37,6 +38,7 @@ void YoloProjection::CallbackImageAndLidar(const Image& image, const LaserScan& 
     Image pubImage = image;
     pushedFrames.push(newImg);
     yoloImagePub.publish(pubImage);
+
     id++;
 }
 void YoloProjection::CallbackYoloResult(const darknet_ros_msgs::BoundingBoxes::ConstPtr& msg)
@@ -78,6 +80,8 @@ void YoloProjection::CallbackYoloResult(const darknet_ros_msgs::BoundingBoxes::C
             }
         }
         if(box.size() < 0) return;
+        float startRadObject = -M_PI;
+        float endRadObject = -M_PI;
         float currentDistance = __FLT_MAX__;
         Point3D currentEndpoint;
         for (int i = 0; i < box.size(); i++)
@@ -94,7 +98,15 @@ void YoloProjection::CallbackYoloResult(const darknet_ros_msgs::BoundingBoxes::C
             {
                 currentDistance = img.lidar.ranges[id];
                 currentEndpoint = Point3D{currentDistance * cos(rad), currentDistance * sin(rad),0};
-            }
+                float startpoint = box[i].xmin;
+                float startTotDeg = (startpoint - cameraInfo.width/2)*degPerPixel;
+                startRadObject = -startTotDeg /180 * M_PI;
+                float endpoint = box[i].xmax;
+                float endTotDeg = (endpoint - cameraInfo.width/2)*degPerPixel;
+                endRadObject = -endTotDeg /180 * M_PI;
+                ROS_INFO("JAJAJAJ %i", id);
+
+            }            
         }   
         if(currentEndpoint.x == 0 || currentEndpoint.y == 0 || currentEndpoint.z == 0)
         {
@@ -117,8 +129,12 @@ void YoloProjection::CallbackYoloResult(const darknet_ros_msgs::BoundingBoxes::C
         p.point.y = currentEndpoint.y;
         p.point.z = currentEndpoint.z;
         geometry_msgs::PointStamped transformed_point;
+
         tf2::doTransform(p, transformed_point, transformStamped);
-        posObjectPub.publish(transformed_point);
+        limo_yolo::map map;
+        map.obstacles = this->ConvertToLidar(img.lidar, startRadObject, endRadObject);;
+        map.goal = transformed_point;
+        mapPub.publish(map);
         ROS_INFO("published");
     }
 }
@@ -126,4 +142,36 @@ void YoloProjection::CallbackYoloResult(const darknet_ros_msgs::BoundingBoxes::C
 bool YoloProjection::SwitchTarget(limo_behaviour_tree::TypeObjectTracking::Request& req, limo_behaviour_tree::TypeObjectTracking::Response& res)
 {
     objectId = (int)req.objectID;
+}
+
+const std::vector<geometry_msgs::PointStamped>& YoloProjection::ConvertToLidar(const LaserScan& laser, const float& startAngleObject, const float& endAngleObject)
+{
+    std::vector<geometry_msgs::PointStamped> pixels(laser.ranges.size());
+    float min_dist = laser.angle_min;
+    float max_dist = laser.angle_max;
+    geometry_msgs::PointStamped transformed_point;
+    for (int i = 0; i < laser.ranges.size(); i++)
+    {
+        float distance = laser.ranges[i];
+        if(min_dist < distance && max_dist > distance)
+        {
+            float angle = laser.angle_min + i * laser.angle_increment;
+            if( angle >= startAngleObject && angle <= endAngleObject) continue;
+            geometry_msgs::PointStamped lidar_point;
+            lidar_point.header.frame_id = laserFrame;
+            lidar_point.point.x = distance * cos(angle);
+            lidar_point.point.y = distance * sin(angle);
+            lidar_point.point.z = 0;
+            try
+            {
+                buffer.transform(lidar_point, transformed_point, baseLinkFrame, ros::Duration(1.0));
+                pixels.push_back(transformed_point);
+            }
+            catch(const std::exception& e)
+            {
+                std::cerr << e.what() << '\n';
+            }    
+        }
+    }  
+    return pixels;
 }

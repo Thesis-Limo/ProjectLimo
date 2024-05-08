@@ -6,6 +6,7 @@
 
 YoloProjection* pro = nullptr;
 void callback(const sensor_msgs::Image::ConstPtr& img, const sensor_msgs::LaserScan::ConstPtr& laser){
+ROS_INFO("ree");
     pro->CallbackImageAndLidar(*img, *laser);
     
 }
