@@ -554,6 +554,7 @@ void* YoloObjectDetector::publishInThread() {
     msg.header.stamp = ros::Time::now();
     msg.header.frame_id = "detection";
     msg.count = num;
+    msg.image_header = headerBuff_[(buffIndex_ + 1) % 3];
     objectPublisher_.publish(msg);
 
     for (int i = 0; i < numClasses_; i++) {
@@ -586,6 +587,7 @@ void* YoloObjectDetector::publishInThread() {
     msg.header.stamp = ros::Time::now();
     msg.header.frame_id = "detection";
     msg.count = 0;
+    msg.image_header = headerBuff_[(buffIndex_ + 1) % 3];
     objectPublisher_.publish(msg);
   }
   if (isCheckingForObjects()) {

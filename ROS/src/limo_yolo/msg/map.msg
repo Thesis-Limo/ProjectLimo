@@ -1,2 +1,2 @@
 geometry_msgs/PointStamped[] obstacles
-geometry_msgs/PointStamped goal
+geometry_msgs/PointStamped[] goal

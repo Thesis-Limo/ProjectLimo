@@ -9,7 +9,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(OpenCV REQUIRED)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   limo_behaviour_tree
@@ -20,6 +19,7 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   message_runtime
   message_generation
+  nav_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -133,7 +133,6 @@ catkin_package(
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
-  ${OpenCV_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -173,14 +172,13 @@ add_dependencies(${PROJECT_NAME} ${catkin_EXPORTED_TARGETS})
 # Specify libraries to link a library or executable target against
 target_link_libraries(${PROJECT_NAME}
   ${catkin_LIBRARIES}
-  ${OpenCV_LIBRARIES}
 )
 
 #############
 ## Install ##
 #############
 
-# all install targets should use catkin DESTINATION variables
+# all install targets should use c  atkin DESTINATION variables
 # See http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html
 
 ## Mark executable scripts (Python etc.) for installation
