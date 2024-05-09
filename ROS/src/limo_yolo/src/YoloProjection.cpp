@@ -19,8 +19,10 @@ YoloProjection::YoloProjection(const ros::NodeHandle& nodehandle):
 {
 
     yoloImagePub = nh.advertise<Image>("/camera/yolo_input",10);
-    mapPub = nh.advertise<geometry_msgs::PolygonStamped >("/map",10);
-    mapTempPub = nh.advertise<geometry_msgs::PolygonStamped >("/map2",10);
+    mapPub = nh.advertise<limo_yolo::map>("/map",10);
+    //Debug purpose
+    //mapPub = nh.advertise<geometry_msgs::PolygonStamped >("/map",10);
+    //mapTempPub = nh.advertise<geometry_msgs::PolygonStamped >("/map2",10);
     targetService = nh.advertiseService("/TrackID", &YoloProjection::SwitchTarget, this);
     //Subscriber
     sub = nh.subscribe<darknet_ros_msgs::BoundingBoxes>("/darknet_ros/bounding_boxes",100,&YoloProjection::CallbackYoloResult, this);
@@ -215,8 +217,16 @@ limo_yolo::map YoloProjection::ConvertToLidar(const LaserScan& laser, const floa
     int id = round(pixelsTargetWithDistance.size()/2);
     float mean = pixelsTargetWithDistance[id].first;
 
+    std::vector<geometry_msgs::PointStamped> out;
     std::vector<geometry_msgs::PointStamped> pixelsTarget;
-
+    for (int i = 0; i < pixelsObstacles.size(); i++)
+    {
+        if(DistanceSquare(pixelsObstacles[i], pixelsTargetWithDistance[id].second) > 0.1)
+        {
+            out.push_back(pixelsObstacles[i]);            
+        }
+    }
+    
     for (int i = 0; i < pixelsTargetWithDistance.size(); i++)
     {
         if(abs(mean - pixelsTargetWithDistance[i].first) < outlineTarget)
@@ -225,7 +235,8 @@ limo_yolo::map YoloProjection::ConvertToLidar(const LaserScan& laser, const floa
             pixelsObstacles.push_back(pixelsTargetWithDistance[i].second);  
     }
     
-    map.obstacles = pixelsObstacles;
+    
+    map.obstacles = out;
     map.goal = pixelsTarget;
     return map;
 }
@@ -274,36 +285,35 @@ void YoloProjection::PublishAndMap(const DataFrame& dataframe, float minAngle, f
         targetPositions = map.goal;
         lastKnownPos = dataframe.currentPose;
     }
-    std::cout << map.goal.size() <<"\n";
-    std::cout << map.obstacles.size() <<"\n";
-    geometry_msgs::PolygonStamped path;
-    path.header.frame_id = laserFrame;
-    std::vector<geometry_msgs::Point32> p;
-    for (int i = 0; i < map.goal.size(); i++)
-    {
-        geometry_msgs::Point32 pe;
-        pe.x = map.goal[i].point.x -0.105;
-        pe.y = map.goal[i].point.y;
-        pe.z = map.goal[i].point.z -0.08;
-        p.push_back(pe);
-    }
-    path.polygon.points = p;
-    mapPub.publish(path);
-    //TODO temp
-    geometry_msgs::PolygonStamped path2;
+    mapPub.publish(map);
+    // geometry_msgs::PolygonStamped path;
+    // path.header.frame_id = laserFrame;
+    // std::vector<geometry_msgs::Point32> p;
+    // for (int i = 0; i < map.goal.size(); i++)
+    // {
+    //     geometry_msgs::Point32 pe;
+    //     pe.x = map.goal[i].point.x -0.105;
+    //     pe.y = map.goal[i].point.y;
+    //     pe.z = map.goal[i].point.z -0.08;
+    //     p.push_back(pe);
+    // }
+    // path.polygon.points = p;
+    // mapPub.publish(path);
+    // //TODO temp
+    // geometry_msgs::PolygonStamped path2;
 
-    path2.header.frame_id = laserFrame;
-    std::vector<geometry_msgs::Point32> pt;
-    for (int i = 0; i < map.obstacles.size(); i++)
-    {
-        geometry_msgs::Point32 pe;
-        pe.x = map.obstacles[i].point.x -0.105;
-        pe.y = map.obstacles[i].point.y;
-        pe.z = map.obstacles[i].point.z -0.08;
-        pt.push_back(pe);
-    }
-    path2.polygon.points = pt;
-    mapTempPub.publish(path2);
+    // path2.header.frame_id = laserFrame;
+    // std::vector<geometry_msgs::Point32> pt;
+    // for (int i = 0; i < map.obstacles.size(); i++)
+    // {
+    //     geometry_msgs::Point32 pe;
+    //     pe.x = map.obstacles[i].point.x -0.105;
+    //     pe.y = map.obstacles[i].point.y;
+    //     pe.z = map.obstacles[i].point.z -0.08;
+    //     pt.push_back(pe);
+    // }
+    // path2.polygon.points = pt;
+    // mapTempPub.publish(path2);
     ROS_INFO("map published");
 }
 
