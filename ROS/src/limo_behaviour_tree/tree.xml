@@ -9,7 +9,7 @@
     <BehaviorTree ID="BatteryCheckTree">
         <Fallback>
             <Condition ID="BatteryCheck"/>
-            <Action ID="EmergencyBrake"/>
+            <Action ID="Brake"/>
         </Fallback>
     </BehaviorTree>
     
@@ -31,7 +31,7 @@
         <Fallback>
             <SubTree ID="Emergency"/>
             <!-- <SubTree ID="TargetCheck"/> -->
-            <!-- <SubTree ID="Moving"/> -->
+            <SubTree ID="Moving"/>
         </Fallback>
     </BehaviorTree>
     
@@ -62,15 +62,14 @@
     </BehaviorTree>
     
     <BehaviorTree ID="Moving">
-        <Fallback name="MM">
-            <Sequence>
+        <Action ID="MoveToTarget"/>
+            <!-- <Sequence>
                 <Condition ID="ToCloseToTarget"/>
                 <Action ID="MoveBack"/> 
             </Sequence>
             <Sequence>
                 <Condition ID="CloseEnoughToTarget"/>
-                <Action ID="MoveToTarget"/>
             </Sequence>
-        </Fallback>
+        </Fallback> -->
     </BehaviorTree>
  </root>

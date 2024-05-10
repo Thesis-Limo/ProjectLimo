@@ -7,7 +7,7 @@ MoveToTarget::MoveToTarget(const std::string& name, const NodeConfiguration& con
 void MoveToTarget::Initialize(const ros::NodeHandle& nodehandle)
 {
   nh = nodehandle;
-  movePub = nh.advertise<limo_motion_controller::MovementController>("/limo_movement", 1);
+  this->client = nh.serviceClient<limo_motion_controller::OverrideMotion>("/override_plan");
 }
 
 NodeStatus MoveToTarget::tick()
@@ -15,12 +15,18 @@ NodeStatus MoveToTarget::tick()
  * currently this is debug code need to change
 */
 {
-  limo_motion_controller::MovementController msg;
-  msg.speed = 0.3;
-  msg.angle = 0;
-  movePub.publish(msg);
-  std::cout << "move\n";
-  return NodeStatus::SUCCESS;
+  limo_motion_controller::OverrideMotion msg;
+  msg.request.speed = 0;
+  msg.request.angle = __FLT_MAX__;
+  msg.request.duration = 0;
+  msg.request.id = "moving";
+  ROS_INFO("Movetotarget");
+  if(client.call(msg))
+  {
+    this->logPub.publish(logInfo);
+    return NodeStatus::SUCCESS;
+  }
+  return NodeStatus::FAILURE;
 }
 void MoveToTarget::halt(){
   }

@@ -4,7 +4,9 @@
     <arg name="batteryToLow" default="10"/>
     <arg name="distanceToCloseToTarget" default="1"/>
     <arg name="distanceToDecideToClose" default="1"/>
-    <arg name="minDistanceWhenBraking" default="0.25"/>
+    <arg name="minDistanceWhenBraking" default="0.35"/>
+
+    <include file="$(find limo_motion_controller)/launch/Controller.launch"/>
 
     <node name="limo_behaviour_tree" pkg="limo_behaviour_tree" type="limo_behaviour_tree" output="screen">
         <param name="minBatteryVoltage" value="$(arg minBatteryVoltage)"/>
@@ -13,6 +15,6 @@
         <param name="distanceToDecideToClose" value="$(arg distanceToDecideToClose)"/>
         <param name="minDistanceWhenBraking" value="$(arg minDistanceWhenBraking)"/>
     </node>
-    <include file="$(find limo_motion_controller)/launch/Controller.launch"/>
+    <!-- <node name="FkasjServer" pkg="limo_yolo" type="FlaskServer.py" output="screen"/> -->
 
 </launch>

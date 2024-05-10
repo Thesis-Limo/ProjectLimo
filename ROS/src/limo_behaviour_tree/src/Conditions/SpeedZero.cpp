@@ -15,6 +15,7 @@ NodeStatus SpeedZero::tick()
  * checks if velocity is more then 0 or not, if it is 0 return SUCCESS
 */
 {
+    ROS_INFO("speedzero %f", speedSqr);
     if(speedSqr <= 0)
         return NodeStatus::SUCCESS;
     return NodeStatus::FAILURE;

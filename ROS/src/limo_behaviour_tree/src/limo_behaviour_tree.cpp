@@ -58,15 +58,15 @@ int main(int argc, char* argv[])
     auto treeTracking = factory2Tracking.createTree("TrackingObject");
     
     ros::Rate r(10); // 10 hz
-    float sec = 0.1;
+    float sec = 1;
     auto visitor = [nh,sec,logger](TreeNode* node)
     {
         if (auto currentNode = dynamic_cast<Brake*>(node))
-            currentNode->Initialize(nh);
+            currentNode->Initialize(nh,logger);
         else if (auto currentNode = dynamic_cast<EmergencyBrake*>(node))
-            currentNode->Initialize(nh, sec);
+            currentNode->Initialize(nh, sec,logger);
         else if (auto currentNode = dynamic_cast<BatteryCheck*>(node))
-            currentNode->Initialize(nh);
+            currentNode->Initialize(nh, logger);
         else if (auto currentNode = dynamic_cast<CloseEnoughToTarget*>(node))
             currentNode->Initialize(nh);
         else if (auto currentNode = dynamic_cast<MinDistance*>(node))
@@ -80,22 +80,20 @@ int main(int argc, char* argv[])
         else if (auto currentNode = dynamic_cast<MoveToTarget*>(node))
             currentNode->Initialize(nh);
         else if (auto currentNode = dynamic_cast<CheckPath*>(node))
-            currentNode->Initialize(nh);
-        else if (auto currentNode = dynamic_cast<RotateAround*>(node))
-            currentNode->Initialize(nh);
+            currentNode->Initialize(nh,logger);
+        else if (auto currentNode = dynamic_cast<MoveBack*>(node))
+            currentNode->Initialize(nh,logger);
     };
     BT::applyRecursiveVisitor(tree.rootNode(),visitor);
-    auto visitorTracking = [nh](TreeNode* node)
+    auto visitorTracking = [nh,logger](TreeNode* node)
     {
-        ROS_INFO("t");
         if (auto currentNode = dynamic_cast<TrackObject*>(node))
             currentNode->Initialize(nh);
         else if (auto currentNode = dynamic_cast<ObjectFound*>(node))
             currentNode->Initialize(nh);
         else if (auto currentNode = dynamic_cast<CreatePath*>(node))
-            currentNode->Initialize(nh);
+            currentNode->Initialize(nh, logger);
     };
-    std_msgs::String msg;
     BT::applyRecursiveVisitor(treeTracking.rootNode(),visitorTracking);
     // Apply the visitor to ALL the nodes of the tree
     //ros::Rate rate(10); // 10 hz
@@ -103,10 +101,7 @@ int main(int argc, char* argv[])
     int i = 0;
     while (ros::ok())
     {
-        //ROS_INFO("l");
         ros::spinOnce();
-        msg.data = i;
-        logger.publish(msg);
         i++;
         // Run the Behavior Tree
         tree.tickRoot();

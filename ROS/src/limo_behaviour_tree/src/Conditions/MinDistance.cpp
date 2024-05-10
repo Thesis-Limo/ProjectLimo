@@ -18,6 +18,7 @@ NodeStatus MinDistance::tick()
 {
     if(currentDistance < minDistance)
         return NodeStatus::SUCCESS;
+    ROS_INFO("MinDistance Oke");
     return NodeStatus::FAILURE;
 }
 void MinDistance::CallBackPoints(const PointCloud::ConstPtr&  msg)
