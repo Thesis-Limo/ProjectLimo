@@ -78,7 +78,7 @@ int main(int argc, char* argv[])
         else if (auto currentNode = dynamic_cast<ToCloseToTarget*>(node))
             currentNode->Initialize(nh);
         else if (auto currentNode = dynamic_cast<MoveToTarget*>(node))
-            currentNode->Initialize(nh);
+            currentNode->Initialize(nh, logger);
         else if (auto currentNode = dynamic_cast<CheckPath*>(node))
             currentNode->Initialize(nh,logger);
         else if (auto currentNode = dynamic_cast<MoveBack*>(node))

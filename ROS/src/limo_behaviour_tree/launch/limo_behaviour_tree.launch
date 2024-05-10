@@ -15,6 +15,6 @@
         <param name="distanceToDecideToClose" value="$(arg distanceToDecideToClose)"/>
         <param name="minDistanceWhenBraking" value="$(arg minDistanceWhenBraking)"/>
     </node>
-    <!-- <node name="FkasjServer" pkg="limo_yolo" type="FlaskServer.py" output="screen"/> -->
+    <node name="FlaskServer" pkg="limo_behaviour_tree" type="FlaskServer.py" output="screen"/>
 
 </launch>

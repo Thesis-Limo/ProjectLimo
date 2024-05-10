@@ -40,7 +40,6 @@ bool Controller::ServiceCallBackMovement(limo_motion_controller::OverrideMotion:
             overrideMotionPlan->duration = 0;
         return true;
     }
-
     ROS_INFO("addOverride");
     overrideMotionPlan = new Motion{angle, req.speed, req.duration,startSpeed, currentSteeringAngle,0};
 

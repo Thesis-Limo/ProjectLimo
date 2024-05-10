@@ -15,7 +15,7 @@ private:
   ros::ServiceClient client;
 public:
   MoveToTarget(const std::string& name, const NodeConfiguration& conf);
-  void Initialize(const ros::NodeHandle& nodehandle);
+  void Initialize(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub);
   NodeStatus tick() override;
   static auto providedPorts() -> PortsList {
     return {};

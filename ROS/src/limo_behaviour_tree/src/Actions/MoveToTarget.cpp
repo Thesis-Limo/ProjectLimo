@@ -5,24 +5,23 @@ MoveToTarget::MoveToTarget(const std::string& name, const NodeConfiguration& con
   :ActionNodeBase(name, conf)
 {
   logInfo.data = "Follow the Path";
-
 }
-void MoveToTarget::Initialize(const ros::NodeHandle& nodehandle)
+void MoveToTarget::Initialize(const ros::NodeHandle& nodehandle,  const ros::Publisher& logPub)
 {
   nh = nodehandle;
   this->client = nh.serviceClient<limo_motion_controller::OverrideMotion>("/override_plan");
+  this->logPub = logPub;
 }
 
 NodeStatus MoveToTarget::tick()
 /*
- * currently this is debug code need to change
+ * remove the overrride funciton
 */
 {
   limo_motion_controller::OverrideMotion msg;
   msg.request.speed = 0;
   msg.request.angle = __FLT_MAX__;
   msg.request.duration = 0;
-  ROS_INFO("Movetotarget");
   if(client.call(msg))
   {
     this->logPub.publish(logInfo);
