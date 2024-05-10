@@ -15,7 +15,6 @@ void TargetNotFound::Initialize(const ros::NodeHandle& nodehandle, const ros::Pu
 
 NodeStatus TargetNotFound::tick()
 {
-    ROS_INFO("targetnotfound");
     std_srvs::Trigger msg;
     if(this->pathService.call(msg))
     {

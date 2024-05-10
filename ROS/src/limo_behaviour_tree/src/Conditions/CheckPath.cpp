@@ -27,6 +27,5 @@ NodeStatus CheckPath::tick()
             return NodeStatus::FAILURE;
         }
     }
-    ROS_INFO("path not found");
     return NodeStatus::SUCCESS;
 }

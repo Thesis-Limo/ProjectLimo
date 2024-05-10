@@ -30,6 +30,5 @@ BT::NodeStatus ObjectFound::tick()
     //send pos to next part
     if(!found)
         return NodeStatus::FAILURE;
-    setOutput<Point3D>("goal", targetpos);
     return NodeStatus::SUCCESS;
 }

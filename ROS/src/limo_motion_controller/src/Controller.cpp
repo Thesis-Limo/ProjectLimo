@@ -12,7 +12,7 @@ Controller::Controller(const ros::NodeHandle& nodehandle)
     minSpeed = nh.param<float>("minSpeed",-1.2);
     maxSpeed = nh.param<float>("maxSpeed",1.2);
     wheelBase = nh.param<float>("wheelBase",0.2);
-    backUpMotion = new Motion{0,1,-1,0,0,0};
+    backUpMotion = new Motion{0,0,-1,0,0,0};
     overrideMotionPlan = nullptr;
     prevTimestamp = ros::Time::now();
     currentTime = 0;
