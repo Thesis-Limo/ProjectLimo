@@ -4,9 +4,9 @@ MoveBack::MoveBack(const std::string& name, const BT::NodeConfiguration& conf)
   :ActionNodeBase(name, conf), durationGoingBack(10), speedGoingBack(0.2)
 {
   logInfo.data = "slowly moving back";
-  this->moveMsg.request.speed = 0;
+  this->moveMsg.request.speed = -0.1;
   this->moveMsg.request.angle = __FLT_MAX__;
-  this->moveMsg.request.duration = 0.8;
+  this->moveMsg.request.duration = -1;
   this->moveMsg.request.sameSpeedStart = true;
 }
 
@@ -20,7 +20,6 @@ void MoveBack::Initialize(const ros::NodeHandle& nodehandle, const ros::Publishe
 
 NodeStatus MoveBack::tick()
 {
-    ROS_INFO("MoveBack");
 
   if(this->moveBackService.call(moveMsg))
   {

@@ -30,8 +30,8 @@
     <BehaviorTree ID="MovementRobot">
         <Fallback>
             <SubTree ID="Emergency"/>
-            <!-- <SubTree ID="TargetCheck"/> -->
-            <!-- <SubTree ID="Moving"/> -->
+            <SubTree ID="TargetCheck"/>
+            <SubTree ID="Moving"/>
         </Fallback>
     </BehaviorTree>
     

@@ -1,4 +1,5 @@
 #include "Controller.h"
+#include <algorithm>   
 #include <cmath>
 
 Controller::Controller(const ros::NodeHandle& nodehandle)
@@ -27,7 +28,6 @@ bool Controller::ServiceCallBackMovement(limo_motion_controller::OverrideMotion:
     float startSpeed = currentSpeed;
     if(req.sameSpeedStart)
     {
-    std::cout << startSpeed << "\n";
 
         startSpeed = req.speed;
     }
@@ -38,10 +38,10 @@ bool Controller::ServiceCallBackMovement(limo_motion_controller::OverrideMotion:
     {
         if(overrideMotionPlan != nullptr)
             overrideMotionPlan->duration = 0;
-        //UpdateMovement();
         return true;
     }
 
+    ROS_INFO("addOverride");
     overrideMotionPlan = new Motion{angle, req.speed, req.duration,startSpeed, currentSteeringAngle,0};
 
     if(motionPlan.size() > 0)
@@ -112,6 +112,7 @@ void Controller::UpdateMovement()
                 currentM->startSpeed = currentSpeed;
             }
         }
+
     }
     else 
     {
@@ -159,10 +160,15 @@ geometry_msgs::Twist Controller::CalculateMovement(const Motion* currentMotion)
     float currentSpeed = (currentMotion->speed - currentMotion->startSpeed)/(duration) * currentTime + currentMotion->startSpeed;
     float currentAngle = (currentMotion->angle - currentMotion->startAngle)/(duration) * currentTime + currentMotion->startAngle;
 
+    currentSpeed = std::min(currentSpeed, std::max(currentMotion->speed , currentMotion->startSpeed));
+    currentSpeed = std::max(currentSpeed, std::min(currentMotion->speed , currentMotion->startSpeed));
+    currentAngle = std::min(currentAngle, std::max(currentMotion->angle , currentMotion->startAngle));
+    currentAngle = std::max(currentAngle, std::min(currentMotion->angle , currentMotion->startAngle));
     this->currentSteeringAngle = currentAngle;
     this->currentSpeed = currentSpeed;
     float v_l = remapSpeed(currentSpeed);
     float v_a = (v_l * tan(currentAngle))/ wheelBase;
+
     currentMovement.linear.x = v_l;
     currentMovement.angular.z = v_a;
     return currentMovement;

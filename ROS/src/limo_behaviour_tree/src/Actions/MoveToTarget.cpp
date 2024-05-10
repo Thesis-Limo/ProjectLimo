@@ -3,7 +3,10 @@
 
 MoveToTarget::MoveToTarget(const std::string& name, const NodeConfiguration& conf)
   :ActionNodeBase(name, conf)
-{}
+{
+  logInfo.data = "Follow the Path";
+
+}
 void MoveToTarget::Initialize(const ros::NodeHandle& nodehandle)
 {
   nh = nodehandle;

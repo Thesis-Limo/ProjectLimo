@@ -21,7 +21,6 @@ BT::NodeStatus RotateAround::tick()
 {
   limo_behaviour_tree::PathType msg;
   msg.request.pathType = 1;
-  ROS_INFO("Rotate");
 
   if(client.call(msg))
   {
