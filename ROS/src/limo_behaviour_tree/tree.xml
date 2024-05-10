@@ -31,7 +31,7 @@
         <Fallback>
             <SubTree ID="Emergency"/>
             <!-- <SubTree ID="TargetCheck"/> -->
-            <SubTree ID="Moving"/>
+            <!-- <SubTree ID="Moving"/> -->
         </Fallback>
     </BehaviorTree>
     
@@ -39,14 +39,16 @@
         <Sequence>
             <Condition ID="MinDistance"/>
             <Fallback name="DistanceBased">
-                <Sequence>
+                    <Action ID="MoveBack"/>
+
+                <!-- <Sequence>
                     <Condition ID="SpeedNotZero"/>
                     <Action ID="EmergencyBrake"/>
                 </Sequence>
                 <Sequence>
                     <Condition ID="SpeedZero"/>
                     <Action ID="MoveBack"/>
-                </Sequence>
+                </Sequence> -->
             </Fallback>
         </Sequence>
     </BehaviorTree>

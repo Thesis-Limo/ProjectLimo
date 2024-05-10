@@ -8,7 +8,6 @@
 #include <string>
 
 struct Motion{
-    std::string id;
     float angle;
     float speed;
     float duration;

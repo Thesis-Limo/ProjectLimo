@@ -21,8 +21,8 @@ NodeStatus EmergencyBrake::tick()
   limo_motion_controller::OverrideMotion msg;
   msg.request.speed = 0;
   msg.request.angle = __FLT_MAX__;
-  msg.request.duration = currentRate;
-  msg.request.id = "ToClose";
+  msg.request.duration = 1;
+  msg.request.sameSpeedStart = true;
   if(brakeService.call(msg))
   {
     ROS_INFO("BRAAAAKE");

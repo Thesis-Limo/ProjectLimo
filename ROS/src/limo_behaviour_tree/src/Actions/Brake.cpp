@@ -7,7 +7,6 @@ Brake::Brake(const std::string& name, const NodeConfiguration& conf)
     this->brakeMsg.request.speed = 0;
     this->brakeMsg.request.angle = __FLT_MAX__;
     this->brakeMsg.request.duration = durationSlowDown;
-    this->brakeMsg.request.id = "Brake";
 }
 void Brake::Initialize(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
 {

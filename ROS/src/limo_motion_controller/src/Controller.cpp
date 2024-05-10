@@ -11,7 +11,7 @@ Controller::Controller(const ros::NodeHandle& nodehandle)
     minSpeed = nh.param<float>("minSpeed",-1.2);
     maxSpeed = nh.param<float>("maxSpeed",1.2);
     wheelBase = nh.param<float>("wheelBase",0.2);
-    backUpMotion = new Motion{"Default",0,1,-1,0,0,0};
+    backUpMotion = new Motion{0,1,-1,0,0,0};
     overrideMotionPlan = nullptr;
     prevTimestamp = ros::Time::now();
     currentTime = 0;
@@ -24,14 +24,15 @@ bool Controller::ServiceCallBackMovement(limo_motion_controller::OverrideMotion:
     //calculating the turning radius and sending information to the cmd_vel 
     float angle = req.angle;
     response.alreadyRunning = false;
+    float startSpeed = currentSpeed;
+    if(req.sameSpeedStart)
+    {
+    std::cout << startSpeed << "\n";
 
+        startSpeed = req.speed;
+    }
     if (angle == __FLT_MAX__) 
         angle = currentSteeringAngle;
-    if (overrideMotionPlan != nullptr && overrideMotionPlan->id == req.id)
-    {
-        response.alreadyRunning = true;
-        return true;
-    }
 
     if(req.duration == 0)
     {
@@ -41,7 +42,8 @@ bool Controller::ServiceCallBackMovement(limo_motion_controller::OverrideMotion:
         return true;
     }
 
-    overrideMotionPlan = new Motion{req.id,angle, req.speed, req.duration,currentSpeed, currentSteeringAngle,0};
+    overrideMotionPlan = new Motion{angle, req.speed, req.duration,startSpeed, currentSteeringAngle,0};
+
     if(motionPlan.size() > 0)
     {
         Motion* currentM = motionPlan.front();
@@ -57,7 +59,7 @@ void Controller::CallBackMovement(const limo_motion_controller::MovementControll
     float angle = msg->angle;
     if (angle == __FLT_MAX__) 
         angle = currentSteeringAngle;
-    overrideMotionPlan = new Motion{msg->id,angle, msg->speed, msg->duration,currentSpeed, currentSteeringAngle,0};
+    overrideMotionPlan = new Motion{angle, msg->speed, msg->duration,currentSpeed, currentSteeringAngle,0};
     if(motionPlan.size() > 0)
     {
         Motion* currentM = motionPlan.front();
@@ -78,7 +80,7 @@ void Controller::CallBackMotionPlan(const limo_motion_controller::MotionPlan::Co
     currentTime = 0;
     for (int i = 0; i < msg->sequence.size(); i++)
     {
-        Motion* m = new Motion{msg->sequence[i].id,msg->sequence[i].angle,msg->sequence[i].speed, msg->sequence[i].duration, 0,0,0};
+        Motion* m = new Motion{msg->sequence[i].angle,msg->sequence[i].speed, msg->sequence[i].duration, 0,0,0};
         motionPlan.push(m);
     }
     UpdateMovement();

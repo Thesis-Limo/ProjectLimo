@@ -16,7 +16,7 @@ NodeStatus SpeedZero::tick()
 */
 {
     ROS_INFO("speedzero %f", speedSqr);
-    if(speedSqr <= 0)
+    if(speedSqr <= 0.01)
         return NodeStatus::SUCCESS;
     return NodeStatus::FAILURE;
 }

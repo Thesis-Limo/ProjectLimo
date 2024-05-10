@@ -19,7 +19,6 @@ NodeStatus MoveToTarget::tick()
   msg.request.speed = 0;
   msg.request.angle = __FLT_MAX__;
   msg.request.duration = 0;
-  msg.request.id = "moving";
   ROS_INFO("Movetotarget");
   if(client.call(msg))
   {
