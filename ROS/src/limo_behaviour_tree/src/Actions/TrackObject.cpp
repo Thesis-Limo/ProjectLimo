@@ -20,7 +20,6 @@ BT::NodeStatus TrackObject::tick()
 {
   limo_behaviour_tree::TypeObjectTracking srv;
   srv.request.objectID = currentTargetID;
-  std::cout << "tracking" << std::endl;
   if(client.call(srv))
   {
     return NodeStatus::SUCCESS;
