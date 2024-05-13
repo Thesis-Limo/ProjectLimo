@@ -16,18 +16,59 @@ if __name__ == '__main__':
         cont = MovementController()
         cont.speed = 1
         cont.angle = angle
-        cont.duration = 1
+        cont.duration = 0.2
         plan.sequence.append(cont)
         cont = MovementController()
         cont.speed = 1
         cont.angle = angle
-        cont.duration = 5
+        cont.duration = 2.4
+        plan.sequence.append(cont)
+        
+        cont = MovementController()
+        cont.speed = 1
+        cont.angle = 0
+        cont.duration = 0.2
         plan.sequence.append(cont)
         cont = MovementController()
-        cont.speed = 0
+        cont.speed = 1
         cont.angle = 0
-        cont.duration = 1
+        cont.duration = 2
         plan.sequence.append(cont)
+        # cont = MovementController()
+        # cont.speed = 1
+        # cont.angle = -angle
+        # cont.duration = 0.3
+        # plan.sequence.append(cont)
+
+        # cont = MovementController()
+        # cont.speed = 1
+        # cont.angle = -angle
+        # cont.duration = 3
+        # plan.sequence.append(cont)
+        
+        # cont = MovementController()
+        # cont.speed = 1
+        # cont.angle = 0
+        # cont.duration = 0.3
+        # plan.sequence.append(cont)
+        # cont = MovementController()
+        # cont.speed = 1
+        # cont.angle = 0
+        # cont.duration = 2
+        # plan.sequence.append(cont)
+        # cont = MovementController()
+        # cont.speed = 1
+        # cont.angle = angle
+        # cont.duration = 0.3
+        # plan.sequence.append(cont)
+
+
+
+        # cont = MovementController()
+        # cont.speed = 0
+        # cont.angle = 0
+        # cont.duration = 1
+        # plan.sequence.append(cont)
         pub.publish(plan)
         break
 

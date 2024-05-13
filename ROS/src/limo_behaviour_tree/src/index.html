@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Viewer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+        socket.on('log_update', function(data) {
+            // Update log content when new data is received
+            document.getElementById("log").innerText = data;
+        });
+    </script>
+</head>
+<body>
+    <h1>Behaviour Tree information</h1>
+    <div id="log"></div>
+</body>
+</html>

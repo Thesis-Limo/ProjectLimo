@@ -1,9 +1,11 @@
 #include <ros/ros.h>
 #include "limo_motion_controller/MovementController.h"
 #include "limo_motion_controller/MotionPlan.h"
+#include "limo_motion_controller/OverrideMotion.h"
 #include <geometry_msgs/Twist.h>
 #include "nav_msgs/Odometry.h"
 #include <queue>
+#include <string>
 
 struct Motion{
     float angle;
@@ -18,11 +20,13 @@ class Controller
 private:
     float remapSpeed(float speed);
     void CallBackMovement(const limo_motion_controller::MovementController::ConstPtr& msg);
+    bool ServiceCallBackMovement(limo_motion_controller::OverrideMotion::Request& req,limo_motion_controller::OverrideMotion::Response& response);
     void CallBackMotionPlan(const limo_motion_controller::MotionPlan::ConstPtr& msg);
 
     ros::NodeHandle nh;
     ros::Subscriber subMovement;
     ros::Subscriber subMotionPlan;
+    ros::ServiceServer serviceOverride;
     ros::Publisher pubCmd;
 
     ros::Time prevTimestamp;

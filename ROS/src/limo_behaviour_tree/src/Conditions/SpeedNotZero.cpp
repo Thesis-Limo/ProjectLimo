@@ -16,10 +16,10 @@ NodeStatus SpeedNotZero::tick()
  * checks if speed is more then 0 or not
 */
 {
-    ROS_INFO("speedmore %f", speedSqr);
-    //if(speedSqr > 0)
-    return NodeStatus::SUCCESS;
-    //return NodeStatus::FAILURE;
+    ROS_INFO("speedNotZero %f", speedSqr);
+    if(speedSqr > 0)
+        return NodeStatus::SUCCESS;
+    return NodeStatus::FAILURE;
 }
 
 void SpeedNotZero::CallBackOdom(const nav_msgs::Odometry::ConstPtr& msg)
