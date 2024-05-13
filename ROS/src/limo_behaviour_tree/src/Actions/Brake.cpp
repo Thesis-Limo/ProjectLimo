@@ -1,23 +1,32 @@
 #include "Brake.h"
-#include "std_srvs/Empty.h"
+
 Brake::Brake(const std::string& name, const NodeConfiguration& conf)
     :ActionNodeBase(name, conf)
-{}
-void Brake::Initialize(const ros::NodeHandle& nodehandle)
 {
-    nh = nodehandle;
-    client = nh.serviceClient<std_srvs::Empty>("/BT/Brake");
+    this->logInfo.data = "Something is in front I need to brake right now";
+    this->brakeMsg.request.speed = 0;
+    this->brakeMsg.request.angle = __FLT_MAX__;
+    this->brakeMsg.request.duration = durationSlowDown;
+}
+void Brake::Initialize(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
+{
+    this->nh = nodehandle;
+    this->brakeService = nh.serviceClient<limo_motion_controller::OverrideMotion>("/override_plan");
+    this->logPub = logPub;
 }
 NodeStatus Brake::tick()
 /*
  * calls service for tracking with name /BT/Brake to execute braking
 */
 {
-    std_srvs::Empty srv;
-    std::cout << "Braking" << std::endl;
-    if(client.call(srv))
-        return NodeStatus::SUCCESS;
-    return NodeStatus::FAILURE;
+    if(this->brakeService.call(brakeMsg))
+    { 
+        ROS_INFO("Brake");
+        this->logPub.publish(logInfo);
+        return NodeStatus::FAILURE;
+    }
+    return NodeStatus::SUCCESS;
+
 }
 void Brake::halt(){
   }

@@ -80,7 +80,14 @@ RUN echo 'export PATH="'"/home/$(id -un)/.local/bin"':$PATH''"' >> ~/.zshrc && \
     echo "alias cbuild='catkin build --cmake-args -DCMAKE_BUILD_TYPE=Release'" >> ~/.zshrc && \ 
     echo "source /opt/ros/melodic/setup.zsh" >> ~/.zshrc  &&\
     echo "source /home/thesis/ROS/devel/setup.zsh" >> ~/.zshrc &&\
-    echo "alias rvizlimo='rviz -d /home/thesis/ROS/src/ugv_sim/limo/limo_description/rviz/model_display.rviz'">> ~/.zshrc
+    echo "alias rvizlimo='rviz -d /home/thesis/ROS/src/ugv_sim/limo/limo_description/rviz/model_display.rviz'">> ~/.zshrc 
+
+
+COPY exec.sh /usr/local/bin/exec.sh
+RUN chmod +x /usr/local/bin/exec.sh
+
+# Update ~/.zshrc and /etc/hosts during container startup
+RUN  cat /usr/local/bin/exec.sh >> ~/.zshrc 
 
 #add folder structure
 WORKDIR /home/thesis

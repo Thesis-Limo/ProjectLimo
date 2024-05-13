@@ -25,6 +25,7 @@ BT::NodeStatus TrackObject::tick()
   {
     return NodeStatus::SUCCESS;
   }
+
   return NodeStatus::FAILURE;
 }
 void TrackObject::halt(){

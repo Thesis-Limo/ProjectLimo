@@ -1,14 +1,15 @@
 # How to use your pc as monitor for the Limo
 
-- Make sure the limo is turned on
-- Set your IP addres in the limo's file named /etc/hosts
-- Set the IP address of the limo in your pc's file /etc/hosts
-- for best practice, the following, in a file or in you ~/.bashrc file, on the limo and also on your pc:
+Make sure the limo is turned on
+Now this has been gone easier. in each terminal you can run 
+```bash
+limo_ip "ipaddresslimo"
+```
+for example
+```bash
+limo_ip 10.22.138.131
+```
 
-  - export ROS_MASTER_URI=http://"ip of the limo":11311
-  - export ROS_IP="ip of the device"
-
-  =>this needs to be done in every terminal page
 
 # How to run pipeline in Limo
 
@@ -26,3 +27,14 @@ You can run the environment in docker and use rviz and the simulator on your pc 
 select NoSim, and then roscore and terminal will be started. For easy use build inside this container, it has the dependencies needed to build it.
 
 Then gazebo and rviz can be started on the pc without using docker.
+# run limo
+```bash
+roslaunch limo_launch limo_default.launch 
+```
+This will run the default settings, with Lidar and camera attached
+```bash
+roslaunch limo_motion_controller Controller.launch
+```
+This will run the controller to get access to the driver, to push the motion plan the topic is called /limo_motionplan
+# github ssh certification on limo
+2868

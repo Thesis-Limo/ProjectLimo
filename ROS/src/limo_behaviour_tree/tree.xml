@@ -2,21 +2,20 @@
     <BehaviorTree ID="MainTree">
         <Sequence name="root">
             <SubTree ID="BatteryCheckTree"/>
-            <SubTree ID="RobotMove"/>
+            <SubTree ID="MovementRobot"/>
         </Sequence>
     </BehaviorTree>
 
     <BehaviorTree ID="BatteryCheckTree">
         <Fallback>
             <Condition ID="BatteryCheck"/>
-            <Action ID="EmergencyBrake"/>
+            <Action ID="Brake"/>
         </Fallback>
     </BehaviorTree>
     
     <BehaviorTree ID="RobotMove">
         <Parallel name="Movement" success_threshold="2">
             <SubTree ID="TrackingObject"/>
-            <SubTree ID="MovementRobot"/>
         </Parallel>
     </BehaviorTree>
     
@@ -40,14 +39,16 @@
         <Sequence>
             <Condition ID="MinDistance"/>
             <Fallback name="DistanceBased">
-                <Sequence>
+                    <Action ID="MoveBack"/>
+
+                <!-- <Sequence>
                     <Condition ID="SpeedNotZero"/>
                     <Action ID="EmergencyBrake"/>
                 </Sequence>
                 <Sequence>
                     <Condition ID="SpeedZero"/>
                     <Action ID="MoveBack"/>
-                </Sequence>
+                </Sequence> -->
             </Fallback>
         </Sequence>
     </BehaviorTree>
@@ -63,15 +64,14 @@
     </BehaviorTree>
     
     <BehaviorTree ID="Moving">
-        <Fallback name="Moving">
-            <Sequence>
+        <Action ID="MoveToTarget"/>
+            <!-- <Sequence>
                 <Condition ID="ToCloseToTarget"/>
-                <Action ID="MoveBack"/>
+                <Action ID="MoveBack"/> 
             </Sequence>
             <Sequence>
                 <Condition ID="CloseEnoughToTarget"/>
-                <Action ID="MoveToTarget"/>
             </Sequence>
-        </Fallback>
+        </Fallback> -->
     </BehaviorTree>
  </root>

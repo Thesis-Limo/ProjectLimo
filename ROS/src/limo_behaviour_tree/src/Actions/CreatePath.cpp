@@ -1,31 +1,29 @@
 #include "CreatePath.h"
-#include "limo_behaviour_tree/EndGoal.h"
+#include "limo_behaviour_tree/PathType.h"
 CreatePath::CreatePath(const std::string& name, const NodeConfiguration& conf)
     :ActionNodeBase(name, conf)
-{}
-void CreatePath::Initialize(const ros::NodeHandle& nodehandle)
+{
+  logInfo.data = "Have found the object, now create the path";
+}
+void CreatePath::Initialize(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
 {
     nh = nodehandle;
-    client = nh.serviceClient<limo_behaviour_tree::EndGoal>("/GoalPos");
+    client = nh.serviceClient<limo_behaviour_tree::PathType>("/BT/create_path");
+    this->logPub = logPub;
 }
 NodeStatus CreatePath::tick()
 /*
  * Gets information form the previous condition and calls function /GoalPos, so that it can calculate the trajectory
 */
 {
-    auto res = getInput<Point3D>("goal");
-    if( !res )
+    limo_behaviour_tree::PathType msg;
+    msg.request.pathType = 0;
+    if(client.call(msg))
     {
-        throw RuntimeError("error reading port [target]:", res.error());
+        //LogInfo
+        this->logPub.publish(logInfo);
+        return NodeStatus::SUCCESS;    
     }
-    Point3D target = res.value();
-    limo_behaviour_tree::EndGoal    srv;
-    srv.request.goalPos.x = target.x;
-    srv.request.goalPos.y = target.y;
-    srv.request.goalPos.z = target.z;
-    std::cout << target.x << std::endl;
-    if(client.call(srv))
-        return NodeStatus::SUCCESS;
     return NodeStatus::FAILURE;
 }
 void CreatePath::halt(){
