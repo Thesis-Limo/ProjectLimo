@@ -28,6 +28,7 @@ YoloProjection::YoloProjection(const ros::NodeHandle& nodehandle):
     sub = nh.subscribe<darknet_ros_msgs::BoundingBoxes>("/darknet_ros/bounding_boxes",100,&YoloProjection::CallbackYoloResult, this);
     subObjectDetectCheck = nh.subscribe<darknet_ros_msgs::ObjectCount>("/darknet_ros/found_object",100,&YoloProjection::CallbackYoloObjects, this);
     subOdom = nh.subscribe<nav_msgs::Odometry>("/odom", 1, &YoloProjection::CallBackOdom, this);
+    serviceFoundObject = nh.advertiseService("/check_target", &YoloProjection::FoundObjectService, this);
     //param
     std::string infoCamera = nh.param<std::string>("infoCamera", "/camera/rgb/camera_info");
     objectId = nh.param<float>("ObjectId", 39);
@@ -36,6 +37,12 @@ YoloProjection::YoloProjection(const ros::NodeHandle& nodehandle):
 
     cameraInfo = *(ros::topic::waitForMessage<CameraInfo>(infoCamera));
     ROS_INFO("finishedInit yolo projection");
+}
+
+bool YoloProjection::FoundObjectService(std_srvs::Trigger::Request& req,std_srvs::Trigger::Response& res)
+{
+    res.success = objectFound;
+    return true;
 }
 
 void YoloProjection::CallbackImageAndLidar(const Image& image, const LaserScan& laser)
@@ -75,6 +82,7 @@ void YoloProjection::CallbackYoloObjects(const darknet_ros_msgs::ObjectCount::Co
     }
     if(objects->count <=0)
     { 
+        objectFound = false;
         ROS_INFO("Nothing in sight");
         PublishAndMap(df);
         return;
@@ -107,7 +115,7 @@ void YoloProjection::CallbackYoloResult(const darknet_ros_msgs::BoundingBoxes::C
             }
         }
         if(box.size() <= 0) {
-
+            objectFound = false;
             ROS_INFO("TargetNotFound");
             PublishAndMap(currentDataframe);
             return;
@@ -137,9 +145,11 @@ void YoloProjection::CallbackYoloResult(const darknet_ros_msgs::BoundingBoxes::C
         if(currentEndpoint.x == 0 || currentEndpoint.y == 0)
         {
             ROS_INFO("TargetNotInReach");
+            objectFound = false;    
             PublishAndMap(currentDataframe);
             return;
-        }        
+        }    
+        objectFound = true;    
         ROS_INFO("TargetFound");
         PublishAndMap(currentDataframe, startRadObject, endRadObject);
     }

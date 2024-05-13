@@ -1,4 +1,5 @@
 #include <ros/ros.h>
+#include <std_srvs/Trigger.h>
 #include <queue>
 
 #include <sensor_msgs/Image.h>
@@ -43,6 +44,7 @@ private:
     ros::Subscriber sub;
     ros::Subscriber subOdom;
     ros::Subscriber subObjectDetectCheck;
+    ros::ServiceServer serviceFoundObject; 
     int objectId;
 
     std::queue<DataFrame> pushedFrames;
@@ -63,9 +65,12 @@ private:
     geometry_msgs::Pose lastKnownPos;
     float currentYaw;
 
+    bool objectFound = false;
+
     void CallbackYoloResult(const darknet_ros_msgs::BoundingBoxes::ConstPtr& bounding_boxes);
     void CallbackYoloObjects(const darknet_ros_msgs::ObjectCount::ConstPtr& objects);
     void CallBackOdom(const nav_msgs::Odometry::ConstPtr& odom);
+    bool FoundObjectService(std_srvs::Trigger::Request& req,std_srvs::Trigger::Response& res);
     bool SwitchTarget(limo_behaviour_tree::TypeObjectTracking::Request& req, limo_behaviour_tree::TypeObjectTracking::Response& res);
 
     limo_yolo::map ConvertToLidar(const LaserScan& laser, const float& startAngleObject, const float& endAngleObject, bool checkPrevTarget = false, const std::vector<geometry_msgs::PointStamped>& target = std::vector<geometry_msgs::PointStamped>());
