@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <launch>
-    <include file="$(find limo_launch)/launch/limo_default.launch">
-        <arg name="pub_odom_tf" default="true" />
-    </include>
+    <include file="$(find limo_launch)/launch/limo_default.launch"/>
     <include file="$(find limo_behaviour_tree)/launch/limo_behaviour_tree.launch"/>
     <include file="$(find limo_yolo)/launch/limo_YOLO.launch"/>
 </launch>
