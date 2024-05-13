@@ -90,7 +90,7 @@ int main(int argc, char* argv[])
         if (auto currentNode = dynamic_cast<TrackObject*>(node))
             currentNode->Initialize(nh);
         else if (auto currentNode = dynamic_cast<ObjectFound*>(node))
-            currentNode->Initialize(nh);
+            currentNode->Initialize(nh, logger);
         else if (auto currentNode = dynamic_cast<CreatePath*>(node))
             currentNode->Initialize(nh, logger);
     };

@@ -1,5 +1,6 @@
 #include "TargetNotFound.h"
 #include <std_srvs/Trigger.h>
+
 TargetNotFound::TargetNotFound(const std::string& name, const NodeConfiguration& conf)
     :ConditionNode(name, conf)
 {

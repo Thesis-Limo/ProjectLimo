@@ -1,34 +1,32 @@
 #include "ObjectFound.h"
+#include <std_srvs/Trigger.h>
+
 ObjectFound::ObjectFound(const std::string& name, const BT::NodeConfiguration& conf)
     :BT::ConditionNode(name, conf)
-{}
+{
+    logInfo.data = "Target is not found";
+}
 
-void ObjectFound::Initialize(const ros::NodeHandle& nodehandle)
+void ObjectFound::Initialize(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
 {
     nh = nodehandle;
-    sub = nh.subscribe("/ObjectPos", 100,&ObjectFound::ObjectFoundCallBack, this);
-}
-void ObjectFound::ObjectFoundCallBack(const geometry_msgs::Point& msgs)
-/*
- * if target is found set the target else set target to false
-*/
-{
-    if(msgs.x != __FLT_MAX__ && msgs.y != __FLT_MAX__ && msgs.z != __FLT_MAX__)
-    {
-        found = true;
-        targetpos = {msgs.x, msgs.y, msgs.z};
-    }
-    else 
-        found = false;
+    this->logPub = logPub;
+    this->pathService = nh.serviceClient<std_srvs::Trigger>("/check_target", 100);
 }
 
 BT::NodeStatus ObjectFound::tick()
 /*
- * pushes position of target if the goal has been found
+ * checks the target if it exist
 */
 {   
-    //send pos to next part
-    if(!found)
-        return NodeStatus::FAILURE;
-    return NodeStatus::SUCCESS;
+    std_srvs::Trigger msg;
+    if(this->pathService.call(msg))
+    {
+        if(msg.response.success)
+        {
+            this->logPub.publish(logInfo);
+            return NodeStatus::SUCCESS;
+        }
+    }
+    return NodeStatus::FAILURE;
 }
