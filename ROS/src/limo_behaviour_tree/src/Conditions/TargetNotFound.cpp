@@ -12,6 +12,10 @@ NodeStatus TargetNotFound::Tick()
 {
     std_srvs::Trigger msg;
 
+    if (this->pathService.exists())
+        ROS_INFO("it exists");
+    ROS_INFO("fff");
+    
     if(this->pathService.call(msg))
     {
         if(msg.response.success)

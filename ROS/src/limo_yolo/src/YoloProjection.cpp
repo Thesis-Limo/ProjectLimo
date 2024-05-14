@@ -28,6 +28,7 @@ YoloProjection::YoloProjection(const ros::NodeHandle& nodehandle):
     sub = nh.subscribe<darknet_ros_msgs::BoundingBoxes>("/darknet_ros/bounding_boxes",100,&YoloProjection::CallbackYoloResult, this);
     subObjectDetectCheck = nh.subscribe<darknet_ros_msgs::ObjectCount>("/darknet_ros/found_object",100,&YoloProjection::CallbackYoloObjects, this);
     subOdom = nh.subscribe<nav_msgs::Odometry>("/odom", 1, &YoloProjection::CallBackOdom, this);
+    serviceFoundObject = nh.advertiseService("/check_target", &YoloProjection::FoundObjectService, this);
     //param
     std::string infoCamera = nh.param<std::string>("infoCamera", "/camera/rgb/camera_info");
     objectId = nh.param<float>("ObjectId", 39);
@@ -35,8 +36,6 @@ YoloProjection::YoloProjection(const ros::NodeHandle& nodehandle):
     laserFrame = nh.param<std::string>("laserFrame", "laser_link");
 
     cameraInfo = *(ros::topic::waitForMessage<CameraInfo>(infoCamera));
-    serviceFoundObject = nh.advertiseService("/check_target", &YoloProjection::FoundObjectService, this);
-
     ROS_INFO("finishedInit yolo projection");
 }
 
