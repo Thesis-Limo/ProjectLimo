@@ -35,7 +35,7 @@ void MinDistance::CallBackPoints(const sensor_msgs::LaserScan::ConstPtr&  laser)
         {
             float angle = laser->angle_min + i * laser->angle_increment;
             if (abs(angle) > min) continue;
-            if(minDistance > distance) minDistance = currentDistance;
+            if(minDistance > distance) minDistance = distance;
         }
     }
     currentDistance = minDistance;
