@@ -13,7 +13,8 @@ RUN apt-get update\
     g++ \
     lsb-release\
     locales \
-    nano
+    nano \
+    python3-tk
 
 RUN dpkg-reconfigure locales
 ARG DEBIAN_FRONTEND=noninteractive
