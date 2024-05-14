@@ -1,4 +1,3 @@
-README.md
 setup.py
 CubicSpline/cubic_spline_planner.c
 FrenetOptimalTrajectory/frenet_optimal_trajectory.c

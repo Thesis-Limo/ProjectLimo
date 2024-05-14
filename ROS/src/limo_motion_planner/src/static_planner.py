@@ -14,7 +14,7 @@ from sensor_msgs.msg import LaserScan
 ROBOT_RADIUS = 0.2  # [m]
 WHEELBASE = 0.2  # [m]
 SIM_LOOP = 500
-TARGET_SPEED = 0.25  # [m/s]
+TARGET_SPEED = 0.5  # [m/s]
 
 
 class FrenetPath:
@@ -265,7 +265,7 @@ def callback(lidar_msg, publisher):
             cont = MovementController()
             cont.speed = speed
             cont.angle = angle
-            cont.duration = 0.2
+            cont.duration = 0.5
             executable_plan.sequence.append(cont)
         publisher.publish(executable_plan)
         input("Press Enter to continue...")
