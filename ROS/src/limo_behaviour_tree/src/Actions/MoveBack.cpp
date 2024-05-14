@@ -1,32 +1,21 @@
-#include <ros/ros.h>
 #include "MoveBack.h"
-MoveBack::MoveBack(const std::string& name, const BT::NodeConfiguration& conf)
-  :ActionNodeBase(name, conf), durationGoingBack(10), speedGoingBack(0.2)
+
+MoveBack::MoveBack(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
+  :Node(nodehandle, logPub,  "slowly moving back"), durationGoingBack(10), speedGoingBack(0.2)
 {
-  logInfo.data = "slowly moving back";
+  this->MoveBackService = nh.serviceClient<limo_motion_controller::OverrideMotion>("/override_plan");
   this->moveMsg.request.speed = -0.1;
   this->moveMsg.request.angle = __FLT_MAX__;
   this->moveMsg.request.duration = -1;
   this->moveMsg.request.sameSpeedStart = true;
 }
 
-void MoveBack::Initialize(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
+NodeStatus MoveBack::Tick()
 {
-  nh = nodehandle;
-  this->moveBackService = nh.serviceClient<limo_motion_controller::OverrideMotion>("/override_plan");
-  this->logPub = logPub;
-}
-
-
-NodeStatus MoveBack::tick()
-{
-
-  if(this->moveBackService.call(moveMsg))
+  if(this->MoveBackService.call(moveMsg))
   {
-    this->logPub.publish(logInfo);
+    Log();
     return NodeStatus::SUCCESS;
   }
   return NodeStatus::FAILURE;
 }
-void MoveBack::halt(){
-  }

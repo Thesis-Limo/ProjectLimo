@@ -1,22 +1,17 @@
-#include "behaviortree_cpp_v3/condition_node.h"
-#include <ros/ros.h>
 #include <limo_base/LimoStatus.h>
+#include <Node.h>
+using namespace BehaviourTree;
 
-using namespace BT;
-
-class BatteryCheck: public ConditionNode
+class BatteryCheck: public Node
 {
 private:
     int BatteryLevel = -1;
     float maxBatteryVoltage;
     float batteryToLow;
-    ros::NodeHandle nh;
-    ros::Subscriber sub;    
-public:
-    void BatteryCallBack(const limo_base::LimoStatus& msgs);
-    BatteryCheck(const std::string& name, const BT::NodeConfiguration& conf);
-    void Initialize(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub);
+    ros::Subscriber sub;
 
-    BT::NodeStatus tick() override;
-    static BT::PortsList providedPorts(){return {};}
+    void BatteryCallBack(const limo_base::LimoStatus& msgs);
+public:
+    BatteryCheck(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub);
+    NodeStatus Tick() override;
 };

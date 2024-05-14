@@ -1,16 +1,13 @@
 #include "ToCloseToTarget.h"
-ToCloseToTarget::ToCloseToTarget(const std::string& name, const NodeConfiguration& conf)
-    :ConditionNode(name, conf)
-{}
 
-void ToCloseToTarget::Initialize(const ros::NodeHandle& nodehandle)
+ToCloseToTarget::ToCloseToTarget(const ros::NodeHandle& nodehandle,const ros::Publisher& logPub)
+  :Node(nodehandle, logPub)
 {
-    nh = nodehandle;
     subTarget = nh.subscribe<geometry_msgs::Point>("/ObjectPos", 100, &ToCloseToTarget::CallBackTarget, this);
     subPosition = nh.subscribe<nav_msgs::Odometry>("/odom", 100, &ToCloseToTarget::CallBackPosition, this);
     distanceToDecideToClose = nh.param<float>("distanceToDecideToClose",1);
 }
-NodeStatus ToCloseToTarget::tick()
+NodeStatus ToCloseToTarget::Tick()
 /*
  * checks if the target is to close to the object or not based on distance
 */

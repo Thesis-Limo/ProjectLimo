@@ -1,17 +1,13 @@
 #include "SpeedNotZero.h"
 
-SpeedNotZero::SpeedNotZero(const std::string& name, const NodeConfiguration& conf)
-    :BT::ConditionNode(name, conf)
+SpeedNotZero::SpeedNotZero(const ros::NodeHandle& nodehandle,const ros::Publisher& logPub)
+  :Node(nodehandle, logPub)
 {
     prevPos.x = __FLT_MAX__;
-}
-void SpeedNotZero::Initialize(const ros::NodeHandle& nodehandle)
-{
-    nh = nodehandle;
     sub = nh.subscribe<nav_msgs::Odometry>("/odom",100, &SpeedNotZero::CallBackOdom, this);
 }
 
-NodeStatus SpeedNotZero::tick()
+NodeStatus SpeedNotZero::Tick()
 /*
  * checks if speed is more then 0 or not
 */

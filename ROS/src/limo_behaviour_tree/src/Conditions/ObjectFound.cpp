@@ -1,20 +1,13 @@
 #include "ObjectFound.h"
 #include <std_srvs/Trigger.h>
 
-ObjectFound::ObjectFound(const std::string& name, const BT::NodeConfiguration& conf)
-    :BT::ConditionNode(name, conf)
+ObjectFound::ObjectFound(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
+  :Node(nodehandle, logPub,"Target is not found")
 {
-    logInfo.data = "Target is not found";
-}
-
-void ObjectFound::Initialize(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
-{
-    nh = nodehandle;
-    this->logPub = logPub;
     this->pathService = nh.serviceClient<std_srvs::Trigger>("/check_target", 100);
 }
 
-BT::NodeStatus ObjectFound::tick()
+NodeStatus ObjectFound::Tick()
 /*
  * checks the target if it exist
 */
@@ -24,7 +17,7 @@ BT::NodeStatus ObjectFound::tick()
     {
         if(msg.response.success)
         {
-            this->logPub.publish(logInfo);
+            Log();
             return NodeStatus::SUCCESS;
         }
     }

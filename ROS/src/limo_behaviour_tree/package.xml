@@ -18,21 +18,18 @@
 
   <buildtool_depend>catkin</buildtool_depend>
   
-  <build_depend>behaviortree_cpp_v3</build_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>limo_bringup</build_depend>
   <build_depend>limo_base</build_depend>
   <build_depend>message_runtime</build_depend>
   <build_depend>limo_motion_controller</build_depend>
 
-  <build_export_depend>behaviortree_cpp_v3</build_export_depend>
   <build_export_depend>roscpp</build_export_depend>
   <build_export_depend>limo_base</build_export_depend>
   <build_export_depend>message_runtime</build_export_depend>
   <build_export_depend>limo_bringup</build_export_depend>
   <build_export_depend>limo_motion_controller</build_export_depend>
 
-  <exec_depend>behaviortree_cpp_v3</exec_depend>
   <exec_depend>roscpp</exec_depend>
   <exec_depend>limo_bringup</exec_depend>
   <exec_depend>limo_base</exec_depend>

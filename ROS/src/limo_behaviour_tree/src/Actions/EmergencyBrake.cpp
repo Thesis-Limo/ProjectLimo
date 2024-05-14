@@ -1,19 +1,13 @@
 #include "EmergencyBrake.h"
 #include <limo_motion_controller/MovementController.h>
-EmergencyBrake::EmergencyBrake(const std::string& name, const BT::NodeConfiguration& conf)
-: BT::ActionNodeBase(name, conf), currentRate(4)
+EmergencyBrake::EmergencyBrake(const ros::NodeHandle& nodehandle, float duration, const ros::Publisher& logPub)
+    :Node(nodehandle, logPub,  "Something is in front I need to brake right now")
 {
-  logInfo.data = "Something is in front I need to brake right now";
-}
-void EmergencyBrake::Initialize(const ros::NodeHandle& nodehandle, float duration, const ros::Publisher& logPub)
-{
-  nh = nodehandle;
   this->brakeService = nh.serviceClient<limo_motion_controller::OverrideMotion>("/override_plan");
   currentRate = duration;
-  this->logPub = logPub;
 }
 
-NodeStatus EmergencyBrake::tick()
+NodeStatus EmergencyBrake::Tick()
 /*
  * Calls the movement controller with current speed and angle velocity, to (0,0)
 */
@@ -26,10 +20,8 @@ NodeStatus EmergencyBrake::tick()
   if(brakeService.call(msg))
   {
     ROS_INFO("BRAAAAKE");
-    this->logPub.publish(logInfo);
+    Log();
     return NodeStatus::SUCCESS;
   }
   return NodeStatus::FAILURE;
 }
-void EmergencyBrake::halt(){
-  }
