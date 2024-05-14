@@ -91,7 +91,7 @@ int main(int argc, char* argv[])
     //Node* root = InitTree(nh, 1,logger);
     //Node* rootSearch = InitTreeSearch(nh, 1,logger);
     Root root(nh, logger);
-    ros::Rate r(10); // 10 hz
+    ros::Rate r(30); // 10 hz
     float sec = 1;
   
     NodeStatus status = NodeStatus::RUNNING;
