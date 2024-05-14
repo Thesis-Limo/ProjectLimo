@@ -7,3 +7,6 @@ torchvision==0.9.1
 ultralytics==8.0.226
 flask
 flask_socketio
+Cython
+matplotlib
+scipy
