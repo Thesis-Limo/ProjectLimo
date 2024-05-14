@@ -1,23 +1,12 @@
-#include "behaviortree_cpp_v3/condition_node.h"
-#include <ros/ros.h>
-#include <std_msgs/String.h>
 #include "position.hpp"
+#include <Node.h>
+using namespace BehaviourTree;
 
-using namespace BT;
-
-class CheckPath: public ConditionNode
+class CheckPath: public Node
 {
 private:
-    ros::NodeHandle nh;
-    ros::Publisher logPub;
-    std_msgs::String logInfo;
-    ros::ServiceClient pathService;
-    
+    ros::ServiceClient pathService;    
 public:
-    CheckPath(const std::string& name, const BT::NodeConfiguration& conf);
-    void Initialize(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub);
-
-    BT::NodeStatus tick() override;
-    static BT::PortsList providedPorts(){return {};}
-    
+    CheckPath(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub);
+    NodeStatus Tick() override;
 };

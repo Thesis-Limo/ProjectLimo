@@ -1,17 +1,14 @@
 #include "TrackObject.h"
 #include "limo_behaviour_tree/TypeObjectTracking.h"
 #include "geometry_msgs/Point.h"
-TrackObject::TrackObject(const std::string& name, const NodeConfiguration& conf)
-: ActionNodeBase(name, conf)
+
+TrackObject::TrackObject(const ros::NodeHandle& nodehandle,const ros::Publisher& logPub)
+  :Node(nodehandle, logPub)
 {
-}
-void TrackObject::Initialize(const ros::NodeHandle& nodehandle)
-{
-  nh = nodehandle;
   client = nh.serviceClient<limo_behaviour_tree::TypeObjectTracking>("/BT/FindObject");
 }
 
-BT::NodeStatus TrackObject::tick()
+NodeStatus TrackObject::Tick()
 /*
  * calls service for tracking with name /BT/FindObject
 */
@@ -26,6 +23,4 @@ BT::NodeStatus TrackObject::tick()
   }
 
   return NodeStatus::FAILURE;
-}
-void TrackObject::halt(){
 }

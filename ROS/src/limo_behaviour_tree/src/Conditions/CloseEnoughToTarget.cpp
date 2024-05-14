@@ -1,15 +1,13 @@
 #include "CloseEnoughToTarget.h"
-CloseEnoughToTarget::CloseEnoughToTarget(const std::string& name, const BT::NodeConfiguration& conf)
-    :BT::ConditionNode(name, conf)
-{}
-void CloseEnoughToTarget::Initialize(const ros::NodeHandle& nodehandle)
+
+CloseEnoughToTarget::CloseEnoughToTarget(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
+  :Node(nodehandle, logPub)
 {
-    nh = nodehandle;
     subTarget = nh.subscribe<geometry_msgs::Point>("/goal", 100, &CloseEnoughToTarget::CallBackTarget, this);
     subPosition = nh.subscribe<nav_msgs::Odometry>("/odom", 100, &CloseEnoughToTarget::CallBackPosition, this);
     distanceToClose = nh.param<float>("distanceToCloseToTarget", 1);
 }
-NodeStatus CloseEnoughToTarget::tick()
+NodeStatus CloseEnoughToTarget::Tick()
 /*
  * checks if the target is at a certain distance in front.
 */

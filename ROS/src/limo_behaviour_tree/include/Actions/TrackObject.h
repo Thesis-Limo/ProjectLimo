@@ -1,19 +1,11 @@
-#include "behaviortree_cpp_v3/action_node.h"
-#include <ros/ros.h>
+#include "Node.h"
+using namespace BehaviourTree;
 
-using namespace BT;
-
-class TrackObject: public ActionNodeBase
+class TrackObject: public Node
 {
 private:
-  ros::NodeHandle nh;
   ros::ServiceClient client;
 public:
-  TrackObject(const std::string& name, const NodeConfiguration& conf);
-  void Initialize(const ros::NodeHandle& nodehandle);
-  NodeStatus tick() override;
-  static auto providedPorts() -> PortsList {
-    return {};
-  }
-  void halt() override ;
+  TrackObject(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub);
+  NodeStatus Tick() override;
 };

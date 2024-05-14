@@ -1,17 +1,12 @@
+
 #include "CreatePath.h"
 #include "limo_behaviour_tree/PathType.h"
-CreatePath::CreatePath(const std::string& name, const NodeConfiguration& conf)
-    :ActionNodeBase(name, conf)
+CreatePath::CreatePath(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
+    :Node(nodehandle, logPub,  "Have found the object, now create the path")
 {
-  logInfo.data = "Have found the object, now create the path";
-}
-void CreatePath::Initialize(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
-{
-    nh = nodehandle;
     client = nh.serviceClient<limo_behaviour_tree::PathType>("/BT/create_path");
-    this->logPub = logPub;
 }
-NodeStatus CreatePath::tick()
+NodeStatus CreatePath::Tick()
 /*
  * Gets information form the previous condition and calls function /GoalPos, so that it can calculate the trajectory
 */
@@ -21,10 +16,8 @@ NodeStatus CreatePath::tick()
     if(client.call(msg))
     {
         //LogInfo
-        this->logPub.publish(logInfo);
+        Log();
         return NodeStatus::SUCCESS;    
     }
     return NodeStatus::FAILURE;
 }
-void CreatePath::halt(){
-  }

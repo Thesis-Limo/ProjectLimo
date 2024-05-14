@@ -1,17 +1,14 @@
 #include "MinDistance.h"
 #include <boost/foreach.hpp>
 
-MinDistance::MinDistance(const std::string& name, const NodeConfiguration& conf)
-    :BT::ConditionNode(name, conf)
+MinDistance::MinDistance(const ros::NodeHandle& nodehandle,const ros::Publisher& logPub)
+  :Node(nodehandle, logPub)
+
 {
-}
-void MinDistance::Initialize(const ros::NodeHandle& nodehandle)
-{
-    nh = nodehandle;
     sub = nh.subscribe<PointCloud>("/camera/depth/points",1, &MinDistance::CallBackPoints, this);
     minDistance = nh.param<float>("minDistanceWhenBraking",0.25f);
 }
-NodeStatus MinDistance::tick()
+NodeStatus MinDistance::Tick()
 /*
  * if the current distance is to close to the object then return success
 */
