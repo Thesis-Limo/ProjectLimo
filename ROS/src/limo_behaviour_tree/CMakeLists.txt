@@ -12,7 +12,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(catkin REQUIRED COMPONENTS
   limo_base
   limo_motion_controller
-  behaviortree_cpp_v3
   roscpp
   pcl_ros
   nav_msgs
