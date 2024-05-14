@@ -6,6 +6,7 @@ TargetNotFound::TargetNotFound(const ros::NodeHandle& nodehandle, const ros::Pub
   :Node(nodehandle, logPub,"Target is not found")
 {
     this->pathService = nh.serviceClient<std_srvs::Trigger>("/check_target", 100);
+    ros::service::waitForService("/check_target", 10000); 
 }
 
 NodeStatus TargetNotFound::Tick()
