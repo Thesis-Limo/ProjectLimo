@@ -1,17 +1,13 @@
 #include "BatteryCheck.h"
-BatteryCheck::BatteryCheck(const std::string& name, const BT::NodeConfiguration& conf)
-    :BT::ConditionNode(name, conf)
-{}
-
-void BatteryCheck::Initialize(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
+BatteryCheck::BatteryCheck(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
+    :Node(nodehandle, logPub)
 {
-    nh = nodehandle;
     sub = nh.subscribe("/limo_status", 1000,&BatteryCheck::BatteryCallBack, this);
     maxBatteryVoltage = nh.param<float>("minBatteryVoltage",12.6);
     batteryToLow = nh.param<float>("batteryToLow",10);
 }
 
-NodeStatus BatteryCheck::tick()
+NodeStatus BatteryCheck::Tick()
 /*
  * creturns failure if the battery is below a certain percentage
 */
@@ -20,7 +16,7 @@ NodeStatus BatteryCheck::tick()
         return NodeStatus::RUNNING;
     else if (BatteryLevel < batteryToLow)
         return NodeStatus::FAILURE;
-        
+     
     return NodeStatus::SUCCESS;
 }
 void BatteryCheck::BatteryCallBack(const limo_base::LimoStatus& msgs)

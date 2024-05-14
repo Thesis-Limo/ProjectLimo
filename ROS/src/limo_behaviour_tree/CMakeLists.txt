@@ -12,7 +12,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(catkin REQUIRED COMPONENTS
   limo_base
   limo_motion_controller
-  behaviortree_cpp_v3
   roscpp
   pcl_ros
   nav_msgs
@@ -134,6 +133,7 @@ include_directories(
   include/${PROJECT_NAME}
   include/Actions
   include/Conditions
+  include/BTArchitecture
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -151,13 +151,13 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 
-file(GLOB srcs include/position.hpp src/Actions/*.cpp src/Conditions/*.cpp include/Actions/*.h include/Conditions/*.h*)
+file(GLOB srcs src/BTArchitecture/*.cpp include/position.hpp src/Actions/*.cpp src/Conditions/*.cpp include/Actions/*.h include/BTArchitecture/*.h  include/Conditions/*.h*)
 
 #add_executable(limo_behaviour_tree ${srcs})
 ##Reminder to myself, if we add an new cpp file add it for executable as well.
  add_executable(
    ${PROJECT_NAME} src/limo_behaviour_tree.cpp
-   tree.xml
+  #  tree.xml
    ${srcs}
  )
 

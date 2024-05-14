@@ -1,19 +1,13 @@
 #include "CheckPath.h"
 #include <std_srvs/Trigger.h>
-CheckPath::CheckPath(const std::string& name, const BT::NodeConfiguration& conf)
-    :BT::ConditionNode(name, conf)
-{
-  logInfo.data = "There is not a path to my goal";
-}
 
-void CheckPath::Initialize(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
+CheckPath::CheckPath(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
+  :Node(nodehandle, logPub,"There is not a path to my goal")
 {
-    nh = nodehandle;
-    this->logPub = logPub;
     this->pathService = nh.serviceClient<std_srvs::Trigger>("/check_path");
 }
 
-NodeStatus CheckPath::tick()
+NodeStatus CheckPath::Tick()
 /*
  * Checks if there is already a plath or not returns success if no math is found
 */
@@ -23,7 +17,7 @@ NodeStatus CheckPath::tick()
     {
         if(msg.response.success)
         {
-            this->logPub.publish(logInfo);
+            Log();
             return NodeStatus::FAILURE;
         }
     }

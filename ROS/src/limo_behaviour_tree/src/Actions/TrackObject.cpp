@@ -10,10 +10,9 @@ void TrackObject::Initialize(const ros::NodeHandle& nodehandle)
   nh = nodehandle;
   currentTargetID = nh.param<int>("currentTargetID",39);
   client = nh.serviceClient<limo_behaviour_tree::TypeObjectTracking>("/TrackID");
-
 }
 
-BT::NodeStatus TrackObject::tick()
+NodeStatus TrackObject::Tick()
 /*
  * calls service for tracking with name /BT/FindObject
 */
@@ -26,6 +25,4 @@ BT::NodeStatus TrackObject::tick()
   }
 
   return NodeStatus::FAILURE;
-}
-void TrackObject::halt(){
 }

@@ -1,27 +1,22 @@
 #include "TargetNotFound.h"
 #include <std_srvs/Trigger.h>
 
-TargetNotFound::TargetNotFound(const std::string& name, const NodeConfiguration& conf)
-    :ConditionNode(name, conf)
-{
-    logInfo.data = "Target is not found";
-}
 
-void TargetNotFound::Initialize(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
+TargetNotFound::TargetNotFound(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
+  :Node(nodehandle, logPub,"Target is not found")
 {
-    nh = nodehandle;
-    this->logPub = logPub;
     this->pathService = nh.serviceClient<std_srvs::Trigger>("/check_target", 100);
 }
 
-NodeStatus TargetNotFound::tick()
+NodeStatus TargetNotFound::Tick()
 {
     std_srvs::Trigger msg;
+
     if(this->pathService.call(msg))
     {
         if(msg.response.success)
         {
-            this->logPub.publish(logInfo);
+            Log();
             return NodeStatus::FAILURE;
         }
     }

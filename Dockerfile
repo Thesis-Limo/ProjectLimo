@@ -44,7 +44,6 @@ RUN apt-get update && apt-get install -y\
     ros-melodic-robot-pose-ekf \
     ros-melodic-navigation\
     ros-melodic-gmapping\
-    ros-melodic-behaviortree-cpp-v3\
     python3-catkin-tools \
     ros-melodic-roslint\
     ros-melodic-gazebo-msgs\

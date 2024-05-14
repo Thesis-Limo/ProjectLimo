@@ -1,4 +1,3 @@
-#include "behaviortree_cpp_v3/bt_factory.h"
 #include "geometry_msgs/Point.h"
 #ifndef POSITION_H
 #define POSITION_H
@@ -41,24 +40,4 @@ public:
         return x*x + y*y + z*z;
     }
 };
-namespace BT
-{
-    template <> inline Point3D convertFromString(StringView str)
-    {
-        // We expect real numbers separated by semicolons
-        auto parts = splitString(str, ';');
-        if (parts.size() != 3)
-        {
-            throw RuntimeError("invalid input)");
-        }
-        else
-        {
-            Point3D output;
-            output.x     = convertFromString<double>(parts[0]);
-            output.y     = convertFromString<double>(parts[1]);
-            output.z     = convertFromString<double>(parts[2]);
-            return output;
-        }
-    }
-} // end namespace BT
 #endif
