@@ -10,7 +10,6 @@ from Dubins.dubins_path_planner import plan_dubins_path
 
 ROBOT_RADIUS = 0.2  # [m]
 WHEELBASE = 0.2  # [m]
-SIM_LOOP = 100
 TARGET_SPEED = 0.1  # [m/s]
 
 
@@ -68,6 +67,19 @@ class MotionPlanner:
         self.initial_state = initial_state
         self.motion_plan = []
         self.planning_done = False
+        self.goal_updated = False
+        self.goal_reached = False
+        self.lock = threading.Lock()
+
+    def update_goal(self, new_goal_pose: Pose):
+        with self.lock:
+            self.goal_pose = new_goal_pose
+            self.goal_updated = True
+            self.goal_reached = False
+            self.planning_done = False
+            print(
+                f"Goal updated to: ({new_goal_pose.x}, {new_goal_pose.y}, {new_goal_pose.yaw})"
+            )
 
     def get_dubins_path(self, curvature: float = 1.0 / 0.4):
         step_size = 1.0
@@ -85,7 +97,7 @@ class MotionPlanner:
         state = state or self.initial_state
 
         start = time.time()
-        for _ in range(SIM_LOOP):
+        while True:
             step_start = time.time()
             try:
                 state, path, goal_reached = self.run_frenet_iteration(
@@ -98,14 +110,25 @@ class MotionPlanner:
 
             self.motion_plan.append(path)
 
-            if goal_reached:
-                break
+            with self.lock:
+                if self.goal_updated:
+                    self.goal_updated = False
+                    new_path = self.get_dubins_path()
+                    csp, tx, ty = self.generate_course_and_state_initialization(
+                        new_path
+                    )
+                if goal_reached:
+                    self.goal_reached = True
+                    self.planning_done = True
+                    print("Goal reached.")
+                    break
+
             step_end = time.time()
             print("Time for step is ", step_end - step_start)
 
-        self.planning_done = True
         end = time.time()
         print(f"Time taken to plan: {end - start:.2f} seconds")
+        self.planning_done = True
 
     def run_frenet_iteration(self, csp, state, tx, ty, obstacles):
         goal_dist = np.hypot(tx[-1] - state.c_x, ty[-1] - state.c_y)
@@ -134,14 +157,11 @@ class MotionPlanner:
         )
 
         goal_reached = np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 0.2
-        if goal_reached:
-            print("Goal reached")
-            print(np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]))
         return updated_state, path, goal_reached
 
     def plan(self):
         path = self.get_dubins_path()
-        threading.Thread(target=self.calculate_frenet, args=(path,)).start()
+        self.calculate_frenet(path)
 
     def plot(self, motion_plan, goal_pose=None, area=5.0):
         goal_pose = goal_pose or self.goal_pose
@@ -209,54 +229,50 @@ def add_to_motion_plan(motion_plan, path, final=False):
     return motion_plan
 
 
-tick = True
+def callback(planner):
+    motion_plan = FrenetPath()
+    idx = 0
+    while not planner.planning_done or idx < len(planner.motion_plan):
+        if idx < len(planner.motion_plan):
+            path = planner.motion_plan[idx]
+            motion_plan = add_to_motion_plan(motion_plan, path)
+            idx += 1
 
-
-def callback():
-    global tick
-    if tick:
-        print("Calculating for timestamp:", time.time())
-        tick = False
-
-        goal_values = input("Enter goal (x y yaw): ")
-        if goal_values == "":
-            tick = True
-            return
-
-        goal_x, goal_y, goal_yaw = [float(num) for num in goal_values.split()]
-
-        obstacles = np.array([(10.0, 10.0)])
-
-        goal_pose = Pose(goal_x, goal_y, goal_yaw)
-        planner = MotionPlanner(goal_pose, obstacleList=obstacles)
-        planner.plan()
-        time.sleep(1.0)
-
-        motion_plan = FrenetPath()
-        idx = 0
-        while not planner.planning_done or idx < len(planner.motion_plan):
-            if idx < len(planner.motion_plan):
-                path = planner.motion_plan[idx]
-                motion_plan = add_to_motion_plan(motion_plan, path)
-                idx += 1
-
+    if planner.motion_plan:
+        path = planner.motion_plan[-1]
         motion_plan = add_to_motion_plan(motion_plan, path, final=True)
-        plan = [
-            (motion_plan.s_d[i], math.atan2(WHEELBASE * motion_plan.c[i], 1.0))
-            for i in range(len(motion_plan.t) - 1)
-        ]
-        plan = [(speed, 0 if math.isnan(angle) else angle) for speed, angle in plan]
-        print(plan)
 
-        print("Final position: ", motion_plan.x[-1], motion_plan.y[-1])
-        planner.plot(planner.motion_plan)
+    plan = [
+        (motion_plan.s_d[i], math.atan2(WHEELBASE * motion_plan.c[i], 1.0))
+        for i in range(len(motion_plan.t) - 1)
+    ]
+    plan = [(speed, 0 if math.isnan(angle) else angle) for speed, angle in plan]
+    print(plan)
 
-        input("Press Enter to continue...")
+    print("Final position: ", motion_plan.x[-1], motion_plan.y[-1])
+    # planner.plot(planner.motion_plan)
 
-        tick = True
+
+def goal_update_listener(planner):
+    while True:
+        goal_values = input("Enter new goal (x y yaw): ")
+        if goal_values:
+            goal_x, goal_y, goal_yaw = [float(num) for num in goal_values.split()]
+            new_goal_pose = Pose(goal_x, goal_y, goal_yaw)
+            planner.update_goal(new_goal_pose)
 
 
 if __name__ == "__main__":
     print("running planner")
-    while True:
-        callback()
+
+    initial_goal_pose = Pose(1.0, 1.0, 0.0)  # Initial goal pose
+    obstacles = np.array([(10.0, 10.0)])  # Example obstacles
+    planner = MotionPlanner(goal_pose=initial_goal_pose, obstacleList=obstacles)
+
+    # Start the goal update listener thread
+    threading.Thread(target=goal_update_listener, args=(planner,), daemon=True).start()
+
+    # Start the planning loop
+    threading.Thread(target=planner.plan, daemon=True).start()
+
+    callback(planner)
