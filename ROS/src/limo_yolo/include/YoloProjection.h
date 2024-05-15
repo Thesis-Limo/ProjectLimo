@@ -3,7 +3,6 @@
 #include <queue>
 
 #include <sensor_msgs/Image.h>
-#include <sensor_msgs/CameraInfo.h>
 #include <sensor_msgs/LaserScan.h>
 
 #include <geometry_msgs/Point.h>
@@ -56,7 +55,6 @@ private:
     float distanceIgnorePoint = 0.1;
     float outlineTarget = 0.1;
     float angleDeadzone = 0.0;
-    CameraInfo cameraInfo;
     std::string laserFrame;
     std::string baseLinkFrame;
 
@@ -78,7 +76,7 @@ private:
     std::vector<geometry_msgs::PointStamped> UpdateTargetPositions(const geometry_msgs::Point& transformation, float yawRotation);
 
     float QuaternionToYaw(const geometry_msgs::Quaternion& quaternion);
-    float PixelToRad(float pixel);
+    float PixelToRad(float pixel,float width);
     float DistanceSquare(const geometry_msgs::PointStamped & a, const geometry_msgs::PointStamped & b);
 public:
     YoloProjection(const ros::NodeHandle& nodehandle);

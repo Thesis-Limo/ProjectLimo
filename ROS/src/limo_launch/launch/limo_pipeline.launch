@@ -5,7 +5,7 @@
     <include file="$(find limo_behaviour_tree)/launch/limo_behaviour_tree.launch">
         <arg name="screen" value="$(arg screen)"/>
     </include>
-    <include file="$(find limo_yolo)/launch/limo_yolo_pipeline.launch">
+    <include file="$(find limo_yolo)/launch/limo_yolo.launch">
         <arg name="screen" value="$(arg screen)"/>
     </include>
 </launch>
