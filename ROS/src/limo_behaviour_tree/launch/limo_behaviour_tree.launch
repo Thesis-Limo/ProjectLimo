@@ -7,6 +7,7 @@
     <arg name="distanceToDecideToClose" default="1"/>
     <arg name="minDistanceWhenBraking" default="0.35"/>
     <arg name="currentTargetID" default="39"/>
+    <arg name="SpeedGoingBack" default="0.1"/>
 
     <include file="$(find limo_motion_controller)/launch/Controller.launch">
         <arg name="screen" value="$(arg screen)"/>
@@ -18,6 +19,8 @@
         <param name="distanceToCloseToTarget" value="$(arg distanceToCloseToTarget)"/>
         <param name="distanceToDecideToClose" value="$(arg distanceToDecideToClose)"/>
         <param name="minDistanceWhenBraking" value="$(arg minDistanceWhenBraking)"/>
+        <param name="currentTargetID" value="$(arg currentTargetID)"/>
+        <param name="SpeedGoingBack" value="$(arg SpeedGoingBack)"/>
     </node>
     <!-- <node name="FlaskServer" pkg="limo_behaviour_tree" type="FlaskServer.py" output="screen"/> -->
 
