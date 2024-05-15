@@ -16,7 +16,7 @@ NodeStatus ObjectFound::Tick()
     std_srvs::Trigger msg;
     if(this->pathService.call(msg))
     {
-        if(msg.response.success)
+        if(!msg.response.success)
         {
             Log();
             return NodeStatus::SUCCESS;
