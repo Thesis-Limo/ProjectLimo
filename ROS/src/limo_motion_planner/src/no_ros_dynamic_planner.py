@@ -57,11 +57,9 @@ class MotionPlanner:
     def __init__(
         self,
         goal_pose: Pose,
-        start_pose: Pose = Pose(0.0, 0.0, 0.0),
         obstacleList: list = [],
         initial_state: FrenetState = FrenetState(0.01, 0.0, 0.0, 0.0, 0.0, 0.0),
     ):
-        self.start_pose = start_pose
         self.goal_pose = goal_pose
         self.obstacleList = obstacleList
         self.initial_state = initial_state
@@ -81,11 +79,13 @@ class MotionPlanner:
                 f"Goal updated to: ({new_goal_pose.x}, {new_goal_pose.y}, {new_goal_pose.yaw})"
             )
 
-    def get_dubins_path(self, curvature: float = 1.0 / 0.4):
-        step_size = 1.0
-        start = self.start_pose
+    def get_dubins_path(
+        self,
+        start: Pose,
+        curvature: float = 1.0 / 0.4,
+        step_size: float = 1.0,
+    ):
         goal = self.goal_pose
-
         path_x, path_y, path_yaw, mode, lengths = plan_dubins_path(
             start.x, start.y, start.yaw, goal.x, goal.y, goal.yaw, curvature, step_size
         )
@@ -113,7 +113,9 @@ class MotionPlanner:
             with self.lock:
                 if self.goal_updated:
                     self.goal_updated = False
-                    new_path = self.get_dubins_path()
+                    new_path = self.get_dubins_path(
+                        Pose(path.x[0], path.y[0], path.yaw[0])
+                    )
                     csp, tx, ty = self.generate_course_and_state_initialization(
                         new_path
                     )
@@ -159,17 +161,18 @@ class MotionPlanner:
         goal_reached = np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 0.2
         return updated_state, path, goal_reached
 
-    def plan(self):
-        path = self.get_dubins_path()
+    def plan(self, start_pose: Pose = Pose(0.0, 0.0, 0.0)):
+        path = self.get_dubins_path(start_pose)
         self.calculate_frenet(path)
 
-    def plot(self, motion_plan, goal_pose=None, area=5.0):
+    def plot(self, motion_plan, full_path, goal_pose=None, area=5.0):
         goal_pose = goal_pose or self.goal_pose
         for path in motion_plan:
             plt.cla()
             for x, y in self.obstacleList:
                 circle = plt.Circle((x, y), 0.2, color="k", fill=False)
                 plt.gca().add_patch(circle)
+            plt.plot(full_path.x, full_path.y, "b")
             plt.plot(goal_pose.x, goal_pose.y, "xg")
             plt.plot(path.x[1:], path.y[1:], "-or")
             plt.plot(path.x[1], path.y[1], "vc")
@@ -249,17 +252,23 @@ def callback(planner):
     plan = [(speed, 0 if math.isnan(angle) else angle) for speed, angle in plan]
     print(plan)
 
-    print("Final position: ", motion_plan.x[-1], motion_plan.y[-1])
-    # planner.plot(planner.motion_plan)
+    print("Final position: ", motion_plan.x[-1], motion_plan.y[-1], motion_plan.yaw[-1])
+    print("x: ", motion_plan.x)
+    print("y: ", motion_plan.y)
+    planner.plot(planner.motion_plan, motion_plan)
 
 
 def goal_update_listener(planner):
     while True:
         goal_values = input("Enter new goal (x y yaw): ")
-        if goal_values:
+        if len(goal_values.split()) == 3 and all(
+            num.isdigit() for num in goal_values.split()
+        ):
             goal_x, goal_y, goal_yaw = [float(num) for num in goal_values.split()]
             new_goal_pose = Pose(goal_x, goal_y, goal_yaw)
             planner.update_goal(new_goal_pose)
+        elif goal_values == "":
+            break
 
 
 if __name__ == "__main__":
@@ -270,9 +279,17 @@ if __name__ == "__main__":
     planner = MotionPlanner(goal_pose=initial_goal_pose, obstacleList=obstacles)
 
     # Start the goal update listener thread
-    threading.Thread(target=goal_update_listener, args=(planner,), daemon=True).start()
+    goal_update_thread = threading.Thread(target=goal_update_listener, args=(planner,))
+    goal_update_thread.start()
 
     # Start the planning loop
-    threading.Thread(target=planner.plan, daemon=True).start()
+    planning_thread = threading.Thread(target=planner.plan)
+    planning_thread.start()
 
     callback(planner)
+
+    # Wait for threads to complete
+    goal_update_thread.join()
+    planning_thread.join()
+
+    print("Planner finished")
