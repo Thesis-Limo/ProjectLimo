@@ -99,7 +99,6 @@ void YoloProjection::CallbackYoloResult(const darknet_ros_msgs::BoundingBoxes::C
     if (currentDataframe.seq == msg->image_header.seq)
     {
         //Got the data from the yolo
-        //std::vector<geometry_msgs::Point> pixels = ;
         std::vector<darknet_ros_msgs::BoundingBox> box;
         darknet_ros_msgs::BoundingBox *bounding_boxes=new darknet_ros_msgs::BoundingBox[end(msg->bounding_boxes)-begin(msg->bounding_boxes)];
         memcpy(bounding_boxes,&(msg->bounding_boxes[0]),(end(msg->bounding_boxes)-begin(msg->bounding_boxes))*sizeof(darknet_ros_msgs::BoundingBox));
@@ -192,19 +191,7 @@ limo_yolo::map YoloProjection::ConvertToLidar(const LaserScan& laser, const floa
                     {
                         p.second = transformed_point;
                         pixelsTargetWithDistance.push_back(p);
-                        //continue;
                     }
-                    // if(startId < target.size() && DistanceSquare(transformed_point,target[startId]) > distanceIgnorePoint)
-                    // {
-                    //     //p.second = target[startId];
-                    //     //pixelsObstacles.push_back(transformed_point);
-                    //     //pixelsTargetWithDistance.push_back(p);
-                    // } 
-                    // else{
-                    //     p.second = transformed_point;
-                    //     pixelsTargetWithDistance.push_back(p);
-                    // }       
-                    
                     startId++;
                 }
                 else

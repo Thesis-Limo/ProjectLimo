@@ -4,6 +4,7 @@
 ObjectFound::ObjectFound(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
   :Node(nodehandle, logPub,"Target is not found")
 {
+    ros::service::waitForService("/check_target", 10000); 
     this->pathService = nh.serviceClient<std_srvs::Trigger>("/check_target", 100);
 }
 

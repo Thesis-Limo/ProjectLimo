@@ -66,19 +66,19 @@ Node* InitTree(const ros::NodeHandle& nodehandle, float duration, const ros::Pub
     Sequence* root = new Sequence(nodehandle, logPub,em);
     return root;
 }
-// Node* InitTreeSearch(const ros::NodeHandle& nodehandle, float duration, const ros::Publisher& logPub)
-// {
-//     TrackObject* trackObject = new TrackObject(nodehandle, logPub);
-//     ObjectFound* objectFound = new ObjectFound(nodehandle, logPub);
-//     CreatePath* createPath = new CreatePath(nodehandle, logPub);
-//     //Setup Tree
-//     std::vector<Node*> em;
-//     em.push_back(trackObject);
-//     em.push_back(objectFound);
-//     em.push_back(createPath);
-//     Sequence* TrackObject = new Sequence(nodehandle, logPub,em);
-//     return TrackObject;
-// }
+Node* InitTreeSearch(const ros::NodeHandle& nodehandle, float duration, const ros::Publisher& logPub)
+{
+    TrackObject* trackObject = new TrackObject(nodehandle, logPub);
+    ObjectFound* objectFound = new ObjectFound(nodehandle, logPub);
+    CreatePath* createPath = new CreatePath(nodehandle, logPub);
+    //Setup Tree
+    std::vector<Node*> em;
+    em.push_back(trackObject);
+    em.push_back(objectFound);
+    em.push_back(createPath);
+    Sequence* TrackObject = new Sequence(nodehandle, logPub,em);
+    return TrackObject;
+}
 
 int main(int argc, char* argv[])
 {
@@ -89,8 +89,7 @@ int main(int argc, char* argv[])
     ros::Publisher logger = nh.advertise<std_msgs::String>("/BT/Log", 100);
     //BT
     Node* root = InitTree(nh, 1,logger);
-    //Node* rootSearch = InitTreeSearch(nh, 1,logger);
-    //Root root(nh, logger);
+    Node* rootSearch = InitTreeSearch(nh, 1,logger);
     ros::Rate r(30); // 10 hz
     float sec = 1;
   
@@ -100,12 +99,8 @@ int main(int argc, char* argv[])
     {
         ros::spinOnce();
         i++;
-       // root.Tick();
         root->Tick();
-        //rootSearch->Tick();
-        // Run the Behavior Tree
-        //tree.tickRoot();
-        //treeTracking.tickRoot();
+        rootSearch->Tick();
         r.sleep();
     }
     return 0;
