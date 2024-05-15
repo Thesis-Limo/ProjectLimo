@@ -19,6 +19,8 @@
 #include "Fallback.h"
 #include "Sequence.h"
 #include "Brake.h"
+
+// #include "Root.hpp"
 using namespace BehaviourTree;
 
 Node* InitTree(const ros::NodeHandle& nodehandle, float duration, const ros::Publisher& logPub)
@@ -88,7 +90,7 @@ int main(int argc, char* argv[])
     //BT
     Node* root = InitTree(nh, 1,logger);
     Node* rootSearch = InitTreeSearch(nh, 1,logger);
-    ros::Rate r(10); // 10 hz
+    ros::Rate r(30); // 10 hz
     float sec = 1;
   
     NodeStatus status = NodeStatus::RUNNING;
@@ -99,9 +101,6 @@ int main(int argc, char* argv[])
         i++;
         root->Tick();
         rootSearch->Tick();
-        // Run the Behavior Tree
-        //tree.tickRoot();
-        //treeTracking.tickRoot();
         r.sleep();
     }
     return 0;

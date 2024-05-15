@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <launch>
-    <include file="$(find limo_base)/launch/limo_base.launch">
-        <arg name="pub_odom_tf" default="true" />
+    <arg name="screen" default="log"/>
+    <include file="$(find limo_launch)/launch/limo_default.launch"/>
+    <include file="$(find limo_behaviour_tree)/launch/limo_behaviour_tree.launch">
+        <arg name="screen" value="$(arg screen)"/>
     </include>
-    <include file="$(find astra_camera)/launch/dabai_u3.launch"/>
-    <include file="$(find limo_behaviour_tree)/launch/limo_behaviour_tree.launch"/>
-
+    <include file="$(find limo_yolo)/launch/limo_yolo_pipeline.launch">
+        <arg name="screen" value="$(arg screen)"/>
+    </include>
 </launch>

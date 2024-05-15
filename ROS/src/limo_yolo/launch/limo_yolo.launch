@@ -1,0 +1,18 @@
+<launch> 
+  <arg name="screen" default="screen"/>
+  <arg name="baseLinkFrame" default="base_link" />
+  <arg name="laserFrame" default="laser_link" />
+  <arg name="ObjectId" default="39"/>
+
+  <node name="limo_yolo" pkg="limo_yolo" type="limo_yolo" output="$(arg screen)">
+    <param name="baseLinkFrame" value="$(arg baseLinkFrame)"/>
+    <param name="laserFrame" value="$(arg laserFrame)"/>
+    <param name="ObjectId" value="$(arg ObjectId)"/>
+  </node>
+
+  <include file="$(find darknet_ros)/launch/yolo_v4_tiny.launch">
+    <arg name="screen" value="$(arg screen)"/>
+    <arg name="image" value="/camera/yolo_input" />
+  </include>
+  
+</launch>

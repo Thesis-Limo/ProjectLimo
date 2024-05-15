@@ -1,11 +1,11 @@
 #include "TrackObject.h"
 #include "limo_behaviour_tree/TypeObjectTracking.h"
 #include "geometry_msgs/Point.h"
-
-TrackObject::TrackObject(const ros::NodeHandle& nodehandle,const ros::Publisher& logPub)
-  :Node(nodehandle, logPub)
+TrackObject::TrackObject(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub)
+    :Node(nodehandle, logPub)
 {
-  client = nh.serviceClient<limo_behaviour_tree::TypeObjectTracking>("/BT/FindObject");
+  currentTargetID = nh.param<int>("currentTargetID",39);
+  client = nh.serviceClient<limo_behaviour_tree::TypeObjectTracking>("/TrackID");
 }
 
 NodeStatus TrackObject::Tick()
@@ -14,11 +14,9 @@ NodeStatus TrackObject::Tick()
 */
 {
   limo_behaviour_tree::TypeObjectTracking srv;
-  srv.request.objectID = 0;
+  srv.request.objectID = currentTargetID;
   if(client.call(srv))
   {
-    if(srv.response.position.x >= __FLT_MAX__)
-      return NodeStatus::RUNNING;
     return NodeStatus::SUCCESS;
   }
 

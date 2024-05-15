@@ -151,7 +151,7 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 
-file(GLOB srcs src/BTArchitecture/*.cpp include/position.hpp src/Actions/*.cpp src/Conditions/*.cpp include/Actions/*.h include/BTArchitecture/*.h  include/Conditions/*.h*)
+file(GLOB srcs src/BTArchitecture/*.cpp include/position.hpp include/BTArchitecture/*.hpp src/Actions/*.cpp src/Conditions/*.cpp include/Actions/*.h include/BTArchitecture/*.h  include/Conditions/*.h*)
 
 #add_executable(limo_behaviour_tree ${srcs})
 ##Reminder to myself, if we add an new cpp file add it for executable as well.
