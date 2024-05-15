@@ -15,7 +15,7 @@
 
 
 YoloProjection::YoloProjection(const ros::NodeHandle& nodehandle):
-    listenerTransform(buffer), nh(nodehandle), id(0)
+    listenerTransform(buffer), nh(nodehandle), id(0), angleDeadzone(0)
 {
 
     yoloImagePub = nh.advertise<Image>("/camera/yolo_input",10);
@@ -30,12 +30,11 @@ YoloProjection::YoloProjection(const ros::NodeHandle& nodehandle):
     subOdom = nh.subscribe<nav_msgs::Odometry>("/odom", 1, &YoloProjection::CallBackOdom, this);
     serviceFoundObject = nh.advertiseService("/check_target", &YoloProjection::FoundObjectService, this);
     //param
-    std::string infoCamera = nh.param<std::string>("infoCamera", "/camera/rgb/camera_info");
     objectId = nh.param<float>("ObjectId", 39);
     baseLinkFrame = nh.param<std::string>("baseLinkFrame", "base_link");
     laserFrame = nh.param<std::string>("laserFrame", "laser_link");
 
-    cameraInfo = *(ros::topic::waitForMessage<CameraInfo>(infoCamera));
+    
     ROS_INFO("finishedInit yolo projection");
 }
 
@@ -52,6 +51,7 @@ void YoloProjection::CallbackImageAndLidar(const Image& image, const LaserScan& 
     @param lidar_msg (sensor_msgs/LaserScan): currentlaserscan
 */
 {
+
     DataFrame newImg{id, laser, image, currentPose};
     Image pubImage = image;
     pushedFrames.push(newImg);
@@ -122,26 +122,23 @@ void YoloProjection::CallbackYoloResult(const darknet_ros_msgs::BoundingBoxes::C
         float startRadObject = -M_PI;
         float endRadObject = -M_PI;
         float currentDistance = __FLT_MAX__;
-        Point3D currentEndpoint;
         for (int i = 0; i < box.size(); i++)
         {
             //Calculate angle
             float pointX = box[i].xmin + (box[i].xmax - box[i].xmin)/2;
-            float rad = PixelToRad(pointX);
+            float rad = PixelToRad(pointX,currentDataframe.currentImage.width);
             float id = (rad - currentDataframe.lidar.angle_min) / currentDataframe.lidar.angle_increment;
             id = round(id);
 
             if(currentDistance > currentDataframe.lidar.ranges[id])
             {
                 currentDistance = currentDataframe.lidar.ranges[id];
-                startRadObject =  PixelToRad(box[i].xmax);
-                endRadObject = PixelToRad(box[i].xmin);
-                std::cout << box[i].xmax << "\n";
-                if(box[i].xmax >= cameraInfo.width)
-                     ROS_INFO("max");
+                startRadObject =  PixelToRad(box[i].xmax,currentDataframe.currentImage.width);
+                endRadObject = PixelToRad(box[i].xmin, currentDataframe.currentImage.width);
+                std::cout << currentDataframe.currentImage.width << "\n";
             }            
         }   
-        if(currentEndpoint.x == 0 || currentEndpoint.y == 0)
+        if(currentDistance == __FLT_MAX__)
         {
             ROS_INFO("TargetNotInReach");
             objectFound = false;    
@@ -276,7 +273,7 @@ void YoloProjection::PublishAndMap(const DataFrame& dataframe, float minAngle, f
 
     }
     else{
-        std::cout << minAngle- angleDeadzone << "-" << maxAngle  + angleDeadzone <<"\n";
+        std::cout << minAngle  << "-" << maxAngle   <<"\n";
         map = this->ConvertToLidar(dataframe.lidar, minAngle - angleDeadzone, maxAngle + angleDeadzone);
         targetPositions.clear();
         targetPositions = map.goal;
@@ -319,12 +316,12 @@ void YoloProjection::CallBackOdom(const nav_msgs::Odometry::ConstPtr& odom)
     currentPose = odom->pose.pose;   
 }
 
-float YoloProjection::PixelToRad(float pixel)
+float YoloProjection::PixelToRad(float pixel, float width)
 /**
  * @brief convert a camerapixel to a deg based on cameraFOV
  */
 {
-    float deg = (pixel - cameraInfo.width / 2) * (colorFOV / cameraInfo.width);
+    float deg = (pixel - width / 2) * (colorFOV / width);
     return -deg / 180 * M_PI;
 }
 std::vector<geometry_msgs::PointStamped> YoloProjection::UpdateTargetPositions(const geometry_msgs::Point& transformation, float yawRotation)
