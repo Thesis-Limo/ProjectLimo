@@ -42,7 +42,7 @@ YoloProjection::YoloProjection(const ros::NodeHandle& nodehandle):
 bool YoloProjection::FoundObjectService(std_srvs::Trigger::Request& req,std_srvs::Trigger::Response& res)
 {
     res.success = objectFound;
-    return true;
+    return objectFound;
 }
 
 void YoloProjection::CallbackImageAndLidar(const Image& image, const LaserScan& laser)

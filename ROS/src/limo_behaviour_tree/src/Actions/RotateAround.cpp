@@ -21,5 +21,8 @@ NodeStatus RotateAround::Tick()
     Log();
     return NodeStatus::SUCCESS;
   }
-  return NodeStatus::FAILURE;
+   //TODO this is temp normally remove the Log and return failure
+  Log();
+
+  return NodeStatus::SUCCESS;
 }
