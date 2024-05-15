@@ -13,7 +13,7 @@ from sensor_msgs.msg import LaserScan
 
 ROBOT_RADIUS = 0.2  # [m]
 WHEELBASE = 0.2  # [m]
-SIM_LOOP = 500
+SIM_LOOP = 100
 TARGET_SPEED = 0.1  # [m/s]
 
 
@@ -122,7 +122,7 @@ class MotionPlanner:
             state.c_d_d,
             state.c_d_dd,
             obstacles,
-            TARGET_SPEED #if goal_dist > 1 else TARGET_SPEED * (goal_dist / 1),
+            TARGET_SPEED if goal_dist > 1 else TARGET_SPEED * (goal_dist / 1),
         )
 
         updated_state = FrenetState(
@@ -136,7 +136,7 @@ class MotionPlanner:
             c_y=path.y[1],
         )
 
-        goal_reached = np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0
+        goal_reached = np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 0.2
         return updated_state, path, goal_reached
 
     def plan(self):
@@ -258,7 +258,7 @@ def callback(lidar_msg, publisher):
         ]
         plan = [(speed, 0 if math.isnan(angle) else angle) for speed, angle in plan]
         print(plan)
-        # print final position
+
         print("Final position: ", motion_plan.x[-1], motion_plan.y[-1])
         executable_plan = MotionPlan()
         for speed, angle in plan:

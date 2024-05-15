@@ -12,7 +12,7 @@ from sensor_msgs.msg import LaserScan
 
 ROBOT_RADIUS = 0.2  # [m]
 WHEELBASE = 0.2  # [m]
-SIM_LOOP = 500
+SIM_LOOP = 100
 TARGET_SPEED = 0.5  # [m/s]
 
 
@@ -135,7 +135,7 @@ class MotionPlanner:
             c_y=path.y[1],
         )
 
-        goal_reached = np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0
+        goal_reached = np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 0.2
         return updated_state, path, goal_reached
 
     def plan(self):
