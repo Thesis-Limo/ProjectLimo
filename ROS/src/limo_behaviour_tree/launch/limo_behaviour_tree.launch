@@ -1,14 +1,18 @@
 <?xml version="1.0"?>
 <launch>
+    <arg name="screen" default="screen"/>
     <arg name="minBatteryVoltage" default="12.6"/>
     <arg name="batteryToLow" default="10"/>
     <arg name="distanceToCloseToTarget" default="1"/>
     <arg name="distanceToDecideToClose" default="1"/>
     <arg name="minDistanceWhenBraking" default="0.35"/>
     <arg name="currentTargetID" default="39"/>
-    <include file="$(find limo_motion_controller)/launch/Controller.launch"/>
 
-    <node name="limo_behaviour_tree" pkg="limo_behaviour_tree" type="limo_behaviour_tree" output="screen">
+    <include file="$(find limo_motion_controller)/launch/Controller.launch">
+        <arg name="screen" value="$(arg screen)"/>
+    </include>
+
+    <node name="limo_behaviour_tree" pkg="limo_behaviour_tree" type="limo_behaviour_tree" output="$(arg screen)">
         <param name="minBatteryVoltage" value="$(arg minBatteryVoltage)"/>
         <param name="batteryToLow" value="$(arg batteryToLow)"/>
         <param name="distanceToCloseToTarget" value="$(arg distanceToCloseToTarget)"/>

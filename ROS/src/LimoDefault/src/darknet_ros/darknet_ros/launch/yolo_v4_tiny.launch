@@ -6,6 +6,7 @@
   <arg name="image" default="/camera/rgb/image_raw" />
   <arg name="console" default="False"/>
   <arg name="opencvDisplay" default="False"/>
+  <arg name="screen" default="screen"/>
 
   <!-- Config and weights folder. -->
   <arg name="yolo_weights_path"          default="$(find darknet_ros)/yolo_network_config/weights"/>
@@ -20,7 +21,7 @@
   <rosparam command="load" ns="darknet_ros" file="$(arg network_param_file)"/>
 
   <!-- Start darknet and ros wrapper -->
-  <node pkg="darknet_ros" type="darknet_ros" name="darknet_ros" output="screen" launch-prefix="$(arg launch_prefix)">
+  <node pkg="darknet_ros" type="darknet_ros" name="darknet_ros" output="$( arg screen)" launch-prefix="$(arg launch_prefix)">
     <param name="weights_path"          value="$(arg yolo_weights_path)" />
     <param name="config_path"           value="$(arg yolo_config_path)" />
     <param name="image_view/enable_console_output"         value="$(arg console)" />

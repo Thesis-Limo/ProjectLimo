@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 <launch>
+    <arg name="screen" default="screen"/>
     <arg name="minSpeed" default="-0.6"/>
     <arg name="maxSpeed" default="0.6"/>
     <arg name="wheelBase" default="0.2"/>
 
-    <node name="limo_motion_controller" pkg="limo_motion_controller" type="limo_motion_controller" output="screen">
+    <node name="limo_motion_controller" pkg="limo_motion_controller" type="limo_motion_controller" output="$(arg screen)">
         <param name="minSpeed" value="$(arg minSpeed)"/>
         <param name="maxSpeed" value="$(arg maxSpeed)"/>
         <param name="wheelBase" value="$(arg wheelBase)"/>
