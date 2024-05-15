@@ -7,6 +7,7 @@ RUN apt-get update && apt-get -y install --no-install-recommends \
     python3 \
     python3-pip
 
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update\
     && apt-get -y install --no-install-recommends \
     wget \
@@ -17,7 +18,6 @@ RUN apt-get update\
     python3-tk
 
 RUN dpkg-reconfigure locales
-ARG DEBIAN_FRONTEND=noninteractive
 
 
 #
