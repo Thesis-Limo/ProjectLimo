@@ -38,7 +38,7 @@ class Pose:
     def __init__(self, x: float, y: float, yaw: float):
         self.x = x  # X coordinate
         self.y = y  # Y coordinate
-        self.yaw = np.deg2rad(yaw + 90)  # Yaw angle
+        self.yaw = yaw  # Yaw angle
 
 
 class FrenetState:
@@ -68,15 +68,30 @@ class MotionPlanner:
         self.goal_updated = False
         self.goal_reached = False
         self.lock = threading.Lock()
+        self.paths = []
 
     def update_goal(self, new_goal_pose: Pose):
         with self.lock:
-            self.goal_pose = new_goal_pose
+            current_position = Pose(
+                self.motion_plan[-1].x[0],
+                self.motion_plan[-1].y[0],
+                self.motion_plan[-1].yaw[0],
+            )
+            # Update the goal pose to be relative to the current position, including rorating x and y by the current yaw
+            self.goal_pose = Pose(
+                new_goal_pose.x * math.cos(current_position.yaw)
+                - new_goal_pose.y * math.sin(current_position.yaw)
+                + current_position.x,
+                new_goal_pose.x * math.sin(current_position.yaw)
+                + new_goal_pose.y * math.cos(current_position.yaw)
+                + current_position.y,
+                new_goal_pose.yaw + current_position.yaw,
+            )
             self.goal_updated = True
             self.goal_reached = False
             self.planning_done = False
             print(
-                f"Goal updated to: ({new_goal_pose.x}, {new_goal_pose.y}, {new_goal_pose.yaw})"
+                f"Goal updated to: ({self.goal_pose.x}, {self.goal_pose.y}, {np.rad2deg(self.goal_pose.yaw)})"
             )
 
     def get_dubins_path(
@@ -89,7 +104,7 @@ class MotionPlanner:
         path_x, path_y, path_yaw, mode, lengths = plan_dubins_path(
             start.x, start.y, start.yaw, goal.x, goal.y, goal.yaw, curvature, step_size
         )
-
+        self.paths.append((path_x, path_y))
         return zip(path_x, path_y)
 
     def calculate_frenet(self, path, state=None):
@@ -114,7 +129,7 @@ class MotionPlanner:
                 if self.goal_updated:
                     self.goal_updated = False
                     new_path = self.get_dubins_path(
-                        Pose(path.x[0], path.y[0], path.yaw[0])
+                        Pose(path.x[1], path.y[1], path.yaw[1])
                     )
                     csp, tx, ty = self.generate_course_and_state_initialization(
                         new_path
@@ -123,8 +138,8 @@ class MotionPlanner:
                         c_speed=path.s_d[1],
                         c_accel=path.s_dd[1],
                         c_d=0.0,
-                        c_d_d=path.d_d[1],
-                        c_d_dd=path.d_dd[1],
+                        c_d_d=0.0,
+                        c_d_dd=0.0,
                         s0=0,
                         c_x=path.x[1],
                         c_y=path.y[1],
@@ -182,6 +197,8 @@ class MotionPlanner:
             for x, y in self.obstacleList:
                 circle = plt.Circle((x, y), 0.2, color="k", fill=False)
                 plt.gca().add_patch(circle)
+            for path_x, path_y in self.paths:
+                plt.plot(path_x, path_y, "r--")
             plt.plot(full_path.x, full_path.y, "b")
             plt.plot(goal_pose.x, goal_pose.y, "xg")
             plt.plot(path.x[1:], path.y[1:], "-or")
@@ -266,7 +283,7 @@ def callback(planner):
         "Final position: ",
         motion_plan.x[-1],
         motion_plan.y[-1],
-        np.rad2deg(motion_plan.yaw[-1]) - 90,
+        np.rad2deg(motion_plan.yaw[-1]),
     )
     # print("x: ", motion_plan.x)
     # print("y: ", motion_plan.y)
@@ -276,11 +293,9 @@ def callback(planner):
 def goal_update_listener(planner):
     while True:
         goal_values = input("Enter new goal (x y yaw): ")
-        if len(goal_values.split()) == 3 and all(
-            num.isdigit() for num in goal_values.split()
-        ):
+        if len(goal_values.split()) == 3:
             goal_x, goal_y, goal_yaw = [float(num) for num in goal_values.split()]
-            new_goal_pose = Pose(goal_x, goal_y, goal_yaw)
+            new_goal_pose = Pose(goal_x, goal_y, np.deg2rad(goal_yaw))
             planner.update_goal(new_goal_pose)
         elif goal_values == "":
             break
@@ -289,8 +304,8 @@ def goal_update_listener(planner):
 if __name__ == "__main__":
     print("running planner")
 
-    initial_goal_pose = Pose(1.0, 1.0, -45.0)  # Initial goal pose
-    obstacles = np.array([(10.0, 10.0)])  # Example obstacles
+    initial_goal_pose = Pose(1.0, -1.0, -np.deg2rad(45))  # Initial goal pose
+    obstacles = np.array([(0.0, 10.5)])  # Example obstacles
     planner = MotionPlanner(goal_pose=initial_goal_pose, obstacleList=obstacles)
 
     # Start the goal update listener thread
