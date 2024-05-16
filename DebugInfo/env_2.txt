@@ -1,0 +1,2412 @@
+obstacles: 
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: -0.0992352557182
+      y: -0.469501852989
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: -0.0941094201803
+      y: -0.479287445545
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: -0.0861366283894
+      y: -0.482522308826
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: -0.0781113249063
+      y: -0.485624581575
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: -0.0707102161646
+      y: -0.490476250648
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: -0.0644847792387
+      y: -0.499002933502
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: -0.0160503429174
+      y: -0.485125571489
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: -0.00601416498423
+      y: -0.478541970253
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.00319297194481
+      y: -0.474450081587
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.0114593240619
+      y: -0.474110424519
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.0196863743663
+      y: -0.473627626896
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.0278715524077
+      y: -0.473002940416
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.0358679401875
+      y: -0.473227024078
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.0438505145907
+      y: -0.473316282034
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.0519286873937
+      y: -0.472277462482
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.0598603668809
+      y: -0.472096890211
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.0677714492381
+      y: -0.471783429384
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.0756597104669
+      y: -0.471337705851
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.0835229451954
+      y: -0.470760315657
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.0913299522549
+      y: -0.471051692963
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.0991407176666
+      y: -0.471213579178
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.106948948367
+      y: -0.470245987177
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.114744266048
+      y: -0.470149040222
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.122536848783
+      y: -0.4699229002
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.130324612856
+      y: -0.469567626715
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.138105418086
+      y: -0.469083279371
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.145964048356
+      y: -0.469466209412
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.153741020262
+      y: -0.468722611666
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.161624505669
+      y: -0.468842983246
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.169388997853
+      y: -0.467839866877
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.177288535535
+      y: -0.467696398497
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.185200977623
+      y: -0.467419356108
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.19312405169
+      y: -0.467008262873
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.201257187426
+      y: -0.467442125082
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.209210905731
+      y: -0.466758131981
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.21716840148
+      y: -0.465938657522
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.225377384126
+      y: -0.465951532125
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.233617480397
+      y: -0.465819805861
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.241886149645
+      y: -0.465542435646
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.250180806518
+      y: -0.465118348598
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.258812617064
+      y: -0.465496242046
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.267167146802
+      y: -0.464770793915
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.275539721847
+      y: -0.463895738125
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.284288223386
+      y: -0.463803082705
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.293080221415
+      y: -0.463547080755
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.301912705898
+      y: -0.463126271963
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.310782607198
+      y: -0.462539315224
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.320108379722
+      y: -0.462691485882
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.329058836699
+      y: -0.46176096797
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.338488544822
+      y: -0.46155244112
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.347972403765
+      y: -0.461157202721
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.357506822348
+      y: -0.46057343483
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.367088119984
+      y: -0.459799289703
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.377222191095
+      y: -0.459693580866
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.387424032688
+      y: -0.459377020597
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.397689502239
+      y: -0.458847403526
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.408014278412
+      y: -0.458102524281
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.41895944953
+      y: -0.45796507597
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.429403464794
+      y: -0.456773936749
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.441078375578
+      y: -0.456972539425
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.45224214673
+      y: -0.456112354994
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.464087616205
+      y: -0.455791831017
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.476016681194
+      y: -0.45520234108
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.488023679256
+      y: -0.454341202974
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.500759999752
+      y: -0.453959286213
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.513587515354
+      y: -0.453278392553
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.526499729156
+      y: -0.452295333147
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.540877710581
+      y: -0.452447444201
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.554669063091
+      y: -0.451536625624
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.569265525341
+      y: -0.450987905264
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.583965401649
+      y: -0.450077414513
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.599500756264
+      y: -0.449474215508
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.615896503925
+      y: -0.449137896299
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.632414500713
+      y: -0.448379337788
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.64981780529
+      y: -0.447829395533
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.667344968319
+      y: -0.446823388338
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.685778956413
+      y: -0.445966184139
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.705942313671
+      y: -0.445809841156
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.725443582535
+      y: -0.444522500038
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.74670897007
+      y: -0.443846464157
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.768950264454
+      y: -0.443140000105
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.791340451241
+      y: -0.441815406084
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.816414158344
+      y: -0.441449284554
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.842517774105
+      y: -0.440883368254
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.869659643173
+      y: -0.440068989992
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.897846560478
+      y: -0.438957124949
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.927083830833
+      y: -0.437498271465
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.960046331882
+      y: -0.43700787425
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.994109253883
+      y: -0.435981422663
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.03108082294
+      y: -0.435218095779
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.06917528391
+      y: -0.433755218983
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.11022315502
+      y: -0.432330369949
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.15541086674
+      y: -0.431273937225
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.20152781487
+      y: -0.429107189178
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.25534794807
+      y: -0.428317189217
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.3103732872
+      y: -0.426189213991
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.37321660995
+      y: -0.424891412258
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.44109950542
+      y: -0.423131525517
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.51500509262
+      y: -0.420948833227
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.59496400833
+      y: -0.418047487736
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.68776712894
+      y: -0.415909022093
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.79059777737
+      y: -0.413183063269
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.91909823895
+      y: -0.412926107645
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.96948669434
+      y: -0.392003268003
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 2.00641272545
+      y: -0.366962581873
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 2.36580942154
+      y: -0.397568255663
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 2.5804781723
+      y: -0.393128931522
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 2.84011767387
+      y: -0.387992680073
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 3.1339349556
+      y: -0.378562748432
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.13817594528
+      y: -0.368770599365
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.14223955154
+      y: -0.301747888327
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.70324848175
+      y: -0.267109066248
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.77748392105
+      y: -0.193765684962
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.73564050674
+      y: 0.656884253025
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.71152208328
+      y: 0.731558859348
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.70565603256
+      y: 0.809035658836
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.69750354767
+      y: 0.886329174042
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.69367788315
+      y: 0.964757442474
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.69130132675
+      y: 1.20515799522
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.69506214142
+      y: 1.37033689022
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.68410776138
+      y: 1.45016539097
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.69286296844
+      y: 1.53707480431
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 2.7875094223
+      y: 0.948467135429
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 2.77071497917
+      y: 0.992544651031
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 2.01076994419
+      y: 0.745790183544
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.66880939484
+      y: 1.96282172203
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.64567516327
+      y: 2.04272174835
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.64422128677
+      y: 2.13323903084
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 7.32831094742
+      y: 3.54200577736
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 7.33671949387
+      y: 3.69607901573
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 2.82835934639
+      y: 1.44932329655
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 2.7816500473
+      y: 1.48191940784
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 5.63563201904
+      y: 3.30617690086
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 5.41182229996
+      y: 3.29300904274
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 5.19758317947
+      y: 3.27822995186
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.9961485672
+      y: 3.26449728012
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.3521871376
+      y: 0.89355880022
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.33258471966
+      y: 0.910685420036
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.2027730751
+      y: 3.14658164978
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 4.06627343178
+      y: 3.14751577377
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 3.92625616074
+      y: 3.14099693298
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 3.78756807327
+      y: 3.13072109222
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 3.66156027794
+      y: 3.12663388252
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 3.5359797287
+      y: 3.11857461929
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 3.42040989876
+      y: 3.11544680595
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 3.30805514336
+      y: 3.11145091057
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 3.19940732002
+      y: 3.10725951195
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 3.10324166298
+      y: 3.11221909523
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.754061501026
+      y: 0.769914329052
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.738366048336
+      y: 0.777080357075
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.657632808685
+      y: 0.701459825039
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.666220765114
+      y: 0.737179398537
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.69154487133
+      y: 0.79753690958
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.681427698135
+      y: 0.811635017395
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.88125882626
+      y: 2.99951672554
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.81804321289
+      y: 3.00531077385
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.75272367477
+      y: 3.00545549393
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.803772668839
+      y: 1.38131117821
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.782960574627
+      y: 1.39720380306
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.761602263451
+      y: 1.4123313427
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.43267879963
+      y: 2.98423480988
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.37911222458
+      y: 2.99663162231
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.33311412811
+      y: 3.02683973312
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.583101909161
+      y: 1.23680818081
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.564430605173
+      y: 1.24972629547
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.30581079006
+      y: 3.44152259827
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.24867210865
+      y: 3.46119379997
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.1845071125
+      y: 3.45843791962
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.12117288589
+      y: 3.45595097542
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 1.05808637619
+      y: 3.45183825493
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.996792714596
+      y: 3.45191431046
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.936578791142
+      y: 3.45431399345
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 0.875114779472
+      y: 3.44932556152
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: 0.812987010479
+      y: 3.43811154366
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: 0.756079595089
+      y: 3.45035815239
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: 0.69507114172
+      y: 3.43899416924
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: 0.63797996521
+      y: 3.44830346107
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: 0.577742319107
+      y: 3.43487095833
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: 0.520495753288
+      y: 3.44025015831
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: 0.461882154942
+      y: 3.43199443817
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: 0.386597584486
+      y: 3.22723770142
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: 0.313329692483
+      y: 2.95190787315
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: 0.263988684416
+      y: 2.94796586037
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: 0.215022157431
+      y: 2.94819784164
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: 0.166216015369
+      y: 2.95361590385
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: 0.117206571177
+      y: 2.94522476196
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: 0.0683802622557
+      y: 2.94502234459
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: 0.0196800413728
+      y: 2.94001245499
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.0286362808943
+      y: 2.92920327187
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.0779846203327
+      y: 2.93956017494
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.126690555811
+      y: 2.93612289429
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.175427634716
+      y: 2.93287396431
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.224902380705
+      y: 2.93577218056
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.273781199455
+      y: 2.93188309669
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.322043527365
+      y: 2.92322206497
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.372054059505
+      y: 2.92561078072
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.420709629059
+      y: 2.91853046417
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.237708259821
+      y: 1.73701500893
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.241699893475
+      y: 1.61572134495
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.23521744132
+      y: 1.46655452251
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.226314772367
+      y: 1.32778871059
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.204911251068
+      y: 1.15980827808
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.204083968401
+      y: 1.0843077898
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.203454304934
+      y: 1.017786026
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.202850182056
+      y: 0.958264350891
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.202211399078
+      y: 0.904501974583
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.203673381805
+      y: 0.861628293991
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.206977356672
+      y: 0.827386319637
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.21070699811
+      y: 0.796998500824
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.215531725883
+      y: 0.771569609642
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.210501540899
+      y: 0.542994260788
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.22307636261
+      y: 0.543682694435
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.236290354729
+      y: 0.544949412346
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.248545963764
+      y: 0.544248342514
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.263664205074
+      y: 0.547436535358
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.27497764349
+      y: 0.544530034065
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 910310032
+      frame_id: "base_link"
+    point: 
+      x: -0.282488037348
+      y: 0.536129832268
+      z: 0.08
+goal: 
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 2.13818023682
+      y: 0.0168538223952
+      z: 0.08
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1715864185
+        nsecs: 900182477
+      frame_id: "base_link"
+    point: 
+      x: 2.14218018532
+      y: -0.0168868303299
+      z: 0.08
+---
