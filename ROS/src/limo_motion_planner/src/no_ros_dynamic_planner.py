@@ -1,5 +1,6 @@
 #!/usr/bin/env python3.6
 import math
+import random
 import threading
 import time
 
@@ -69,6 +70,7 @@ class MotionPlanner:
         self.goal_reached = False
         self.lock = threading.Lock()
         self.paths = []
+        self.obstacles_at_time = []
 
     def update_goal(self, new_goal_pose: Pose):
         with self.lock:
@@ -77,7 +79,7 @@ class MotionPlanner:
                 self.motion_plan[-1].y[0],
                 self.motion_plan[-1].yaw[0],
             )
-            # Update the goal pose to be relative to the current position, including rorating x and y by the current yaw
+            # Update the goal pose to be relative to the current position, including rotating x and y by the current yaw
             self.goal_pose = Pose(
                 new_goal_pose.x * math.cos(current_position.yaw)
                 - new_goal_pose.y * math.sin(current_position.yaw)
@@ -93,6 +95,34 @@ class MotionPlanner:
             print(
                 f"Goal updated to: ({self.goal_pose.x}, {self.goal_pose.y}, {np.rad2deg(self.goal_pose.yaw)})"
             )
+
+    def update_obstacles(self):
+        current_position = Pose(
+            self.motion_plan[-1].x[0],
+            self.motion_plan[-1].y[0],
+            self.motion_plan[-1].yaw[0],
+        )
+        with self.lock:
+            new_obstacles = [
+                (
+                    current_position.x
+                    + (
+                        random.uniform(0.3, 0.5)
+                        if random.randint(0, 1)
+                        else -random.uniform(0.4, 0.6)
+                    ),
+                    current_position.y
+                    + (
+                        random.uniform(0.3, 0.5)
+                        if random.randint(0, 1)
+                        else -random.uniform(0.4, 0.6)
+                    ),
+                )
+                for _ in range(5)
+            ]
+            self.obstacleList = np.array(new_obstacles)
+            self.obstacles_at_time.append((new_obstacles, time.time()))
+            print(f"Obstacles updated to: {new_obstacles}")
 
     def get_dubins_path(
         self,
@@ -194,9 +224,12 @@ class MotionPlanner:
         goal_pose = goal_pose or self.goal_pose
         for path in motion_plan:
             plt.cla()
-            for x, y in self.obstacleList:
-                circle = plt.Circle((x, y), 0.2, color="k", fill=False)
-                plt.gca().add_patch(circle)
+            current_time = time.time()
+            for obs, timestamp in self.obstacles_at_time:
+                if current_time - timestamp < 1.0:  # Only show recent obstacles
+                    for x, y in obs:
+                        circle = plt.Circle((x, y), 0.2, color="k", fill=False)
+                        plt.gca().add_patch(circle)
             for path_x, path_y in self.paths:
                 plt.plot(path_x, path_y, "r--")
             plt.plot(full_path.x, full_path.y, "b")
@@ -301,6 +334,15 @@ def goal_update_listener(planner):
             break
 
 
+def obstacle_update_loop(
+    planner,
+):
+    while True:
+        if len(planner.motion_plan) > 0:
+            planner.update_obstacles()
+        time.sleep(0.5)
+
+
 if __name__ == "__main__":
     print("running planner")
 
@@ -312,6 +354,12 @@ if __name__ == "__main__":
     goal_update_thread = threading.Thread(target=goal_update_listener, args=(planner,))
     goal_update_thread.start()
 
+    # Start the obstacle update thread
+    obstacle_update_thread = threading.Thread(
+        target=obstacle_update_loop, args=(planner,)
+    )
+    obstacle_update_thread.start()
+
     # Start the planning loop
     planning_thread = threading.Thread(target=planner.plan)
     planning_thread.start()
@@ -320,6 +368,7 @@ if __name__ == "__main__":
 
     # Wait for threads to complete
     goal_update_thread.join()
+    obstacle_update_thread.join()
     planning_thread.join()
 
     print("Planner finished")
