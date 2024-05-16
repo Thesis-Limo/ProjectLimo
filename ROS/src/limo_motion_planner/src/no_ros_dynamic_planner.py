@@ -15,42 +15,42 @@ TARGET_SPEED = 0.1  # [m/s]
 
 class FrenetPath:
     def __init__(self):
-        self.t = []
-        self.d = []
-        self.d_d = []
-        self.d_dd = []
-        self.d_ddd = []
-        self.s = []
-        self.s_d = []
-        self.s_dd = []
-        self.s_ddd = []
-        self.cd = 0.0
-        self.cv = 0.0
-        self.cf = 0.0
-        self.x = []
-        self.y = []
-        self.yaw = []
-        self.ds = []
-        self.c = []
+        self.t = []  # Time points along the path
+        self.d = []  # Lateral offsets from the reference path
+        self.d_d = []  # Lateral velocities
+        self.d_dd = []  # Lateral accelerations
+        self.d_ddd = []  # Lateral jerks
+        self.s = []  # Arc lengths along the reference path
+        self.s_d = []  # Longitudinal velocities
+        self.s_dd = []  # Longitudinal accelerations
+        self.s_ddd = []  # Longitudinal jerks
+        self.cd = 0.0  # Lateral cost
+        self.cv = 0.0  # Longitudinal cost
+        self.cf = 0.0  # Total cost
+        self.x = []  # X coordinates in the global frame
+        self.y = []  # Y coordinates in the global frame
+        self.yaw = []  # Yaw angles along the path
+        self.ds = []  # Path segment lengths
+        self.c = []  # Curvatures along the path
 
 
 class Pose:
     def __init__(self, x: float, y: float, yaw: float):
-        self.x = x
-        self.y = y
-        self.yaw = np.deg2rad(yaw)
+        self.x = x  # X coordinate
+        self.y = y  # Y coordinate
+        self.yaw = np.deg2rad(yaw + 90)  # Yaw angle
 
 
 class FrenetState:
     def __init__(self, c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, c_x=0.0, c_y=0.0):
-        self.c_speed = c_speed
-        self.c_accel = c_accel
-        self.c_d = c_d
-        self.c_d_d = c_d_d
-        self.c_d_dd = c_d_dd
-        self.s0 = s0
-        self.c_x = c_x
-        self.c_y = c_y
+        self.c_speed = c_speed  # Current speed
+        self.c_accel = c_accel  # Current acceleration
+        self.c_d = c_d  # Current lateral offset
+        self.c_d_d = c_d_d  # Current lateral speed
+        self.c_d_dd = c_d_dd  # Current lateral acceleration
+        self.s0 = s0  # Current arc length along the reference path
+        self.c_x = c_x  # Current X coordinate in the global frame
+        self.c_y = c_y  # Current Y coordinate in the global frame
 
 
 class MotionPlanner:
@@ -118,6 +118,16 @@ class MotionPlanner:
                     )
                     csp, tx, ty = self.generate_course_and_state_initialization(
                         new_path
+                    )
+                    state = FrenetState(
+                        c_speed=path.s_d[1],
+                        c_accel=path.s_dd[1],
+                        c_d=0.0,
+                        c_d_d=path.d_d[1],
+                        c_d_dd=path.d_dd[1],
+                        s0=0,
+                        c_x=path.x[1],
+                        c_y=path.y[1],
                     )
                 if goal_reached:
                     self.goal_reached = True
@@ -252,9 +262,14 @@ def callback(planner):
     plan = [(speed, 0 if math.isnan(angle) else angle) for speed, angle in plan]
     print(plan)
 
-    print("Final position: ", motion_plan.x[-1], motion_plan.y[-1], motion_plan.yaw[-1])
-    print("x: ", motion_plan.x)
-    print("y: ", motion_plan.y)
+    print(
+        "Final position: ",
+        motion_plan.x[-1],
+        motion_plan.y[-1],
+        np.rad2deg(motion_plan.yaw[-1]) - 90,
+    )
+    # print("x: ", motion_plan.x)
+    # print("y: ", motion_plan.y)
     planner.plot(planner.motion_plan, motion_plan)
 
 
@@ -274,7 +289,7 @@ def goal_update_listener(planner):
 if __name__ == "__main__":
     print("running planner")
 
-    initial_goal_pose = Pose(1.0, 1.0, 0.0)  # Initial goal pose
+    initial_goal_pose = Pose(1.0, 1.0, -45.0)  # Initial goal pose
     obstacles = np.array([(10.0, 10.0)])  # Example obstacles
     planner = MotionPlanner(goal_pose=initial_goal_pose, obstacleList=obstacles)
 
