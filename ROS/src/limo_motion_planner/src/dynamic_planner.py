@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import rospy
 from Dubins.dubins_path_planner import plan_dubins_path
+from limo_yolo.msg import map
 from sensor_msgs.msg import LaserScan
 
 ROBOT_RADIUS = 0.2  # [m]
@@ -42,6 +43,9 @@ class Pose:
         self.x = x  # X coordinate
         self.y = y  # Y coordinate
         self.yaw = yaw  # Yaw angle
+
+    def __str__(self):
+        return f"({self.x}, {self.y}, {self.yaw})"
 
 
 class FrenetState:
@@ -238,7 +242,6 @@ class MotionPlanner:
         path = self.get_dubins_path(start_pose)
         self.calculate_frenet(path)
 
-    def plot(self, motion_plan, full_path, goal_pose=None, area=5.0):
         goal_pose = goal_pose or self.goal_pose
         for path in motion_plan:
             plt.cla()
@@ -310,53 +313,43 @@ def add_to_motion_plan(motion_plan, path, final=False):
     return motion_plan
 
 
-def callback(planner):
-    motion_plan = FrenetPath()
-    idx = 0
-    while not planner.planning_done or idx < len(planner.motion_plan):
-        if idx < len(planner.motion_plan):
-            path = planner.motion_plan[idx]
-            motion_plan = add_to_motion_plan(motion_plan, path)
-            idx += 1
-
-    if planner.motion_plan:
-        path = planner.motion_plan[-1]
-        motion_plan = add_to_motion_plan(motion_plan, path, final=True)
-
-    plan = [
-        (motion_plan.s_d[i], math.atan2(WHEELBASE * motion_plan.c[i], 1.0))
-        for i in range(len(motion_plan.t) - 1)
-    ]
-    plan = [(speed, 0 if math.isnan(angle) else angle) for speed, angle in plan]
-    print(plan)
-
-    print(
-        "Final position: ",
-        motion_plan.x[-1],
-        motion_plan.y[-1],
-        np.rad2deg(motion_plan.yaw[-1]),
-    )
-    # print("x: ", motion_plan.x)
-    # print("y: ", motion_plan.y)
-    planner.plot(planner.motion_plan, motion_plan)
+def extract_points(points):
+    x = []
+    y = []
+    for point in points:
+        position = point.point
+        x.append(position.x)
+        y.append(position.y)
+    return x, y
 
 
-def goal_update_listener(planner):
-    while True:
-        goal_values = input("Enter new goal (x y yaw): ")
-        if len(goal_values.split()) == 3:
-            goal_x, goal_y, goal_yaw = [float(num) for num in goal_values.split()]
-            new_goal_pose = Pose(goal_x, goal_y, np.deg2rad(goal_yaw))
-            planner.update_goal(new_goal_pose)
-        elif goal_values == "":
-            break
+def update_obstacles(obstacles: map.obstacles):
+    x, y = extract_points(obstacles.points)
+    obstacles = np.array(list(zip(x, y)))
+    print(obstacles)
 
 
-def update_obstacles(lidar_msg, planner):
-    planner.store_obstacle_scan(lidar_msg)
+def get_taget_pose(goal: map.goal):
+    x, y = extract_points(goal.points)
+    x = sum(x) / len(x)
+    y = sum(y) / len(y)
+    goal = Pose(x, y, math.atan2(y, x))
+    print(goal)
+
+
+def callback(map: map):
+    get_taget_pose(map.goal)
+    update_obstacles(map.obstacles)
 
 
 if __name__ == "__main__":
+
+    print("running")
+    rospy.init_node("motion_planner")
+    s = rospy.Subscriber("/map", map, callback)
+    rospy.spin()
+
+    """
     print("running")
     planner = MotionPlanner(Pose(0, 0, np.deg2rad(0)))
     rospy.init_node("motion_planner")
@@ -365,3 +358,4 @@ if __name__ == "__main__":
 
     goal_thread = threading.Thread(target=goal_update_listener, args=(planner,))
     goal_thread.start()
+    """
