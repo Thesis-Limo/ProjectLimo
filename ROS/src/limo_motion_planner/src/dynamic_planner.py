@@ -76,7 +76,7 @@ class MotionPlanner:
         self.obstacles_updated = False
         self.queued_obstacles = None
 
-        self.initial_state = (FrenetState(0.01, 0.0, 0.0, 0.0, 0.0, 0.0),)
+        self.initial_state = FrenetState(0.01, 0.0, 0.0, 0.0, 0.0, 0.0)
 
         self.lock = threading.Lock()
         self.publisher = publisher
@@ -118,8 +118,10 @@ class MotionPlanner:
 
     def update_map(self, map: map):
         if len(map.goal):
+            print("setting goal")
             self.queued_goal = map.goal
             self.goal_updated = True
+            self.goal_set = True
         if len(map.obstacles):
             self.queued_obstacles = map.obstacles
             self.obstacles_updated = True
@@ -141,12 +143,14 @@ class MotionPlanner:
         cont.speed = motion_plan.s_d[1]
         cont.angle = motion_plan.c[1]
         cont.duration = TIME_STEP
-        plan.append(cont)
+        plan.sequence.append(cont)
+        print("Sending command: ", cont.speed, cont.angle, cont.duration)
         self.publisher.publish(plan)
 
     def main_loop(self):
         state = self.initial_state
         while True:
+            start = time.time()
             if not self.goal_set:
                 continue
 
@@ -191,6 +195,8 @@ class MotionPlanner:
                 continue
 
             self.publish_motion(path)
+            end = time.time()
+            print(f"Time taken to plan: {end - start:.2f} seconds")
 
     def run_frenet_iteration(self, csp, state, tx, ty, obstacles):
         goal_dist = np.hypot(tx[-1] - state.c_x, ty[-1] - state.c_y)
@@ -221,13 +227,9 @@ class MotionPlanner:
         goal_reached = np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 0.2
         return updated_state, path, goal_reached
 
-    def plan(self, start_pose: Pose = Pose(0.0, 0.0, 0.0)):
-        path = self.get_dubins_path(start_pose)
-        self.calculate_frenet(path)
-
     def generate_course_and_state_initialization(self):
         goal = self.goal_pose
-        path = self.get_dubins_path(goal)
+        path = self.get_dubins_path()
         wx, wy = zip(*path)
         tx, ty, tyaw, tc, csp = frenet_optimal_trajectory.generate_target_course(
             list(np.array(wx)), list(np.array(wy))
@@ -282,7 +284,7 @@ if __name__ == "__main__":
 
     pub = rospy.Publisher("/limo_motionplan", MotionPlan, queue_size=10)
     planner = MotionPlanner(pub)
-    s = rospy.Subscriber("/map", map, planner.update_map)
+    s = rospy.Subscriber("/map", map, lambda map: planner.update_map(map))
 
     planner_thread = threading.Thread(target=planner.main_loop)
     planner_thread.start()
