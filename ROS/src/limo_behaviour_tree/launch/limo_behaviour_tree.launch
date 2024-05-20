@@ -5,7 +5,7 @@
     <arg name="batteryToLow" default="10"/>
     <arg name="distanceToCloseToTarget" default="1"/>
     <arg name="distanceToDecideToClose" default="1"/>
-    <arg name="minDistanceWhenBraking" default="0.35"/>
+    <arg name="minDistanceWhenBraking" default="0.15"/>
     <arg name="currentTargetID" default="0"/>
     <arg name="SpeedGoingBack" default="-0.1"/>
 
