@@ -15,7 +15,7 @@ from limo_yolo.msg import map
 ROBOT_RADIUS = 0.2  # [m]
 WHEELBASE = 0.2  # [m]
 TARGET_SPEED = 0.1  # [m/s]
-TIME_STEP = 1.5  # [s]
+TIME_STEP = 0.7  # [s]
 
 
 class FrenetPath:
