@@ -9,12 +9,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 import rospy
 from Dubins.dubins_path_planner import plan_dubins_path
+from limo_motion_controller.msg import MotionPlan, MovementController
 from limo_yolo.msg import map
-from sensor_msgs.msg import LaserScan
 
 ROBOT_RADIUS = 0.2  # [m]
 WHEELBASE = 0.2  # [m]
 TARGET_SPEED = 0.1  # [m/s]
+TIME_STEP = 0.25  # [s]
 
 
 class FrenetPath:
@@ -63,151 +64,133 @@ class FrenetState:
 class MotionPlanner:
     def __init__(
         self,
-        goal_pose: Pose,
-        obstacleList: list = [],
-        initial_state: FrenetState = FrenetState(0.01, 0.0, 0.0, 0.0, 0.0, 0.0),
+        publisher: rospy.Publisher,
     ):
-        self.goal_pose = goal_pose
-        self.obstacleList = obstacleList
-        self.initial_state = initial_state
-        self.motion_plan = []
-        self.planning_done = False
+        self.goal_pose = None
         self.goal_updated = False
         self.goal_reached = False
+        self.goal_set = False
+        self.queued_goal = None
+
+        self.obstacleList = None
         self.obstacles_updated = False
+        self.queued_obstacles = None
+
+        self.initial_state = (FrenetState(0.01, 0.0, 0.0, 0.0, 0.0, 0.0),)
+
         self.lock = threading.Lock()
-        self.paths = []
-        self.lidar_data = []
+        self.publisher = publisher
 
-    def update_goal(self, new_goal_pose: Pose):
-        with self.lock:
-            current_position = Pose(
-                self.motion_plan[-1].x[0],
-                self.motion_plan[-1].y[0],
-                self.motion_plan[-1].yaw[0],
-            )
+    def get_distance(self, pose: Pose):
+        return math.sqrt(pose.x**2 + pose.y**2)
 
-            self.goal_pose = Pose(
-                new_goal_pose.x * math.cos(current_position.yaw)
-                - new_goal_pose.y * math.sin(current_position.yaw)
-                + current_position.x,
-                new_goal_pose.x * math.sin(current_position.yaw)
-                + new_goal_pose.y * math.cos(current_position.yaw)
-                + current_position.y,
-                new_goal_pose.yaw + current_position.yaw,
-            )
-            self.goal_updated = True
+    def extract_points(self, points):
+        x = []
+        y = []
+        for point in points:
+            position = point.point
+            x.append(position.x)
+            y.append(position.y)
+        return x, y
+
+    def update_obstacles(self, obstacles: map.obstacles):
+        x, y = self.extract_points(obstacles)
+        obstacles = np.array(list(zip(x, y)))
+        self.set_obstacles(obstacles)
+
+    def set_obstacles(self, obstacles: np.array):
+        self.obstacleList = obstacles
+        self.obstacles_updated = False
+
+    def update_goal(self, goal: map.goal):
+        x, y = self.extract_points(goal)
+        x = sum(x) / len(x)
+        y = sum(y) / len(y)
+        goal_pose = Pose(x, y, math.atan2(y, x))
+        self.set_goal(goal_pose)
+
+    def set_goal(self, goal: Pose):
+        self.goal_pose = goal
+        self.goal_set = True
+        self.goal_updated = False
+        if self.get_distance(goal) > 0.25:
             self.goal_reached = False
-            self.planning_done = False
-            print(
-                f"Goal updated to: ({self.goal_pose.x}, {self.goal_pose.y}, {np.rad2deg(self.goal_pose.yaw)})"
-            )
 
-    def update_obstacles(self):
-        lidar_msg = self.lidar_data[-1]
-        with self.lock:
-            current_position = Pose(
-                self.motion_plan[-1].x[0],
-                self.motion_plan[-1].y[0],
-                self.motion_plan[-1].yaw[0],
-            )
-
-            obstacles = []
-
-            min_dist = lidar_msg.range_min
-            max_dist = lidar_msg.range_max
-
-            for i, distance in enumerate(lidar_msg.ranges):
-                if min_dist < distance < max_dist:
-                    angle = lidar_msg.angle_min + i * lidar_msg.angle_increment
-                    x = distance * np.cos(angle)
-                    y = distance * np.sin(angle)
-                    x_global = (
-                        x * math.cos(current_position.yaw)
-                        - y * math.sin(current_position.yaw)
-                        + current_position.x
-                    )
-                    y_global = (
-                        x * math.sin(current_position.yaw)
-                        + y * math.cos(current_position.yaw)
-                        + current_position.y
-                    )
-
-                    obstacles.append((x_global, y_global))
-            obstacles = np.array(obstacles)
-
-            self.obstacleList = obstacles
-
-    def store_obstacle_scan(self, lidar_msg):
-        self.lidar_data.append((lidar_msg))
-        self.obstacles_updated = True
+    def update_map(self, map: map):
+        if len(map.goal):
+            self.queued_goal = map.goal
+            self.goal_updated = True
+        if len(map.obstacles):
+            self.queued_obstacles = map.obstacles
+            self.obstacles_updated = True
 
     def get_dubins_path(
         self,
-        start: Pose,
         curvature: float = 1.0 / 0.4,
         step_size: float = 1.0,
     ):
         goal = self.goal_pose
         path_x, path_y, path_yaw, mode, lengths = plan_dubins_path(
-            start.x, start.y, start.yaw, goal.x, goal.y, goal.yaw, curvature, step_size
+            0, 0, 0, goal.x, goal.y, goal.yaw, curvature, step_size
         )
-        self.paths.append((path_x, path_y))
         return zip(path_x, path_y)
 
-    def calculate_frenet(self, path, state=None):
-        csp, tx, ty = self.generate_course_and_state_initialization(path)
-        state = state or self.initial_state
+    def publish_motion(self, motion_plan: FrenetPath):
+        plan = MotionPlan()
+        cont = MovementController()
+        cont.speed = motion_plan.s_d[1]
+        cont.angle = motion_plan.c[1]
+        cont.duration = TIME_STEP
+        plan.append(cont)
+        self.publisher.publish(plan)
 
-        start = time.time()
+    def main_loop(self):
+        state = self.initial_state
         while True:
-            if self.obstacles_updated:
-                self.update_obstacles()
-                self.obstacles_updated = False
+            if not self.goal_set:
+                continue
 
-            step_start = time.time()
+            if self.goal_updated:
+                self.update_goal(self.queued_goal)
+            else:
+                new_x, new_y = (
+                    self.goal_pose.x - state.c_x,
+                    self.goal_pose.y - state.c_y,
+                )
+                new_yaw = math.atan2(new_y, new_x)
+                self.set_goal(Pose(new_x, new_y, new_yaw))
+
+            if self.obstacles_updated:
+                self.update_obstacles(self.queued_obstacles)
+            else:
+                new_obstacles = []
+                for obstacle in self.obstacleList:
+                    new_x, new_y = obstacle[0] - state.c_x, obstacle[1] - state.c_y
+                    new_obstacles.append([new_x, new_y])
+                self.set_obstacles(np.array(new_obstacles))
+
+            csp, tx, ty = self.generate_course_and_state_initialization()
+
+            state = FrenetState(
+                c_speed=state.c_speed,
+                c_accel=state.c_accel,
+                c_d=0.0,
+                c_d_d=0.0,
+                c_d_dd=0.0,
+                s0=0.0,
+                c_x=0.0,
+                c_y=0.0,
+            )
+
             try:
                 state, path, goal_reached = self.run_frenet_iteration(
                     csp, state, tx, ty, self.obstacleList
                 )
             except AttributeError:
-                self.motion_plan = []
-                self.planning_done = True
-                return
+                print("No path found.")
+                continue
 
-            self.motion_plan.append(path)
-
-            with self.lock:
-                if self.goal_updated:
-                    self.goal_updated = False
-                    new_path = self.get_dubins_path(
-                        Pose(path.x[1], path.y[1], path.yaw[1])
-                    )
-                    csp, tx, ty = self.generate_course_and_state_initialization(
-                        new_path
-                    )
-                    state = FrenetState(
-                        c_speed=path.s_d[1],
-                        c_accel=path.s_dd[1],
-                        c_d=0.0,
-                        c_d_d=0.0,
-                        c_d_dd=0.0,
-                        s0=0,
-                        c_x=path.x[1],
-                        c_y=path.y[1],
-                    )
-                if goal_reached:
-                    self.goal_reached = True
-                    self.planning_done = True
-                    print("Goal reached.")
-                    break
-
-            step_end = time.time()
-            print("Time for step is ", step_end - step_start)
-
-        end = time.time()
-        print(f"Time taken to plan: {end - start:.2f} seconds")
-        self.planning_done = True
+            self.publish_motion(path)
 
     def run_frenet_iteration(self, csp, state, tx, ty, obstacles):
         goal_dist = np.hypot(tx[-1] - state.c_x, ty[-1] - state.c_y)
@@ -242,29 +225,9 @@ class MotionPlanner:
         path = self.get_dubins_path(start_pose)
         self.calculate_frenet(path)
 
-        goal_pose = goal_pose or self.goal_pose
-        for path in motion_plan:
-            plt.cla()
-            current_time = time.time()
-            for obs, timestamp in self.obstacles_at_time:
-                if current_time - timestamp < 1.0:  # Only show recent obstacles
-                    for x, y in obs:
-                        circle = plt.Circle((x, y), 0.2, color="k", fill=False)
-                        plt.gca().add_patch(circle)
-            for path_x, path_y in self.paths:
-                plt.plot(path_x, path_y, "r--")
-            plt.plot(full_path.x, full_path.y, "b")
-            plt.plot(goal_pose.x, goal_pose.y, "xg")
-            plt.plot(path.x[1:], path.y[1:], "-or")
-            plt.plot(path.x[1], path.y[1], "vc")
-            plt.xlim(path.x[1] - area, path.x[1] + area)
-            plt.ylim(path.y[1] - area, path.y[1] + area)
-            plt.title("v[m/s]:" + str(path.s_d[1])[0:4])
-            plt.grid(True)
-            plt.pause(0.0001)
-        plt.show()
-
-    def generate_course_and_state_initialization(self, path):
+    def generate_course_and_state_initialization(self):
+        goal = self.goal_pose
+        path = self.get_dubins_path(goal)
         wx, wy = zip(*path)
         tx, ty, tyaw, tc, csp = frenet_optimal_trajectory.generate_target_course(
             list(np.array(wx)), list(np.array(wy))
@@ -313,49 +276,14 @@ def add_to_motion_plan(motion_plan, path, final=False):
     return motion_plan
 
 
-def extract_points(points):
-    x = []
-    y = []
-    for point in points:
-        position = point.point
-        x.append(position.x)
-        y.append(position.y)
-    return x, y
-
-
-def update_obstacles(obstacles: map.obstacles):
-    x, y = extract_points(obstacles.points)
-    obstacles = np.array(list(zip(x, y)))
-    print(obstacles)
-
-
-def get_taget_pose(goal: map.goal):
-    x, y = extract_points(goal.points)
-    x = sum(x) / len(x)
-    y = sum(y) / len(y)
-    goal = Pose(x, y, math.atan2(y, x))
-    print(goal)
-
-
-def callback(map: map):
-    get_taget_pose(map.goal)
-    update_obstacles(map.obstacles)
-
-
 if __name__ == "__main__":
-
     print("running")
     rospy.init_node("motion_planner")
-    s = rospy.Subscriber("/map", map, callback)
-    rospy.spin()
 
-    """
-    print("running")
-    planner = MotionPlanner(Pose(0, 0, np.deg2rad(0)))
-    rospy.init_node("motion_planner")
-    s = rospy.Subscriber("/scan", LaserScan, lambda msg: update_obstacles(msg, planner))
-    rospy.spin()
+    pub = rospy.Publisher("/limo_motionplan", MotionPlan, queue_size=10)
+    planner = MotionPlanner(pub)
+    s = rospy.Subscriber("/map", map, planner.update_map)
 
-    goal_thread = threading.Thread(target=goal_update_listener, args=(planner,))
-    goal_thread.start()
-    """
+    planner_thread = threading.Thread(target=planner.main_loop)
+    planner_thread.start()
+    rospy.spin()
