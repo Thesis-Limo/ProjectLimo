@@ -15,7 +15,7 @@ from limo_yolo.msg import map
 ROBOT_RADIUS = 0.2  # [m]
 WHEELBASE = 0.2  # [m]
 TARGET_SPEED = 0.1  # [m/s]
-TIME_STEP = 0.7  # [s]
+TIME_STEP = 1.5  # [s]
 
 
 class FrenetPath:
@@ -199,7 +199,7 @@ class MotionPlanner:
             print(f"Time taken to plan: {end - start:.2f} seconds")
 
     def run_frenet_iteration(self, csp, state, tx, ty, obstacles):
-        goal_dist = np.hypot(tx[-1] - state.c_x, ty[-1] - state.c_y)
+        goal_dist = self.get_distance(self.goal_pose)
 
         path = frenet_optimal_trajectory.frenet_optimal_planning(
             csp,
