@@ -12,10 +12,7 @@ from Dubins.dubins_path_planner import plan_dubins_path
 from limo_motion_controller.msg import MotionPlan, MovementController
 from limo_yolo.msg import map
 
-ROBOT_RADIUS = 0.2  # [m]
-WHEELBASE = 0.2  # [m]
 TARGET_SPEED = 0.1  # [m/s]
-TIME_STEP = 0.5  # [s]
 
 
 class FrenetPath:
@@ -142,7 +139,7 @@ class MotionPlanner:
         cont = MovementController()
         cont.speed = motion_plan.s_d[1]
         cont.angle = motion_plan.c[1]
-        cont.duration = TIME_STEP
+        cont.duration = 0.5
         plan.sequence.append(cont)
         print("Sending command: ", cont.speed, cont.angle, cont.duration)
         self.publisher.publish(plan)
