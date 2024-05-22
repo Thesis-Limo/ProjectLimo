@@ -36407,7 +36407,7 @@ if (!__Pyx_RefNanny) {
  * cdef double MIN_T = 2.0 # min prediction time [s]
  * cdef double D_T_S = 5.0 / 3.6 # target speed sampling length [m/s]             # <<<<<<<<<<<<<<
  * cdef int N_S_SAMPLE = 1 # sampling number of target speed
- * cdef double ROBOT_RADIUS = 0.4 # robot radius [m]
+ * cdef double ROBOT_RADIUS = 0.3 # robot radius [m]
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_T_S = (5.0 / 3.6);
 
@@ -36415,7 +36415,7 @@ if (!__Pyx_RefNanny) {
  * cdef double MIN_T = 2.0 # min prediction time [s]
  * cdef double D_T_S = 5.0 / 3.6 # target speed sampling length [m/s]
  * cdef int N_S_SAMPLE = 1 # sampling number of target speed             # <<<<<<<<<<<<<<
- * cdef double ROBOT_RADIUS = 0.4 # robot radius [m]
+ * cdef double ROBOT_RADIUS = 0.3 # robot radius [m]
  * 
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_N_S_SAMPLE = 1;
@@ -36423,24 +36423,24 @@ if (!__Pyx_RefNanny) {
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":23
  * cdef double D_T_S = 5.0 / 3.6 # target speed sampling length [m/s]
  * cdef int N_S_SAMPLE = 1 # sampling number of target speed
- * cdef double ROBOT_RADIUS = 0.4 # robot radius [m]             # <<<<<<<<<<<<<<
+ * cdef double ROBOT_RADIUS = 0.3 # robot radius [m]             # <<<<<<<<<<<<<<
  * 
- * cdef double K_J = 0.1 # weight of jerk
+ * cdef double K_J = 0.01 # weight of jerk
  */
-  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_ROBOT_RADIUS = 0.4;
+  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_ROBOT_RADIUS = 0.3;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":25
- * cdef double ROBOT_RADIUS = 0.4 # robot radius [m]
+ * cdef double ROBOT_RADIUS = 0.3 # robot radius [m]
  * 
- * cdef double K_J = 0.1 # weight of jerk             # <<<<<<<<<<<<<<
+ * cdef double K_J = 0.01 # weight of jerk             # <<<<<<<<<<<<<<
  * cdef double K_T = 0.1 # weight of time
  * cdef double K_D = 1.0 # weight of square of d
  */
-  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_J = 0.1;
+  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_J = 0.01;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":26
  * 
- * cdef double K_J = 0.1 # weight of jerk
+ * cdef double K_J = 0.01 # weight of jerk
  * cdef double K_T = 0.1 # weight of time             # <<<<<<<<<<<<<<
  * cdef double K_D = 1.0 # weight of square of d
  * cdef double K_LAT = 1.0 # weight of lateral direction
@@ -36448,7 +36448,7 @@ if (!__Pyx_RefNanny) {
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_T = 0.1;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":27
- * cdef double K_J = 0.1 # weight of jerk
+ * cdef double K_J = 0.01 # weight of jerk
  * cdef double K_T = 0.1 # weight of time
  * cdef double K_D = 1.0 # weight of square of d             # <<<<<<<<<<<<<<
  * cdef double K_LAT = 1.0 # weight of lateral direction
