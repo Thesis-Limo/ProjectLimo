@@ -132,11 +132,16 @@ class MotionPlanner:
             self.acceleration * np.sin(steering_angle),  # c_d_dd
             obstacles,  # ob
             (
-                TARGET_SPEED if goal_dist > 2 else TARGET_SPEED * (goal_dist / 2)
+                TARGET_SPEED if goal_dist > 1 else TARGET_SPEED * (goal_dist)
             ),  # target_speed
         )
 
         if path is not None:
+            # print out all the path points
+            print("Path points:")
+            for i in range(len(path.x)):
+                print(f"({path.x[i]}, {path.y[i]})")
+
             current_timestamp = map.obstacles[0].header.stamp
             if current_timestamp <= self.last_timestamp:
                 return
