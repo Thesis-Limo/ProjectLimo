@@ -12,10 +12,7 @@ from Dubins.dubins_path_planner import plan_dubins_path
 from limo_motion_controller.msg import MotionPlan, MovementController
 from limo_yolo.msg import map
 
-ROBOT_RADIUS = 0.2  # [m]
-WHEELBASE = 0.2  # [m]
 TARGET_SPEED = 0.1  # [m/s]
-TIME_STEP = 0.25  # [s]
 
 
 class FrenetPath:
@@ -89,7 +86,7 @@ class MotionPlanner:
         y = []
         for point in points:
             position = point.point
-            x.append(position.x)
+            x.append(position.x - 0.2)
             y.append(position.y)
         return x, y
 
@@ -113,12 +110,11 @@ class MotionPlanner:
         self.goal_pose = goal
         self.goal_set = True
         self.goal_updated = False
-        if self.get_distance(goal) > 0.25:
+        if self.get_distance(goal) > 0.35:
             self.goal_reached = False
 
     def update_map(self, map: map):
         if len(map.goal):
-            print("setting goal")
             self.queued_goal = map.goal
             self.goal_updated = True
             self.goal_set = True
@@ -142,7 +138,7 @@ class MotionPlanner:
         cont = MovementController()
         cont.speed = motion_plan.s_d[1]
         cont.angle = motion_plan.c[1]
-        cont.duration = TIME_STEP
+        cont.duration = 0.5
         plan.sequence.append(cont)
         print("Sending command: ", cont.speed, cont.angle, cont.duration)
         self.publisher.publish(plan)
@@ -156,13 +152,21 @@ class MotionPlanner:
 
             if self.goal_updated:
                 self.update_goal(self.queued_goal)
+                print("Updated Goal: ", self.goal_pose)
             else:
                 new_x, new_y = (
                     self.goal_pose.x - state.c_x,
                     self.goal_pose.y - state.c_y,
                 )
                 new_yaw = math.atan2(new_y, new_x)
-                self.set_goal(Pose(new_x, new_y, new_yaw))
+                # if any is nan, set to 0
+                if math.isnan(new_x) or math.isnan(new_y) or math.isnan(new_yaw):
+                    print("Goal reached")
+                    time.sleep(1)
+                    continue
+                else:
+                    self.set_goal(Pose(new_x, new_y, new_yaw))
+                    print("Calculated Goal: ", self.goal_pose)
 
             if self.obstacles_updated:
                 self.update_obstacles(self.queued_obstacles)
@@ -190,16 +194,19 @@ class MotionPlanner:
                 state, path, goal_reached = self.run_frenet_iteration(
                     csp, state, tx, ty, self.obstacleList
                 )
-            except AttributeError:
-                print("No path found.")
+            except AttributeError as e:
+                print(e)
                 continue
+            if goal_reached:
+                print("Goal Reached")
+            else:
+                self.publish_motion(path)
 
-            self.publish_motion(path)
             end = time.time()
             print(f"Time taken to plan: {end - start:.2f} seconds")
 
     def run_frenet_iteration(self, csp, state, tx, ty, obstacles):
-        goal_dist = np.hypot(tx[-1] - state.c_x, ty[-1] - state.c_y)
+        goal_dist = self.get_distance(self.goal_pose)
 
         path = frenet_optimal_trajectory.frenet_optimal_planning(
             csp,
@@ -224,7 +231,7 @@ class MotionPlanner:
             c_y=path.y[1],
         )
 
-        goal_reached = np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 0.2
+        goal_reached = np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 0.3
         return updated_state, path, goal_reached
 
     def generate_course_and_state_initialization(self):

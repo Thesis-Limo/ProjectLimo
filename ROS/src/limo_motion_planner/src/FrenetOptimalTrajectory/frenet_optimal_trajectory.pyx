@@ -10,23 +10,23 @@ import matplotlib.pyplot as plt
 from CubicSpline.cubic_spline_planner cimport CubicSpline2D
 from QuinticPolynomialsPlanner.quintic_polynomials_planner cimport QuinticPolynomial
 
-cdef double MAX_SPEED = 1.0
-cdef double MAX_ACCEL = 1.0
+cdef double MAX_SPEED = 1.0 # maximum speed [m/s]
+cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]
 cdef double MAX_CURVATURE = 2.5  # 1 / 0.4
-cdef double MAX_ROAD_WIDTH = 7.0
-cdef double D_ROAD_W = 1.0
-cdef double DT = 0.2
-cdef double MAX_T = 4.0
-cdef double MIN_T = 2.0
-cdef double D_T_S = 5.0 / 3.6
-cdef int N_S_SAMPLE = 1
-cdef double ROBOT_RADIUS = 0.2
+cdef double MAX_ROAD_WIDTH = 7.0 # maximum road width [m]
+cdef double D_ROAD_W = 1.0 # road width sampling length [m]
+cdef double DT = 0.2 # time tick [s]
+cdef double MAX_T = 4.0 # max prediction time [s]
+cdef double MIN_T = 2.0 # min prediction time [s]
+cdef double D_T_S = 5.0 / 3.6 # target speed sampling length [m/s]
+cdef int N_S_SAMPLE = 1 # sampling number of target speed
+cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
 
-cdef double K_J = 0.1
-cdef double K_T = 0.1
-cdef double K_D = 1.0
-cdef double K_LAT = 1.0
-cdef double K_LON = 1.0
+cdef double K_J = 0.1 # weight of jerk
+cdef double K_T = 0.1 # weight of time
+cdef double K_D = 1.0 # weight of square of d
+cdef double K_LAT = 1.0 # weight of lateral direction
+cdef double K_LON = 1.0 # weight of longitudinal direction
 
 cdef bint show_animation = True
 cdef int SIM_LOOP = 500

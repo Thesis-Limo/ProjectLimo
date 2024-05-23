@@ -81,7 +81,12 @@ class MotionPlanner:
         return zip(path_x, path_y)
 
     def calculate_frenet(self, path, state=None):
-        csp, tx, ty = self.generate_course_and_state_initialization(path)
+        start = time.time()
+        csp, tx, ty = self.generate_course_and_state_initialization(
+            [[0, 0], [self.goal_pose.x, self.goal_pose.y]]
+        )
+        stop = time.time()
+        print(f"Time taken to generate course: {stop - start:.2f} seconds")
         state = state or self.initial_state
 
         start = time.time()
