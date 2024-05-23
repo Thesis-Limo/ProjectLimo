@@ -76,7 +76,6 @@ class MotionPlanner:
         publisher: rospy.Publisher,
     ):
         self.goal_pose = None
-        self.goal_updated = False
         self.goal_reached = False
         self.goal_set = False
         self.queued_goal = None
@@ -111,25 +110,13 @@ class MotionPlanner:
         self.obstacleList = obstacles
         self.obstacles_updated = False
 
-    def update_goal(self, goal: map.goal):
-        x, y = self.extract_points(goal)
-        x = sum(x) / len(x)
-        y = sum(y) / len(y)
-        goal_pose = Pose(x, y, math.atan2(y, x))
-        self.set_goal(goal_pose)
-
     def set_goal(self, goal: Pose):
         self.goal_pose = goal
         self.goal_set = True
-        self.goal_updated = False
         if self.get_distance(goal) > 0.35:
             self.goal_reached = False
 
     def update_map(self, map: map):
-        if len(map.goal):
-            self.queued_goal = map.goal
-            self.goal_updated = True
-            self.goal_set = True
         if len(map.obstacles):
             self.queued_obstacles = map.obstacles
             self.obstacles_updated = True
@@ -162,22 +149,18 @@ class MotionPlanner:
             if not self.goal_set:
                 continue
 
-            if self.goal_updated:
-                self.update_goal(self.queued_goal)
-                print("Updated Goal: ", self.goal_pose)
+            new_x, new_y = (
+                self.goal_pose.x - state.c_x,
+                self.goal_pose.y - state.c_y,
+            )
+            new_yaw = self.goal_pose.yaw - state.yaw
+            if math.isnan(new_x) or math.isnan(new_y) or math.isnan(new_yaw):
+                print("Goal reached")
+                time.sleep(1)
+                continue
             else:
-                new_x, new_y = (
-                    self.goal_pose.x - state.c_x,
-                    self.goal_pose.y - state.c_y,
-                )
-                new_yaw = self.goal_pose.yaw - state.yaw
-                if math.isnan(new_x) or math.isnan(new_y) or math.isnan(new_yaw):
-                    print("Goal reached")
-                    time.sleep(1)
-                    continue
-                else:
-                    self.set_goal(Pose(new_x, new_y, new_yaw))
-                    print("Calculated Goal: ", self.goal_pose)
+                self.set_goal(Pose(new_x, new_y, new_yaw))
+                print("Calculated Goal: ", self.goal_pose)
 
             if self.obstacles_updated:
                 self.update_obstacles(self.queued_obstacles)
@@ -250,6 +233,17 @@ class MotionPlanner:
         return csp, tx, ty
 
 
+def update_goal(planner):
+    while True:
+        goal = input("Set goal (x, y, yaw): ").split()
+        if len(goal) != 3:
+            print("Invalid input")
+            continue
+        goal_x, goal_y, goal_yaw = [float(x) for x in goal]
+        planner.set_goal(Pose(goal_x, goal_y, np.deg2rad(goal_yaw)))
+        time.sleep(1)
+
+
 if __name__ == "__main__":
     print("running")
     rospy.init_node("motion_planner")
@@ -257,6 +251,9 @@ if __name__ == "__main__":
     pub = rospy.Publisher("/limo_motionplan", MotionPlan, queue_size=10)
     planner = MotionPlanner(pub)
     s = rospy.Subscriber("/map", map, lambda map: planner.update_map(map))
+
+    goal_thread = threading.Thread(target=update_goal, args=(planner,))
+    goal_thread.start()
 
     planner_thread = threading.Thread(target=planner.main_loop)
     planner_thread.start()
