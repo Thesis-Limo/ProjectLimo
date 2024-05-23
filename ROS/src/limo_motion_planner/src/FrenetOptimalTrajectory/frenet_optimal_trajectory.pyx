@@ -20,9 +20,9 @@ cdef double MAX_T = 4.0 # max prediction time [s]
 cdef double MIN_T = 2.0 # min prediction time [s]
 cdef double D_T_S = 5.0 / 3.6 # target speed sampling length [m/s]
 cdef int N_S_SAMPLE = 1 # sampling number of target speed
-cdef double ROBOT_RADIUS = 0.3 # robot radius [m]
+cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
 
-cdef double K_J = 0.01 # weight of jerk
+cdef double K_J = 0.1 # weight of jerk
 cdef double K_T = 0.1 # weight of time
 cdef double K_D = 1.0 # weight of square of d
 cdef double K_LAT = 1.0 # weight of lateral direction
