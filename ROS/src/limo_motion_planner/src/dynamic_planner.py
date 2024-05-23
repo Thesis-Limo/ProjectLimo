@@ -47,7 +47,18 @@ class Pose:
 
 
 class FrenetState:
-    def __init__(self, c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, c_x=0.0, c_y=0.0):
+    def __init__(
+        self,
+        c_speed,
+        c_accel,
+        c_d=0.0,
+        c_d_d=0.0,
+        c_d_dd=0.0,
+        s0=0.0,
+        c_x=0.0,
+        c_y=0.0,
+        yaw=0.0,
+    ):
         self.c_speed = c_speed  # Current speed
         self.c_accel = c_accel  # Current acceleration
         self.c_d = c_d  # Current lateral offset
@@ -56,6 +67,7 @@ class FrenetState:
         self.s0 = s0  # Current arc length along the reference path
         self.c_x = c_x  # Current X coordinate in the global frame
         self.c_y = c_y  # Current Y coordinate in the global frame
+        self.yaw = yaw  # Relative yaw
 
 
 class MotionPlanner:
@@ -158,8 +170,7 @@ class MotionPlanner:
                     self.goal_pose.x - state.c_x,
                     self.goal_pose.y - state.c_y,
                 )
-                new_yaw = math.atan2(new_y, new_x)
-                # if any is nan, set to 0
+                new_yaw = self.goal_pose.yaw - state.yaw
                 if math.isnan(new_x) or math.isnan(new_y) or math.isnan(new_yaw):
                     print("Goal reached")
                     time.sleep(1)
@@ -182,12 +193,6 @@ class MotionPlanner:
             state = FrenetState(
                 c_speed=state.c_speed,
                 c_accel=state.c_accel,
-                c_d=0.0,
-                c_d_d=0.0,
-                c_d_dd=0.0,
-                s0=0.0,
-                c_x=0.0,
-                c_y=0.0,
             )
 
             try:
@@ -229,6 +234,7 @@ class MotionPlanner:
             s0=path.s[1],
             c_x=path.x[1],
             c_y=path.y[1],
+            yaw=path.yaw[1],
         )
 
         goal_reached = np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 0.3
