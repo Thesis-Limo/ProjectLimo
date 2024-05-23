@@ -244,47 +244,6 @@ class MotionPlanner:
         return csp, tx, ty
 
 
-def add_to_motion_plan(motion_plan, path, final=False):
-    if not final:
-        motion_plan.t.append(path.t[1])
-        motion_plan.d.append(path.d[1])
-        motion_plan.d_d.append(path.d_d[1])
-        motion_plan.d_dd.append(path.d_dd[1])
-        motion_plan.d_ddd.append(path.d_ddd[1])
-        motion_plan.s.append(path.s[1])
-        motion_plan.s_d.append(path.s_d[1])
-        motion_plan.s_dd.append(path.s_dd[1])
-        motion_plan.s_ddd.append(path.s_ddd[1])
-        motion_plan.cd = path.cd
-        motion_plan.cv = path.cv
-        motion_plan.cf = path.cf
-        motion_plan.x.append(path.x[1])
-        motion_plan.y.append(path.y[1])
-        motion_plan.yaw.append(path.yaw[1])
-        motion_plan.ds.append(path.ds[1])
-        motion_plan.c.append(path.c[1])
-    else:
-        motion_plan.t.extend(path.t[2:])
-        motion_plan.d.extend(path.d[2:])
-        motion_plan.d_d.extend(path.d_d[2:])
-        motion_plan.d_dd.extend(path.d_dd[2:])
-        motion_plan.d_ddd.extend(path.d_ddd[2:])
-        motion_plan.s.extend(path.s[2:])
-        motion_plan.s_d.extend(path.s_d[2:])
-        motion_plan.s_dd.extend(path.s_dd[2:])
-        motion_plan.s_ddd.extend(path.s_ddd[2:])
-        motion_plan.cd = path.cd
-        motion_plan.cv = path.cv
-        motion_plan.cf = path.cf
-        motion_plan.x.extend(path.x[2:])
-        motion_plan.y.extend(path.y[2:])
-        motion_plan.yaw.extend(path.yaw[2:])
-        motion_plan.ds.extend(path.ds[2:])
-        motion_plan.c.extend(path.c[2:])
-
-    return motion_plan
-
-
 if __name__ == "__main__":
     print("running")
     rospy.init_node("motion_planner")
