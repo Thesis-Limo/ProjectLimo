@@ -1,9 +1,10 @@
 # cython: language_level=3
 
-from libc.math cimport cos, sin, atan2, sqrt, pi
+from libc.math cimport cos, sin, sqrt, pi
 import numpy as np
 cimport numpy as cnp
 import matplotlib.pyplot as plt
+from functools import lru_cache
 
 cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]
 cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
@@ -27,6 +28,7 @@ cdef class DWAPath:
         self.omega = 0.0
         self.cost = 0.0
 
+@lru_cache(None)
 def generate_trajectory(double v, double omega, double x, double y, double yaw, double current_speed, double target_speed, double dt):
     cdef DWAPath path = DWAPath()
     path.v = v
@@ -48,39 +50,46 @@ def generate_trajectory(double v, double omega, double x, double y, double yaw, 
 
     return path
 
-
-def calculate_cost(DWAPath path, cnp.ndarray[cnp.float64_t, ndim=2] ob, double gx, double gy, double target_speed):
-    cdef double to_goal_cost = TO_GOAL_COST_GAIN * sqrt(pow(path.x[-1] - gx, 2) + pow(path.y[-1] - gy, 2))
+cdef double calculate_cost(DWAPath path, cnp.ndarray[cnp.float64_t, ndim=2] ob, double gx, double gy, double target_speed):
+    cdef double to_goal_cost = TO_GOAL_COST_GAIN * sqrt((path.x[-1] - gx) ** 2 + (path.y[-1] - gy) ** 2)
     cdef double speed_cost = SPEED_COST_GAIN * (target_speed - path.v)
-
-    cdef double min_obstacle_distance = float("inf")
-    for ix, iy in zip(path.x, path.y):
-        for ob_x, ob_y in ob:
-            distance = sqrt(pow(ix - ob_x, 2) + pow(iy - ob_y, 2))
-            if distance < min_obstacle_distance:
-                min_obstacle_distance = distance
-    obstacle_cost = OBSTACLE_COST_GAIN / min_obstacle_distance
+    cdef double min_obstacle_distance = np.min(np.sqrt((np.array(path.x)[:, np.newaxis] - ob[:, 0]) ** 2 + (np.array(path.y)[:, np.newaxis] - ob[:, 1]) ** 2))
+    cdef double obstacle_cost = OBSTACLE_COST_GAIN / min_obstacle_distance
 
     path.cost = to_goal_cost + speed_cost + obstacle_cost
     return path.cost
 
-def check_collision(DWAPath path, cnp.ndarray[cnp.float64_t, ndim=2] ob):
-    cdef double d, ix, iy
-    for ix, iy in zip(path.x, path.y):
-        for ox, oy in ob:
+cdef bint check_collision(DWAPath path, cnp.ndarray[cnp.float64_t, ndim=2] ob):
+    cdef double d, ix, iy, ox, oy
+    cdef cnp.ndarray[cnp.float64_t, ndim=1] path_x = np.array(path.x, dtype=np.float64)
+    cdef cnp.ndarray[cnp.float64_t, ndim=1] path_y = np.array(path.y, dtype=np.float64)
+    cdef int i, j
+    cdef int path_len = path_x.shape[0]
+    cdef int ob_len = ob.shape[0]
+    for i in range(path_len):
+        ix = path_x[i]
+        iy = path_y[i]
+        for j in range(ob_len):
+            ox = ob[j, 0]
+            oy = ob[j, 1]
             d = sqrt((ix - ox) ** 2 + (iy - oy) ** 2)
             if d <= ROBOT_RADIUS:
                 return False
     return True
 
 def dwa_planning(double x, double y, double yaw, double current_speed, cnp.ndarray[cnp.float64_t, ndim=2] ob, double gx, double gy, double target_speed, double dt=DT, bint debug_mode=False):
+    cdef int v_steps = int((target_speed - DWA_V_MIN) / DWA_V_RESOLUTION + 1)
+    cdef int omega_steps = int((DWA_OMEGA_MAX - DWA_OMEGA_MIN) / DWA_OMEGA_RESOLUTION + 1)
     cdef list[DWAPath] paths = []
     cdef DWAPath best_path = None
     cdef double min_cost = float("inf")
+    cdef double v, omega, cost
+    cdef DWAPath path
 
-    # Generate and evaluate all trajectories
-    for v in np.arange(DWA_V_MIN, target_speed + DWA_V_RESOLUTION, DWA_V_RESOLUTION):
-        for omega in np.arange(DWA_OMEGA_MIN, DWA_OMEGA_MAX + DWA_OMEGA_RESOLUTION, DWA_OMEGA_RESOLUTION):
+    for i in range(v_steps):
+        v = DWA_V_MIN + i * DWA_V_RESOLUTION
+        for j in range(omega_steps):
+            omega = DWA_OMEGA_MIN + j * DWA_OMEGA_RESOLUTION
             path = generate_trajectory(v, omega, x, y, yaw, current_speed, target_speed, dt)
             if check_collision(path, ob):
                 cost = calculate_cost(path, ob, gx, gy, target_speed)
