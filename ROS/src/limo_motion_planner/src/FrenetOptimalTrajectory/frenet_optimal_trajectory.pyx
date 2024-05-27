@@ -13,20 +13,20 @@ from QuinticPolynomialsPlanner.quintic_polynomials_planner cimport QuinticPolyno
 cdef double MAX_SPEED = 1.0 # maximum speed [m/s]
 cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]
 cdef double MAX_CURVATURE = 2.5  # 1 / 0.4
-cdef double MAX_ROAD_WIDTH = 0.25 # maximum road width [m]
+cdef double MAX_ROAD_WIDTH = 0.2 # maximum road width [m]
 cdef double D_ROAD_W = 0.005 # road width sampling length [m]
 cdef double DT = 0.2 # time tick [s]
-cdef double MAX_T = 3.0 # max prediction time [s]
-cdef double MIN_T = 2.0 # min prediction time [s]
+cdef double MAX_T = 5.0 # max prediction time [s]
+cdef double MIN_T = 4.0 # min prediction time [s]
 cdef double D_T_S = 0.05 # target speed sampling length [m/s]
 cdef double N_S_SAMPLE = 1.0 # sampling number of target speed
 cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
 
 cdef double K_J = 0.1 # weight of jerk
-cdef double K_T = 0.5 # weight of time
-cdef double K_D = 0.2 # weight of square of d
-cdef double K_LAT = 0.2 # weight of lateral direction
-cdef double K_LON = 2.0 # weight of longitudinal direction
+cdef double K_T = 0.1 # weight of time
+cdef double K_D = 0.1 # weight of square of d
+cdef double K_LAT = 0.5 # weight of lateral direction
+cdef double K_LON = 1.0 # weight of longitudinal direction
 
 cdef bint show_animation = True
 cdef int SIM_LOOP = 500
@@ -165,7 +165,7 @@ cdef list check_paths(list fplist, cnp.ndarray[cnp.float64_t, ndim=2] ob):
             continue
         elif any(fabs(a) > MAX_ACCEL for a in fplist[i].s_dd):  # Max accel check
             continue
-        elif any(fabs(c) > MAX_CURVATURE for c in fplist[i].c[3:]):  # Max curvature check
+        elif any(fabs(c) > MAX_CURVATURE for c in fplist[i].c):  # Max curvature check
             continue
         elif not check_collision(fplist[i], ob):
             continue

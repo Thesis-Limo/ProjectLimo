@@ -93,7 +93,6 @@ class MotionPlanner:
                 )
             except AttributeError as e:
                 print(e)
-                print("Obstacles are: ", self.obstacleList)
                 self.planning_done = True
                 return
 
