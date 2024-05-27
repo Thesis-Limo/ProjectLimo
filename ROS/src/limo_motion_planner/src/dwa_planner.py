@@ -66,7 +66,9 @@ class MotionPlanner:
             step_start = time.time()
             try:
                 distance_to_goal = math.hypot(state.x - gx, state.y - gy)
-                target_speed = min(TARGET_SPEED, distance_to_goal / 2)
+                target_speed = (
+                    TARGET_SPEED if distance_to_goal > 0.4 else TARGET_SPEED / 2
+                )
                 state, path, goal_reached = self.run_dwa_step(
                     state, gx, gy, target_speed
                 )
@@ -112,7 +114,10 @@ class MotionPlanner:
         return state
 
     def plot(self):
-        plt.figure()
+        plt.cla()
+        for x, y in self.obstacleList:
+            circle = plt.Circle((x, y), 0.2, color="k", fill=False)
+            plt.gca().add_patch(circle)
         for path in self.motion_plan:
             plt.plot(path.x, path.y, "-b")
         plt.plot(self.goal_pose.x, self.goal_pose.y, "xr")
