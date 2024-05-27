@@ -17,7 +17,7 @@ cdef double MAX_ROAD_WIDTH = 0.2 # maximum road width [m]
 cdef double D_ROAD_W = 0.005 # road width sampling length [m]
 cdef double DT = 0.2 # time tick [s]
 cdef double MAX_T = 5.0 # max prediction time [s]
-cdef double MIN_T = 4.0 # min prediction time [s]
+cdef double MIN_T = 3.0 # min prediction time [s]
 cdef double D_T_S = 0.05 # target speed sampling length [m/s]
 cdef double N_S_SAMPLE = 1.0 # sampling number of target speed
 cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
@@ -191,11 +191,17 @@ def frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double
     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, target_speed)
     fplist = calc_global_paths(fplist, csp)
     valid_fplist = check_paths(fplist, ob)
+    
+    # Determine the largest available time frame among valid paths
+    max_time_frame = max(fp.t[-1] for fp in valid_fplist)
+    
+    # Filter the valid paths to include only those with the largest time frame
+    max_time_frame_paths = [fp for fp in valid_fplist if fp.t[-1] == max_time_frame]
 
-    # find minimum cost path
+    # find minimum cost path from the filtered list
     min_cost = float("inf")
     best_path = None
-    for fp in valid_fplist:
+    for fp in max_time_frame_paths:
         if min_cost >= fp.cf:
             min_cost = fp.cf
             best_path = fp
@@ -215,72 +221,3 @@ def frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double
         plt.show()
 
     return best_path
-
-
-def main():
-    print(__file__ + " start!!")
-
-    # Waypoints
-    cdef list wx = [0.0, 10.0, 20.5, 35.0, 70.5]
-    cdef list wy = [0.0, -6.0, 5.0, 6.5, 0.0]
-
-    # Obstacle lists
-    cdef cnp.ndarray[cnp.float64_t, ndim=2] ob = np.array([[20.0, 10.0],
-                                                           [30.0, 6.0],
-                                                           [30.0, 8.0],
-                                                           [35.0, 8.0],
-                                                           [50.0, 3.0]], dtype=np.float64)
-
-    cdef double target_speed = 0.5
-
-    # Generate target course
-    cdef tuple target_course = generate_target_course(wx, wy)
-    cdef list tx = target_course[0]
-    cdef list ty = target_course[1]
-    cdef list tyaw = target_course[2]
-    cdef list tc = target_course[3]
-    cdef CubicSpline2D csp = target_course[4]
-
-    # Initial state
-    cdef double c_speed = 0.01  # current speed [m/s]
-    cdef double c_accel = 0.0  # current acceleration [m/ss]
-    cdef double c_d = 0.0  # current lateral position [m]
-    cdef double c_d_d = 0.0  # current lateral speed [m/s]
-    cdef double c_d_dd = 0.0  # current lateral acceleration [m/s]
-    cdef double s0 = 0.0  # current course position
-
-    cdef double area = 5.0  # animation area length [m]
-    cdef FrenetPath path
-
-    for i in range(SIM_LOOP):
-        path = frenet_optimal_planning(csp, s0, c_speed, c_accel, c_d, c_d_d, c_d_dd, ob, target_speed)
-
-        # Update state
-        s0 = path.s[1]
-        c_d = path.d[1]
-        c_d_d = path.d_d[1]
-        c_d_dd = path.d_dd[1]
-        c_speed = path.s_d[1]
-        c_accel = path.s_dd[1]
-
-        if np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0:
-            print("Goal reached")
-            break
-
-        if show_animation:
-            plt.cla()
-            plt.plot(tx, ty, label="Course")
-            plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")
-            plt.plot(path.x[1:], path.y[1:], "-or", label="Trajectory")
-            plt.xlim(path.x[1] - area, path.x[1] + area)
-            plt.ylim(path.y[1] - area, path.y[1] + area)
-            plt.title(f"Time Step: {i}")
-            plt.pause(0.001)
-            plt.legend()
-
-    print("Finish")
-    if show_animation:
-        plt.show()
-
-if __name__ == "__main__":
-    main()
