@@ -10,7 +10,7 @@ from Dubins.dubins_path_planner import plan_dubins_path
 
 WHEELBASE = 0.2  # [m]
 SIM_LOOP = 500
-TARGET_SPEED = 0.2  # [m/s]
+TARGET_SPEED = 0.25  # [m/s]
 
 
 class Pose:
@@ -65,7 +65,11 @@ class MotionPlanner:
         for _ in range(SIM_LOOP):
             step_start = time.time()
             try:
-                state, path, goal_reached = self.run_dwa_step(state, gx, gy)
+                distance_to_goal = math.hypot(state.x - gx, state.y - gy)
+                target_speed = min(TARGET_SPEED, distance_to_goal / 2)
+                state, path, goal_reached = self.run_dwa_step(
+                    state, gx, gy, target_speed
+                )
                 if goal_reached:
                     self.planning_done = True
                     print("Goal Reached")
@@ -79,7 +83,7 @@ class MotionPlanner:
         print("Total planning time: ", time.time() - start)
         return state
 
-    def run_dwa_step(self, state, gx, gy):
+    def run_dwa_step(self, state, gx, gy, target_speed):
         ob = np.array(self.obstacleList)
         dwa_path = dp.dwa_planning(
             state.x,
@@ -89,6 +93,7 @@ class MotionPlanner:
             ob,
             gx,
             gy,
+            target_speed,
             self.dt,
             debug_mode=False,
         )
