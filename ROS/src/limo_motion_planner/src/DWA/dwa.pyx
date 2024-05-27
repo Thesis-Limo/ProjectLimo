@@ -5,12 +5,11 @@ import numpy as np
 cimport numpy as cnp
 import matplotlib.pyplot as plt
 
-from CubicSpline.cubic_spline_planner cimport CubicSpline2D
-
+cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]
 cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
-cdef double DT = 0.2 # time tick [s]
+cdef double DT = 0.1 # default time tick [s]
 cdef double DWA_V_MIN = 0.0
-cdef double DWA_V_MAX = 0.2
+cdef double DWA_V_MAX = 0.25
 cdef double DWA_OMEGA_MIN = -pi / 6
 cdef double DWA_OMEGA_MAX = pi / 6
 cdef double DWA_V_RESOLUTION = 0.1
@@ -29,17 +28,19 @@ cdef class DWAPath:
         self.omega = 0.0
         self.cost = 0.0
 
-def generate_trajectory(double v, double omega, double x, double y, double yaw):
+def generate_trajectory(double v, double omega, double x, double y, double yaw, double current_speed, double dt):
     cdef DWAPath path = DWAPath()
     path.v = v
     path.omega = omega
-    cdef double dt = DT
+    cdef double time = 0.0
     cdef int predict_steps = int(PREDICT_TIME / dt)
     cdef double x_, y_, yaw_
 
     for _ in range(predict_steps):
-        x_ = x + v * cos(yaw) * dt
-        y_ = y + v * sin(yaw) * dt
+        time += dt
+        v_t = current_speed + MAX_ACCEL * time
+        x_ = x + v_t * cos(yaw) * dt
+        y_ = y + v_t * sin(yaw) * dt
         yaw_ = yaw + omega * dt
         path.x.append(x_)
         path.y.append(y_)
@@ -72,7 +73,7 @@ def check_collision(DWAPath path, cnp.ndarray[cnp.float64_t, ndim=2] ob):
                 return False
     return True
 
-def dwa_planning(CubicSpline2D csp, double x, double y, double yaw, double speed, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed, bint debug_mode=False):
+def dwa_planning(double x, double y, double yaw, double current_speed, cnp.ndarray[cnp.float64_t, ndim=2] ob, double gx, double gy, double dt=DT, bint debug_mode=False):
     cdef list[DWAPath] paths = []
     cdef DWAPath best_path = None
     cdef double min_cost = float("inf")
@@ -80,9 +81,9 @@ def dwa_planning(CubicSpline2D csp, double x, double y, double yaw, double speed
     # Generate and evaluate all trajectories
     for v in np.arange(DWA_V_MIN, DWA_V_MAX + DWA_V_RESOLUTION, DWA_V_RESOLUTION):
         for omega in np.arange(DWA_OMEGA_MIN, DWA_OMEGA_MAX + DWA_OMEGA_RESOLUTION, DWA_OMEGA_RESOLUTION):
-            path = generate_trajectory(v, omega, x, y, yaw)
+            path = generate_trajectory(v, omega, x, y, yaw, current_speed, dt)
             if check_collision(path, ob):
-                cost = calculate_cost(path, ob, csp.sx.a[-1], csp.sy.a[-1])
+                cost = calculate_cost(path, ob, gx, gy)
                 paths.append(path)
                 if cost < min_cost:
                     min_cost = cost
@@ -103,18 +104,3 @@ def dwa_planning(CubicSpline2D csp, double x, double y, double yaw, double speed
         plt.show()
 
     return best_path
-
-cpdef tuple generate_target_course(list wx, list wy):
-    cdef CubicSpline2D csp = CubicSpline2D(np.array(wx, dtype=np.float64), np.array(wy, dtype=np.float64))
-    cdef double[:] s = np.arange(0, csp.s[-1], 0.1)
-
-    rx, ry, ryaw, rk = [], [], [], []
-    cdef double ix, iy, i_s
-    for i_s in s:
-        ix, iy = csp.calc_position(i_s)
-        rx.append(ix)
-        ry.append(iy)
-        ryaw.append(csp.calc_yaw(i_s))
-        rk.append(csp.calc_curvature(i_s))
-
-    return rx, ry, ryaw, rk, csp

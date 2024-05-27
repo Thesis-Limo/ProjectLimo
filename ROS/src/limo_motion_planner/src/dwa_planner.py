@@ -35,12 +35,14 @@ class MotionPlanner:
         start_pose: Pose = Pose(0.0, 0.0, 0.0),
         obstacleList: list = [],
         initial_state: State = State(0.0, 0.0, 0.0, 0.01),
+        dt=0.1,
     ):
         self.start_pose = start_pose
         self.goal_pose = goal_pose
         self.obstacleList = obstacleList
         self.initial_state = initial_state
         self.motion_plan = []
+        self.dt = dt
         self.planning_done = False
 
     def get_dubins_path(self, curvature: float = 1.0 / 0.4):
@@ -56,57 +58,62 @@ class MotionPlanner:
 
     def calculate_dwa(self, path, state=None):
         print("Calculating DWA path")
-        csp, tx, ty = self.generate_course_and_state_initialization(path)
+        gx, gy = self.goal_pose.x, self.goal_pose.y
         state = state or self.initial_state
 
         start = time.time()
         for _ in range(SIM_LOOP):
             step_start = time.time()
             try:
-                state, path, goal_reached = self.run_dwa_step(csp, state, tx, ty)
+                state, path, goal_reached = self.run_dwa_step(state, gx, gy)
                 if goal_reached:
                     self.planning_done = True
                     print("Goal Reached")
                     break
+                self.motion_plan.append(path)
+                step_end = time.time()
+                print("Time for step: ", step_end - step_start)
             except KeyboardInterrupt:
                 break
 
         print("Total planning time: ", time.time() - start)
         return state
 
-    def run_dwa_step(self, csp, state, tx, ty):
+    def run_dwa_step(self, state, gx, gy):
         ob = np.array(self.obstacleList)
-        gx = tx[-1]
-        gy = ty[-1]
-        target_speed = TARGET_SPEED
         dwa_path = dp.dwa_planning(
-            csp,
             state.x,
             state.y,
             state.yaw,
             state.speed,
             ob,
-            target_speed,
-            debug_mode=True,
+            gx,
+            gy,
+            self.dt,
+            debug_mode=False,
         )
         if dwa_path is None:
             raise RuntimeError("No valid path found.")
 
         state = self.update(state, dwa_path.v, dwa_path.omega)
-        goal_reached = math.hypot(state.x - gx, state.y - gy) <= 1.0
+        goal_reached = math.hypot(state.x - gx, state.y - gy) <= 0.3
         return state, dwa_path, goal_reached
 
-    def generate_course_and_state_initialization(self, path):
-        wx, wy = map(list, zip(*path))
-        tx, ty, tyaw, tc, csp = dp.generate_target_course(wx, wy)
-        return csp, tx, ty
-
     def update(self, state, v, omega):
-        state.x += v * math.cos(state.yaw) * 0.1
-        state.y += v * math.sin(state.yaw) * 0.1
-        state.yaw += omega * 0.1
+        state.x += v * math.cos(state.yaw) * self.dt
+        state.y += v * math.sin(state.yaw) * self.dt
+        state.yaw += omega * self.dt
         state.speed = v
         return state
+
+    def plot(self):
+        plt.figure()
+        for path in self.motion_plan:
+            plt.plot(path.x, path.y, "-b")
+        plt.plot(self.goal_pose.x, self.goal_pose.y, "xr")
+        plt.grid(True)
+        plt.axis("equal")
+        plt.show()
 
 
 def read_laser_scan_from_file(file_path):
@@ -120,7 +127,6 @@ def read_laser_scan_from_file(file_path):
 
 
 def callback(lidar_msg):
-
     print("Calculating for timestamp:", lidar_msg["header"]["stamp"])
     obstacles = []
     s = time.time()
@@ -146,6 +152,7 @@ def callback(lidar_msg):
     planner = MotionPlanner(goal_pose, obstacleList=obstacles)
     dubins_path = list(planner.get_dubins_path())
     planner.calculate_dwa(dubins_path)
+    planner.plot()
 
 
 if __name__ == "__main__":
