@@ -122,6 +122,7 @@ class MotionPlanner:
                 state.c_d_dd,
                 obstacles,
                 TARGET_SPEED if goal_dist > 0.4 else TARGET_SPEED * (goal_dist / 0.4),
+                debug_mode=True,
             )
 
             updated_state = FrenetState(
@@ -141,9 +142,7 @@ class MotionPlanner:
         return updated_state, path, goal_reached
 
     def plan(self):
-        path = zip(
-            [self.start_pose.x, self.goal_pose.x], [self.start_pose.y, self.goal_pose.y]
-        )
+        path = self.get_dubins_path()
         self.calculate_frenet(path)
 
     def plot(self, motion_plan, goal_pose=None, area=5.0):
