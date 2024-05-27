@@ -122,7 +122,7 @@ class MotionPlanner:
                 state.c_d_dd,
                 obstacles,
                 TARGET_SPEED if goal_dist > 0.4 else TARGET_SPEED * (goal_dist / 0.4),
-                debug_mode=True,
+                debug_mode=False,
             )
 
             updated_state = FrenetState(
