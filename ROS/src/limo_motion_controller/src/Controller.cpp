@@ -152,24 +152,18 @@ float Controller::remapSpeed(float speed)
 geometry_msgs::Twist Controller::CalculateMovement(const Motion *currentMotion)
 {
     geometry_msgs::Twist currentMovement;
-    float duration = currentMotion->duration;
-    if (duration < 0)
-    {
-        duration = 1;
-    }
-    float currentSpeed = (currentMotion->speed - currentMotion->startSpeed) / (duration)*currentTime + currentMotion->startSpeed;
-    float currentAngle = (currentMotion->angle - currentMotion->startAngle) / (duration)*currentTime + currentMotion->startAngle;
 
-    currentSpeed = std::min(currentSpeed, std::max(currentMotion->speed, currentMotion->startSpeed));
-    currentSpeed = std::max(currentSpeed, std::min(currentMotion->speed, currentMotion->startSpeed));
-    currentAngle = std::min(currentAngle, std::max(currentMotion->angle, currentMotion->startAngle));
-    currentAngle = std::max(currentAngle, std::min(currentMotion->angle, currentMotion->startAngle));
+    float currentSpeed = currentMotion->speed;
+    float currentAngle = currentMotion->angle;
+
     this->currentSteeringAngle = currentAngle;
     this->currentSpeed = currentSpeed;
-    float v_l = remapSpeed(currentSpeed);
+
+    float v_l = (currentSpeed);
     float v_a = (v_l * tan(currentAngle)) / wheelBase;
 
     currentMovement.linear.x = v_l;
     currentMovement.angular.z = v_a;
+
     return currentMovement;
 }
