@@ -13,11 +13,11 @@ from QuinticPolynomialsPlanner.quintic_polynomials_planner cimport QuinticPolyno
 cdef double MAX_SPEED = 1.0 # maximum speed [m/s]
 cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]
 cdef double MAX_CURVATURE = 2.5  # 1 / 0.4
-cdef double MAX_ROAD_WIDTH = 0.5 # maximum road width [m]
-cdef double D_ROAD_W = 0.05 # road width sampling length [m]
+cdef double MAX_ROAD_WIDTH = 0.25 # maximum road width [m]
+cdef double D_ROAD_W = 0.005 # road width sampling length [m]
 cdef double DT = 0.2 # time tick [s]
-cdef double MAX_T = 4.0 # max prediction time [s]
-cdef double MIN_T = 2.0 # min prediction time [s]
+cdef double MAX_T = 3.0 # max prediction time [s]
+cdef double MIN_T = 1.0 # min prediction time [s]
 cdef double D_T_S = 0.05 # target speed sampling length [m/s]
 cdef double N_S_SAMPLE = 1.0 # sampling number of target speed
 cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
@@ -25,11 +25,11 @@ cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
 cdef double K_J = 0.1 # weight of jerk
 cdef double K_T = 0.5 # weight of time
 cdef double K_D = 0.2 # weight of square of d
-cdef double K_LAT = 1.0 # weight of lateral direction
-cdef double K_LON = 1.0 # weight of longitudinal direction
+cdef double K_LAT = 0.2 # weight of lateral direction
+cdef double K_LON = 2.0 # weight of longitudinal direction
 
 cdef bint show_animation = True
-cdef bint debug_mode = True  # Debug flag for plotting all candidate paths
+cdef bint debug_mode = False  # Debug flag for plotting all candidate paths
 cdef int SIM_LOOP = 500
 
 cdef class QuarticPolynomial:
@@ -101,7 +101,7 @@ def calc_frenet_paths(double c_speed, double c_accel, double c_d, double c_d_d, 
             fp.d_ddd = [lat_qp.calc_third_derivative(t) for t in fp.t]
 
             # Longitudinal motion planning (Velocity keeping)
-            for tv in np.arange(0, target_speed + D_T_S * N_S_SAMPLE, D_T_S):
+            for tv in np.arange(target_speed - D_T_S * N_S_SAMPLE, target_speed + D_T_S * N_S_SAMPLE, D_T_S):
                 tfp = deepcopy(fp)
                 lon_qp = QuarticPolynomial(s0, c_speed, c_accel, tv, 0.0, Ti)
 
@@ -166,7 +166,7 @@ cdef list check_paths(list fplist, cnp.ndarray[cnp.float64_t, ndim=2] ob):
             continue
         elif any(fabs(a) > MAX_ACCEL for a in fplist[i].s_dd):  # Max accel check
             continue
-        elif any(fabs(c) > MAX_CURVATURE for c in fplist[i].c):  # Max curvature check
+        elif any(fabs(c) > MAX_CURVATURE for c in fplist[i].c[3:]):  # Max curvature check
             continue
         elif not check_collision(fplist[i], ob):
             continue
@@ -195,8 +195,8 @@ def frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double
 
     if debug_mode:
         plt.figure(figsize=(10, 10))
-        for fp in fplist:
-            plt.plot(fp.x, fp.y, "-b", alpha=0.5)
+        #for fp in fplist:
+        #    plt.plot(fp.x, fp.y, "-b", alpha=0.5)
         for fp in valid_fplist:
             plt.plot(fp.s, fp.d, '-r', alpha=0.3)
         plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")
