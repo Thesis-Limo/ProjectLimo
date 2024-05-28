@@ -1,6 +1,5 @@
 #!/usr/bin/env python3.6
 import math
-import threading
 import time
 
 import FrenetOptimalTrajectory.frenet_optimal_trajectory as frenet_optimal_trajectory
@@ -11,10 +10,9 @@ from Dubins.dubins_path_planner import plan_dubins_path
 from limo_motion_controller.msg import MotionPlan, MovementController
 from sensor_msgs.msg import LaserScan
 
-ROBOT_RADIUS = 0.2  # [m]
 WHEELBASE = 0.2  # [m]
 SIM_LOOP = 500
-TARGET_SPEED = 0.1  # [m/s]
+TARGET_SPEED = 0.2  # [m/s]
 
 
 class FrenetPath:
@@ -97,7 +95,7 @@ class MotionPlanner:
                 )
             except AttributeError as e:
                 print(e)
-                print("Obstacles are: ", self.obstacleList)
+                # print("Obstacles are: ", self.obstacleList)
                 # self.motion_plan = []
                 self.planning_done = True
                 return
@@ -125,7 +123,7 @@ class MotionPlanner:
             state.c_d_d,
             state.c_d_dd,
             obstacles,
-            TARGET_SPEED if goal_dist > 1 else TARGET_SPEED * (goal_dist / 1),
+            TARGET_SPEED if goal_dist > 0.4 else TARGET_SPEED * (goal_dist / 0.4),
         )
 
         updated_state = FrenetState(
