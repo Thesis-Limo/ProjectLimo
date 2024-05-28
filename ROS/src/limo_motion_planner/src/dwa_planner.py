@@ -32,7 +32,7 @@ class MotionPlanner:
         goal_pose: Pose,
         start_pose: Pose = Pose(0.0, 0.0),
         obstacleList: list = [],
-        initial_state: State = State(0.0, 0.0, 0.0, 0.01),
+        initial_state: State = State(0.0, 0.0, 0.0, 0.0),
         dt=0.1,
     ):
         self.start_pose = start_pose
