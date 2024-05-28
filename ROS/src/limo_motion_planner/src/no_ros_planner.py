@@ -1,17 +1,16 @@
 #!/usr/bin/env python3.6
 import math
-import threading
 import time
 
 import FrenetOptimalTrajectory.frenet_optimal_trajectory as frenet_optimal_trajectory
 import matplotlib.pyplot as plt
 import numpy as np
+import yaml
 from Dubins.dubins_path_planner import plan_dubins_path
 
-ROBOT_RADIUS = 0.2  # [m]
 WHEELBASE = 0.2  # [m]
-SIM_LOOP = 100
-TARGET_SPEED = 0.1  # [m/s]
+SIM_LOOP = 500
+TARGET_SPEED = 0.2  # [m/s]
 
 
 class FrenetPath:
@@ -81,12 +80,8 @@ class MotionPlanner:
         return zip(path_x, path_y)
 
     def calculate_frenet(self, path, state=None):
-        start = time.time()
-        csp, tx, ty = self.generate_course_and_state_initialization(
-            [[0, 0], [self.goal_pose.x, self.goal_pose.y]]
-        )
-        stop = time.time()
-        print(f"Time taken to generate course: {stop - start:.2f} seconds")
+        print("Calculating frenet path")
+        csp, tx, ty = self.generate_course_and_state_initialization(path)
         state = state or self.initial_state
 
         start = time.time()
@@ -96,8 +91,8 @@ class MotionPlanner:
                 state, path, goal_reached = self.run_frenet_iteration(
                     csp, state, tx, ty, self.obstacleList
                 )
-            except AttributeError:
-                self.motion_plan = []
+            except AttributeError as e:
+                print(e)
                 self.planning_done = True
                 return
 
@@ -115,38 +110,39 @@ class MotionPlanner:
     def run_frenet_iteration(self, csp, state, tx, ty, obstacles):
         goal_dist = np.hypot(tx[-1] - state.c_x, ty[-1] - state.c_y)
 
-        path = frenet_optimal_trajectory.frenet_optimal_planning(
-            csp,
-            state.s0,
-            state.c_speed,
-            state.c_accel,
-            state.c_d,
-            state.c_d_d,
-            state.c_d_dd,
-            obstacles,
-            TARGET_SPEED if goal_dist > 1 else TARGET_SPEED * (goal_dist / 1),
-        )
+        try:
+            path = frenet_optimal_trajectory.frenet_optimal_planning(
+                csp,
+                state.s0,
+                state.c_speed,
+                state.c_accel,
+                state.c_d,
+                state.c_d_d,
+                state.c_d_dd,
+                obstacles,
+                TARGET_SPEED if goal_dist > 0.4 else TARGET_SPEED * (goal_dist / 0.4),
+                debug_mode=False,
+            )
 
-        updated_state = FrenetState(
-            c_speed=path.s_d[1],
-            c_accel=path.s_dd[1],
-            c_d=path.d[1],
-            c_d_d=path.d_d[1],
-            c_d_dd=path.d_dd[1],
-            s0=path.s[1],
-            c_x=path.x[1],
-            c_y=path.y[1],
-        )
+            updated_state = FrenetState(
+                c_speed=path.s_d[1],
+                c_accel=path.s_dd[1],
+                c_d=path.d[1],
+                c_d_d=path.d_d[1],
+                c_d_dd=path.d_dd[1],
+                s0=path.s[1],
+                c_x=path.x[1],
+                c_y=path.y[1],
+            )
 
-        goal_reached = np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 0.2
-        if goal_reached:
-            print("Goal reached")
-            print(np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]))
+            goal_reached = np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 0.2
+        except Exception as e:
+            raise AttributeError(e)
         return updated_state, path, goal_reached
 
     def plan(self):
         path = self.get_dubins_path()
-        threading.Thread(target=self.calculate_frenet, args=(path,)).start()
+        self.calculate_frenet(path)
 
     def plot(self, motion_plan, goal_pose=None, area=5.0):
         goal_pose = goal_pose or self.goal_pose
@@ -166,10 +162,19 @@ class MotionPlanner:
         plt.show()
 
     def generate_course_and_state_initialization(self, path):
+
         wx, wy = zip(*path)
         tx, ty, tyaw, tc, csp = frenet_optimal_trajectory.generate_target_course(
             list(np.array(wx)), list(np.array(wy))
         )
+        # plot the csp and obstacles
+        plt.plot(tx, ty, "-r", label="course")
+        plt.plot(wx, wy, "xb", label="course")
+        plt.plot(
+            [x[0] for x in self.obstacleList], [x[1] for x in self.obstacleList], "ok"
+        )
+        plt.show()
+
         return csp, tx, ty
 
 
@@ -217,11 +222,34 @@ def add_to_motion_plan(motion_plan, path, final=False):
 tick = True
 
 
-def callback():
+def read_laser_scan_from_file(file_path):
+    with open(file_path, "r") as file:
+        scan_data_str = file.read()
+
+    # Convert YAML string to Python dictionary
+    scan_data_dict = yaml.safe_load(scan_data_str)
+
+    return scan_data_dict
+
+
+def callback(lidar_msg):
     global tick
     if tick:
-        print("Calculating for timestamp:", time.time())
+        print("Calculating for timestamp:", lidar_msg["header"]["stamp"])
         tick = False
+        obstacles = []
+        s = time.time()
+
+        min_dist = lidar_msg["range_min"]
+        max_dist = lidar_msg["range_max"]
+
+        for i, distance in enumerate(lidar_msg["ranges"]):
+            if min_dist < distance < max_dist:
+                angle = lidar_msg["angle_min"] + i * lidar_msg["angle_increment"]
+                x = distance * np.cos(angle)
+                y = distance * np.sin(angle)
+                obstacles.append((x, y))
+        obstacles = np.array(obstacles)
 
         goal_values = input("Enter goal (x y yaw): ")
         if goal_values == "":
@@ -230,22 +258,15 @@ def callback():
 
         goal_x, goal_y, goal_yaw = [float(num) for num in goal_values.split()]
 
-        obstacles = np.array([(10.0, 10.0)])
-
         goal_pose = Pose(goal_x, goal_y, goal_yaw)
         planner = MotionPlanner(goal_pose, obstacleList=obstacles)
         planner.plan()
-        time.sleep(1.0)
 
         motion_plan = FrenetPath()
-        idx = 0
-        while not planner.planning_done or idx < len(planner.motion_plan):
-            if idx < len(planner.motion_plan):
-                path = planner.motion_plan[idx]
-                motion_plan = add_to_motion_plan(motion_plan, path)
-                idx += 1
-
+        for path in planner.motion_plan:
+            motion_plan = add_to_motion_plan(motion_plan, path)
         motion_plan = add_to_motion_plan(motion_plan, path, final=True)
+
         plan = [
             (motion_plan.s_d[i], math.atan2(WHEELBASE * motion_plan.c[i], 1.0))
             for i in range(len(motion_plan.t) - 1)
@@ -254,6 +275,7 @@ def callback():
         print(plan)
 
         print("Final position: ", motion_plan.x[-1], motion_plan.y[-1])
+
         planner.plot(planner.motion_plan)
 
         input("Press Enter to continue...")
@@ -262,6 +284,6 @@ def callback():
 
 
 if __name__ == "__main__":
+    lidar_msg = read_laser_scan_from_file("scan_data.txt")
+    callback(lidar_msg)
     print("running planner")
-    while True:
-        callback()

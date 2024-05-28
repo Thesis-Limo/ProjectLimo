@@ -18,6 +18,11 @@ extensions = [
         sources=["FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx"],
         include_dirs=[np.get_include()],
     ),
+    Extension(
+        "DWA.dwa",
+        sources=["DWA/dwa.pyx"],
+        include_dirs=[np.get_include()],
+    ),
 ]
 
 setup(name="Path Planning Library", ext_modules=cythonize(extensions))

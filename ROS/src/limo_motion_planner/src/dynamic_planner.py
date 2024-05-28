@@ -98,7 +98,7 @@ class MotionPlanner:
         y = []
         for point in points:
             position = point.point
-            x.append(position.x - 0.2)
+            x.append(position.x - 0.1)
             y.append(position.y)
         return x, y
 
@@ -222,7 +222,7 @@ class MotionPlanner:
             state.c_d_d,
             state.c_d_dd,
             obstacles,
-            TARGET_SPEED if goal_dist > 1 else TARGET_SPEED * (goal_dist / 1),
+            TARGET_SPEED if goal_dist > 0.4 else TARGET_SPEED * (goal_dist / 0.4),
         )
 
         updated_state = FrenetState(
