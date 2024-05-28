@@ -6,7 +6,6 @@ import DWA.dwa as dp
 import matplotlib.pyplot as plt
 import numpy as np
 import yaml
-from Dubins.dubins_path_planner import plan_dubins_path
 
 WHEELBASE = 0.2  # [m]
 SIM_LOOP = 500
@@ -14,10 +13,9 @@ TARGET_SPEED = 0.25  # [m/s]
 
 
 class Pose:
-    def __init__(self, x: float, y: float, yaw: float):
+    def __init__(self, x: float, y: float):
         self.x = x
         self.y = y
-        self.yaw = np.deg2rad(yaw)
 
 
 class State:
@@ -32,7 +30,7 @@ class MotionPlanner:
     def __init__(
         self,
         goal_pose: Pose,
-        start_pose: Pose = Pose(0.0, 0.0, 0.0),
+        start_pose: Pose = Pose(0.0, 0.0),
         obstacleList: list = [],
         initial_state: State = State(0.0, 0.0, 0.0, 0.01),
         dt=0.1,
@@ -45,18 +43,7 @@ class MotionPlanner:
         self.dt = dt
         self.planning_done = False
 
-    def get_dubins_path(self, curvature: float = 1.0 / 0.4):
-        step_size = 1.0
-        start = self.start_pose
-        goal = self.goal_pose
-
-        path_x, path_y, path_yaw, mode, lengths = plan_dubins_path(
-            start.x, start.y, start.yaw, goal.x, goal.y, goal.yaw, curvature, step_size
-        )
-
-        return zip(path_x, path_y)
-
-    def calculate_dwa(self, path, state=None):
+    def calculate_dwa(self, state=None):
         print("Calculating DWA path")
         gx, gy = self.goal_pose.x, self.goal_pose.y
         state = state or self.initial_state
@@ -153,16 +140,15 @@ def callback(lidar_msg):
             obstacles.append((x, y))
     obstacles = np.array(obstacles)
 
-    goal_values = input("Enter goal (x y yaw): ")
+    goal_values = input("Enter goal (x y): ")
     if goal_values == "":
         return
 
-    goal_x, goal_y, goal_yaw = [float(num) for num in goal_values.split()]
+    goal_x, goal_y = [float(num) for num in goal_values.split()]
 
-    goal_pose = Pose(goal_x, goal_y, goal_yaw)
+    goal_pose = Pose(goal_x, goal_y)
     planner = MotionPlanner(goal_pose, obstacleList=obstacles)
-    dubins_path = list(planner.get_dubins_path())
-    planner.calculate_dwa(dubins_path)
+    planner.calculate_dwa()
     planner.plot()
 
 
