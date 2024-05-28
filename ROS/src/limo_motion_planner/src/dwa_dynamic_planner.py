@@ -36,7 +36,7 @@ class MotionPlanner:
     def __init__(
         self,
         publisher: rospy.Publisher,
-        dt=0.1,
+        dt=0.01,
     ):
         self.goal_pose = None
         self.goal_updated = False
@@ -146,10 +146,9 @@ class MotionPlanner:
                 motion_plan.append(path)
 
                 end = time.time()
-                print(f"Time taken to plan: {end - start:.2f} seconds")
+                # print(f"Time taken to plan: {end - start:.2f} seconds")
             except Exception as e:
                 print("Error in step:", e)
-                self.publish_motion(motion_plan)
                 motion_plan = []
                 continue
 
