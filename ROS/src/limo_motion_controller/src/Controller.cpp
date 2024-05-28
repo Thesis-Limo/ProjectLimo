@@ -7,6 +7,7 @@ Controller::Controller(const ros::NodeHandle &nodehandle)
     nh = nodehandle;
     subMovement = nh.subscribe<limo_motion_controller::MovementController>("/limo_movement", 100, &Controller::CallBackMovement, this);
     subMotionPlan = nh.subscribe<limo_motion_controller::MotionPlan>("/limo_motionplan", 100, &Controller::CallBackMotionPlan, this);
+    subMotionPlanAppend = nh.subscribe<limo_motion_controller::MovementController>("/limo_motionplan_append", 100, &Controller::CallBackMotionPlanAppend, this);
     serviceOverride = nh.advertiseService("/override_plan", &Controller::ServiceCallBackMovement, this);
     pubCmd = nh.advertise<geometry_msgs::Twist>("/cmd_vel", 100);
     minSpeed = nh.param<float>("minSpeed", -1.2);
@@ -82,6 +83,12 @@ void Controller::CallBackMotionPlan(const limo_motion_controller::MotionPlan::Co
         motionPlan.push(m);
     }
     UpdateMovement();
+}
+
+void Controller::CallBackMotionPlanAppend(const limo_motion_controller::MovementController::ConstPtr &msg)
+{
+    Motion *m = new Motion{msg->angle, msg->speed, msg->duration, currentSpeed, currentSteeringAngle, 0};
+    motionPlan.push(m);
 }
 
 void Controller::UpdateMovement()

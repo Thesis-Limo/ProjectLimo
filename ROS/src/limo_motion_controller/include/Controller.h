@@ -22,10 +22,12 @@ private:
     void CallBackMovement(const limo_motion_controller::MovementController::ConstPtr& msg);
     bool ServiceCallBackMovement(limo_motion_controller::OverrideMotion::Request& req,limo_motion_controller::OverrideMotion::Response& response);
     void CallBackMotionPlan(const limo_motion_controller::MotionPlan::ConstPtr& msg);
+    void CallBackMotionPlanAppend(const limo_motion_controller::MovementController::ConstPtr &msg); 
 
     ros::NodeHandle nh;
     ros::Subscriber subMovement;
     ros::Subscriber subMotionPlan;
+    ros::Subscriber subMotionPlanAppend;
     ros::ServiceServer serviceOverride;
     ros::Publisher pubCmd;
 
