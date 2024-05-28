@@ -149,6 +149,10 @@ def callback(lidar_msg):
     goal_pose = Pose(goal_x, goal_y)
     planner = MotionPlanner(goal_pose, obstacleList=obstacles)
     planner.calculate_dwa()
+
+    for plan in planner.motion_plan:
+        print(f"Speed: {plan.v}, Angle: {plan.omega}, Duration: {planner.dt}")
+
     planner.plot()
 
 
