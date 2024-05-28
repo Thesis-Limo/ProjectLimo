@@ -8,6 +8,3 @@ cubic_spline_planner.main_2d()
 
 # Test Quintic Polynomial Planner
 quintic_polynomials_planner.main()
-
-# Test Frenet Optimal Trajectory Planner
-frenet_optimal_trajectory.main()
