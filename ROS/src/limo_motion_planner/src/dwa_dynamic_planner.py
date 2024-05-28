@@ -36,17 +36,12 @@ class MotionPlanner:
     def __init__(
         self,
         publisher: rospy.Publisher,
-        dt=0.2,
+        dt=0.1,
     ):
         self.goal_pose = None
         self.goal_updated = False
-        self.goal_reached = False
-        self.goal_set = False
-        self.queued_goal = None
 
         self.obstacleList = None
-        self.obstacles_updated = False
-        self.queued_obstacles = None
 
         self.initial_state = State(0.0, 0.0, 0.0, 0.0)
 
@@ -74,7 +69,6 @@ class MotionPlanner:
 
     def set_obstacles(self, obstacles: np.array):
         self.obstacleList = obstacles
-        self.obstacles_updated = False
 
     def update_goal(self, goal: map.goal):
         x, y = self.extract_points(goal)
@@ -85,29 +79,23 @@ class MotionPlanner:
 
     def set_goal(self, goal: Pose):
         self.goal_pose = goal
-        self.goal_set = True
-        self.goal_updated = False
-        if self.get_distance(goal) > 0.35:
-            self.goal_reached = False
+        self.goal_updated = True
 
     def update_map(self, map: map):
         if len(map.goal):
-            self.queued_goal = map.goal
-            self.goal_updated = True
-            self.goal_set = True
+            self.update_goal(map.goal)
         if len(map.obstacles):
-            self.queued_obstacles = map.obstacles
-            self.obstacles_updated = True
+            self.update_obstacles(map.obstacles)
 
-    def publish_motion(self, path):
-        plan = MotionPlan()
-        cont = MovementController()
-        cont.speed = path.v
-        cont.angle = path.omega
-        cont.duration = self.dt
-        plan.sequence.append(cont)
-        print("Sending command: ", cont.speed, cont.angle, cont.duration)
-        self.publisher.publish(plan)
+    def publish_motion(self, planner):
+        executable_plan = MotionPlan()
+        for plan in planner:
+            cont = MovementController()
+            cont.speed = plan.v
+            cont.angle = plan.omega
+            cont.duration = self.dt
+            executable_plan.sequence.append(cont)
+        self.publisher.publish(executable_plan)
 
     def run_dwa_step(self, state, gx, gy, target_speed):
         ob = np.array(self.obstacleList)
@@ -139,37 +127,14 @@ class MotionPlanner:
 
     def main_loop(self):
         state = self.initial_state
+        motion_plan = []
         while True:
-            start = time.time()
-            if not self.goal_set:
+            if not self.goal_pose:
                 continue
-            if self.goal_updated:
-                self.update_goal(self.queued_goal)
-                print("Updated Goal: ", self.goal_pose)
-            else:
-                new_x, new_y = (
-                    self.goal_pose.x - state.x,
-                    self.goal_pose.y - state.y,
-                )
-                if math.isnan(new_x) or math.isnan(new_y):
-                    print("Goal reached")
-                    time.sleep(1)
-                    continue
-                else:
-                    self.set_goal(Pose(new_x, new_y))
-                    print("Calculated Goal: ", self.goal_pose)
-
-            if self.obstacles_updated:
-                self.update_obstacles(self.queued_obstacles)
-            else:
-                new_obstacles = []
-                for obstacle in self.obstacleList:
-                    new_x, new_y = obstacle[0] - state.x, obstacle[1] - state.y
-                    new_obstacles.append([new_x, new_y])
-                self.set_obstacles(np.array(new_obstacles))
 
             gx, gy = self.goal_pose.x, self.goal_pose.y
 
+            start = time.time()
             try:
                 distance_to_goal = math.hypot(state.x - gx, state.y - gy)
                 target_speed = (
@@ -178,22 +143,28 @@ class MotionPlanner:
                 state, path, goal_reached = self.run_dwa_step(
                     state, gx, gy, target_speed
                 )
-                if goal_reached:
-                    self.planning_done = True
-                    print("Goal Reached")
-                    time.sleep(0.5)
-                    continue
+                motion_plan.append(path)
+
+                end = time.time()
+                print(f"Time taken to plan: {end - start:.2f} seconds")
             except Exception as e:
                 print("Error in step:", e)
+                self.publish_motion(motion_plan)
+                motion_plan = []
                 continue
 
             if goal_reached:
                 print("Goal Reached")
-            else:
-                self.publish_motion(path)
+                self.publish_motion(motion_plan)
+                motion_plan = []
+                continue
 
-            end = time.time()
-            print(f"Time taken to plan: {end - start:.2f} seconds")
+            if self.goal_updated:
+                self.goal_updated = False
+                print("Updated Goal: ", self.goal_pose)
+                self.publish_motion(motion_plan)
+                motion_plan = []
+                continue
 
 
 if __name__ == "__main__":
