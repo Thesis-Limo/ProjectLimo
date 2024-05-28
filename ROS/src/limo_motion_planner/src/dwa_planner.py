@@ -79,7 +79,8 @@ class MotionPlanner:
                 self.motion_plan.append(path)
                 step_end = time.time()
                 print("Time for step: ", step_end - step_start)
-            except KeyboardInterrupt:
+            except Exception as e:
+                print("Error in step:", e)
                 break
 
         print("Total planning time: ", time.time() - start)
