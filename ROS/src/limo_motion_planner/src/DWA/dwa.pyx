@@ -18,6 +18,7 @@ cdef double PREDICT_TIME = 2.0  # Predict 2 seconds ahead
 cdef double TO_GOAL_COST_GAIN = 1.0
 cdef double SPEED_COST_GAIN = 1.0
 cdef double OBSTACLE_COST_GAIN = 1.0
+cdef double TURN_COST_GAIN = 0.05
 
 cdef class DWAPath:
     def __init__(self):
@@ -55,8 +56,9 @@ cdef double calculate_cost(DWAPath path, cnp.ndarray[cnp.float64_t, ndim=2] ob, 
     cdef double speed_cost = SPEED_COST_GAIN * (target_speed - path.v)
     cdef double min_obstacle_distance = np.min(np.sqrt((np.array(path.x)[:, np.newaxis] - ob[:, 0]) ** 2 + (np.array(path.y)[:, np.newaxis] - ob[:, 1]) ** 2))
     cdef double obstacle_cost = OBSTACLE_COST_GAIN / min_obstacle_distance
+    cdef double turn_cost = TURN_COST_GAIN * abs(path.omega)
 
-    path.cost = to_goal_cost + speed_cost + obstacle_cost
+    path.cost = to_goal_cost + speed_cost + obstacle_cost + turn_cost
     return path.cost
 
 cdef bint check_collision(DWAPath path, cnp.ndarray[cnp.float64_t, ndim=2] ob):
