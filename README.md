@@ -46,19 +46,19 @@ build_planner
 
 To build the motion planner
 
+```bash
+cbuild
+```
+
+To build the rest
+
 # run limo
 
 ```bash
-roslaunch limo_launch limo_default.launch
+roslaunch limo_launch limo_pipeline.launch
 ```
 
-This will run the default settings, with Lidar and camera attached
-
-```bash
-roslaunch limo_motion_controller Controller.launch
-```
-
-This will run the controller to get access to the driver, to push the motion plan the topic is called /limo_motionplan
+This will run the full pipeline
 
 # github ssh certification on limo
 

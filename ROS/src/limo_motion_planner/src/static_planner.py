@@ -1,6 +1,5 @@
 #!/usr/bin/env python3.6
 import math
-import threading
 import time
 
 import FrenetOptimalTrajectory.frenet_optimal_trajectory as frenet_optimal_trajectory
@@ -11,10 +10,9 @@ from Dubins.dubins_path_planner import plan_dubins_path
 from limo_motion_controller.msg import MotionPlan, MovementController
 from sensor_msgs.msg import LaserScan
 
-ROBOT_RADIUS = 0.2  # [m]
 WHEELBASE = 0.2  # [m]
-SIM_LOOP = 100
-TARGET_SPEED = 0.1  # [m/s]
+SIM_LOOP = 500
+TARGET_SPEED = 0.2  # [m/s]
 
 
 class FrenetPath:
@@ -84,6 +82,7 @@ class MotionPlanner:
         return zip(path_x, path_y)
 
     def calculate_frenet(self, path, state=None):
+        print("Calculating frenet path")
         csp, tx, ty = self.generate_course_and_state_initialization(path)
         state = state or self.initial_state
 
@@ -94,8 +93,10 @@ class MotionPlanner:
                 state, path, goal_reached = self.run_frenet_iteration(
                     csp, state, tx, ty, self.obstacleList
                 )
-            except AttributeError:
-                self.motion_plan = []
+            except AttributeError as e:
+                print(e)
+                # print("Obstacles are: ", self.obstacleList)
+                # self.motion_plan = []
                 self.planning_done = True
                 return
 
@@ -122,7 +123,7 @@ class MotionPlanner:
             state.c_d_d,
             state.c_d_dd,
             obstacles,
-            TARGET_SPEED if goal_dist > 1 else TARGET_SPEED * (goal_dist / 1),
+            TARGET_SPEED if goal_dist > 0.4 else TARGET_SPEED * (goal_dist / 0.4),
         )
 
         updated_state = FrenetState(
@@ -141,7 +142,7 @@ class MotionPlanner:
 
     def plan(self):
         path = self.get_dubins_path()
-        threading.Thread(target=self.calculate_frenet, args=(path,)).start()
+        self.calculate_frenet(path)
 
     def plot(self, motion_plan, goal_pose=None, area=5.0):
         goal_pose = goal_pose or self.goal_pose
@@ -241,17 +242,12 @@ def callback(lidar_msg, publisher):
         goal_pose = Pose(goal_x, goal_y, goal_yaw)
         planner = MotionPlanner(goal_pose, obstacleList=obstacles)
         planner.plan()
-        time.sleep(1.0)
 
         motion_plan = FrenetPath()
-        idx = 0
-        while not planner.planning_done or idx < len(planner.motion_plan):
-            if idx < len(planner.motion_plan):
-                path = planner.motion_plan[idx]
-                motion_plan = add_to_motion_plan(motion_plan, path)
-                idx += 1
-
+        for path in planner.motion_plan:
+            motion_plan = add_to_motion_plan(motion_plan, path)
         motion_plan = add_to_motion_plan(motion_plan, path, final=True)
+
         plan = [
             (motion_plan.s_d[i], math.atan2(WHEELBASE * motion_plan.c[i], 1.0))
             for i in range(len(motion_plan.t) - 1)
@@ -268,7 +264,7 @@ def callback(lidar_msg, publisher):
             cont.duration = 0.2
             executable_plan.sequence.append(cont)
         publisher.publish(executable_plan)
-        planner.plot(planner.motion_plan)
+        # planner.plot(planner.motion_plan)
 
         input("Press Enter to continue...")
 

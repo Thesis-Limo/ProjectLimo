@@ -36333,149 +36333,149 @@ if (!__Pyx_RefNanny) {
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":13
  * from QuinticPolynomialsPlanner.quintic_polynomials_planner cimport QuinticPolynomial
  * 
- * cdef double MAX_SPEED = 1.0             # <<<<<<<<<<<<<<
- * cdef double MAX_ACCEL = 1.0
+ * cdef double MAX_SPEED = 1.0 # maximum speed [m/s]             # <<<<<<<<<<<<<<
+ * cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]
  * cdef double MAX_CURVATURE = 2.5  # 1 / 0.4
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_SPEED = 1.0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":14
  * 
- * cdef double MAX_SPEED = 1.0
- * cdef double MAX_ACCEL = 1.0             # <<<<<<<<<<<<<<
+ * cdef double MAX_SPEED = 1.0 # maximum speed [m/s]
+ * cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]             # <<<<<<<<<<<<<<
  * cdef double MAX_CURVATURE = 2.5  # 1 / 0.4
- * cdef double MAX_ROAD_WIDTH = 7.0
+ * cdef double MAX_ROAD_WIDTH = 7.0 # maximum road width [m]
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_ACCEL = 1.0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":15
- * cdef double MAX_SPEED = 1.0
- * cdef double MAX_ACCEL = 1.0
+ * cdef double MAX_SPEED = 1.0 # maximum speed [m/s]
+ * cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]
  * cdef double MAX_CURVATURE = 2.5  # 1 / 0.4             # <<<<<<<<<<<<<<
- * cdef double MAX_ROAD_WIDTH = 7.0
- * cdef double D_ROAD_W = 1.0
+ * cdef double MAX_ROAD_WIDTH = 7.0 # maximum road width [m]
+ * cdef double D_ROAD_W = 1.0 # road width sampling length [m]
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_CURVATURE = 2.5;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":16
- * cdef double MAX_ACCEL = 1.0
+ * cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]
  * cdef double MAX_CURVATURE = 2.5  # 1 / 0.4
- * cdef double MAX_ROAD_WIDTH = 7.0             # <<<<<<<<<<<<<<
- * cdef double D_ROAD_W = 1.0
- * cdef double DT = 0.2
+ * cdef double MAX_ROAD_WIDTH = 7.0 # maximum road width [m]             # <<<<<<<<<<<<<<
+ * cdef double D_ROAD_W = 1.0 # road width sampling length [m]
+ * cdef double DT = 0.2 # time tick [s]
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_ROAD_WIDTH = 7.0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":17
  * cdef double MAX_CURVATURE = 2.5  # 1 / 0.4
- * cdef double MAX_ROAD_WIDTH = 7.0
- * cdef double D_ROAD_W = 1.0             # <<<<<<<<<<<<<<
- * cdef double DT = 0.2
- * cdef double MAX_T = 4.0
+ * cdef double MAX_ROAD_WIDTH = 7.0 # maximum road width [m]
+ * cdef double D_ROAD_W = 1.0 # road width sampling length [m]             # <<<<<<<<<<<<<<
+ * cdef double DT = 0.2 # time tick [s]
+ * cdef double MAX_T = 4.0 # max prediction time [s]
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_ROAD_W = 1.0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":18
- * cdef double MAX_ROAD_WIDTH = 7.0
- * cdef double D_ROAD_W = 1.0
- * cdef double DT = 0.2             # <<<<<<<<<<<<<<
- * cdef double MAX_T = 4.0
- * cdef double MIN_T = 2.0
+ * cdef double MAX_ROAD_WIDTH = 7.0 # maximum road width [m]
+ * cdef double D_ROAD_W = 1.0 # road width sampling length [m]
+ * cdef double DT = 0.2 # time tick [s]             # <<<<<<<<<<<<<<
+ * cdef double MAX_T = 4.0 # max prediction time [s]
+ * cdef double MIN_T = 2.0 # min prediction time [s]
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_DT = 0.2;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":19
- * cdef double D_ROAD_W = 1.0
- * cdef double DT = 0.2
- * cdef double MAX_T = 4.0             # <<<<<<<<<<<<<<
- * cdef double MIN_T = 2.0
- * cdef double D_T_S = 5.0 / 3.6
+ * cdef double D_ROAD_W = 1.0 # road width sampling length [m]
+ * cdef double DT = 0.2 # time tick [s]
+ * cdef double MAX_T = 4.0 # max prediction time [s]             # <<<<<<<<<<<<<<
+ * cdef double MIN_T = 2.0 # min prediction time [s]
+ * cdef double D_T_S = 5.0 / 3.6 # target speed sampling length [m/s]
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_T = 4.0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":20
- * cdef double DT = 0.2
- * cdef double MAX_T = 4.0
- * cdef double MIN_T = 2.0             # <<<<<<<<<<<<<<
- * cdef double D_T_S = 5.0 / 3.6
- * cdef int N_S_SAMPLE = 1
+ * cdef double DT = 0.2 # time tick [s]
+ * cdef double MAX_T = 4.0 # max prediction time [s]
+ * cdef double MIN_T = 2.0 # min prediction time [s]             # <<<<<<<<<<<<<<
+ * cdef double D_T_S = 5.0 / 3.6 # target speed sampling length [m/s]
+ * cdef int N_S_SAMPLE = 1 # sampling number of target speed
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MIN_T = 2.0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":21
- * cdef double MAX_T = 4.0
- * cdef double MIN_T = 2.0
- * cdef double D_T_S = 5.0 / 3.6             # <<<<<<<<<<<<<<
- * cdef int N_S_SAMPLE = 1
- * cdef double ROBOT_RADIUS = 0.2
+ * cdef double MAX_T = 4.0 # max prediction time [s]
+ * cdef double MIN_T = 2.0 # min prediction time [s]
+ * cdef double D_T_S = 5.0 / 3.6 # target speed sampling length [m/s]             # <<<<<<<<<<<<<<
+ * cdef int N_S_SAMPLE = 1 # sampling number of target speed
+ * cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_T_S = (5.0 / 3.6);
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":22
- * cdef double MIN_T = 2.0
- * cdef double D_T_S = 5.0 / 3.6
- * cdef int N_S_SAMPLE = 1             # <<<<<<<<<<<<<<
- * cdef double ROBOT_RADIUS = 0.2
+ * cdef double MIN_T = 2.0 # min prediction time [s]
+ * cdef double D_T_S = 5.0 / 3.6 # target speed sampling length [m/s]
+ * cdef int N_S_SAMPLE = 1 # sampling number of target speed             # <<<<<<<<<<<<<<
+ * cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
  * 
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_N_S_SAMPLE = 1;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":23
- * cdef double D_T_S = 5.0 / 3.6
- * cdef int N_S_SAMPLE = 1
- * cdef double ROBOT_RADIUS = 0.2             # <<<<<<<<<<<<<<
+ * cdef double D_T_S = 5.0 / 3.6 # target speed sampling length [m/s]
+ * cdef int N_S_SAMPLE = 1 # sampling number of target speed
+ * cdef double ROBOT_RADIUS = 0.2 # robot radius [m]             # <<<<<<<<<<<<<<
  * 
- * cdef double K_J = 0.1
+ * cdef double K_J = 0.1 # weight of jerk
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_ROBOT_RADIUS = 0.2;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":25
- * cdef double ROBOT_RADIUS = 0.2
+ * cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
  * 
- * cdef double K_J = 0.1             # <<<<<<<<<<<<<<
- * cdef double K_T = 0.1
- * cdef double K_D = 1.0
+ * cdef double K_J = 0.1 # weight of jerk             # <<<<<<<<<<<<<<
+ * cdef double K_T = 0.1 # weight of time
+ * cdef double K_D = 1.0 # weight of square of d
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_J = 0.1;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":26
  * 
- * cdef double K_J = 0.1
- * cdef double K_T = 0.1             # <<<<<<<<<<<<<<
- * cdef double K_D = 1.0
- * cdef double K_LAT = 1.0
+ * cdef double K_J = 0.1 # weight of jerk
+ * cdef double K_T = 0.1 # weight of time             # <<<<<<<<<<<<<<
+ * cdef double K_D = 1.0 # weight of square of d
+ * cdef double K_LAT = 1.0 # weight of lateral direction
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_T = 0.1;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":27
- * cdef double K_J = 0.1
- * cdef double K_T = 0.1
- * cdef double K_D = 1.0             # <<<<<<<<<<<<<<
- * cdef double K_LAT = 1.0
- * cdef double K_LON = 1.0
+ * cdef double K_J = 0.1 # weight of jerk
+ * cdef double K_T = 0.1 # weight of time
+ * cdef double K_D = 1.0 # weight of square of d             # <<<<<<<<<<<<<<
+ * cdef double K_LAT = 1.0 # weight of lateral direction
+ * cdef double K_LON = 1.0 # weight of longitudinal direction
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_D = 1.0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":28
- * cdef double K_T = 0.1
- * cdef double K_D = 1.0
- * cdef double K_LAT = 1.0             # <<<<<<<<<<<<<<
- * cdef double K_LON = 1.0
+ * cdef double K_T = 0.1 # weight of time
+ * cdef double K_D = 1.0 # weight of square of d
+ * cdef double K_LAT = 1.0 # weight of lateral direction             # <<<<<<<<<<<<<<
+ * cdef double K_LON = 1.0 # weight of longitudinal direction
  * 
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_LAT = 1.0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":29
- * cdef double K_D = 1.0
- * cdef double K_LAT = 1.0
- * cdef double K_LON = 1.0             # <<<<<<<<<<<<<<
+ * cdef double K_D = 1.0 # weight of square of d
+ * cdef double K_LAT = 1.0 # weight of lateral direction
+ * cdef double K_LON = 1.0 # weight of longitudinal direction             # <<<<<<<<<<<<<<
  * 
  * cdef bint show_animation = True
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_LON = 1.0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":31
- * cdef double K_LON = 1.0
+ * cdef double K_LON = 1.0 # weight of longitudinal direction
  * 
  * cdef bint show_animation = True             # <<<<<<<<<<<<<<
  * cdef int SIM_LOOP = 500

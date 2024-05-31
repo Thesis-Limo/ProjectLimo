@@ -22,4 +22,3 @@ srv_gen/
 CATKIN_IGNORE
 nstall/
 ROS/install/
-test.txt
