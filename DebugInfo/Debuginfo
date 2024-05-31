@@ -1,0 +1,3 @@
+#!/bin/zsh
+rosrun image_view video_recorder image:=camera/image_raw video_recorder _filename:=$1
+#rosrun image_view image_view image:=camera/image_raw _filename:=$1
