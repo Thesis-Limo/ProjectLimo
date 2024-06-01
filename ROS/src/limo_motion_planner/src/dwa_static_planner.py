@@ -175,7 +175,7 @@ def callback(lidar_msg, publisher):
 
         tick = True
 
-        # planner.plot()
+        planner.plot()
 
 
 if __name__ == "__main__":
