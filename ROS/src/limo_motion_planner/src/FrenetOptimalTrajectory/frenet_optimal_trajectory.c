@@ -4,14 +4,14 @@
 {
     "distutils": {
         "depends": [
-            "/usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/arrayobject.h",
-            "/usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/arrayscalars.h",
-            "/usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/ndarrayobject.h",
-            "/usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/ndarraytypes.h",
-            "/usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/ufuncobject.h"
+            "/home/njal/miniconda3/lib/python3.11/site-packages/numpy/core/include/numpy/arrayobject.h",
+            "/home/njal/miniconda3/lib/python3.11/site-packages/numpy/core/include/numpy/arrayscalars.h",
+            "/home/njal/miniconda3/lib/python3.11/site-packages/numpy/core/include/numpy/ndarrayobject.h",
+            "/home/njal/miniconda3/lib/python3.11/site-packages/numpy/core/include/numpy/ndarraytypes.h",
+            "/home/njal/miniconda3/lib/python3.11/site-packages/numpy/core/include/numpy/ufuncobject.h"
         ],
         "include_dirs": [
-            "/usr/local/lib/python3.6/dist-packages/numpy/core/include"
+            "/home/njal/miniconda3/lib/python3.11/site-packages/numpy/core/include"
         ],
         "name": "FrenetOptimalTrajectory.frenet_optimal_trajectory",
         "sources": [
@@ -1676,7 +1676,7 @@ typedef struct {
 
 /* #### Code section: numeric_typedefs ### */
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":732
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":730
  * # in Cython to enable them only on the right systems.
  * 
  * ctypedef npy_int8       int8_t             # <<<<<<<<<<<<<<
@@ -1685,7 +1685,7 @@ typedef struct {
  */
 typedef npy_int8 __pyx_t_5numpy_int8_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":733
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":731
  * 
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t             # <<<<<<<<<<<<<<
@@ -1694,7 +1694,7 @@ typedef npy_int8 __pyx_t_5numpy_int8_t;
  */
 typedef npy_int16 __pyx_t_5numpy_int16_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":734
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":732
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t             # <<<<<<<<<<<<<<
@@ -1703,7 +1703,7 @@ typedef npy_int16 __pyx_t_5numpy_int16_t;
  */
 typedef npy_int32 __pyx_t_5numpy_int32_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":735
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":733
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t
  * ctypedef npy_int64      int64_t             # <<<<<<<<<<<<<<
@@ -1712,7 +1712,7 @@ typedef npy_int32 __pyx_t_5numpy_int32_t;
  */
 typedef npy_int64 __pyx_t_5numpy_int64_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":739
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":737
  * #ctypedef npy_int128     int128_t
  * 
  * ctypedef npy_uint8      uint8_t             # <<<<<<<<<<<<<<
@@ -1721,7 +1721,7 @@ typedef npy_int64 __pyx_t_5numpy_int64_t;
  */
 typedef npy_uint8 __pyx_t_5numpy_uint8_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":740
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":738
  * 
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t             # <<<<<<<<<<<<<<
@@ -1730,7 +1730,7 @@ typedef npy_uint8 __pyx_t_5numpy_uint8_t;
  */
 typedef npy_uint16 __pyx_t_5numpy_uint16_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":741
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":739
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t             # <<<<<<<<<<<<<<
@@ -1739,7 +1739,7 @@ typedef npy_uint16 __pyx_t_5numpy_uint16_t;
  */
 typedef npy_uint32 __pyx_t_5numpy_uint32_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":742
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":740
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t
  * ctypedef npy_uint64     uint64_t             # <<<<<<<<<<<<<<
@@ -1748,7 +1748,7 @@ typedef npy_uint32 __pyx_t_5numpy_uint32_t;
  */
 typedef npy_uint64 __pyx_t_5numpy_uint64_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":746
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":744
  * #ctypedef npy_uint128    uint128_t
  * 
  * ctypedef npy_float32    float32_t             # <<<<<<<<<<<<<<
@@ -1757,7 +1757,7 @@ typedef npy_uint64 __pyx_t_5numpy_uint64_t;
  */
 typedef npy_float32 __pyx_t_5numpy_float32_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":747
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":745
  * 
  * ctypedef npy_float32    float32_t
  * ctypedef npy_float64    float64_t             # <<<<<<<<<<<<<<
@@ -1766,61 +1766,43 @@ typedef npy_float32 __pyx_t_5numpy_float32_t;
  */
 typedef npy_float64 __pyx_t_5numpy_float64_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":756
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":754
  * # The int types are mapped a bit surprising --
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t             # <<<<<<<<<<<<<<
- * ctypedef npy_longlong   long_t
- * ctypedef npy_longlong   longlong_t
- */
-typedef npy_long __pyx_t_5numpy_int_t;
-
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":757
- * # numpy.int corresponds to 'l' and numpy.long to 'q'
- * ctypedef npy_long       int_t
- * ctypedef npy_longlong   long_t             # <<<<<<<<<<<<<<
  * ctypedef npy_longlong   longlong_t
  * 
  */
-typedef npy_longlong __pyx_t_5numpy_long_t;
+typedef npy_long __pyx_t_5numpy_int_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":758
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":755
+ * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t
- * ctypedef npy_longlong   long_t
  * ctypedef npy_longlong   longlong_t             # <<<<<<<<<<<<<<
  * 
  * ctypedef npy_ulong      uint_t
  */
 typedef npy_longlong __pyx_t_5numpy_longlong_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":760
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":757
  * ctypedef npy_longlong   longlong_t
  * 
  * ctypedef npy_ulong      uint_t             # <<<<<<<<<<<<<<
- * ctypedef npy_ulonglong  ulong_t
  * ctypedef npy_ulonglong  ulonglong_t
+ * 
  */
 typedef npy_ulong __pyx_t_5numpy_uint_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":761
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":758
  * 
  * ctypedef npy_ulong      uint_t
- * ctypedef npy_ulonglong  ulong_t             # <<<<<<<<<<<<<<
- * ctypedef npy_ulonglong  ulonglong_t
- * 
- */
-typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
-
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":762
- * ctypedef npy_ulong      uint_t
- * ctypedef npy_ulonglong  ulong_t
  * ctypedef npy_ulonglong  ulonglong_t             # <<<<<<<<<<<<<<
  * 
  * ctypedef npy_intp       intp_t
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":764
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":760
  * ctypedef npy_ulonglong  ulonglong_t
  * 
  * ctypedef npy_intp       intp_t             # <<<<<<<<<<<<<<
@@ -1829,7 +1811,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
  */
 typedef npy_intp __pyx_t_5numpy_intp_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":765
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":761
  * 
  * ctypedef npy_intp       intp_t
  * ctypedef npy_uintp      uintp_t             # <<<<<<<<<<<<<<
@@ -1838,7 +1820,7 @@ typedef npy_intp __pyx_t_5numpy_intp_t;
  */
 typedef npy_uintp __pyx_t_5numpy_uintp_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":767
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":763
  * ctypedef npy_uintp      uintp_t
  * 
  * ctypedef npy_double     float_t             # <<<<<<<<<<<<<<
@@ -1847,7 +1829,7 @@ typedef npy_uintp __pyx_t_5numpy_uintp_t;
  */
 typedef npy_double __pyx_t_5numpy_float_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":768
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":764
  * 
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t             # <<<<<<<<<<<<<<
@@ -1856,7 +1838,7 @@ typedef npy_double __pyx_t_5numpy_float_t;
  */
 typedef npy_double __pyx_t_5numpy_double_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":769
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":765
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t
  * ctypedef npy_longdouble longdouble_t             # <<<<<<<<<<<<<<
@@ -1901,12 +1883,13 @@ struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_sco
 struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr;
 struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr;
 struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr;
+struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr;
 struct __pyx_array_obj;
 struct __pyx_MemviewEnum_obj;
 struct __pyx_memoryview_obj;
 struct __pyx_memoryviewslice_obj;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":771
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":767
  * ctypedef npy_longdouble longdouble_t
  * 
  * ctypedef npy_cfloat      cfloat_t             # <<<<<<<<<<<<<<
@@ -1915,7 +1898,7 @@ struct __pyx_memoryviewslice_obj;
  */
 typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":772
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":768
  * 
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t             # <<<<<<<<<<<<<<
@@ -1924,7 +1907,7 @@ typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":773
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":769
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t
  * ctypedef npy_clongdouble clongdouble_t             # <<<<<<<<<<<<<<
@@ -1933,7 +1916,7 @@ typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
  */
 typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":775
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":771
  * ctypedef npy_clongdouble clongdouble_t
  * 
  * ctypedef npy_cdouble     complex_t             # <<<<<<<<<<<<<<
@@ -2097,6 +2080,22 @@ struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_sco
   PyObject_HEAD
   PyObject *__pyx_genexpr_arg_0;
   PyObject *__pyx_v_c;
+};
+
+
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":196
+ * 
+ *     # Determine the largest available time frame among valid paths
+ *     max_time_frame = max(fp.t[-1] for fp in valid_fplist)             # <<<<<<<<<<<<<<
+ * 
+ *     # Filter the valid paths to include only those with the largest time frame
+ */
+struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr {
+  PyObject_HEAD
+  PyObject *__pyx_genexpr_arg_0;
+  PyObject *__pyx_v_fp;
+  PyObject *__pyx_t_0;
+  Py_ssize_t __pyx_t_1;
 };
 
 
@@ -3100,15 +3099,6 @@ static CYTHON_INLINE double __Pyx_PyUnicode_AsDouble(PyObject *obj) {
 #endif
 }
 
-/* SliceTupleAndList.proto */
-#if CYTHON_COMPILING_IN_CPYTHON
-static CYTHON_INLINE PyObject* __Pyx_PyList_GetSlice(PyObject* src, Py_ssize_t start, Py_ssize_t stop);
-static CYTHON_INLINE PyObject* __Pyx_PyTuple_GetSlice(PyObject* src, Py_ssize_t start, Py_ssize_t stop);
-#else
-#define __Pyx_PyList_GetSlice(seq, start, stop)   PySequence_GetSlice(seq, start, stop)
-#define __Pyx_PyTuple_GetSlice(seq, start, stop)  PySequence_GetSlice(seq, start, stop)
-#endif
-
 /* PyObject_GenericGetAttrNoDict.proto */
 #if CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP && PY_VERSION_HEX < 0x03070000
 static CYTHON_INLINE PyObject* __Pyx_PyObject_GenericGetAttrNoDict(PyObject* obj, PyObject* attr_name);
@@ -3711,7 +3701,7 @@ static double __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_DT;
 static double __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_T;
 static double __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MIN_T;
 static double __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_T_S;
-static int __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_N_S_SAMPLE;
+static double __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_N_S_SAMPLE;
 static double __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_ROBOT_RADIUS;
 static double __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_J;
 static double __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_T;
@@ -3732,7 +3722,6 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_c
 static int __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_collision(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *, PyArrayObject *); /*proto*/
 static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_paths(PyObject *, PyArrayObject *); /*proto*/
 static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_generate_target_course(PyObject *, PyObject *, int __pyx_skip_dispatch); /*proto*/
-static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *, double, double, double, double, double, double, PyArrayObject *, double, int __pyx_skip_dispatch); /*proto*/
 static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_unpickle_QuarticPolynomial__set_state(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial *, PyObject *); /*proto*/
 static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_unpickle_FrenetPath__set_state(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *, PyObject *); /*proto*/
 static int __pyx_array_allocate_buffer(struct __pyx_array_obj *); /*proto*/
@@ -3782,7 +3771,7 @@ int __pyx_module_is_main_FrenetOptimalTrajectory__frenet_optimal_trajectory = 0;
 static PyObject *__pyx_builtin_sum;
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_zip;
-static PyObject *__pyx_builtin_print;
+static PyObject *__pyx_builtin_max;
 static PyObject *__pyx_builtin___import__;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_MemoryError;
@@ -3797,7 +3786,10 @@ static PyObject *__pyx_builtin_ImportError;
 static const char __pyx_k_[] = ": ";
 static const char __pyx_k_O[] = "O";
 static const char __pyx_k_c[] = "c";
-static const char __pyx_k_i[] = "i";
+static const char __pyx_k_d[] = "d";
+static const char __pyx_k_g[] = "-g";
+static const char __pyx_k_r[] = "-r";
+static const char __pyx_k_s[] = "s";
 static const char __pyx_k_t[] = "t";
 static const char __pyx_k_x[] = "x";
 static const char __pyx_k_Ti[] = "Ti";
@@ -3812,48 +3804,44 @@ static const char __pyx_k_gc[] = "gc";
 static const char __pyx_k_id[] = "id";
 static const char __pyx_k_np[] = "np";
 static const char __pyx_k_ob[] = "ob";
-static const char __pyx_k_or[] = "-or";
 static const char __pyx_k_s0[] = "s0";
-static const char __pyx_k_tc[] = "tc";
 static const char __pyx_k_tv[] = "tv";
-static const char __pyx_k_tx[] = "tx";
-static const char __pyx_k_ty[] = "ty";
 static const char __pyx_k_wx[] = "wx";
 static const char __pyx_k_wy[] = "wy";
 static const char __pyx_k_xk[] = "xk";
 static const char __pyx_k_xs[] = "xs";
-static const char __pyx_k__50[] = "?";
+static const char __pyx_k__47[] = "?";
 static const char __pyx_k_abc[] = "abc";
 static const char __pyx_k_and[] = " and ";
 static const char __pyx_k_axe[] = "axe";
 static const char __pyx_k_axs[] = "axs";
 static const char __pyx_k_c_d[] = "c_d";
-static const char __pyx_k_cla[] = "cla";
 static const char __pyx_k_csp[] = "csp";
+static const char __pyx_k_d_m[] = "d [m]";
 static const char __pyx_k_got[] = " (got ";
 static const char __pyx_k_inf[] = "inf";
+static const char __pyx_k_max[] = "max";
 static const char __pyx_k_new[] = "__new__";
 static const char __pyx_k_obj[] = "obj";
 static const char __pyx_k_plt[] = "plt";
 static const char __pyx_k_s_d[] = "s_d";
+static const char __pyx_k_s_m[] = "s [m]";
 static const char __pyx_k_sum[] = "sum";
 static const char __pyx_k_sys[] = "sys";
 static const char __pyx_k_tfp[] = "tfp";
 static const char __pyx_k_vxe[] = "vxe";
 static const char __pyx_k_vxs[] = "vxs";
 static const char __pyx_k_zip[] = "zip";
-static const char __pyx_k_area[] = "area";
 static const char __pyx_k_args[] = "args";
 static const char __pyx_k_base[] = "base";
 static const char __pyx_k_copy[] = "copy";
 static const char __pyx_k_dict[] = "__dict__";
-static const char __pyx_k_file[] = "__file__";
+static const char __pyx_k_grid[] = "grid";
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_mode[] = "mode";
 static const char __pyx_k_name[] = "name";
 static const char __pyx_k_ndim[] = "ndim";
 static const char __pyx_k_pack[] = "pack";
-static const char __pyx_k_path[] = "path";
 static const char __pyx_k_plot[] = "plot";
 static const char __pyx_k_s_dd[] = "s_dd";
 static const char __pyx_k_self[] = "self";
@@ -3865,10 +3853,8 @@ static const char __pyx_k_step[] = "step";
 static const char __pyx_k_stop[] = "stop";
 static const char __pyx_k_test[] = "__test__";
 static const char __pyx_k_time[] = "time";
-static const char __pyx_k_tyaw[] = "tyaw";
-static const char __pyx_k_xlim[] = "xlim";
-static const char __pyx_k_ylim[] = "ylim";
 static const char __pyx_k_ASCII[] = "ASCII";
+static const char __pyx_k_alpha[] = "alpha";
 static const char __pyx_k_array[] = "array";
 static const char __pyx_k_c_d_d[] = "c_d_d";
 static const char __pyx_k_class[] = "__class__";
@@ -3877,12 +3863,9 @@ static const char __pyx_k_count[] = "count";
 static const char __pyx_k_dtype[] = "dtype";
 static const char __pyx_k_error[] = "error";
 static const char __pyx_k_flags[] = "flags";
-static const char __pyx_k_hypot[] = "hypot";
 static const char __pyx_k_index[] = "index";
 static const char __pyx_k_label[] = "label";
 static const char __pyx_k_numpy[] = "numpy";
-static const char __pyx_k_pause[] = "pause";
-static const char __pyx_k_print[] = "print";
 static const char __pyx_k_range[] = "range";
 static const char __pyx_k_shape[] = "shape";
 static const char __pyx_k_solve[] = "solve";
@@ -3890,20 +3873,19 @@ static const char __pyx_k_start[] = "start";
 static const char __pyx_k_state[] = "state";
 static const char __pyx_k_throw[] = "throw";
 static const char __pyx_k_title[] = "title";
-static const char __pyx_k_Course[] = "Course";
-static const char __pyx_k_Finish[] = "Finish";
 static const char __pyx_k_arange[] = "arange";
 static const char __pyx_k_c_d_dd[] = "c_d_dd";
 static const char __pyx_k_dict_2[] = "_dict";
 static const char __pyx_k_enable[] = "enable";
 static const char __pyx_k_encode[] = "encode";
+static const char __pyx_k_figure[] = "figure";
 static const char __pyx_k_format[] = "format";
+static const char __pyx_k_fplist[] = "fplist";
 static const char __pyx_k_import[] = "__import__";
 static const char __pyx_k_lat_qp[] = "lat_qp";
 static const char __pyx_k_legend[] = "legend";
 static const char __pyx_k_linalg[] = "linalg";
 static const char __pyx_k_lon_qp[] = "lon_qp";
-static const char __pyx_k_main_2[] = "main";
 static const char __pyx_k_name_2[] = "__name__";
 static const char __pyx_k_pickle[] = "pickle";
 static const char __pyx_k_pyplot[] = "pyplot";
@@ -3911,34 +3893,39 @@ static const char __pyx_k_reduce[] = "__reduce__";
 static const char __pyx_k_struct[] = "struct";
 static const char __pyx_k_unpack[] = "unpack";
 static const char __pyx_k_update[] = "update";
+static const char __pyx_k_xlabel[] = "xlabel";
+static const char __pyx_k_ylabel[] = "ylabel";
 static const char __pyx_k_c_accel[] = "c_accel";
 static const char __pyx_k_c_speed[] = "c_speed";
 static const char __pyx_k_disable[] = "disable";
+static const char __pyx_k_figsize[] = "figsize";
 static const char __pyx_k_float64[] = "float64";
 static const char __pyx_k_fortran[] = "fortran";
 static const char __pyx_k_genexpr[] = "genexpr";
 static const char __pyx_k_memview[] = "memview";
-static const char __pyx_k_start_2[] = " start!!";
 static const char __pyx_k_Ellipsis[] = "Ellipsis";
 static const char __pyx_k_Sequence[] = "Sequence";
 static const char __pyx_k_deepcopy[] = "deepcopy";
 static const char __pyx_k_getstate[] = "__getstate__";
 static const char __pyx_k_itemsize[] = "itemsize";
+static const char __pyx_k_min_cost[] = "min_cost";
 static const char __pyx_k_pyx_type[] = "__pyx_type";
 static const char __pyx_k_register[] = "register";
 static const char __pyx_k_setstate[] = "__setstate__";
+static const char __pyx_k_Best_Path[] = "Best Path";
 static const char __pyx_k_Obstacles[] = "Obstacles";
-static const char __pyx_k_Time_Step[] = "Time Step: ";
 static const char __pyx_k_TypeError[] = "TypeError";
+static const char __pyx_k_best_path[] = "best_path";
 static const char __pyx_k_enumerate[] = "enumerate";
 static const char __pyx_k_isenabled[] = "isenabled";
+static const char __pyx_k_linewidth[] = "linewidth";
 static const char __pyx_k_pyx_state[] = "__pyx_state";
 static const char __pyx_k_reduce_ex[] = "__reduce_ex__";
 static const char __pyx_k_FrenetPath[] = "FrenetPath";
 static const char __pyx_k_IndexError[] = "IndexError";
-static const char __pyx_k_Trajectory[] = "Trajectory";
 static const char __pyx_k_ValueError[] = "ValueError";
 static const char __pyx_k_calc_point[] = "calc_point";
+static const char __pyx_k_debug_mode[] = "debug_mode";
 static const char __pyx_k_matplotlib[] = "matplotlib";
 static const char __pyx_k_pyx_result[] = "__pyx_result";
 static const char __pyx_k_pyx_vtable[] = "__pyx_vtable__";
@@ -3946,7 +3933,7 @@ static const char __pyx_k_ImportError[] = "ImportError";
 static const char __pyx_k_MemoryError[] = "MemoryError";
 static const char __pyx_k_PickleError[] = "PickleError";
 static const char __pyx_k_collections[] = "collections";
-static const char __pyx_k_Goal_reached[] = "Goal reached";
+static const char __pyx_k_Frenet_Paths[] = "Frenet Paths";
 static const char __pyx_k_frenet_paths[] = "frenet_paths";
 static const char __pyx_k_initializing[] = "_initializing";
 static const char __pyx_k_is_coroutine[] = "_is_coroutine";
@@ -3954,11 +3941,12 @@ static const char __pyx_k_pyx_checksum[] = "__pyx_checksum";
 static const char __pyx_k_stringsource[] = "<stringsource>";
 static const char __pyx_k_target_speed[] = "target_speed";
 static const char __pyx_k_use_setstate[] = "use_setstate";
+static const char __pyx_k_valid_fplist[] = "valid_fplist";
 static const char __pyx_k_version_info[] = "version_info";
 static const char __pyx_k_class_getitem[] = "__class_getitem__";
 static const char __pyx_k_reduce_cython[] = "__reduce_cython__";
-static const char __pyx_k_target_course[] = "target_course";
 static const char __pyx_k_AssertionError[] = "AssertionError";
+static const char __pyx_k_max_time_frame[] = "max_time_frame";
 static const char __pyx_k_View_MemoryView[] = "View.MemoryView";
 static const char __pyx_k_allocate_buffer[] = "allocate_buffer";
 static const char __pyx_k_collections_abc[] = "collections.abc";
@@ -3972,6 +3960,7 @@ static const char __pyx_k_pyx_unpickle_Enum[] = "__pyx_unpickle_Enum";
 static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_strided_and_direct[] = "<strided and direct>";
+static const char __pyx_k_max_time_frame_paths[] = "max_time_frame_paths";
 static const char __pyx_k_strided_and_indirect[] = "<strided and indirect>";
 static const char __pyx_k_Invalid_shape_in_axis[] = "Invalid shape in axis ";
 static const char __pyx_k_calc_first_derivative[] = "calc_first_derivative";
@@ -4016,6 +4005,7 @@ static const char __pyx_k_QuarticPolynomial_calc_first_der[] = "QuarticPolynomia
 static const char __pyx_k_QuarticPolynomial_calc_second_de[] = "QuarticPolynomial.calc_second_derivative";
 static const char __pyx_k_QuarticPolynomial_calc_third_der[] = "QuarticPolynomial.calc_third_derivative";
 static const char __pyx_k_Unable_to_convert_item_to_object[] = "Unable to convert item to object";
+static const char __pyx_k_frenet_optimal_planning_locals_g[] = "frenet_optimal_planning.<locals>.genexpr";
 static const char __pyx_k_got_differing_extents_in_dimensi[] = "got differing extents in dimension ";
 static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __reduce__ due to non-trivial __cinit__";
 static const char __pyx_k_numpy_core_umath_failed_to_impor[] = "numpy.core.umath failed to import";
@@ -4139,16 +4129,17 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
 static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_3genexpr(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_genexpr_arg_0); /* proto */
 static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11check_paths_6genexpr(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_genexpr_arg_0); /* proto */
 static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_2generate_target_course(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_wx, PyObject *__pyx_v_wy); /* proto */
-static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_4frenet_optimal_planning(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp, double __pyx_v_s0, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, PyArrayObject *__pyx_v_ob, double __pyx_v_target_speed); /* proto */
-static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_6main(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_8__pyx_unpickle_QuarticPolynomial(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10__pyx_unpickle_FrenetPath(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_23frenet_optimal_planning_genexpr(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_genexpr_arg_0); /* proto */
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_4frenet_optimal_planning(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp, double __pyx_v_s0, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, PyArrayObject *__pyx_v_ob, double __pyx_v_target_speed, int __pyx_v_debug_mode); /* proto */
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_6__pyx_unpickle_QuarticPolynomial(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_8__pyx_unpickle_FrenetPath(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_tp_new_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct__genexpr(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_array(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_Enum(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_memoryview(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
@@ -4207,6 +4198,16 @@ typedef struct {
   PyTypeObject *__pyx_ptype_5numpy_flatiter;
   PyTypeObject *__pyx_ptype_5numpy_broadcast;
   PyTypeObject *__pyx_ptype_5numpy_ndarray;
+  PyTypeObject *__pyx_ptype_5numpy_generic;
+  PyTypeObject *__pyx_ptype_5numpy_number;
+  PyTypeObject *__pyx_ptype_5numpy_integer;
+  PyTypeObject *__pyx_ptype_5numpy_signedinteger;
+  PyTypeObject *__pyx_ptype_5numpy_unsignedinteger;
+  PyTypeObject *__pyx_ptype_5numpy_inexact;
+  PyTypeObject *__pyx_ptype_5numpy_floating;
+  PyTypeObject *__pyx_ptype_5numpy_complexfloating;
+  PyTypeObject *__pyx_ptype_5numpy_flexible;
+  PyTypeObject *__pyx_ptype_5numpy_character;
   PyTypeObject *__pyx_ptype_5numpy_ufunc;
   #if CYTHON_USE_MODULE_STATE
   #endif
@@ -4222,6 +4223,7 @@ typedef struct {
   PyObject *__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr;
   PyObject *__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr;
   PyObject *__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr;
+  PyObject *__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr;
   PyObject *__pyx_type___pyx_array;
   PyObject *__pyx_type___pyx_MemviewEnum;
   PyObject *__pyx_type___pyx_memoryview;
@@ -4233,6 +4235,7 @@ typedef struct {
   PyTypeObject *__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr;
   PyTypeObject *__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr;
   PyTypeObject *__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr;
+  PyTypeObject *__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr;
   PyTypeObject *__pyx_array_type;
   PyTypeObject *__pyx_MemviewEnum_type;
   PyTypeObject *__pyx_memoryview_type;
@@ -4241,23 +4244,22 @@ typedef struct {
   PyObject *__pyx_n_s_ASCII;
   PyObject *__pyx_kp_s_All_dimensions_preceding_dimensi;
   PyObject *__pyx_n_s_AssertionError;
+  PyObject *__pyx_kp_u_Best_Path;
   PyObject *__pyx_kp_s_Buffer_view_does_not_expose_stri;
   PyObject *__pyx_kp_s_Can_only_create_a_buffer_that_is;
   PyObject *__pyx_kp_s_Cannot_assign_to_read_only_memor;
   PyObject *__pyx_kp_s_Cannot_create_writable_memory_vi;
   PyObject *__pyx_kp_u_Cannot_index_with_type;
   PyObject *__pyx_kp_s_Cannot_transpose_memoryview_with;
-  PyObject *__pyx_n_u_Course;
   PyObject *__pyx_kp_s_Dimension_d_is_not_direct;
   PyObject *__pyx_n_s_Ellipsis;
   PyObject *__pyx_kp_s_Empty_shape_tuple_for_cython_arr;
-  PyObject *__pyx_n_u_Finish;
   PyObject *__pyx_n_s_FrenetOptimalTrajectory_frenet_o;
   PyObject *__pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2;
   PyObject *__pyx_n_s_FrenetPath;
   PyObject *__pyx_n_s_FrenetPath___reduce_cython;
   PyObject *__pyx_n_s_FrenetPath___setstate_cython;
-  PyObject *__pyx_kp_u_Goal_reached;
+  PyObject *__pyx_kp_u_Frenet_Paths;
   PyObject *__pyx_n_s_ImportError;
   PyObject *__pyx_kp_s_Incompatible_checksums_0x_x_vs_0;
   PyObject *__pyx_kp_s_Incompatible_checksums_0x_x_vs_0_2;
@@ -4284,28 +4286,27 @@ typedef struct {
   PyObject *__pyx_n_s_Sequence;
   PyObject *__pyx_kp_s_Step_may_not_be_zero_axis_d;
   PyObject *__pyx_n_s_Ti;
-  PyObject *__pyx_kp_u_Time_Step;
-  PyObject *__pyx_n_u_Trajectory;
   PyObject *__pyx_n_s_TypeError;
   PyObject *__pyx_kp_s_Unable_to_convert_item_to_object;
   PyObject *__pyx_n_s_ValueError;
   PyObject *__pyx_n_s_View_MemoryView;
   PyObject *__pyx_kp_u__2;
   PyObject *__pyx_n_s__3;
-  PyObject *__pyx_n_s__50;
+  PyObject *__pyx_n_s__47;
   PyObject *__pyx_kp_u__6;
   PyObject *__pyx_kp_u__7;
   PyObject *__pyx_n_s_abc;
   PyObject *__pyx_n_s_allocate_buffer;
+  PyObject *__pyx_n_s_alpha;
   PyObject *__pyx_kp_u_and;
   PyObject *__pyx_n_s_arange;
-  PyObject *__pyx_n_s_area;
   PyObject *__pyx_n_s_args;
   PyObject *__pyx_n_s_array;
   PyObject *__pyx_n_s_asyncio_coroutines;
   PyObject *__pyx_n_s_axe;
   PyObject *__pyx_n_s_axs;
   PyObject *__pyx_n_s_base;
+  PyObject *__pyx_n_s_best_path;
   PyObject *__pyx_n_s_c;
   PyObject *__pyx_n_u_c;
   PyObject *__pyx_n_s_c_accel;
@@ -4321,7 +4322,6 @@ typedef struct {
   PyObject *__pyx_n_s_cf;
   PyObject *__pyx_n_s_check_collision_locals_genexpr;
   PyObject *__pyx_n_s_check_paths_locals_genexpr;
-  PyObject *__pyx_n_s_cla;
   PyObject *__pyx_n_s_class;
   PyObject *__pyx_n_s_class_getitem;
   PyObject *__pyx_n_s_cline_in_traceback;
@@ -4333,6 +4333,9 @@ typedef struct {
   PyObject *__pyx_n_s_copy;
   PyObject *__pyx_n_s_count;
   PyObject *__pyx_n_s_csp;
+  PyObject *__pyx_n_s_d;
+  PyObject *__pyx_kp_u_d_m;
+  PyObject *__pyx_n_s_debug_mode;
   PyObject *__pyx_n_s_deepcopy;
   PyObject *__pyx_n_s_di;
   PyObject *__pyx_n_s_dict;
@@ -4344,23 +4347,26 @@ typedef struct {
   PyObject *__pyx_n_s_encode;
   PyObject *__pyx_n_s_enumerate;
   PyObject *__pyx_n_s_error;
-  PyObject *__pyx_n_s_file;
+  PyObject *__pyx_n_s_figsize;
+  PyObject *__pyx_n_s_figure;
   PyObject *__pyx_n_s_flags;
   PyObject *__pyx_n_s_float64;
   PyObject *__pyx_n_s_format;
   PyObject *__pyx_n_s_fortran;
   PyObject *__pyx_n_u_fortran;
   PyObject *__pyx_n_s_fp;
+  PyObject *__pyx_n_s_fplist;
   PyObject *__pyx_n_s_frenet_optimal_planning;
+  PyObject *__pyx_n_s_frenet_optimal_planning_locals_g;
   PyObject *__pyx_n_s_frenet_paths;
+  PyObject *__pyx_kp_u_g;
   PyObject *__pyx_kp_u_gc;
   PyObject *__pyx_n_s_generate_target_course;
   PyObject *__pyx_n_s_genexpr;
   PyObject *__pyx_n_s_getstate;
   PyObject *__pyx_kp_u_got;
   PyObject *__pyx_kp_u_got_differing_extents_in_dimensi;
-  PyObject *__pyx_n_s_hypot;
-  PyObject *__pyx_n_s_i;
+  PyObject *__pyx_n_s_grid;
   PyObject *__pyx_n_s_id;
   PyObject *__pyx_n_s_import;
   PyObject *__pyx_n_s_index;
@@ -4374,13 +4380,16 @@ typedef struct {
   PyObject *__pyx_n_s_lat_qp;
   PyObject *__pyx_n_s_legend;
   PyObject *__pyx_n_s_linalg;
+  PyObject *__pyx_n_s_linewidth;
   PyObject *__pyx_n_s_lon_qp;
   PyObject *__pyx_n_s_main;
-  PyObject *__pyx_n_u_main;
-  PyObject *__pyx_n_s_main_2;
   PyObject *__pyx_n_s_matplotlib;
   PyObject *__pyx_n_s_matplotlib_pyplot;
+  PyObject *__pyx_n_s_max;
+  PyObject *__pyx_n_s_max_time_frame;
+  PyObject *__pyx_n_s_max_time_frame_paths;
   PyObject *__pyx_n_s_memview;
+  PyObject *__pyx_n_s_min_cost;
   PyObject *__pyx_n_s_mode;
   PyObject *__pyx_n_s_name;
   PyObject *__pyx_n_s_name_2;
@@ -4393,14 +4402,10 @@ typedef struct {
   PyObject *__pyx_kp_u_numpy_core_umath_failed_to_impor;
   PyObject *__pyx_n_s_ob;
   PyObject *__pyx_n_s_obj;
-  PyObject *__pyx_kp_u_or;
   PyObject *__pyx_n_s_pack;
-  PyObject *__pyx_n_s_path;
-  PyObject *__pyx_n_s_pause;
   PyObject *__pyx_n_s_pickle;
   PyObject *__pyx_n_s_plot;
   PyObject *__pyx_n_s_plt;
-  PyObject *__pyx_n_s_print;
   PyObject *__pyx_n_s_pyplot;
   PyObject *__pyx_n_s_pyx_PickleError;
   PyObject *__pyx_n_s_pyx_checksum;
@@ -4411,14 +4416,17 @@ typedef struct {
   PyObject *__pyx_n_s_pyx_unpickle_FrenetPath;
   PyObject *__pyx_n_s_pyx_unpickle_QuarticPolynomial;
   PyObject *__pyx_n_s_pyx_vtable;
+  PyObject *__pyx_kp_u_r;
   PyObject *__pyx_n_s_range;
   PyObject *__pyx_n_s_reduce;
   PyObject *__pyx_n_s_reduce_cython;
   PyObject *__pyx_n_s_reduce_ex;
   PyObject *__pyx_n_s_register;
+  PyObject *__pyx_n_s_s;
   PyObject *__pyx_n_s_s0;
   PyObject *__pyx_n_s_s_d;
   PyObject *__pyx_n_s_s_dd;
+  PyObject *__pyx_kp_u_s_m;
   PyObject *__pyx_n_s_self;
   PyObject *__pyx_n_s_send;
   PyObject *__pyx_n_s_setstate;
@@ -4429,7 +4437,6 @@ typedef struct {
   PyObject *__pyx_n_s_solve;
   PyObject *__pyx_n_s_spec;
   PyObject *__pyx_n_s_start;
-  PyObject *__pyx_kp_u_start_2;
   PyObject *__pyx_n_s_state;
   PyObject *__pyx_n_s_step;
   PyObject *__pyx_n_s_stop;
@@ -4441,23 +4448,19 @@ typedef struct {
   PyObject *__pyx_n_s_sum;
   PyObject *__pyx_n_s_sys;
   PyObject *__pyx_n_s_t;
-  PyObject *__pyx_n_s_target_course;
   PyObject *__pyx_n_s_target_speed;
-  PyObject *__pyx_n_s_tc;
   PyObject *__pyx_n_s_test;
   PyObject *__pyx_n_s_tfp;
   PyObject *__pyx_n_s_throw;
   PyObject *__pyx_n_s_time;
   PyObject *__pyx_n_s_title;
   PyObject *__pyx_n_s_tv;
-  PyObject *__pyx_n_s_tx;
-  PyObject *__pyx_n_s_ty;
-  PyObject *__pyx_n_s_tyaw;
   PyObject *__pyx_kp_s_unable_to_allocate_array_data;
   PyObject *__pyx_kp_s_unable_to_allocate_shape_and_str;
   PyObject *__pyx_n_s_unpack;
   PyObject *__pyx_n_s_update;
   PyObject *__pyx_n_s_use_setstate;
+  PyObject *__pyx_n_s_valid_fplist;
   PyObject *__pyx_n_s_version_info;
   PyObject *__pyx_n_s_vxe;
   PyObject *__pyx_n_s_vxs;
@@ -4465,30 +4468,18 @@ typedef struct {
   PyObject *__pyx_n_s_wy;
   PyObject *__pyx_n_s_x;
   PyObject *__pyx_n_u_xk;
-  PyObject *__pyx_n_s_xlim;
+  PyObject *__pyx_n_s_xlabel;
   PyObject *__pyx_n_s_xs;
-  PyObject *__pyx_n_s_ylim;
+  PyObject *__pyx_n_s_ylabel;
   PyObject *__pyx_n_s_zip;
   PyObject *__pyx_float_0_0;
   PyObject *__pyx_float_0_1;
-  PyObject *__pyx_float_1_0;
-  PyObject *__pyx_float_3_0;
-  PyObject *__pyx_float_5_0;
-  PyObject *__pyx_float_6_0;
-  PyObject *__pyx_float_6_5;
-  PyObject *__pyx_float_8_0;
-  PyObject *__pyx_float_10_0;
-  PyObject *__pyx_float_20_0;
-  PyObject *__pyx_float_20_5;
-  PyObject *__pyx_float_30_0;
-  PyObject *__pyx_float_35_0;
-  PyObject *__pyx_float_50_0;
-  PyObject *__pyx_float_70_5;
-  PyObject *__pyx_float_0_001;
-  PyObject *__pyx_float_neg_6_0;
+  PyObject *__pyx_float_0_3;
   PyObject *__pyx_int_0;
   PyObject *__pyx_int_1;
+  PyObject *__pyx_int_2;
   PyObject *__pyx_int_3;
+  PyObject *__pyx_int_10;
   PyObject *__pyx_int_39446356;
   PyObject *__pyx_int_70765620;
   PyObject *__pyx_int_95896647;
@@ -4519,30 +4510,27 @@ typedef struct {
   PyObject *__pyx_tuple__23;
   PyObject *__pyx_tuple__24;
   PyObject *__pyx_tuple__25;
-  PyObject *__pyx_tuple__26;
+  PyObject *__pyx_tuple__27;
   PyObject *__pyx_tuple__28;
-  PyObject *__pyx_tuple__29;
-  PyObject *__pyx_tuple__34;
-  PyObject *__pyx_tuple__36;
-  PyObject *__pyx_tuple__40;
-  PyObject *__pyx_tuple__42;
-  PyObject *__pyx_tuple__44;
-  PyObject *__pyx_tuple__46;
-  PyObject *__pyx_codeobj__27;
+  PyObject *__pyx_tuple__33;
+  PyObject *__pyx_tuple__35;
+  PyObject *__pyx_tuple__39;
+  PyObject *__pyx_tuple__41;
+  PyObject *__pyx_tuple__43;
+  PyObject *__pyx_codeobj__26;
+  PyObject *__pyx_codeobj__29;
   PyObject *__pyx_codeobj__30;
   PyObject *__pyx_codeobj__31;
   PyObject *__pyx_codeobj__32;
-  PyObject *__pyx_codeobj__33;
-  PyObject *__pyx_codeobj__35;
+  PyObject *__pyx_codeobj__34;
+  PyObject *__pyx_codeobj__36;
   PyObject *__pyx_codeobj__37;
   PyObject *__pyx_codeobj__38;
-  PyObject *__pyx_codeobj__39;
-  PyObject *__pyx_codeobj__41;
-  PyObject *__pyx_codeobj__43;
+  PyObject *__pyx_codeobj__40;
+  PyObject *__pyx_codeobj__42;
+  PyObject *__pyx_codeobj__44;
   PyObject *__pyx_codeobj__45;
-  PyObject *__pyx_codeobj__47;
-  PyObject *__pyx_codeobj__48;
-  PyObject *__pyx_codeobj__49;
+  PyObject *__pyx_codeobj__46;
 } __pyx_mstate;
 
 #if CYTHON_USE_MODULE_STATE
@@ -4590,6 +4578,16 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_flatiter);
   Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_broadcast);
   Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_ndarray);
+  Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_generic);
+  Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_number);
+  Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_integer);
+  Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_signedinteger);
+  Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_unsignedinteger);
+  Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_inexact);
+  Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_floating);
+  Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_complexfloating);
+  Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_flexible);
+  Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_character);
   Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_ufunc);
   Py_CLEAR(clear_module_state->__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D);
   Py_CLEAR(clear_module_state->__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D);
@@ -4606,6 +4604,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr);
   Py_CLEAR(clear_module_state->__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr);
   Py_CLEAR(clear_module_state->__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr);
+  Py_CLEAR(clear_module_state->__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr);
+  Py_CLEAR(clear_module_state->__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr);
   Py_CLEAR(clear_module_state->__pyx_array_type);
   Py_CLEAR(clear_module_state->__pyx_type___pyx_array);
   Py_CLEAR(clear_module_state->__pyx_MemviewEnum_type);
@@ -4618,23 +4618,22 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_ASCII);
   Py_CLEAR(clear_module_state->__pyx_kp_s_All_dimensions_preceding_dimensi);
   Py_CLEAR(clear_module_state->__pyx_n_s_AssertionError);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_Best_Path);
   Py_CLEAR(clear_module_state->__pyx_kp_s_Buffer_view_does_not_expose_stri);
   Py_CLEAR(clear_module_state->__pyx_kp_s_Can_only_create_a_buffer_that_is);
   Py_CLEAR(clear_module_state->__pyx_kp_s_Cannot_assign_to_read_only_memor);
   Py_CLEAR(clear_module_state->__pyx_kp_s_Cannot_create_writable_memory_vi);
   Py_CLEAR(clear_module_state->__pyx_kp_u_Cannot_index_with_type);
   Py_CLEAR(clear_module_state->__pyx_kp_s_Cannot_transpose_memoryview_with);
-  Py_CLEAR(clear_module_state->__pyx_n_u_Course);
   Py_CLEAR(clear_module_state->__pyx_kp_s_Dimension_d_is_not_direct);
   Py_CLEAR(clear_module_state->__pyx_n_s_Ellipsis);
   Py_CLEAR(clear_module_state->__pyx_kp_s_Empty_shape_tuple_for_cython_arr);
-  Py_CLEAR(clear_module_state->__pyx_n_u_Finish);
   Py_CLEAR(clear_module_state->__pyx_n_s_FrenetOptimalTrajectory_frenet_o);
   Py_CLEAR(clear_module_state->__pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2);
   Py_CLEAR(clear_module_state->__pyx_n_s_FrenetPath);
   Py_CLEAR(clear_module_state->__pyx_n_s_FrenetPath___reduce_cython);
   Py_CLEAR(clear_module_state->__pyx_n_s_FrenetPath___setstate_cython);
-  Py_CLEAR(clear_module_state->__pyx_kp_u_Goal_reached);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_Frenet_Paths);
   Py_CLEAR(clear_module_state->__pyx_n_s_ImportError);
   Py_CLEAR(clear_module_state->__pyx_kp_s_Incompatible_checksums_0x_x_vs_0);
   Py_CLEAR(clear_module_state->__pyx_kp_s_Incompatible_checksums_0x_x_vs_0_2);
@@ -4661,28 +4660,27 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_Sequence);
   Py_CLEAR(clear_module_state->__pyx_kp_s_Step_may_not_be_zero_axis_d);
   Py_CLEAR(clear_module_state->__pyx_n_s_Ti);
-  Py_CLEAR(clear_module_state->__pyx_kp_u_Time_Step);
-  Py_CLEAR(clear_module_state->__pyx_n_u_Trajectory);
   Py_CLEAR(clear_module_state->__pyx_n_s_TypeError);
   Py_CLEAR(clear_module_state->__pyx_kp_s_Unable_to_convert_item_to_object);
   Py_CLEAR(clear_module_state->__pyx_n_s_ValueError);
   Py_CLEAR(clear_module_state->__pyx_n_s_View_MemoryView);
   Py_CLEAR(clear_module_state->__pyx_kp_u__2);
   Py_CLEAR(clear_module_state->__pyx_n_s__3);
-  Py_CLEAR(clear_module_state->__pyx_n_s__50);
+  Py_CLEAR(clear_module_state->__pyx_n_s__47);
   Py_CLEAR(clear_module_state->__pyx_kp_u__6);
   Py_CLEAR(clear_module_state->__pyx_kp_u__7);
   Py_CLEAR(clear_module_state->__pyx_n_s_abc);
   Py_CLEAR(clear_module_state->__pyx_n_s_allocate_buffer);
+  Py_CLEAR(clear_module_state->__pyx_n_s_alpha);
   Py_CLEAR(clear_module_state->__pyx_kp_u_and);
   Py_CLEAR(clear_module_state->__pyx_n_s_arange);
-  Py_CLEAR(clear_module_state->__pyx_n_s_area);
   Py_CLEAR(clear_module_state->__pyx_n_s_args);
   Py_CLEAR(clear_module_state->__pyx_n_s_array);
   Py_CLEAR(clear_module_state->__pyx_n_s_asyncio_coroutines);
   Py_CLEAR(clear_module_state->__pyx_n_s_axe);
   Py_CLEAR(clear_module_state->__pyx_n_s_axs);
   Py_CLEAR(clear_module_state->__pyx_n_s_base);
+  Py_CLEAR(clear_module_state->__pyx_n_s_best_path);
   Py_CLEAR(clear_module_state->__pyx_n_s_c);
   Py_CLEAR(clear_module_state->__pyx_n_u_c);
   Py_CLEAR(clear_module_state->__pyx_n_s_c_accel);
@@ -4698,7 +4696,6 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_cf);
   Py_CLEAR(clear_module_state->__pyx_n_s_check_collision_locals_genexpr);
   Py_CLEAR(clear_module_state->__pyx_n_s_check_paths_locals_genexpr);
-  Py_CLEAR(clear_module_state->__pyx_n_s_cla);
   Py_CLEAR(clear_module_state->__pyx_n_s_class);
   Py_CLEAR(clear_module_state->__pyx_n_s_class_getitem);
   Py_CLEAR(clear_module_state->__pyx_n_s_cline_in_traceback);
@@ -4710,6 +4707,9 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_copy);
   Py_CLEAR(clear_module_state->__pyx_n_s_count);
   Py_CLEAR(clear_module_state->__pyx_n_s_csp);
+  Py_CLEAR(clear_module_state->__pyx_n_s_d);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_d_m);
+  Py_CLEAR(clear_module_state->__pyx_n_s_debug_mode);
   Py_CLEAR(clear_module_state->__pyx_n_s_deepcopy);
   Py_CLEAR(clear_module_state->__pyx_n_s_di);
   Py_CLEAR(clear_module_state->__pyx_n_s_dict);
@@ -4721,23 +4721,26 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_encode);
   Py_CLEAR(clear_module_state->__pyx_n_s_enumerate);
   Py_CLEAR(clear_module_state->__pyx_n_s_error);
-  Py_CLEAR(clear_module_state->__pyx_n_s_file);
+  Py_CLEAR(clear_module_state->__pyx_n_s_figsize);
+  Py_CLEAR(clear_module_state->__pyx_n_s_figure);
   Py_CLEAR(clear_module_state->__pyx_n_s_flags);
   Py_CLEAR(clear_module_state->__pyx_n_s_float64);
   Py_CLEAR(clear_module_state->__pyx_n_s_format);
   Py_CLEAR(clear_module_state->__pyx_n_s_fortran);
   Py_CLEAR(clear_module_state->__pyx_n_u_fortran);
   Py_CLEAR(clear_module_state->__pyx_n_s_fp);
+  Py_CLEAR(clear_module_state->__pyx_n_s_fplist);
   Py_CLEAR(clear_module_state->__pyx_n_s_frenet_optimal_planning);
+  Py_CLEAR(clear_module_state->__pyx_n_s_frenet_optimal_planning_locals_g);
   Py_CLEAR(clear_module_state->__pyx_n_s_frenet_paths);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_g);
   Py_CLEAR(clear_module_state->__pyx_kp_u_gc);
   Py_CLEAR(clear_module_state->__pyx_n_s_generate_target_course);
   Py_CLEAR(clear_module_state->__pyx_n_s_genexpr);
   Py_CLEAR(clear_module_state->__pyx_n_s_getstate);
   Py_CLEAR(clear_module_state->__pyx_kp_u_got);
   Py_CLEAR(clear_module_state->__pyx_kp_u_got_differing_extents_in_dimensi);
-  Py_CLEAR(clear_module_state->__pyx_n_s_hypot);
-  Py_CLEAR(clear_module_state->__pyx_n_s_i);
+  Py_CLEAR(clear_module_state->__pyx_n_s_grid);
   Py_CLEAR(clear_module_state->__pyx_n_s_id);
   Py_CLEAR(clear_module_state->__pyx_n_s_import);
   Py_CLEAR(clear_module_state->__pyx_n_s_index);
@@ -4751,13 +4754,16 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_lat_qp);
   Py_CLEAR(clear_module_state->__pyx_n_s_legend);
   Py_CLEAR(clear_module_state->__pyx_n_s_linalg);
+  Py_CLEAR(clear_module_state->__pyx_n_s_linewidth);
   Py_CLEAR(clear_module_state->__pyx_n_s_lon_qp);
   Py_CLEAR(clear_module_state->__pyx_n_s_main);
-  Py_CLEAR(clear_module_state->__pyx_n_u_main);
-  Py_CLEAR(clear_module_state->__pyx_n_s_main_2);
   Py_CLEAR(clear_module_state->__pyx_n_s_matplotlib);
   Py_CLEAR(clear_module_state->__pyx_n_s_matplotlib_pyplot);
+  Py_CLEAR(clear_module_state->__pyx_n_s_max);
+  Py_CLEAR(clear_module_state->__pyx_n_s_max_time_frame);
+  Py_CLEAR(clear_module_state->__pyx_n_s_max_time_frame_paths);
   Py_CLEAR(clear_module_state->__pyx_n_s_memview);
+  Py_CLEAR(clear_module_state->__pyx_n_s_min_cost);
   Py_CLEAR(clear_module_state->__pyx_n_s_mode);
   Py_CLEAR(clear_module_state->__pyx_n_s_name);
   Py_CLEAR(clear_module_state->__pyx_n_s_name_2);
@@ -4770,14 +4776,10 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_kp_u_numpy_core_umath_failed_to_impor);
   Py_CLEAR(clear_module_state->__pyx_n_s_ob);
   Py_CLEAR(clear_module_state->__pyx_n_s_obj);
-  Py_CLEAR(clear_module_state->__pyx_kp_u_or);
   Py_CLEAR(clear_module_state->__pyx_n_s_pack);
-  Py_CLEAR(clear_module_state->__pyx_n_s_path);
-  Py_CLEAR(clear_module_state->__pyx_n_s_pause);
   Py_CLEAR(clear_module_state->__pyx_n_s_pickle);
   Py_CLEAR(clear_module_state->__pyx_n_s_plot);
   Py_CLEAR(clear_module_state->__pyx_n_s_plt);
-  Py_CLEAR(clear_module_state->__pyx_n_s_print);
   Py_CLEAR(clear_module_state->__pyx_n_s_pyplot);
   Py_CLEAR(clear_module_state->__pyx_n_s_pyx_PickleError);
   Py_CLEAR(clear_module_state->__pyx_n_s_pyx_checksum);
@@ -4788,14 +4790,17 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_pyx_unpickle_FrenetPath);
   Py_CLEAR(clear_module_state->__pyx_n_s_pyx_unpickle_QuarticPolynomial);
   Py_CLEAR(clear_module_state->__pyx_n_s_pyx_vtable);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_r);
   Py_CLEAR(clear_module_state->__pyx_n_s_range);
   Py_CLEAR(clear_module_state->__pyx_n_s_reduce);
   Py_CLEAR(clear_module_state->__pyx_n_s_reduce_cython);
   Py_CLEAR(clear_module_state->__pyx_n_s_reduce_ex);
   Py_CLEAR(clear_module_state->__pyx_n_s_register);
+  Py_CLEAR(clear_module_state->__pyx_n_s_s);
   Py_CLEAR(clear_module_state->__pyx_n_s_s0);
   Py_CLEAR(clear_module_state->__pyx_n_s_s_d);
   Py_CLEAR(clear_module_state->__pyx_n_s_s_dd);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_s_m);
   Py_CLEAR(clear_module_state->__pyx_n_s_self);
   Py_CLEAR(clear_module_state->__pyx_n_s_send);
   Py_CLEAR(clear_module_state->__pyx_n_s_setstate);
@@ -4806,7 +4811,6 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_solve);
   Py_CLEAR(clear_module_state->__pyx_n_s_spec);
   Py_CLEAR(clear_module_state->__pyx_n_s_start);
-  Py_CLEAR(clear_module_state->__pyx_kp_u_start_2);
   Py_CLEAR(clear_module_state->__pyx_n_s_state);
   Py_CLEAR(clear_module_state->__pyx_n_s_step);
   Py_CLEAR(clear_module_state->__pyx_n_s_stop);
@@ -4818,23 +4822,19 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_sum);
   Py_CLEAR(clear_module_state->__pyx_n_s_sys);
   Py_CLEAR(clear_module_state->__pyx_n_s_t);
-  Py_CLEAR(clear_module_state->__pyx_n_s_target_course);
   Py_CLEAR(clear_module_state->__pyx_n_s_target_speed);
-  Py_CLEAR(clear_module_state->__pyx_n_s_tc);
   Py_CLEAR(clear_module_state->__pyx_n_s_test);
   Py_CLEAR(clear_module_state->__pyx_n_s_tfp);
   Py_CLEAR(clear_module_state->__pyx_n_s_throw);
   Py_CLEAR(clear_module_state->__pyx_n_s_time);
   Py_CLEAR(clear_module_state->__pyx_n_s_title);
   Py_CLEAR(clear_module_state->__pyx_n_s_tv);
-  Py_CLEAR(clear_module_state->__pyx_n_s_tx);
-  Py_CLEAR(clear_module_state->__pyx_n_s_ty);
-  Py_CLEAR(clear_module_state->__pyx_n_s_tyaw);
   Py_CLEAR(clear_module_state->__pyx_kp_s_unable_to_allocate_array_data);
   Py_CLEAR(clear_module_state->__pyx_kp_s_unable_to_allocate_shape_and_str);
   Py_CLEAR(clear_module_state->__pyx_n_s_unpack);
   Py_CLEAR(clear_module_state->__pyx_n_s_update);
   Py_CLEAR(clear_module_state->__pyx_n_s_use_setstate);
+  Py_CLEAR(clear_module_state->__pyx_n_s_valid_fplist);
   Py_CLEAR(clear_module_state->__pyx_n_s_version_info);
   Py_CLEAR(clear_module_state->__pyx_n_s_vxe);
   Py_CLEAR(clear_module_state->__pyx_n_s_vxs);
@@ -4842,30 +4842,18 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_wy);
   Py_CLEAR(clear_module_state->__pyx_n_s_x);
   Py_CLEAR(clear_module_state->__pyx_n_u_xk);
-  Py_CLEAR(clear_module_state->__pyx_n_s_xlim);
+  Py_CLEAR(clear_module_state->__pyx_n_s_xlabel);
   Py_CLEAR(clear_module_state->__pyx_n_s_xs);
-  Py_CLEAR(clear_module_state->__pyx_n_s_ylim);
+  Py_CLEAR(clear_module_state->__pyx_n_s_ylabel);
   Py_CLEAR(clear_module_state->__pyx_n_s_zip);
   Py_CLEAR(clear_module_state->__pyx_float_0_0);
   Py_CLEAR(clear_module_state->__pyx_float_0_1);
-  Py_CLEAR(clear_module_state->__pyx_float_1_0);
-  Py_CLEAR(clear_module_state->__pyx_float_3_0);
-  Py_CLEAR(clear_module_state->__pyx_float_5_0);
-  Py_CLEAR(clear_module_state->__pyx_float_6_0);
-  Py_CLEAR(clear_module_state->__pyx_float_6_5);
-  Py_CLEAR(clear_module_state->__pyx_float_8_0);
-  Py_CLEAR(clear_module_state->__pyx_float_10_0);
-  Py_CLEAR(clear_module_state->__pyx_float_20_0);
-  Py_CLEAR(clear_module_state->__pyx_float_20_5);
-  Py_CLEAR(clear_module_state->__pyx_float_30_0);
-  Py_CLEAR(clear_module_state->__pyx_float_35_0);
-  Py_CLEAR(clear_module_state->__pyx_float_50_0);
-  Py_CLEAR(clear_module_state->__pyx_float_70_5);
-  Py_CLEAR(clear_module_state->__pyx_float_0_001);
-  Py_CLEAR(clear_module_state->__pyx_float_neg_6_0);
+  Py_CLEAR(clear_module_state->__pyx_float_0_3);
   Py_CLEAR(clear_module_state->__pyx_int_0);
   Py_CLEAR(clear_module_state->__pyx_int_1);
+  Py_CLEAR(clear_module_state->__pyx_int_2);
   Py_CLEAR(clear_module_state->__pyx_int_3);
+  Py_CLEAR(clear_module_state->__pyx_int_10);
   Py_CLEAR(clear_module_state->__pyx_int_39446356);
   Py_CLEAR(clear_module_state->__pyx_int_70765620);
   Py_CLEAR(clear_module_state->__pyx_int_95896647);
@@ -4896,30 +4884,27 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_tuple__23);
   Py_CLEAR(clear_module_state->__pyx_tuple__24);
   Py_CLEAR(clear_module_state->__pyx_tuple__25);
-  Py_CLEAR(clear_module_state->__pyx_tuple__26);
+  Py_CLEAR(clear_module_state->__pyx_tuple__27);
   Py_CLEAR(clear_module_state->__pyx_tuple__28);
-  Py_CLEAR(clear_module_state->__pyx_tuple__29);
-  Py_CLEAR(clear_module_state->__pyx_tuple__34);
-  Py_CLEAR(clear_module_state->__pyx_tuple__36);
-  Py_CLEAR(clear_module_state->__pyx_tuple__40);
-  Py_CLEAR(clear_module_state->__pyx_tuple__42);
-  Py_CLEAR(clear_module_state->__pyx_tuple__44);
-  Py_CLEAR(clear_module_state->__pyx_tuple__46);
-  Py_CLEAR(clear_module_state->__pyx_codeobj__27);
+  Py_CLEAR(clear_module_state->__pyx_tuple__33);
+  Py_CLEAR(clear_module_state->__pyx_tuple__35);
+  Py_CLEAR(clear_module_state->__pyx_tuple__39);
+  Py_CLEAR(clear_module_state->__pyx_tuple__41);
+  Py_CLEAR(clear_module_state->__pyx_tuple__43);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__26);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__29);
   Py_CLEAR(clear_module_state->__pyx_codeobj__30);
   Py_CLEAR(clear_module_state->__pyx_codeobj__31);
   Py_CLEAR(clear_module_state->__pyx_codeobj__32);
-  Py_CLEAR(clear_module_state->__pyx_codeobj__33);
-  Py_CLEAR(clear_module_state->__pyx_codeobj__35);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__34);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__36);
   Py_CLEAR(clear_module_state->__pyx_codeobj__37);
   Py_CLEAR(clear_module_state->__pyx_codeobj__38);
-  Py_CLEAR(clear_module_state->__pyx_codeobj__39);
-  Py_CLEAR(clear_module_state->__pyx_codeobj__41);
-  Py_CLEAR(clear_module_state->__pyx_codeobj__43);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__40);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__42);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__44);
   Py_CLEAR(clear_module_state->__pyx_codeobj__45);
-  Py_CLEAR(clear_module_state->__pyx_codeobj__47);
-  Py_CLEAR(clear_module_state->__pyx_codeobj__48);
-  Py_CLEAR(clear_module_state->__pyx_codeobj__49);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__46);
   return 0;
 }
 #endif
@@ -4945,6 +4930,16 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_flatiter);
   Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_broadcast);
   Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_ndarray);
+  Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_generic);
+  Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_number);
+  Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_integer);
+  Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_signedinteger);
+  Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_unsignedinteger);
+  Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_inexact);
+  Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_floating);
+  Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_complexfloating);
+  Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_flexible);
+  Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_character);
   Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_ufunc);
   Py_VISIT(traverse_module_state->__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline1D);
   Py_VISIT(traverse_module_state->__pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D);
@@ -4961,6 +4956,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr);
   Py_VISIT(traverse_module_state->__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr);
   Py_VISIT(traverse_module_state->__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr);
+  Py_VISIT(traverse_module_state->__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr);
+  Py_VISIT(traverse_module_state->__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr);
   Py_VISIT(traverse_module_state->__pyx_array_type);
   Py_VISIT(traverse_module_state->__pyx_type___pyx_array);
   Py_VISIT(traverse_module_state->__pyx_MemviewEnum_type);
@@ -4973,23 +4970,22 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_ASCII);
   Py_VISIT(traverse_module_state->__pyx_kp_s_All_dimensions_preceding_dimensi);
   Py_VISIT(traverse_module_state->__pyx_n_s_AssertionError);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_Best_Path);
   Py_VISIT(traverse_module_state->__pyx_kp_s_Buffer_view_does_not_expose_stri);
   Py_VISIT(traverse_module_state->__pyx_kp_s_Can_only_create_a_buffer_that_is);
   Py_VISIT(traverse_module_state->__pyx_kp_s_Cannot_assign_to_read_only_memor);
   Py_VISIT(traverse_module_state->__pyx_kp_s_Cannot_create_writable_memory_vi);
   Py_VISIT(traverse_module_state->__pyx_kp_u_Cannot_index_with_type);
   Py_VISIT(traverse_module_state->__pyx_kp_s_Cannot_transpose_memoryview_with);
-  Py_VISIT(traverse_module_state->__pyx_n_u_Course);
   Py_VISIT(traverse_module_state->__pyx_kp_s_Dimension_d_is_not_direct);
   Py_VISIT(traverse_module_state->__pyx_n_s_Ellipsis);
   Py_VISIT(traverse_module_state->__pyx_kp_s_Empty_shape_tuple_for_cython_arr);
-  Py_VISIT(traverse_module_state->__pyx_n_u_Finish);
   Py_VISIT(traverse_module_state->__pyx_n_s_FrenetOptimalTrajectory_frenet_o);
   Py_VISIT(traverse_module_state->__pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2);
   Py_VISIT(traverse_module_state->__pyx_n_s_FrenetPath);
   Py_VISIT(traverse_module_state->__pyx_n_s_FrenetPath___reduce_cython);
   Py_VISIT(traverse_module_state->__pyx_n_s_FrenetPath___setstate_cython);
-  Py_VISIT(traverse_module_state->__pyx_kp_u_Goal_reached);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_Frenet_Paths);
   Py_VISIT(traverse_module_state->__pyx_n_s_ImportError);
   Py_VISIT(traverse_module_state->__pyx_kp_s_Incompatible_checksums_0x_x_vs_0);
   Py_VISIT(traverse_module_state->__pyx_kp_s_Incompatible_checksums_0x_x_vs_0_2);
@@ -5016,28 +5012,27 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_Sequence);
   Py_VISIT(traverse_module_state->__pyx_kp_s_Step_may_not_be_zero_axis_d);
   Py_VISIT(traverse_module_state->__pyx_n_s_Ti);
-  Py_VISIT(traverse_module_state->__pyx_kp_u_Time_Step);
-  Py_VISIT(traverse_module_state->__pyx_n_u_Trajectory);
   Py_VISIT(traverse_module_state->__pyx_n_s_TypeError);
   Py_VISIT(traverse_module_state->__pyx_kp_s_Unable_to_convert_item_to_object);
   Py_VISIT(traverse_module_state->__pyx_n_s_ValueError);
   Py_VISIT(traverse_module_state->__pyx_n_s_View_MemoryView);
   Py_VISIT(traverse_module_state->__pyx_kp_u__2);
   Py_VISIT(traverse_module_state->__pyx_n_s__3);
-  Py_VISIT(traverse_module_state->__pyx_n_s__50);
+  Py_VISIT(traverse_module_state->__pyx_n_s__47);
   Py_VISIT(traverse_module_state->__pyx_kp_u__6);
   Py_VISIT(traverse_module_state->__pyx_kp_u__7);
   Py_VISIT(traverse_module_state->__pyx_n_s_abc);
   Py_VISIT(traverse_module_state->__pyx_n_s_allocate_buffer);
+  Py_VISIT(traverse_module_state->__pyx_n_s_alpha);
   Py_VISIT(traverse_module_state->__pyx_kp_u_and);
   Py_VISIT(traverse_module_state->__pyx_n_s_arange);
-  Py_VISIT(traverse_module_state->__pyx_n_s_area);
   Py_VISIT(traverse_module_state->__pyx_n_s_args);
   Py_VISIT(traverse_module_state->__pyx_n_s_array);
   Py_VISIT(traverse_module_state->__pyx_n_s_asyncio_coroutines);
   Py_VISIT(traverse_module_state->__pyx_n_s_axe);
   Py_VISIT(traverse_module_state->__pyx_n_s_axs);
   Py_VISIT(traverse_module_state->__pyx_n_s_base);
+  Py_VISIT(traverse_module_state->__pyx_n_s_best_path);
   Py_VISIT(traverse_module_state->__pyx_n_s_c);
   Py_VISIT(traverse_module_state->__pyx_n_u_c);
   Py_VISIT(traverse_module_state->__pyx_n_s_c_accel);
@@ -5053,7 +5048,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_cf);
   Py_VISIT(traverse_module_state->__pyx_n_s_check_collision_locals_genexpr);
   Py_VISIT(traverse_module_state->__pyx_n_s_check_paths_locals_genexpr);
-  Py_VISIT(traverse_module_state->__pyx_n_s_cla);
   Py_VISIT(traverse_module_state->__pyx_n_s_class);
   Py_VISIT(traverse_module_state->__pyx_n_s_class_getitem);
   Py_VISIT(traverse_module_state->__pyx_n_s_cline_in_traceback);
@@ -5065,6 +5059,9 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_copy);
   Py_VISIT(traverse_module_state->__pyx_n_s_count);
   Py_VISIT(traverse_module_state->__pyx_n_s_csp);
+  Py_VISIT(traverse_module_state->__pyx_n_s_d);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_d_m);
+  Py_VISIT(traverse_module_state->__pyx_n_s_debug_mode);
   Py_VISIT(traverse_module_state->__pyx_n_s_deepcopy);
   Py_VISIT(traverse_module_state->__pyx_n_s_di);
   Py_VISIT(traverse_module_state->__pyx_n_s_dict);
@@ -5076,23 +5073,26 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_encode);
   Py_VISIT(traverse_module_state->__pyx_n_s_enumerate);
   Py_VISIT(traverse_module_state->__pyx_n_s_error);
-  Py_VISIT(traverse_module_state->__pyx_n_s_file);
+  Py_VISIT(traverse_module_state->__pyx_n_s_figsize);
+  Py_VISIT(traverse_module_state->__pyx_n_s_figure);
   Py_VISIT(traverse_module_state->__pyx_n_s_flags);
   Py_VISIT(traverse_module_state->__pyx_n_s_float64);
   Py_VISIT(traverse_module_state->__pyx_n_s_format);
   Py_VISIT(traverse_module_state->__pyx_n_s_fortran);
   Py_VISIT(traverse_module_state->__pyx_n_u_fortran);
   Py_VISIT(traverse_module_state->__pyx_n_s_fp);
+  Py_VISIT(traverse_module_state->__pyx_n_s_fplist);
   Py_VISIT(traverse_module_state->__pyx_n_s_frenet_optimal_planning);
+  Py_VISIT(traverse_module_state->__pyx_n_s_frenet_optimal_planning_locals_g);
   Py_VISIT(traverse_module_state->__pyx_n_s_frenet_paths);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_g);
   Py_VISIT(traverse_module_state->__pyx_kp_u_gc);
   Py_VISIT(traverse_module_state->__pyx_n_s_generate_target_course);
   Py_VISIT(traverse_module_state->__pyx_n_s_genexpr);
   Py_VISIT(traverse_module_state->__pyx_n_s_getstate);
   Py_VISIT(traverse_module_state->__pyx_kp_u_got);
   Py_VISIT(traverse_module_state->__pyx_kp_u_got_differing_extents_in_dimensi);
-  Py_VISIT(traverse_module_state->__pyx_n_s_hypot);
-  Py_VISIT(traverse_module_state->__pyx_n_s_i);
+  Py_VISIT(traverse_module_state->__pyx_n_s_grid);
   Py_VISIT(traverse_module_state->__pyx_n_s_id);
   Py_VISIT(traverse_module_state->__pyx_n_s_import);
   Py_VISIT(traverse_module_state->__pyx_n_s_index);
@@ -5106,13 +5106,16 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_lat_qp);
   Py_VISIT(traverse_module_state->__pyx_n_s_legend);
   Py_VISIT(traverse_module_state->__pyx_n_s_linalg);
+  Py_VISIT(traverse_module_state->__pyx_n_s_linewidth);
   Py_VISIT(traverse_module_state->__pyx_n_s_lon_qp);
   Py_VISIT(traverse_module_state->__pyx_n_s_main);
-  Py_VISIT(traverse_module_state->__pyx_n_u_main);
-  Py_VISIT(traverse_module_state->__pyx_n_s_main_2);
   Py_VISIT(traverse_module_state->__pyx_n_s_matplotlib);
   Py_VISIT(traverse_module_state->__pyx_n_s_matplotlib_pyplot);
+  Py_VISIT(traverse_module_state->__pyx_n_s_max);
+  Py_VISIT(traverse_module_state->__pyx_n_s_max_time_frame);
+  Py_VISIT(traverse_module_state->__pyx_n_s_max_time_frame_paths);
   Py_VISIT(traverse_module_state->__pyx_n_s_memview);
+  Py_VISIT(traverse_module_state->__pyx_n_s_min_cost);
   Py_VISIT(traverse_module_state->__pyx_n_s_mode);
   Py_VISIT(traverse_module_state->__pyx_n_s_name);
   Py_VISIT(traverse_module_state->__pyx_n_s_name_2);
@@ -5125,14 +5128,10 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_kp_u_numpy_core_umath_failed_to_impor);
   Py_VISIT(traverse_module_state->__pyx_n_s_ob);
   Py_VISIT(traverse_module_state->__pyx_n_s_obj);
-  Py_VISIT(traverse_module_state->__pyx_kp_u_or);
   Py_VISIT(traverse_module_state->__pyx_n_s_pack);
-  Py_VISIT(traverse_module_state->__pyx_n_s_path);
-  Py_VISIT(traverse_module_state->__pyx_n_s_pause);
   Py_VISIT(traverse_module_state->__pyx_n_s_pickle);
   Py_VISIT(traverse_module_state->__pyx_n_s_plot);
   Py_VISIT(traverse_module_state->__pyx_n_s_plt);
-  Py_VISIT(traverse_module_state->__pyx_n_s_print);
   Py_VISIT(traverse_module_state->__pyx_n_s_pyplot);
   Py_VISIT(traverse_module_state->__pyx_n_s_pyx_PickleError);
   Py_VISIT(traverse_module_state->__pyx_n_s_pyx_checksum);
@@ -5143,14 +5142,17 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_pyx_unpickle_FrenetPath);
   Py_VISIT(traverse_module_state->__pyx_n_s_pyx_unpickle_QuarticPolynomial);
   Py_VISIT(traverse_module_state->__pyx_n_s_pyx_vtable);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_r);
   Py_VISIT(traverse_module_state->__pyx_n_s_range);
   Py_VISIT(traverse_module_state->__pyx_n_s_reduce);
   Py_VISIT(traverse_module_state->__pyx_n_s_reduce_cython);
   Py_VISIT(traverse_module_state->__pyx_n_s_reduce_ex);
   Py_VISIT(traverse_module_state->__pyx_n_s_register);
+  Py_VISIT(traverse_module_state->__pyx_n_s_s);
   Py_VISIT(traverse_module_state->__pyx_n_s_s0);
   Py_VISIT(traverse_module_state->__pyx_n_s_s_d);
   Py_VISIT(traverse_module_state->__pyx_n_s_s_dd);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_s_m);
   Py_VISIT(traverse_module_state->__pyx_n_s_self);
   Py_VISIT(traverse_module_state->__pyx_n_s_send);
   Py_VISIT(traverse_module_state->__pyx_n_s_setstate);
@@ -5161,7 +5163,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_solve);
   Py_VISIT(traverse_module_state->__pyx_n_s_spec);
   Py_VISIT(traverse_module_state->__pyx_n_s_start);
-  Py_VISIT(traverse_module_state->__pyx_kp_u_start_2);
   Py_VISIT(traverse_module_state->__pyx_n_s_state);
   Py_VISIT(traverse_module_state->__pyx_n_s_step);
   Py_VISIT(traverse_module_state->__pyx_n_s_stop);
@@ -5173,23 +5174,19 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_sum);
   Py_VISIT(traverse_module_state->__pyx_n_s_sys);
   Py_VISIT(traverse_module_state->__pyx_n_s_t);
-  Py_VISIT(traverse_module_state->__pyx_n_s_target_course);
   Py_VISIT(traverse_module_state->__pyx_n_s_target_speed);
-  Py_VISIT(traverse_module_state->__pyx_n_s_tc);
   Py_VISIT(traverse_module_state->__pyx_n_s_test);
   Py_VISIT(traverse_module_state->__pyx_n_s_tfp);
   Py_VISIT(traverse_module_state->__pyx_n_s_throw);
   Py_VISIT(traverse_module_state->__pyx_n_s_time);
   Py_VISIT(traverse_module_state->__pyx_n_s_title);
   Py_VISIT(traverse_module_state->__pyx_n_s_tv);
-  Py_VISIT(traverse_module_state->__pyx_n_s_tx);
-  Py_VISIT(traverse_module_state->__pyx_n_s_ty);
-  Py_VISIT(traverse_module_state->__pyx_n_s_tyaw);
   Py_VISIT(traverse_module_state->__pyx_kp_s_unable_to_allocate_array_data);
   Py_VISIT(traverse_module_state->__pyx_kp_s_unable_to_allocate_shape_and_str);
   Py_VISIT(traverse_module_state->__pyx_n_s_unpack);
   Py_VISIT(traverse_module_state->__pyx_n_s_update);
   Py_VISIT(traverse_module_state->__pyx_n_s_use_setstate);
+  Py_VISIT(traverse_module_state->__pyx_n_s_valid_fplist);
   Py_VISIT(traverse_module_state->__pyx_n_s_version_info);
   Py_VISIT(traverse_module_state->__pyx_n_s_vxe);
   Py_VISIT(traverse_module_state->__pyx_n_s_vxs);
@@ -5197,30 +5194,18 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_wy);
   Py_VISIT(traverse_module_state->__pyx_n_s_x);
   Py_VISIT(traverse_module_state->__pyx_n_u_xk);
-  Py_VISIT(traverse_module_state->__pyx_n_s_xlim);
+  Py_VISIT(traverse_module_state->__pyx_n_s_xlabel);
   Py_VISIT(traverse_module_state->__pyx_n_s_xs);
-  Py_VISIT(traverse_module_state->__pyx_n_s_ylim);
+  Py_VISIT(traverse_module_state->__pyx_n_s_ylabel);
   Py_VISIT(traverse_module_state->__pyx_n_s_zip);
   Py_VISIT(traverse_module_state->__pyx_float_0_0);
   Py_VISIT(traverse_module_state->__pyx_float_0_1);
-  Py_VISIT(traverse_module_state->__pyx_float_1_0);
-  Py_VISIT(traverse_module_state->__pyx_float_3_0);
-  Py_VISIT(traverse_module_state->__pyx_float_5_0);
-  Py_VISIT(traverse_module_state->__pyx_float_6_0);
-  Py_VISIT(traverse_module_state->__pyx_float_6_5);
-  Py_VISIT(traverse_module_state->__pyx_float_8_0);
-  Py_VISIT(traverse_module_state->__pyx_float_10_0);
-  Py_VISIT(traverse_module_state->__pyx_float_20_0);
-  Py_VISIT(traverse_module_state->__pyx_float_20_5);
-  Py_VISIT(traverse_module_state->__pyx_float_30_0);
-  Py_VISIT(traverse_module_state->__pyx_float_35_0);
-  Py_VISIT(traverse_module_state->__pyx_float_50_0);
-  Py_VISIT(traverse_module_state->__pyx_float_70_5);
-  Py_VISIT(traverse_module_state->__pyx_float_0_001);
-  Py_VISIT(traverse_module_state->__pyx_float_neg_6_0);
+  Py_VISIT(traverse_module_state->__pyx_float_0_3);
   Py_VISIT(traverse_module_state->__pyx_int_0);
   Py_VISIT(traverse_module_state->__pyx_int_1);
+  Py_VISIT(traverse_module_state->__pyx_int_2);
   Py_VISIT(traverse_module_state->__pyx_int_3);
+  Py_VISIT(traverse_module_state->__pyx_int_10);
   Py_VISIT(traverse_module_state->__pyx_int_39446356);
   Py_VISIT(traverse_module_state->__pyx_int_70765620);
   Py_VISIT(traverse_module_state->__pyx_int_95896647);
@@ -5251,30 +5236,27 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_tuple__23);
   Py_VISIT(traverse_module_state->__pyx_tuple__24);
   Py_VISIT(traverse_module_state->__pyx_tuple__25);
-  Py_VISIT(traverse_module_state->__pyx_tuple__26);
+  Py_VISIT(traverse_module_state->__pyx_tuple__27);
   Py_VISIT(traverse_module_state->__pyx_tuple__28);
-  Py_VISIT(traverse_module_state->__pyx_tuple__29);
-  Py_VISIT(traverse_module_state->__pyx_tuple__34);
-  Py_VISIT(traverse_module_state->__pyx_tuple__36);
-  Py_VISIT(traverse_module_state->__pyx_tuple__40);
-  Py_VISIT(traverse_module_state->__pyx_tuple__42);
-  Py_VISIT(traverse_module_state->__pyx_tuple__44);
-  Py_VISIT(traverse_module_state->__pyx_tuple__46);
-  Py_VISIT(traverse_module_state->__pyx_codeobj__27);
+  Py_VISIT(traverse_module_state->__pyx_tuple__33);
+  Py_VISIT(traverse_module_state->__pyx_tuple__35);
+  Py_VISIT(traverse_module_state->__pyx_tuple__39);
+  Py_VISIT(traverse_module_state->__pyx_tuple__41);
+  Py_VISIT(traverse_module_state->__pyx_tuple__43);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__26);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__29);
   Py_VISIT(traverse_module_state->__pyx_codeobj__30);
   Py_VISIT(traverse_module_state->__pyx_codeobj__31);
   Py_VISIT(traverse_module_state->__pyx_codeobj__32);
-  Py_VISIT(traverse_module_state->__pyx_codeobj__33);
-  Py_VISIT(traverse_module_state->__pyx_codeobj__35);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__34);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__36);
   Py_VISIT(traverse_module_state->__pyx_codeobj__37);
   Py_VISIT(traverse_module_state->__pyx_codeobj__38);
-  Py_VISIT(traverse_module_state->__pyx_codeobj__39);
-  Py_VISIT(traverse_module_state->__pyx_codeobj__41);
-  Py_VISIT(traverse_module_state->__pyx_codeobj__43);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__40);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__42);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__44);
   Py_VISIT(traverse_module_state->__pyx_codeobj__45);
-  Py_VISIT(traverse_module_state->__pyx_codeobj__47);
-  Py_VISIT(traverse_module_state->__pyx_codeobj__48);
-  Py_VISIT(traverse_module_state->__pyx_codeobj__49);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__46);
   return 0;
 }
 #endif
@@ -5330,6 +5312,16 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_ptype_5numpy_flatiter __pyx_mstate_global->__pyx_ptype_5numpy_flatiter
 #define __pyx_ptype_5numpy_broadcast __pyx_mstate_global->__pyx_ptype_5numpy_broadcast
 #define __pyx_ptype_5numpy_ndarray __pyx_mstate_global->__pyx_ptype_5numpy_ndarray
+#define __pyx_ptype_5numpy_generic __pyx_mstate_global->__pyx_ptype_5numpy_generic
+#define __pyx_ptype_5numpy_number __pyx_mstate_global->__pyx_ptype_5numpy_number
+#define __pyx_ptype_5numpy_integer __pyx_mstate_global->__pyx_ptype_5numpy_integer
+#define __pyx_ptype_5numpy_signedinteger __pyx_mstate_global->__pyx_ptype_5numpy_signedinteger
+#define __pyx_ptype_5numpy_unsignedinteger __pyx_mstate_global->__pyx_ptype_5numpy_unsignedinteger
+#define __pyx_ptype_5numpy_inexact __pyx_mstate_global->__pyx_ptype_5numpy_inexact
+#define __pyx_ptype_5numpy_floating __pyx_mstate_global->__pyx_ptype_5numpy_floating
+#define __pyx_ptype_5numpy_complexfloating __pyx_mstate_global->__pyx_ptype_5numpy_complexfloating
+#define __pyx_ptype_5numpy_flexible __pyx_mstate_global->__pyx_ptype_5numpy_flexible
+#define __pyx_ptype_5numpy_character __pyx_mstate_global->__pyx_ptype_5numpy_character
 #define __pyx_ptype_5numpy_ufunc __pyx_mstate_global->__pyx_ptype_5numpy_ufunc
 #if CYTHON_USE_MODULE_STATE
 #endif
@@ -5345,6 +5337,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr __pyx_mstate_global->__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr
 #define __pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr __pyx_mstate_global->__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr
 #define __pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr __pyx_mstate_global->__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr
+#define __pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr __pyx_mstate_global->__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr
 #define __pyx_type___pyx_array __pyx_mstate_global->__pyx_type___pyx_array
 #define __pyx_type___pyx_MemviewEnum __pyx_mstate_global->__pyx_type___pyx_MemviewEnum
 #define __pyx_type___pyx_memoryview __pyx_mstate_global->__pyx_type___pyx_memoryview
@@ -5356,6 +5349,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr __pyx_mstate_global->__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_1_genexpr
 #define __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr __pyx_mstate_global->__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_2_genexpr
 #define __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr __pyx_mstate_global->__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr
+#define __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr __pyx_mstate_global->__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr
 #define __pyx_array_type __pyx_mstate_global->__pyx_array_type
 #define __pyx_MemviewEnum_type __pyx_mstate_global->__pyx_MemviewEnum_type
 #define __pyx_memoryview_type __pyx_mstate_global->__pyx_memoryview_type
@@ -5364,23 +5358,22 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_ASCII __pyx_mstate_global->__pyx_n_s_ASCII
 #define __pyx_kp_s_All_dimensions_preceding_dimensi __pyx_mstate_global->__pyx_kp_s_All_dimensions_preceding_dimensi
 #define __pyx_n_s_AssertionError __pyx_mstate_global->__pyx_n_s_AssertionError
+#define __pyx_kp_u_Best_Path __pyx_mstate_global->__pyx_kp_u_Best_Path
 #define __pyx_kp_s_Buffer_view_does_not_expose_stri __pyx_mstate_global->__pyx_kp_s_Buffer_view_does_not_expose_stri
 #define __pyx_kp_s_Can_only_create_a_buffer_that_is __pyx_mstate_global->__pyx_kp_s_Can_only_create_a_buffer_that_is
 #define __pyx_kp_s_Cannot_assign_to_read_only_memor __pyx_mstate_global->__pyx_kp_s_Cannot_assign_to_read_only_memor
 #define __pyx_kp_s_Cannot_create_writable_memory_vi __pyx_mstate_global->__pyx_kp_s_Cannot_create_writable_memory_vi
 #define __pyx_kp_u_Cannot_index_with_type __pyx_mstate_global->__pyx_kp_u_Cannot_index_with_type
 #define __pyx_kp_s_Cannot_transpose_memoryview_with __pyx_mstate_global->__pyx_kp_s_Cannot_transpose_memoryview_with
-#define __pyx_n_u_Course __pyx_mstate_global->__pyx_n_u_Course
 #define __pyx_kp_s_Dimension_d_is_not_direct __pyx_mstate_global->__pyx_kp_s_Dimension_d_is_not_direct
 #define __pyx_n_s_Ellipsis __pyx_mstate_global->__pyx_n_s_Ellipsis
 #define __pyx_kp_s_Empty_shape_tuple_for_cython_arr __pyx_mstate_global->__pyx_kp_s_Empty_shape_tuple_for_cython_arr
-#define __pyx_n_u_Finish __pyx_mstate_global->__pyx_n_u_Finish
 #define __pyx_n_s_FrenetOptimalTrajectory_frenet_o __pyx_mstate_global->__pyx_n_s_FrenetOptimalTrajectory_frenet_o
 #define __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2 __pyx_mstate_global->__pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2
 #define __pyx_n_s_FrenetPath __pyx_mstate_global->__pyx_n_s_FrenetPath
 #define __pyx_n_s_FrenetPath___reduce_cython __pyx_mstate_global->__pyx_n_s_FrenetPath___reduce_cython
 #define __pyx_n_s_FrenetPath___setstate_cython __pyx_mstate_global->__pyx_n_s_FrenetPath___setstate_cython
-#define __pyx_kp_u_Goal_reached __pyx_mstate_global->__pyx_kp_u_Goal_reached
+#define __pyx_kp_u_Frenet_Paths __pyx_mstate_global->__pyx_kp_u_Frenet_Paths
 #define __pyx_n_s_ImportError __pyx_mstate_global->__pyx_n_s_ImportError
 #define __pyx_kp_s_Incompatible_checksums_0x_x_vs_0 __pyx_mstate_global->__pyx_kp_s_Incompatible_checksums_0x_x_vs_0
 #define __pyx_kp_s_Incompatible_checksums_0x_x_vs_0_2 __pyx_mstate_global->__pyx_kp_s_Incompatible_checksums_0x_x_vs_0_2
@@ -5407,28 +5400,27 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_Sequence __pyx_mstate_global->__pyx_n_s_Sequence
 #define __pyx_kp_s_Step_may_not_be_zero_axis_d __pyx_mstate_global->__pyx_kp_s_Step_may_not_be_zero_axis_d
 #define __pyx_n_s_Ti __pyx_mstate_global->__pyx_n_s_Ti
-#define __pyx_kp_u_Time_Step __pyx_mstate_global->__pyx_kp_u_Time_Step
-#define __pyx_n_u_Trajectory __pyx_mstate_global->__pyx_n_u_Trajectory
 #define __pyx_n_s_TypeError __pyx_mstate_global->__pyx_n_s_TypeError
 #define __pyx_kp_s_Unable_to_convert_item_to_object __pyx_mstate_global->__pyx_kp_s_Unable_to_convert_item_to_object
 #define __pyx_n_s_ValueError __pyx_mstate_global->__pyx_n_s_ValueError
 #define __pyx_n_s_View_MemoryView __pyx_mstate_global->__pyx_n_s_View_MemoryView
 #define __pyx_kp_u__2 __pyx_mstate_global->__pyx_kp_u__2
 #define __pyx_n_s__3 __pyx_mstate_global->__pyx_n_s__3
-#define __pyx_n_s__50 __pyx_mstate_global->__pyx_n_s__50
+#define __pyx_n_s__47 __pyx_mstate_global->__pyx_n_s__47
 #define __pyx_kp_u__6 __pyx_mstate_global->__pyx_kp_u__6
 #define __pyx_kp_u__7 __pyx_mstate_global->__pyx_kp_u__7
 #define __pyx_n_s_abc __pyx_mstate_global->__pyx_n_s_abc
 #define __pyx_n_s_allocate_buffer __pyx_mstate_global->__pyx_n_s_allocate_buffer
+#define __pyx_n_s_alpha __pyx_mstate_global->__pyx_n_s_alpha
 #define __pyx_kp_u_and __pyx_mstate_global->__pyx_kp_u_and
 #define __pyx_n_s_arange __pyx_mstate_global->__pyx_n_s_arange
-#define __pyx_n_s_area __pyx_mstate_global->__pyx_n_s_area
 #define __pyx_n_s_args __pyx_mstate_global->__pyx_n_s_args
 #define __pyx_n_s_array __pyx_mstate_global->__pyx_n_s_array
 #define __pyx_n_s_asyncio_coroutines __pyx_mstate_global->__pyx_n_s_asyncio_coroutines
 #define __pyx_n_s_axe __pyx_mstate_global->__pyx_n_s_axe
 #define __pyx_n_s_axs __pyx_mstate_global->__pyx_n_s_axs
 #define __pyx_n_s_base __pyx_mstate_global->__pyx_n_s_base
+#define __pyx_n_s_best_path __pyx_mstate_global->__pyx_n_s_best_path
 #define __pyx_n_s_c __pyx_mstate_global->__pyx_n_s_c
 #define __pyx_n_u_c __pyx_mstate_global->__pyx_n_u_c
 #define __pyx_n_s_c_accel __pyx_mstate_global->__pyx_n_s_c_accel
@@ -5444,7 +5436,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_cf __pyx_mstate_global->__pyx_n_s_cf
 #define __pyx_n_s_check_collision_locals_genexpr __pyx_mstate_global->__pyx_n_s_check_collision_locals_genexpr
 #define __pyx_n_s_check_paths_locals_genexpr __pyx_mstate_global->__pyx_n_s_check_paths_locals_genexpr
-#define __pyx_n_s_cla __pyx_mstate_global->__pyx_n_s_cla
 #define __pyx_n_s_class __pyx_mstate_global->__pyx_n_s_class
 #define __pyx_n_s_class_getitem __pyx_mstate_global->__pyx_n_s_class_getitem
 #define __pyx_n_s_cline_in_traceback __pyx_mstate_global->__pyx_n_s_cline_in_traceback
@@ -5456,6 +5447,9 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_copy __pyx_mstate_global->__pyx_n_s_copy
 #define __pyx_n_s_count __pyx_mstate_global->__pyx_n_s_count
 #define __pyx_n_s_csp __pyx_mstate_global->__pyx_n_s_csp
+#define __pyx_n_s_d __pyx_mstate_global->__pyx_n_s_d
+#define __pyx_kp_u_d_m __pyx_mstate_global->__pyx_kp_u_d_m
+#define __pyx_n_s_debug_mode __pyx_mstate_global->__pyx_n_s_debug_mode
 #define __pyx_n_s_deepcopy __pyx_mstate_global->__pyx_n_s_deepcopy
 #define __pyx_n_s_di __pyx_mstate_global->__pyx_n_s_di
 #define __pyx_n_s_dict __pyx_mstate_global->__pyx_n_s_dict
@@ -5467,23 +5461,26 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_encode __pyx_mstate_global->__pyx_n_s_encode
 #define __pyx_n_s_enumerate __pyx_mstate_global->__pyx_n_s_enumerate
 #define __pyx_n_s_error __pyx_mstate_global->__pyx_n_s_error
-#define __pyx_n_s_file __pyx_mstate_global->__pyx_n_s_file
+#define __pyx_n_s_figsize __pyx_mstate_global->__pyx_n_s_figsize
+#define __pyx_n_s_figure __pyx_mstate_global->__pyx_n_s_figure
 #define __pyx_n_s_flags __pyx_mstate_global->__pyx_n_s_flags
 #define __pyx_n_s_float64 __pyx_mstate_global->__pyx_n_s_float64
 #define __pyx_n_s_format __pyx_mstate_global->__pyx_n_s_format
 #define __pyx_n_s_fortran __pyx_mstate_global->__pyx_n_s_fortran
 #define __pyx_n_u_fortran __pyx_mstate_global->__pyx_n_u_fortran
 #define __pyx_n_s_fp __pyx_mstate_global->__pyx_n_s_fp
+#define __pyx_n_s_fplist __pyx_mstate_global->__pyx_n_s_fplist
 #define __pyx_n_s_frenet_optimal_planning __pyx_mstate_global->__pyx_n_s_frenet_optimal_planning
+#define __pyx_n_s_frenet_optimal_planning_locals_g __pyx_mstate_global->__pyx_n_s_frenet_optimal_planning_locals_g
 #define __pyx_n_s_frenet_paths __pyx_mstate_global->__pyx_n_s_frenet_paths
+#define __pyx_kp_u_g __pyx_mstate_global->__pyx_kp_u_g
 #define __pyx_kp_u_gc __pyx_mstate_global->__pyx_kp_u_gc
 #define __pyx_n_s_generate_target_course __pyx_mstate_global->__pyx_n_s_generate_target_course
 #define __pyx_n_s_genexpr __pyx_mstate_global->__pyx_n_s_genexpr
 #define __pyx_n_s_getstate __pyx_mstate_global->__pyx_n_s_getstate
 #define __pyx_kp_u_got __pyx_mstate_global->__pyx_kp_u_got
 #define __pyx_kp_u_got_differing_extents_in_dimensi __pyx_mstate_global->__pyx_kp_u_got_differing_extents_in_dimensi
-#define __pyx_n_s_hypot __pyx_mstate_global->__pyx_n_s_hypot
-#define __pyx_n_s_i __pyx_mstate_global->__pyx_n_s_i
+#define __pyx_n_s_grid __pyx_mstate_global->__pyx_n_s_grid
 #define __pyx_n_s_id __pyx_mstate_global->__pyx_n_s_id
 #define __pyx_n_s_import __pyx_mstate_global->__pyx_n_s_import
 #define __pyx_n_s_index __pyx_mstate_global->__pyx_n_s_index
@@ -5497,13 +5494,16 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_lat_qp __pyx_mstate_global->__pyx_n_s_lat_qp
 #define __pyx_n_s_legend __pyx_mstate_global->__pyx_n_s_legend
 #define __pyx_n_s_linalg __pyx_mstate_global->__pyx_n_s_linalg
+#define __pyx_n_s_linewidth __pyx_mstate_global->__pyx_n_s_linewidth
 #define __pyx_n_s_lon_qp __pyx_mstate_global->__pyx_n_s_lon_qp
 #define __pyx_n_s_main __pyx_mstate_global->__pyx_n_s_main
-#define __pyx_n_u_main __pyx_mstate_global->__pyx_n_u_main
-#define __pyx_n_s_main_2 __pyx_mstate_global->__pyx_n_s_main_2
 #define __pyx_n_s_matplotlib __pyx_mstate_global->__pyx_n_s_matplotlib
 #define __pyx_n_s_matplotlib_pyplot __pyx_mstate_global->__pyx_n_s_matplotlib_pyplot
+#define __pyx_n_s_max __pyx_mstate_global->__pyx_n_s_max
+#define __pyx_n_s_max_time_frame __pyx_mstate_global->__pyx_n_s_max_time_frame
+#define __pyx_n_s_max_time_frame_paths __pyx_mstate_global->__pyx_n_s_max_time_frame_paths
 #define __pyx_n_s_memview __pyx_mstate_global->__pyx_n_s_memview
+#define __pyx_n_s_min_cost __pyx_mstate_global->__pyx_n_s_min_cost
 #define __pyx_n_s_mode __pyx_mstate_global->__pyx_n_s_mode
 #define __pyx_n_s_name __pyx_mstate_global->__pyx_n_s_name
 #define __pyx_n_s_name_2 __pyx_mstate_global->__pyx_n_s_name_2
@@ -5516,14 +5516,10 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_kp_u_numpy_core_umath_failed_to_impor __pyx_mstate_global->__pyx_kp_u_numpy_core_umath_failed_to_impor
 #define __pyx_n_s_ob __pyx_mstate_global->__pyx_n_s_ob
 #define __pyx_n_s_obj __pyx_mstate_global->__pyx_n_s_obj
-#define __pyx_kp_u_or __pyx_mstate_global->__pyx_kp_u_or
 #define __pyx_n_s_pack __pyx_mstate_global->__pyx_n_s_pack
-#define __pyx_n_s_path __pyx_mstate_global->__pyx_n_s_path
-#define __pyx_n_s_pause __pyx_mstate_global->__pyx_n_s_pause
 #define __pyx_n_s_pickle __pyx_mstate_global->__pyx_n_s_pickle
 #define __pyx_n_s_plot __pyx_mstate_global->__pyx_n_s_plot
 #define __pyx_n_s_plt __pyx_mstate_global->__pyx_n_s_plt
-#define __pyx_n_s_print __pyx_mstate_global->__pyx_n_s_print
 #define __pyx_n_s_pyplot __pyx_mstate_global->__pyx_n_s_pyplot
 #define __pyx_n_s_pyx_PickleError __pyx_mstate_global->__pyx_n_s_pyx_PickleError
 #define __pyx_n_s_pyx_checksum __pyx_mstate_global->__pyx_n_s_pyx_checksum
@@ -5534,14 +5530,17 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_pyx_unpickle_FrenetPath __pyx_mstate_global->__pyx_n_s_pyx_unpickle_FrenetPath
 #define __pyx_n_s_pyx_unpickle_QuarticPolynomial __pyx_mstate_global->__pyx_n_s_pyx_unpickle_QuarticPolynomial
 #define __pyx_n_s_pyx_vtable __pyx_mstate_global->__pyx_n_s_pyx_vtable
+#define __pyx_kp_u_r __pyx_mstate_global->__pyx_kp_u_r
 #define __pyx_n_s_range __pyx_mstate_global->__pyx_n_s_range
 #define __pyx_n_s_reduce __pyx_mstate_global->__pyx_n_s_reduce
 #define __pyx_n_s_reduce_cython __pyx_mstate_global->__pyx_n_s_reduce_cython
 #define __pyx_n_s_reduce_ex __pyx_mstate_global->__pyx_n_s_reduce_ex
 #define __pyx_n_s_register __pyx_mstate_global->__pyx_n_s_register
+#define __pyx_n_s_s __pyx_mstate_global->__pyx_n_s_s
 #define __pyx_n_s_s0 __pyx_mstate_global->__pyx_n_s_s0
 #define __pyx_n_s_s_d __pyx_mstate_global->__pyx_n_s_s_d
 #define __pyx_n_s_s_dd __pyx_mstate_global->__pyx_n_s_s_dd
+#define __pyx_kp_u_s_m __pyx_mstate_global->__pyx_kp_u_s_m
 #define __pyx_n_s_self __pyx_mstate_global->__pyx_n_s_self
 #define __pyx_n_s_send __pyx_mstate_global->__pyx_n_s_send
 #define __pyx_n_s_setstate __pyx_mstate_global->__pyx_n_s_setstate
@@ -5552,7 +5551,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_solve __pyx_mstate_global->__pyx_n_s_solve
 #define __pyx_n_s_spec __pyx_mstate_global->__pyx_n_s_spec
 #define __pyx_n_s_start __pyx_mstate_global->__pyx_n_s_start
-#define __pyx_kp_u_start_2 __pyx_mstate_global->__pyx_kp_u_start_2
 #define __pyx_n_s_state __pyx_mstate_global->__pyx_n_s_state
 #define __pyx_n_s_step __pyx_mstate_global->__pyx_n_s_step
 #define __pyx_n_s_stop __pyx_mstate_global->__pyx_n_s_stop
@@ -5564,23 +5562,19 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_sum __pyx_mstate_global->__pyx_n_s_sum
 #define __pyx_n_s_sys __pyx_mstate_global->__pyx_n_s_sys
 #define __pyx_n_s_t __pyx_mstate_global->__pyx_n_s_t
-#define __pyx_n_s_target_course __pyx_mstate_global->__pyx_n_s_target_course
 #define __pyx_n_s_target_speed __pyx_mstate_global->__pyx_n_s_target_speed
-#define __pyx_n_s_tc __pyx_mstate_global->__pyx_n_s_tc
 #define __pyx_n_s_test __pyx_mstate_global->__pyx_n_s_test
 #define __pyx_n_s_tfp __pyx_mstate_global->__pyx_n_s_tfp
 #define __pyx_n_s_throw __pyx_mstate_global->__pyx_n_s_throw
 #define __pyx_n_s_time __pyx_mstate_global->__pyx_n_s_time
 #define __pyx_n_s_title __pyx_mstate_global->__pyx_n_s_title
 #define __pyx_n_s_tv __pyx_mstate_global->__pyx_n_s_tv
-#define __pyx_n_s_tx __pyx_mstate_global->__pyx_n_s_tx
-#define __pyx_n_s_ty __pyx_mstate_global->__pyx_n_s_ty
-#define __pyx_n_s_tyaw __pyx_mstate_global->__pyx_n_s_tyaw
 #define __pyx_kp_s_unable_to_allocate_array_data __pyx_mstate_global->__pyx_kp_s_unable_to_allocate_array_data
 #define __pyx_kp_s_unable_to_allocate_shape_and_str __pyx_mstate_global->__pyx_kp_s_unable_to_allocate_shape_and_str
 #define __pyx_n_s_unpack __pyx_mstate_global->__pyx_n_s_unpack
 #define __pyx_n_s_update __pyx_mstate_global->__pyx_n_s_update
 #define __pyx_n_s_use_setstate __pyx_mstate_global->__pyx_n_s_use_setstate
+#define __pyx_n_s_valid_fplist __pyx_mstate_global->__pyx_n_s_valid_fplist
 #define __pyx_n_s_version_info __pyx_mstate_global->__pyx_n_s_version_info
 #define __pyx_n_s_vxe __pyx_mstate_global->__pyx_n_s_vxe
 #define __pyx_n_s_vxs __pyx_mstate_global->__pyx_n_s_vxs
@@ -5588,30 +5582,18 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_wy __pyx_mstate_global->__pyx_n_s_wy
 #define __pyx_n_s_x __pyx_mstate_global->__pyx_n_s_x
 #define __pyx_n_u_xk __pyx_mstate_global->__pyx_n_u_xk
-#define __pyx_n_s_xlim __pyx_mstate_global->__pyx_n_s_xlim
+#define __pyx_n_s_xlabel __pyx_mstate_global->__pyx_n_s_xlabel
 #define __pyx_n_s_xs __pyx_mstate_global->__pyx_n_s_xs
-#define __pyx_n_s_ylim __pyx_mstate_global->__pyx_n_s_ylim
+#define __pyx_n_s_ylabel __pyx_mstate_global->__pyx_n_s_ylabel
 #define __pyx_n_s_zip __pyx_mstate_global->__pyx_n_s_zip
 #define __pyx_float_0_0 __pyx_mstate_global->__pyx_float_0_0
 #define __pyx_float_0_1 __pyx_mstate_global->__pyx_float_0_1
-#define __pyx_float_1_0 __pyx_mstate_global->__pyx_float_1_0
-#define __pyx_float_3_0 __pyx_mstate_global->__pyx_float_3_0
-#define __pyx_float_5_0 __pyx_mstate_global->__pyx_float_5_0
-#define __pyx_float_6_0 __pyx_mstate_global->__pyx_float_6_0
-#define __pyx_float_6_5 __pyx_mstate_global->__pyx_float_6_5
-#define __pyx_float_8_0 __pyx_mstate_global->__pyx_float_8_0
-#define __pyx_float_10_0 __pyx_mstate_global->__pyx_float_10_0
-#define __pyx_float_20_0 __pyx_mstate_global->__pyx_float_20_0
-#define __pyx_float_20_5 __pyx_mstate_global->__pyx_float_20_5
-#define __pyx_float_30_0 __pyx_mstate_global->__pyx_float_30_0
-#define __pyx_float_35_0 __pyx_mstate_global->__pyx_float_35_0
-#define __pyx_float_50_0 __pyx_mstate_global->__pyx_float_50_0
-#define __pyx_float_70_5 __pyx_mstate_global->__pyx_float_70_5
-#define __pyx_float_0_001 __pyx_mstate_global->__pyx_float_0_001
-#define __pyx_float_neg_6_0 __pyx_mstate_global->__pyx_float_neg_6_0
+#define __pyx_float_0_3 __pyx_mstate_global->__pyx_float_0_3
 #define __pyx_int_0 __pyx_mstate_global->__pyx_int_0
 #define __pyx_int_1 __pyx_mstate_global->__pyx_int_1
+#define __pyx_int_2 __pyx_mstate_global->__pyx_int_2
 #define __pyx_int_3 __pyx_mstate_global->__pyx_int_3
+#define __pyx_int_10 __pyx_mstate_global->__pyx_int_10
 #define __pyx_int_39446356 __pyx_mstate_global->__pyx_int_39446356
 #define __pyx_int_70765620 __pyx_mstate_global->__pyx_int_70765620
 #define __pyx_int_95896647 __pyx_mstate_global->__pyx_int_95896647
@@ -5642,30 +5624,27 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_tuple__23 __pyx_mstate_global->__pyx_tuple__23
 #define __pyx_tuple__24 __pyx_mstate_global->__pyx_tuple__24
 #define __pyx_tuple__25 __pyx_mstate_global->__pyx_tuple__25
-#define __pyx_tuple__26 __pyx_mstate_global->__pyx_tuple__26
+#define __pyx_tuple__27 __pyx_mstate_global->__pyx_tuple__27
 #define __pyx_tuple__28 __pyx_mstate_global->__pyx_tuple__28
-#define __pyx_tuple__29 __pyx_mstate_global->__pyx_tuple__29
-#define __pyx_tuple__34 __pyx_mstate_global->__pyx_tuple__34
-#define __pyx_tuple__36 __pyx_mstate_global->__pyx_tuple__36
-#define __pyx_tuple__40 __pyx_mstate_global->__pyx_tuple__40
-#define __pyx_tuple__42 __pyx_mstate_global->__pyx_tuple__42
-#define __pyx_tuple__44 __pyx_mstate_global->__pyx_tuple__44
-#define __pyx_tuple__46 __pyx_mstate_global->__pyx_tuple__46
-#define __pyx_codeobj__27 __pyx_mstate_global->__pyx_codeobj__27
+#define __pyx_tuple__33 __pyx_mstate_global->__pyx_tuple__33
+#define __pyx_tuple__35 __pyx_mstate_global->__pyx_tuple__35
+#define __pyx_tuple__39 __pyx_mstate_global->__pyx_tuple__39
+#define __pyx_tuple__41 __pyx_mstate_global->__pyx_tuple__41
+#define __pyx_tuple__43 __pyx_mstate_global->__pyx_tuple__43
+#define __pyx_codeobj__26 __pyx_mstate_global->__pyx_codeobj__26
+#define __pyx_codeobj__29 __pyx_mstate_global->__pyx_codeobj__29
 #define __pyx_codeobj__30 __pyx_mstate_global->__pyx_codeobj__30
 #define __pyx_codeobj__31 __pyx_mstate_global->__pyx_codeobj__31
 #define __pyx_codeobj__32 __pyx_mstate_global->__pyx_codeobj__32
-#define __pyx_codeobj__33 __pyx_mstate_global->__pyx_codeobj__33
-#define __pyx_codeobj__35 __pyx_mstate_global->__pyx_codeobj__35
+#define __pyx_codeobj__34 __pyx_mstate_global->__pyx_codeobj__34
+#define __pyx_codeobj__36 __pyx_mstate_global->__pyx_codeobj__36
 #define __pyx_codeobj__37 __pyx_mstate_global->__pyx_codeobj__37
 #define __pyx_codeobj__38 __pyx_mstate_global->__pyx_codeobj__38
-#define __pyx_codeobj__39 __pyx_mstate_global->__pyx_codeobj__39
-#define __pyx_codeobj__41 __pyx_mstate_global->__pyx_codeobj__41
-#define __pyx_codeobj__43 __pyx_mstate_global->__pyx_codeobj__43
+#define __pyx_codeobj__40 __pyx_mstate_global->__pyx_codeobj__40
+#define __pyx_codeobj__42 __pyx_mstate_global->__pyx_codeobj__42
+#define __pyx_codeobj__44 __pyx_mstate_global->__pyx_codeobj__44
 #define __pyx_codeobj__45 __pyx_mstate_global->__pyx_codeobj__45
-#define __pyx_codeobj__47 __pyx_mstate_global->__pyx_codeobj__47
-#define __pyx_codeobj__48 __pyx_mstate_global->__pyx_codeobj__48
-#define __pyx_codeobj__49 __pyx_mstate_global->__pyx_codeobj__49
+#define __pyx_codeobj__46 __pyx_mstate_global->__pyx_codeobj__46
 /* #### Code section: module_code ### */
 
 /* "View.MemoryView":131
@@ -19294,7 +19273,7 @@ static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *__
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":246
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":245
  * 
  *         @property
  *         cdef inline PyObject* base(self) nogil:             # <<<<<<<<<<<<<<
@@ -19305,7 +19284,7 @@ static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *__
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject *__pyx_v_self) {
   PyObject *__pyx_r;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":249
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":248
  *             """Returns a borrowed reference to the object owning the data/memory.
  *             """
  *             return PyArray_BASE(self)             # <<<<<<<<<<<<<<
@@ -19315,7 +19294,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject 
   __pyx_r = PyArray_BASE(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":246
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":245
  * 
  *         @property
  *         cdef inline PyObject* base(self) nogil:             # <<<<<<<<<<<<<<
@@ -19328,7 +19307,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject 
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":252
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":251
  * 
  *         @property
  *         cdef inline dtype descr(self):             # <<<<<<<<<<<<<<
@@ -19342,7 +19321,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   PyArray_Descr *__pyx_t_1;
   __Pyx_RefNannySetupContext("descr", 1);
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":255
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":254
  *             """Returns an owned reference to the dtype of the array.
  *             """
  *             return <dtype>PyArray_DESCR(self)             # <<<<<<<<<<<<<<
@@ -19355,7 +19334,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   __pyx_r = ((PyArray_Descr *)__pyx_t_1);
   goto __pyx_L0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":252
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":251
  * 
  *         @property
  *         cdef inline dtype descr(self):             # <<<<<<<<<<<<<<
@@ -19370,7 +19349,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":258
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":257
  * 
  *         @property
  *         cdef inline int ndim(self) nogil:             # <<<<<<<<<<<<<<
@@ -19381,7 +19360,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
 static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx_v_self) {
   int __pyx_r;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":261
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":260
  *             """Returns the number of dimensions in the array.
  *             """
  *             return PyArray_NDIM(self)             # <<<<<<<<<<<<<<
@@ -19391,7 +19370,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
   __pyx_r = PyArray_NDIM(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":258
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":257
  * 
  *         @property
  *         cdef inline int ndim(self) nogil:             # <<<<<<<<<<<<<<
@@ -19404,7 +19383,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":264
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":263
  * 
  *         @property
  *         cdef inline npy_intp *shape(self) nogil:             # <<<<<<<<<<<<<<
@@ -19415,7 +19394,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
 static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObject *__pyx_v_self) {
   npy_intp *__pyx_r;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":269
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":268
  *             Can return NULL for 0-dimensional arrays.
  *             """
  *             return PyArray_DIMS(self)             # <<<<<<<<<<<<<<
@@ -19425,7 +19404,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
   __pyx_r = PyArray_DIMS(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":264
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":263
  * 
  *         @property
  *         cdef inline npy_intp *shape(self) nogil:             # <<<<<<<<<<<<<<
@@ -19438,7 +19417,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":272
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":271
  * 
  *         @property
  *         cdef inline npy_intp *strides(self) nogil:             # <<<<<<<<<<<<<<
@@ -19449,7 +19428,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
 static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayObject *__pyx_v_self) {
   npy_intp *__pyx_r;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":276
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":275
  *             The number of elements matches the number of dimensions of the array (ndim).
  *             """
  *             return PyArray_STRIDES(self)             # <<<<<<<<<<<<<<
@@ -19459,7 +19438,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
   __pyx_r = PyArray_STRIDES(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":272
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":271
  * 
  *         @property
  *         cdef inline npy_intp *strides(self) nogil:             # <<<<<<<<<<<<<<
@@ -19472,7 +19451,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":279
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":278
  * 
  *         @property
  *         cdef inline npy_intp size(self) nogil:             # <<<<<<<<<<<<<<
@@ -19483,7 +19462,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
 static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *__pyx_v_self) {
   npy_intp __pyx_r;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":282
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":281
  *             """Returns the total size (in number of elements) of the array.
  *             """
  *             return PyArray_SIZE(self)             # <<<<<<<<<<<<<<
@@ -19493,7 +19472,7 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
   __pyx_r = PyArray_SIZE(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":279
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":278
  * 
  *         @property
  *         cdef inline npy_intp size(self) nogil:             # <<<<<<<<<<<<<<
@@ -19506,7 +19485,7 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":285
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":284
  * 
  *         @property
  *         cdef inline char* data(self) nogil:             # <<<<<<<<<<<<<<
@@ -19517,7 +19496,7 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
 static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__pyx_v_self) {
   char *__pyx_r;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":291
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":290
  *             of `PyArray_DATA()` instead, which returns a 'void*'.
  *             """
  *             return PyArray_BYTES(self)             # <<<<<<<<<<<<<<
@@ -19527,7 +19506,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__p
   __pyx_r = PyArray_BYTES(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":285
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":284
  * 
  *         @property
  *         cdef inline char* data(self) nogil:             # <<<<<<<<<<<<<<
@@ -19540,7 +19519,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__p
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":777
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":773
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -19557,7 +19536,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1", 1);
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":778
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":774
  * 
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
@@ -19565,13 +19544,13 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
  * cdef inline object PyArray_MultiIterNew2(a, b):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyArray_MultiIterNew(1, ((void *)__pyx_v_a)); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 778, __pyx_L1_error)
+  __pyx_t_1 = PyArray_MultiIterNew(1, ((void *)__pyx_v_a)); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 774, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":777
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":773
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -19590,7 +19569,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":780
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":776
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -19607,7 +19586,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2", 1);
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":781
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":777
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
@@ -19615,13 +19594,13 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyArray_MultiIterNew(2, ((void *)__pyx_v_a), ((void *)__pyx_v_b)); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 781, __pyx_L1_error)
+  __pyx_t_1 = PyArray_MultiIterNew(2, ((void *)__pyx_v_a), ((void *)__pyx_v_b)); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 777, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":780
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":776
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -19640,7 +19619,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":783
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":779
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -19657,7 +19636,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3", 1);
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":784
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":780
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
@@ -19665,13 +19644,13 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyArray_MultiIterNew(3, ((void *)__pyx_v_a), ((void *)__pyx_v_b), ((void *)__pyx_v_c)); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 784, __pyx_L1_error)
+  __pyx_t_1 = PyArray_MultiIterNew(3, ((void *)__pyx_v_a), ((void *)__pyx_v_b), ((void *)__pyx_v_c)); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 780, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":783
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":779
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -19690,7 +19669,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":786
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":782
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -19707,7 +19686,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4", 1);
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":787
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":783
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
@@ -19715,13 +19694,13 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyArray_MultiIterNew(4, ((void *)__pyx_v_a), ((void *)__pyx_v_b), ((void *)__pyx_v_c), ((void *)__pyx_v_d)); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 787, __pyx_L1_error)
+  __pyx_t_1 = PyArray_MultiIterNew(4, ((void *)__pyx_v_a), ((void *)__pyx_v_b), ((void *)__pyx_v_c), ((void *)__pyx_v_d)); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 783, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":786
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":782
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -19740,7 +19719,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":789
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":785
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -19757,7 +19736,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5", 1);
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":790
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":786
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
@@ -19765,13 +19744,13 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyArray_MultiIterNew(5, ((void *)__pyx_v_a), ((void *)__pyx_v_b), ((void *)__pyx_v_c), ((void *)__pyx_v_d), ((void *)__pyx_v_e)); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 790, __pyx_L1_error)
+  __pyx_t_1 = PyArray_MultiIterNew(5, ((void *)__pyx_v_a), ((void *)__pyx_v_b), ((void *)__pyx_v_c), ((void *)__pyx_v_d), ((void *)__pyx_v_e)); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 786, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":789
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":785
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -19790,7 +19769,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":792
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":788
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -19804,7 +19783,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("PyDataType_SHAPE", 1);
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":793
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":789
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -19814,7 +19793,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   __pyx_t_1 = PyDataType_HASSUBARRAY(__pyx_v_d);
   if (__pyx_t_1) {
 
-    /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":794
+    /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":790
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):
  *         return <tuple>d.subarray.shape             # <<<<<<<<<<<<<<
@@ -19826,7 +19805,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     __pyx_r = ((PyObject*)__pyx_v_d->subarray->shape);
     goto __pyx_L0;
 
-    /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":793
+    /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":789
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -19835,7 +19814,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
  */
   }
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":796
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":792
  *         return <tuple>d.subarray.shape
  *     else:
  *         return ()             # <<<<<<<<<<<<<<
@@ -19849,7 +19828,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     goto __pyx_L0;
   }
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":792
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":788
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -19864,7 +19843,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":950
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":968
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -19873,8 +19852,12 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
  */
 
 static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_arr, PyObject *__pyx_v_base) {
+  int __pyx_t_1;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":951
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":969
  * 
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!             # <<<<<<<<<<<<<<
@@ -19883,16 +19866,16 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   Py_INCREF(__pyx_v_base);
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":952
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":970
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!
  *     PyArray_SetBaseObject(arr, base)             # <<<<<<<<<<<<<<
  * 
  * cdef inline object get_array_base(ndarray arr):
  */
-  (void)(PyArray_SetBaseObject(__pyx_v_arr, __pyx_v_base));
+  __pyx_t_1 = PyArray_SetBaseObject(__pyx_v_arr, __pyx_v_base); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(2, 970, __pyx_L1_error)
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":950
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":968
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -19901,9 +19884,13 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
 
   /* function exit code */
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_AddTraceback("numpy.set_array_base", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_L0:;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":954
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":972
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -19918,7 +19905,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("get_array_base", 1);
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":955
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":973
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)             # <<<<<<<<<<<<<<
@@ -19927,7 +19914,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   __pyx_v_base = PyArray_BASE(__pyx_v_arr);
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":956
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":974
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -19937,7 +19924,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_t_1 = (__pyx_v_base == NULL);
   if (__pyx_t_1) {
 
-    /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":957
+    /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":975
  *     base = PyArray_BASE(arr)
  *     if base is NULL:
  *         return None             # <<<<<<<<<<<<<<
@@ -19948,7 +19935,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":956
+    /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":974
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -19957,7 +19944,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   }
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":958
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":976
  *     if base is NULL:
  *         return None
  *     return <object>base             # <<<<<<<<<<<<<<
@@ -19969,7 +19956,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_r = ((PyObject *)__pyx_v_base);
   goto __pyx_L0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":954
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":972
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -19984,7 +19971,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":962
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":980
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -20008,7 +19995,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_array", 1);
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":963
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":981
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20024,16 +20011,16 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":964
+      /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":982
  * cdef inline int import_array() except -1:
  *     try:
  *         __pyx_import_array()             # <<<<<<<<<<<<<<
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")
  */
-      __pyx_t_4 = _import_array(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(2, 964, __pyx_L3_error)
+      __pyx_t_4 = _import_array(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(2, 982, __pyx_L3_error)
 
-      /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":963
+      /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":981
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20047,7 +20034,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":965
+    /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":983
  *     try:
  *         __pyx_import_array()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -20057,27 +20044,27 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __pyx_t_4 = __Pyx_PyErr_ExceptionMatches(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])));
     if (__pyx_t_4) {
       __Pyx_AddTraceback("numpy.import_array", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(2, 965, __pyx_L5_except_error)
+      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(2, 983, __pyx_L5_except_error)
       __Pyx_XGOTREF(__pyx_t_5);
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
-      /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":966
+      /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":984
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
  * 
  * cdef inline int import_umath() except -1:
  */
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_ImportError, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(2, 966, __pyx_L5_except_error)
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_ImportError, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(2, 984, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_Raise(__pyx_t_8, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      __PYX_ERR(2, 966, __pyx_L5_except_error)
+      __PYX_ERR(2, 984, __pyx_L5_except_error)
     }
     goto __pyx_L5_except_error;
 
-    /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":963
+    /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":981
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20093,7 +20080,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":962
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":980
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -20116,7 +20103,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":968
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":986
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -20140,7 +20127,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_umath", 1);
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":969
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":987
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20156,16 +20143,16 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":970
+      /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":988
  * cdef inline int import_umath() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")
  */
-      __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(2, 970, __pyx_L3_error)
+      __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(2, 988, __pyx_L3_error)
 
-      /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":969
+      /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":987
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20179,7 +20166,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":971
+    /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":989
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -20189,27 +20176,27 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __pyx_t_4 = __Pyx_PyErr_ExceptionMatches(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])));
     if (__pyx_t_4) {
       __Pyx_AddTraceback("numpy.import_umath", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(2, 971, __pyx_L5_except_error)
+      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(2, 989, __pyx_L5_except_error)
       __Pyx_XGOTREF(__pyx_t_5);
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
-      /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":972
+      /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":990
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
  * 
  * cdef inline int import_ufunc() except -1:
  */
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_ImportError, __pyx_tuple__10, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(2, 972, __pyx_L5_except_error)
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_ImportError, __pyx_tuple__10, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(2, 990, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_Raise(__pyx_t_8, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      __PYX_ERR(2, 972, __pyx_L5_except_error)
+      __PYX_ERR(2, 990, __pyx_L5_except_error)
     }
     goto __pyx_L5_except_error;
 
-    /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":969
+    /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":987
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20225,7 +20212,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":968
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":986
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -20248,7 +20235,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":974
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":992
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -20272,7 +20259,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_ufunc", 1);
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":975
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":993
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20288,16 +20275,16 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":976
+      /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":994
  * cdef inline int import_ufunc() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")
  */
-      __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(2, 976, __pyx_L3_error)
+      __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(2, 994, __pyx_L3_error)
 
-      /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":975
+      /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":993
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20311,7 +20298,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":977
+    /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":995
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -20321,27 +20308,27 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __pyx_t_4 = __Pyx_PyErr_ExceptionMatches(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])));
     if (__pyx_t_4) {
       __Pyx_AddTraceback("numpy.import_ufunc", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(2, 977, __pyx_L5_except_error)
+      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(2, 995, __pyx_L5_except_error)
       __Pyx_XGOTREF(__pyx_t_5);
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
-      /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":978
+      /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":996
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
  * 
  * 
  */
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_ImportError, __pyx_tuple__10, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(2, 978, __pyx_L5_except_error)
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_ImportError, __pyx_tuple__10, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(2, 996, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_Raise(__pyx_t_8, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      __PYX_ERR(2, 978, __pyx_L5_except_error)
+      __PYX_ERR(2, 996, __pyx_L5_except_error)
     }
     goto __pyx_L5_except_error;
 
-    /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":975
+    /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":993
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20357,7 +20344,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":974
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":992
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -20380,7 +20367,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":981
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":999
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -20391,7 +20378,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
 static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_obj) {
   int __pyx_r;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":993
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1011
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyTimedeltaArrType_Type)             # <<<<<<<<<<<<<<
@@ -20401,7 +20388,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyTimedeltaArrType_Type));
   goto __pyx_L0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":981
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":999
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -20414,7 +20401,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":996
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1014
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -20425,7 +20412,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
 static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_obj) {
   int __pyx_r;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":1008
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1026
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyDatetimeArrType_Type)             # <<<<<<<<<<<<<<
@@ -20435,7 +20422,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyDatetimeArrType_Type));
   goto __pyx_L0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":996
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1014
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -20448,7 +20435,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":1011
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1029
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -20459,7 +20446,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
 static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *__pyx_v_obj) {
   npy_datetime __pyx_r;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":1018
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1036
  *     also needed.  That can be found using `get_datetime64_unit`.
  *     """
  *     return (<PyDatetimeScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -20469,7 +20456,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   __pyx_r = ((PyDatetimeScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":1011
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1029
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -20482,7 +20469,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":1021
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1039
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -20493,7 +20480,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
 static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject *__pyx_v_obj) {
   npy_timedelta __pyx_r;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":1025
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1043
  *     returns the int64 value underlying scalar numpy timedelta64 object
  *     """
  *     return (<PyTimedeltaScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -20503,7 +20490,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   __pyx_r = ((PyTimedeltaScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":1021
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1039
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -20516,7 +20503,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   return __pyx_r;
 }
 
-/* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":1028
+/* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1046
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -20527,7 +20514,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
 static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObject *__pyx_v_obj) {
   NPY_DATETIMEUNIT __pyx_r;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":1032
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1050
  *     returns the unit part of the dtype for a numpy datetime64 object.
  *     """
  *     return <NPY_DATETIMEUNIT>(<PyDatetimeScalarObject*>obj).obmeta.base             # <<<<<<<<<<<<<<
@@ -20535,7 +20522,7 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   __pyx_r = ((NPY_DATETIMEUNIT)((PyDatetimeScalarObject *)__pyx_v_obj)->obmeta.base);
   goto __pyx_L0;
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":1028
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":1046
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -28967,7 +28954,7 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_g
  * 
  *     return rx, ry, ryaw, rk, csp             # <<<<<<<<<<<<<<
  * 
- * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed):
+ * def frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed, bint debug_mode=False):
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_3 = PyTuple_New(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 188, __pyx_L1_error)
@@ -29170,11 +29157,12 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
 /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":190
  *     return rx, ry, ryaw, rk, csp
  * 
- * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed):             # <<<<<<<<<<<<<<
+ * def frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed, bint debug_mode=False):             # <<<<<<<<<<<<<<
  *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, target_speed)
  *     fplist = calc_global_paths(fplist, csp)
  */
 
+/* Python wrapper */
 static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5frenet_optimal_planning(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
@@ -29182,14 +29170,398 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp, double __pyx_v_s0, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, PyArrayObject *__pyx_v_ob, double __pyx_v_target_speed, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyMethodDef __pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5frenet_optimal_planning = {"frenet_optimal_planning", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5frenet_optimal_planning, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5frenet_optimal_planning(PyObject *__pyx_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+) {
+  struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp = 0;
+  double __pyx_v_s0;
+  double __pyx_v_c_speed;
+  double __pyx_v_c_accel;
+  double __pyx_v_c_d;
+  double __pyx_v_c_d_d;
+  double __pyx_v_c_d_dd;
+  PyArrayObject *__pyx_v_ob = 0;
+  double __pyx_v_target_speed;
+  int __pyx_v_debug_mode;
+  #if !CYTHON_METH_FASTCALL
+  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
+  #endif
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject* values[10] = {0,0,0,0,0,0,0,0,0,0};
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("frenet_optimal_planning (wrapper)", 0);
+  #if !CYTHON_METH_FASTCALL
+  #if CYTHON_ASSUME_SAFE_MACROS
+  __pyx_nargs = PyTuple_GET_SIZE(__pyx_args);
+  #else
+  __pyx_nargs = PyTuple_Size(__pyx_args); if (unlikely(__pyx_nargs < 0)) return NULL;
+  #endif
+  #endif
+  __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
+  {
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_csp,&__pyx_n_s_s0,&__pyx_n_s_c_speed,&__pyx_n_s_c_accel,&__pyx_n_s_c_d,&__pyx_n_s_c_d_d,&__pyx_n_s_c_d_dd,&__pyx_n_s_ob,&__pyx_n_s_target_speed,&__pyx_n_s_debug_mode,0};
+    if (__pyx_kwds) {
+      Py_ssize_t kw_args;
+      switch (__pyx_nargs) {
+        case 10: values[9] = __Pyx_Arg_FASTCALL(__pyx_args, 9);
+        CYTHON_FALLTHROUGH;
+        case  9: values[8] = __Pyx_Arg_FASTCALL(__pyx_args, 8);
+        CYTHON_FALLTHROUGH;
+        case  8: values[7] = __Pyx_Arg_FASTCALL(__pyx_args, 7);
+        CYTHON_FALLTHROUGH;
+        case  7: values[6] = __Pyx_Arg_FASTCALL(__pyx_args, 6);
+        CYTHON_FALLTHROUGH;
+        case  6: values[5] = __Pyx_Arg_FASTCALL(__pyx_args, 5);
+        CYTHON_FALLTHROUGH;
+        case  5: values[4] = __Pyx_Arg_FASTCALL(__pyx_args, 4);
+        CYTHON_FALLTHROUGH;
+        case  4: values[3] = __Pyx_Arg_FASTCALL(__pyx_args, 3);
+        CYTHON_FALLTHROUGH;
+        case  3: values[2] = __Pyx_Arg_FASTCALL(__pyx_args, 2);
+        CYTHON_FALLTHROUGH;
+        case  2: values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
+        CYTHON_FALLTHROUGH;
+        case  1: values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = __Pyx_NumKwargs_FASTCALL(__pyx_kwds);
+      switch (__pyx_nargs) {
+        case  0:
+        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_csp)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+        else goto __pyx_L5_argtuple_error;
+        CYTHON_FALLTHROUGH;
+        case  1:
+        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_s0)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 0, 9, 10, 1); __PYX_ERR(0, 190, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  2:
+        if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_c_speed)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 0, 9, 10, 2); __PYX_ERR(0, 190, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  3:
+        if (likely((values[3] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_c_accel)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[3]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 0, 9, 10, 3); __PYX_ERR(0, 190, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  4:
+        if (likely((values[4] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_c_d)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[4]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 0, 9, 10, 4); __PYX_ERR(0, 190, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  5:
+        if (likely((values[5] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_c_d_d)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[5]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 0, 9, 10, 5); __PYX_ERR(0, 190, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  6:
+        if (likely((values[6] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_c_d_dd)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[6]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 0, 9, 10, 6); __PYX_ERR(0, 190, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  7:
+        if (likely((values[7] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_ob)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[7]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 0, 9, 10, 7); __PYX_ERR(0, 190, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  8:
+        if (likely((values[8] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_target_speed)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[8]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+        else {
+          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 0, 9, 10, 8); __PYX_ERR(0, 190, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  9:
+        if (kw_args > 0) {
+          PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_debug_mode);
+          if (value) { values[9] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        const Py_ssize_t kwd_pos_args = __pyx_nargs;
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "frenet_optimal_planning") < 0)) __PYX_ERR(0, 190, __pyx_L3_error)
+      }
+    } else {
+      switch (__pyx_nargs) {
+        case 10: values[9] = __Pyx_Arg_FASTCALL(__pyx_args, 9);
+        CYTHON_FALLTHROUGH;
+        case  9: values[8] = __Pyx_Arg_FASTCALL(__pyx_args, 8);
+        values[7] = __Pyx_Arg_FASTCALL(__pyx_args, 7);
+        values[6] = __Pyx_Arg_FASTCALL(__pyx_args, 6);
+        values[5] = __Pyx_Arg_FASTCALL(__pyx_args, 5);
+        values[4] = __Pyx_Arg_FASTCALL(__pyx_args, 4);
+        values[3] = __Pyx_Arg_FASTCALL(__pyx_args, 3);
+        values[2] = __Pyx_Arg_FASTCALL(__pyx_args, 2);
+        values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
+        values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+        break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+    }
+    __pyx_v_csp = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)values[0]);
+    __pyx_v_s0 = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_s0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+    __pyx_v_c_speed = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_c_speed == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+    __pyx_v_c_accel = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_c_accel == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+    __pyx_v_c_d = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_c_d == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+    __pyx_v_c_d_d = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_c_d_d == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+    __pyx_v_c_d_dd = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_c_d_dd == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+    __pyx_v_ob = ((PyArrayObject *)values[7]);
+    __pyx_v_target_speed = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_target_speed == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+    if (values[9]) {
+      __pyx_v_debug_mode = __Pyx_PyObject_IsTrue(values[9]); if (unlikely((__pyx_v_debug_mode == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+    } else {
+      __pyx_v_debug_mode = ((int)((int)0));
+    }
+  }
+  goto __pyx_L6_skip;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 0, 9, 10, __pyx_nargs); __PYX_ERR(0, 190, __pyx_L3_error)
+  __pyx_L6_skip:;
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_AddTraceback("FrenetOptimalTrajectory.frenet_optimal_trajectory.frenet_optimal_planning", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_csp), __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D, 1, "csp", 0))) __PYX_ERR(0, 190, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ob), __pyx_ptype_5numpy_ndarray, 1, "ob", 0))) __PYX_ERR(0, 190, __pyx_L1_error)
+  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_4frenet_optimal_planning(__pyx_self, __pyx_v_csp, __pyx_v_s0, __pyx_v_c_speed, __pyx_v_c_accel, __pyx_v_c_d, __pyx_v_c_d_d, __pyx_v_c_d_dd, __pyx_v_ob, __pyx_v_target_speed, __pyx_v_debug_mode);
+
+  /* function exit code */
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __pyx_r = NULL;
+  __pyx_L0:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_23frenet_optimal_planning_2generator4(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
+
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":196
+ * 
+ *     # Determine the largest available time frame among valid paths
+ *     max_time_frame = max(fp.t[-1] for fp in valid_fplist)             # <<<<<<<<<<<<<<
+ * 
+ *     # Filter the valid paths to include only those with the largest time frame
+ */
+
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_23frenet_optimal_planning_genexpr(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_genexpr_arg_0) {
+  struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr *__pyx_cur_scope;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("genexpr", 0);
+  __pyx_cur_scope = (struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr *)__pyx_tp_new_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr, __pyx_empty_tuple, NULL);
+  if (unlikely(!__pyx_cur_scope)) {
+    __pyx_cur_scope = ((struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr *)Py_None);
+    __Pyx_INCREF(Py_None);
+    __PYX_ERR(0, 196, __pyx_L1_error)
+  } else {
+    __Pyx_GOTREF((PyObject *)__pyx_cur_scope);
+  }
+  __pyx_cur_scope->__pyx_genexpr_arg_0 = __pyx_genexpr_arg_0;
+  __Pyx_INCREF(__pyx_cur_scope->__pyx_genexpr_arg_0);
+  __Pyx_GIVEREF(__pyx_cur_scope->__pyx_genexpr_arg_0);
+  {
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_23frenet_optimal_planning_2generator4, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_frenet_optimal_planning_locals_g, __pyx_n_s_FrenetOptimalTrajectory_frenet_o); if (unlikely(!gen)) __PYX_ERR(0, 196, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_cur_scope);
+    __Pyx_RefNannyFinishContext();
+    return (PyObject *) gen;
+  }
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_AddTraceback("FrenetOptimalTrajectory.frenet_optimal_trajectory.frenet_optimal_planning.genexpr", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __Pyx_DECREF((PyObject *)__pyx_cur_scope);
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_23frenet_optimal_planning_2generator4(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value) /* generator body */
+{
+  struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr *__pyx_cur_scope = ((struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr *)__pyx_generator->closure);
+  PyObject *__pyx_r = NULL;
+  PyObject *__pyx_t_1 = NULL;
+  Py_ssize_t __pyx_t_2;
+  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("genexpr", 0);
+  switch (__pyx_generator->resume_label) {
+    case 0: goto __pyx_L3_first_run;
+    case 1: goto __pyx_L6_resume_from_yield;
+    default: /* CPython raises the right error here */
+    __Pyx_RefNannyFinishContext();
+    return NULL;
+  }
+  __pyx_L3_first_run:;
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 196, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_genexpr_arg_0)) { __Pyx_RaiseUnboundLocalError(".0"); __PYX_ERR(0, 196, __pyx_L1_error) }
+  if (unlikely(__pyx_cur_scope->__pyx_genexpr_arg_0 == Py_None)) {
+    PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
+    __PYX_ERR(0, 196, __pyx_L1_error)
+  }
+  __pyx_t_1 = __pyx_cur_scope->__pyx_genexpr_arg_0; __Pyx_INCREF(__pyx_t_1);
+  __pyx_t_2 = 0;
+  for (;;) {
+    {
+      Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
+      #if !CYTHON_ASSUME_SAFE_MACROS
+      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 196, __pyx_L1_error)
+      #endif
+      if (__pyx_t_2 >= __pyx_temp) break;
+    }
+    #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 196, __pyx_L1_error)
+    #else
+    __pyx_t_3 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 196, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    #endif
+    __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_fp);
+    __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_fp, __pyx_t_3);
+    __Pyx_GIVEREF(__pyx_t_3);
+    __pyx_t_3 = 0;
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_fp, __pyx_n_s_t); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 196, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_3, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 196, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_r = __pyx_t_4;
+    __pyx_t_4 = 0;
+    __Pyx_XGIVEREF(__pyx_t_1);
+    __pyx_cur_scope->__pyx_t_0 = __pyx_t_1;
+    __pyx_cur_scope->__pyx_t_1 = __pyx_t_2;
+    __Pyx_XGIVEREF(__pyx_r);
+    __Pyx_RefNannyFinishContext();
+    __Pyx_Coroutine_ResetAndClearException(__pyx_generator);
+    /* return from generator, yielding value */
+    __pyx_generator->resume_label = 1;
+    return __pyx_r;
+    __pyx_L6_resume_from_yield:;
+    __pyx_t_1 = __pyx_cur_scope->__pyx_t_0;
+    __pyx_cur_scope->__pyx_t_0 = 0;
+    __Pyx_XGOTREF(__pyx_t_1);
+    __pyx_t_2 = __pyx_cur_scope->__pyx_t_1;
+    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 196, __pyx_L1_error)
+  }
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
+
+  /* function exit code */
+  PyErr_SetNone(PyExc_StopIteration);
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_Generator_Replace_StopIteration(0);
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_AddTraceback("genexpr", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_L0:;
+  __Pyx_XDECREF(__pyx_r); __pyx_r = 0;
+  #if !CYTHON_USE_EXC_INFO_STACK
+  __Pyx_Coroutine_ResetAndClearException(__pyx_generator);
+  #endif
+  __pyx_generator->resume_label = -1;
+  __Pyx_Coroutine_clear((PyObject*)__pyx_generator);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":190
+ *     return rx, ry, ryaw, rk, csp
+ * 
+ * def frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed, bint debug_mode=False):             # <<<<<<<<<<<<<<
+ *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, target_speed)
+ *     fplist = calc_global_paths(fplist, csp)
+ */
+
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_4frenet_optimal_planning(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp, double __pyx_v_s0, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, PyArrayObject *__pyx_v_ob, double __pyx_v_target_speed, int __pyx_v_debug_mode) {
   PyObject *__pyx_v_fplist = NULL;
+  PyObject *__pyx_v_valid_fplist = NULL;
+  PyObject *__pyx_v_max_time_frame = NULL;
+  PyObject *__pyx_v_max_time_frame_paths = NULL;
   PyObject *__pyx_v_min_cost = NULL;
   PyObject *__pyx_v_best_path = NULL;
   PyObject *__pyx_v_fp = NULL;
+  PyObject *__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_23frenet_optimal_planning_2generator4 = 0;
+  PyObject *__pyx_9genexpr18__pyx_v_fp = NULL;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_ob;
   __Pyx_Buffer __pyx_pybuffer_ob;
-  struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *__pyx_r = NULL;
+  PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
@@ -29202,9 +29574,9 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
   PyObject *__pyx_t_9 = NULL;
   PyObject *__pyx_t_10 = NULL;
   int __pyx_t_11;
-  double __pyx_t_12;
-  Py_ssize_t __pyx_t_13;
-  int __pyx_t_14;
+  Py_ssize_t __pyx_t_12;
+  int __pyx_t_13;
+  double __pyx_t_14;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -29221,10 +29593,10 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":191
  * 
- * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed):
+ * def frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed, bint debug_mode=False):
  *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, target_speed)             # <<<<<<<<<<<<<<
  *     fplist = calc_global_paths(fplist, csp)
- *     fplist = check_paths(fplist, ob)
+ *     valid_fplist = check_paths(fplist, ob)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_calc_frenet_paths); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -29275,10 +29647,10 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
   __pyx_t_1 = 0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":192
- * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed):
+ * def frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed, bint debug_mode=False):
  *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, target_speed)
  *     fplist = calc_global_paths(fplist, csp)             # <<<<<<<<<<<<<<
- *     fplist = check_paths(fplist, ob)
+ *     valid_fplist = check_paths(fplist, ob)
  * 
  */
   if (!(likely(PyList_CheckExact(__pyx_v_fplist))||((__pyx_v_fplist) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_v_fplist))) __PYX_ERR(0, 192, __pyx_L1_error)
@@ -29290,142 +29662,632 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":193
  *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, target_speed)
  *     fplist = calc_global_paths(fplist, csp)
- *     fplist = check_paths(fplist, ob)             # <<<<<<<<<<<<<<
+ *     valid_fplist = check_paths(fplist, ob)             # <<<<<<<<<<<<<<
  * 
- *     # find minimum cost path
+ *     # Determine the largest available time frame among valid paths
  */
   if (!(likely(PyList_CheckExact(__pyx_v_fplist))||((__pyx_v_fplist) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_v_fplist))) __PYX_ERR(0, 193, __pyx_L1_error)
   __pyx_t_1 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_check_paths(((PyObject*)__pyx_v_fplist), ((PyArrayObject *)__pyx_v_ob)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 193, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF_SET(__pyx_v_fplist, __pyx_t_1);
+  __pyx_v_valid_fplist = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":196
  * 
- *     # find minimum cost path
+ *     # Determine the largest available time frame among valid paths
+ *     max_time_frame = max(fp.t[-1] for fp in valid_fplist)             # <<<<<<<<<<<<<<
+ * 
+ *     # Filter the valid paths to include only those with the largest time frame
+ */
+  __pyx_t_1 = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_23frenet_optimal_planning_genexpr(NULL, __pyx_v_valid_fplist); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 196, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_max, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 196, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_max_time_frame = __pyx_t_2;
+  __pyx_t_2 = 0;
+
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":199
+ * 
+ *     # Filter the valid paths to include only those with the largest time frame
+ *     max_time_frame_paths = [fp for fp in valid_fplist if fp.t[-1] == max_time_frame]             # <<<<<<<<<<<<<<
+ * 
+ *     # find minimum cost path from the filtered list
+ */
+  { /* enter inner scope */
+    __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L5_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    if (unlikely(__pyx_v_valid_fplist == Py_None)) {
+      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
+      __PYX_ERR(0, 199, __pyx_L5_error)
+    }
+    __pyx_t_1 = __pyx_v_valid_fplist; __Pyx_INCREF(__pyx_t_1);
+    __pyx_t_12 = 0;
+    for (;;) {
+      {
+        Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
+        #if !CYTHON_ASSUME_SAFE_MACROS
+        if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 199, __pyx_L5_error)
+        #endif
+        if (__pyx_t_12 >= __pyx_temp) break;
+      }
+      #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+      __pyx_t_9 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_12); __Pyx_INCREF(__pyx_t_9); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 199, __pyx_L5_error)
+      #else
+      __pyx_t_9 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 199, __pyx_L5_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      #endif
+      __Pyx_XDECREF_SET(__pyx_9genexpr18__pyx_v_fp, __pyx_t_9);
+      __pyx_t_9 = 0;
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_9genexpr18__pyx_v_fp, __pyx_n_s_t); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 199, __pyx_L5_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      __pyx_t_8 = __Pyx_GetItemInt(__pyx_t_9, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 199, __pyx_L5_error)
+      __Pyx_GOTREF(__pyx_t_8);
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+      __pyx_t_9 = PyObject_RichCompare(__pyx_t_8, __pyx_v_max_time_frame, Py_EQ); __Pyx_XGOTREF(__pyx_t_9); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 199, __pyx_L5_error)
+      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+      __pyx_t_13 = __Pyx_PyObject_IsTrue(__pyx_t_9); if (unlikely((__pyx_t_13 < 0))) __PYX_ERR(0, 199, __pyx_L5_error)
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+      if (__pyx_t_13) {
+        if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_9genexpr18__pyx_v_fp))) __PYX_ERR(0, 199, __pyx_L5_error)
+      }
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_XDECREF(__pyx_9genexpr18__pyx_v_fp); __pyx_9genexpr18__pyx_v_fp = 0;
+    goto __pyx_L10_exit_scope;
+    __pyx_L5_error:;
+    __Pyx_XDECREF(__pyx_9genexpr18__pyx_v_fp); __pyx_9genexpr18__pyx_v_fp = 0;
+    goto __pyx_L1_error;
+    __pyx_L10_exit_scope:;
+  } /* exit inner scope */
+  __pyx_v_max_time_frame_paths = ((PyObject*)__pyx_t_2);
+  __pyx_t_2 = 0;
+
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":202
+ * 
+ *     # find minimum cost path from the filtered list
  *     min_cost = float("inf")             # <<<<<<<<<<<<<<
  *     best_path = None
- *     for fp in fplist:
+ *     for fp in max_time_frame_paths:
  */
-  __pyx_t_12 = __Pyx_PyUnicode_AsDouble(__pyx_n_u_inf); if (unlikely(__pyx_t_12 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L1_error)
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_t_12); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 196, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_v_min_cost = __pyx_t_1;
-  __pyx_t_1 = 0;
+  __pyx_t_14 = __Pyx_PyUnicode_AsDouble(__pyx_n_u_inf); if (unlikely(__pyx_t_14 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_v_min_cost = __pyx_t_2;
+  __pyx_t_2 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":197
- *     # find minimum cost path
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":203
+ *     # find minimum cost path from the filtered list
  *     min_cost = float("inf")
  *     best_path = None             # <<<<<<<<<<<<<<
- *     for fp in fplist:
+ *     for fp in max_time_frame_paths:
  *         if min_cost >= fp.cf:
  */
   __Pyx_INCREF(Py_None);
   __pyx_v_best_path = Py_None;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":198
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":204
  *     min_cost = float("inf")
  *     best_path = None
- *     for fp in fplist:             # <<<<<<<<<<<<<<
+ *     for fp in max_time_frame_paths:             # <<<<<<<<<<<<<<
  *         if min_cost >= fp.cf:
  *             min_cost = fp.cf
  */
-  if (unlikely(__pyx_v_fplist == Py_None)) {
-    PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 198, __pyx_L1_error)
-  }
-  __pyx_t_1 = __pyx_v_fplist; __Pyx_INCREF(__pyx_t_1);
-  __pyx_t_13 = 0;
+  __pyx_t_2 = __pyx_v_max_time_frame_paths; __Pyx_INCREF(__pyx_t_2);
+  __pyx_t_12 = 0;
   for (;;) {
     {
-      Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
+      Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_2);
       #if !CYTHON_ASSUME_SAFE_MACROS
-      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 198, __pyx_L1_error)
+      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 204, __pyx_L1_error)
       #endif
-      if (__pyx_t_13 >= __pyx_temp) break;
+      if (__pyx_t_12 >= __pyx_temp) break;
     }
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_13); __Pyx_INCREF(__pyx_t_2); __pyx_t_13++; if (unlikely((0 < 0))) __PYX_ERR(0, 198, __pyx_L1_error)
+    __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_12); __Pyx_INCREF(__pyx_t_1); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 204, __pyx_L1_error)
     #else
-    __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_13); __pyx_t_13++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 198, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     #endif
-    __Pyx_XDECREF_SET(__pyx_v_fp, __pyx_t_2);
-    __pyx_t_2 = 0;
+    __Pyx_XDECREF_SET(__pyx_v_fp, __pyx_t_1);
+    __pyx_t_1 = 0;
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":199
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":205
  *     best_path = None
- *     for fp in fplist:
+ *     for fp in max_time_frame_paths:
  *         if min_cost >= fp.cf:             # <<<<<<<<<<<<<<
  *             min_cost = fp.cf
  *             best_path = fp
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_fp, __pyx_n_s_cf); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_9 = PyObject_RichCompare(__pyx_v_min_cost, __pyx_t_2, Py_GE); __Pyx_XGOTREF(__pyx_t_9); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 199, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_9); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 199, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_fp, __pyx_n_s_cf); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_9 = PyObject_RichCompare(__pyx_v_min_cost, __pyx_t_1, Py_GE); __Pyx_XGOTREF(__pyx_t_9); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 205, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_13 = __Pyx_PyObject_IsTrue(__pyx_t_9); if (unlikely((__pyx_t_13 < 0))) __PYX_ERR(0, 205, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-    if (__pyx_t_14) {
+    if (__pyx_t_13) {
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":200
- *     for fp in fplist:
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":206
+ *     for fp in max_time_frame_paths:
  *         if min_cost >= fp.cf:
  *             min_cost = fp.cf             # <<<<<<<<<<<<<<
  *             best_path = fp
  * 
  */
-      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_fp, __pyx_n_s_cf); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 200, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_fp, __pyx_n_s_cf); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 206, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF_SET(__pyx_v_min_cost, __pyx_t_9);
       __pyx_t_9 = 0;
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":201
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":207
  *         if min_cost >= fp.cf:
  *             min_cost = fp.cf
  *             best_path = fp             # <<<<<<<<<<<<<<
  * 
- *     return best_path
+ *     if debug_mode:
  */
       __Pyx_INCREF(__pyx_v_fp);
       __Pyx_DECREF_SET(__pyx_v_best_path, __pyx_v_fp);
 
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":199
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":205
  *     best_path = None
- *     for fp in fplist:
+ *     for fp in max_time_frame_paths:
  *         if min_cost >= fp.cf:             # <<<<<<<<<<<<<<
  *             min_cost = fp.cf
  *             best_path = fp
  */
     }
 
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":198
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":204
  *     min_cost = float("inf")
  *     best_path = None
- *     for fp in fplist:             # <<<<<<<<<<<<<<
+ *     for fp in max_time_frame_paths:             # <<<<<<<<<<<<<<
  *         if min_cost >= fp.cf:
  *             min_cost = fp.cf
  */
   }
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":203
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":209
  *             best_path = fp
  * 
- *     return best_path             # <<<<<<<<<<<<<<
- * 
- * def main():
+ *     if debug_mode:             # <<<<<<<<<<<<<<
+ *         plt.figure(figsize=(10, 10))
+ *         for fp in valid_fplist:
  */
-  __Pyx_XDECREF((PyObject *)__pyx_r);
-  if (!(likely(((__pyx_v_best_path) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_best_path, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath))))) __PYX_ERR(0, 203, __pyx_L1_error)
+  if (__pyx_v_debug_mode) {
+
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":210
+ * 
+ *     if debug_mode:
+ *         plt.figure(figsize=(10, 10))             # <<<<<<<<<<<<<<
+ *         for fp in valid_fplist:
+ *             plt.plot(fp.s, fp.d, '-r', alpha=0.3)
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 210, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_figure); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 210, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_9);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 210, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_figsize, __pyx_tuple__11) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 210, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":211
+ *     if debug_mode:
+ *         plt.figure(figsize=(10, 10))
+ *         for fp in valid_fplist:             # <<<<<<<<<<<<<<
+ *             plt.plot(fp.s, fp.d, '-r', alpha=0.3)
+ *         if best_path:
+ */
+    if (unlikely(__pyx_v_valid_fplist == Py_None)) {
+      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
+      __PYX_ERR(0, 211, __pyx_L1_error)
+    }
+    __pyx_t_1 = __pyx_v_valid_fplist; __Pyx_INCREF(__pyx_t_1);
+    __pyx_t_12 = 0;
+    for (;;) {
+      {
+        Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
+        #if !CYTHON_ASSUME_SAFE_MACROS
+        if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 211, __pyx_L1_error)
+        #endif
+        if (__pyx_t_12 >= __pyx_temp) break;
+      }
+      #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+      __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_12); __Pyx_INCREF(__pyx_t_2); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 211, __pyx_L1_error)
+      #else
+      __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 211, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      #endif
+      __Pyx_XDECREF_SET(__pyx_v_fp, __pyx_t_2);
+      __pyx_t_2 = 0;
+
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":212
+ *         plt.figure(figsize=(10, 10))
+ *         for fp in valid_fplist:
+ *             plt.plot(fp.s, fp.d, '-r', alpha=0.3)             # <<<<<<<<<<<<<<
+ *         if best_path:
+ *             plt.plot(best_path.s, best_path.d, '-g', linewidth=2, label="Best Path")
+ */
+      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 212, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_plot); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 212, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_fp, __pyx_n_s_s); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 212, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_fp, __pyx_n_s_d); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 212, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_8);
+      __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 212, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __Pyx_GIVEREF(__pyx_t_2);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_2)) __PYX_ERR(0, 212, __pyx_L1_error);
+      __Pyx_GIVEREF(__pyx_t_8);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_7, 1, __pyx_t_8)) __PYX_ERR(0, 212, __pyx_L1_error);
+      __Pyx_INCREF(__pyx_kp_u_r);
+      __Pyx_GIVEREF(__pyx_kp_u_r);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_7, 2, __pyx_kp_u_r)) __PYX_ERR(0, 212, __pyx_L1_error);
+      __pyx_t_2 = 0;
+      __pyx_t_8 = 0;
+      __pyx_t_8 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 212, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_8);
+      if (PyDict_SetItem(__pyx_t_8, __pyx_n_s_alpha, __pyx_float_0_3) < 0) __PYX_ERR(0, 212, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 212, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":211
+ *     if debug_mode:
+ *         plt.figure(figsize=(10, 10))
+ *         for fp in valid_fplist:             # <<<<<<<<<<<<<<
+ *             plt.plot(fp.s, fp.d, '-r', alpha=0.3)
+ *         if best_path:
+ */
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":213
+ *         for fp in valid_fplist:
+ *             plt.plot(fp.s, fp.d, '-r', alpha=0.3)
+ *         if best_path:             # <<<<<<<<<<<<<<
+ *             plt.plot(best_path.s, best_path.d, '-g', linewidth=2, label="Best Path")
+ *         plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")
+ */
+    __pyx_t_13 = __Pyx_PyObject_IsTrue(__pyx_v_best_path); if (unlikely((__pyx_t_13 < 0))) __PYX_ERR(0, 213, __pyx_L1_error)
+    if (__pyx_t_13) {
+
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":214
+ *             plt.plot(fp.s, fp.d, '-r', alpha=0.3)
+ *         if best_path:
+ *             plt.plot(best_path.s, best_path.d, '-g', linewidth=2, label="Best Path")             # <<<<<<<<<<<<<<
+ *         plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")
+ *         plt.xlabel('s [m]')
+ */
+      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 214, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_plot); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 214, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_best_path, __pyx_n_s_s); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 214, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_best_path, __pyx_n_s_d); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 214, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_8);
+      __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 214, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __Pyx_GIVEREF(__pyx_t_1);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_1)) __PYX_ERR(0, 214, __pyx_L1_error);
+      __Pyx_GIVEREF(__pyx_t_8);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_7, 1, __pyx_t_8)) __PYX_ERR(0, 214, __pyx_L1_error);
+      __Pyx_INCREF(__pyx_kp_u_g);
+      __Pyx_GIVEREF(__pyx_kp_u_g);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_7, 2, __pyx_kp_u_g)) __PYX_ERR(0, 214, __pyx_L1_error);
+      __pyx_t_1 = 0;
+      __pyx_t_8 = 0;
+      __pyx_t_8 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 214, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_8);
+      if (PyDict_SetItem(__pyx_t_8, __pyx_n_s_linewidth, __pyx_int_2) < 0) __PYX_ERR(0, 214, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_8, __pyx_n_s_label, __pyx_kp_u_Best_Path) < 0) __PYX_ERR(0, 214, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 214, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":213
+ *         for fp in valid_fplist:
+ *             plt.plot(fp.s, fp.d, '-r', alpha=0.3)
+ *         if best_path:             # <<<<<<<<<<<<<<
+ *             plt.plot(best_path.s, best_path.d, '-g', linewidth=2, label="Best Path")
+ *         plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")
+ */
+    }
+
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":215
+ *         if best_path:
+ *             plt.plot(best_path.s, best_path.d, '-g', linewidth=2, label="Best Path")
+ *         plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")             # <<<<<<<<<<<<<<
+ *         plt.xlabel('s [m]')
+ *         plt.ylabel('d [m]')
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_plt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_plot); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_ob), __pyx_tuple__12); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_ob), __pyx_tuple__13); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_1);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1)) __PYX_ERR(0, 215, __pyx_L1_error);
+    __Pyx_GIVEREF(__pyx_t_7);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_7)) __PYX_ERR(0, 215, __pyx_L1_error);
+    __Pyx_INCREF(__pyx_n_u_xk);
+    __Pyx_GIVEREF(__pyx_n_u_xk);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 2, __pyx_n_u_xk)) __PYX_ERR(0, 215, __pyx_L1_error);
+    __pyx_t_1 = 0;
+    __pyx_t_7 = 0;
+    __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_label, __pyx_n_u_Obstacles) < 0) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_2, __pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":216
+ *             plt.plot(best_path.s, best_path.d, '-g', linewidth=2, label="Best Path")
+ *         plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")
+ *         plt.xlabel('s [m]')             # <<<<<<<<<<<<<<
+ *         plt.ylabel('d [m]')
+ *         plt.title('Frenet Paths')
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_plt); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 216, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_xlabel); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 216, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    __pyx_t_7 = NULL;
+    __pyx_t_11 = 0;
+    #if CYTHON_UNPACK_METHODS
+    if (unlikely(PyMethod_Check(__pyx_t_2))) {
+      __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_2);
+      if (likely(__pyx_t_7)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_7);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_2, function);
+        __pyx_t_11 = 1;
+      }
+    }
+    #endif
+    {
+      PyObject *__pyx_callargs[2] = {__pyx_t_7, __pyx_kp_u_s_m};
+      __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_11, 1+__pyx_t_11);
+      __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 216, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":217
+ *         plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")
+ *         plt.xlabel('s [m]')
+ *         plt.ylabel('d [m]')             # <<<<<<<<<<<<<<
+ *         plt.title('Frenet Paths')
+ *         plt.legend()
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 217, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_ylabel); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 217, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = NULL;
+    __pyx_t_11 = 0;
+    #if CYTHON_UNPACK_METHODS
+    if (unlikely(PyMethod_Check(__pyx_t_7))) {
+      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_7);
+      if (likely(__pyx_t_2)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_7);
+        __Pyx_INCREF(__pyx_t_2);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_7, function);
+        __pyx_t_11 = 1;
+      }
+    }
+    #endif
+    {
+      PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_kp_u_d_m};
+      __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_7, __pyx_callargs+1-__pyx_t_11, 1+__pyx_t_11);
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 217, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":218
+ *         plt.xlabel('s [m]')
+ *         plt.ylabel('d [m]')
+ *         plt.title('Frenet Paths')             # <<<<<<<<<<<<<<
+ *         plt.legend()
+ *         plt.grid(True)
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_plt); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 218, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_title); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    __pyx_t_7 = NULL;
+    __pyx_t_11 = 0;
+    #if CYTHON_UNPACK_METHODS
+    if (unlikely(PyMethod_Check(__pyx_t_2))) {
+      __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_2);
+      if (likely(__pyx_t_7)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_7);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_2, function);
+        __pyx_t_11 = 1;
+      }
+    }
+    #endif
+    {
+      PyObject *__pyx_callargs[2] = {__pyx_t_7, __pyx_kp_u_Frenet_Paths};
+      __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_11, 1+__pyx_t_11);
+      __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 218, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":219
+ *         plt.ylabel('d [m]')
+ *         plt.title('Frenet Paths')
+ *         plt.legend()             # <<<<<<<<<<<<<<
+ *         plt.grid(True)
+ *         plt.show()
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 219, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_legend); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 219, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = NULL;
+    __pyx_t_11 = 0;
+    #if CYTHON_UNPACK_METHODS
+    if (unlikely(PyMethod_Check(__pyx_t_7))) {
+      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_7);
+      if (likely(__pyx_t_2)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_7);
+        __Pyx_INCREF(__pyx_t_2);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_7, function);
+        __pyx_t_11 = 1;
+      }
+    }
+    #endif
+    {
+      PyObject *__pyx_callargs[2] = {__pyx_t_2, NULL};
+      __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_7, __pyx_callargs+1-__pyx_t_11, 0+__pyx_t_11);
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 219, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":220
+ *         plt.title('Frenet Paths')
+ *         plt.legend()
+ *         plt.grid(True)             # <<<<<<<<<<<<<<
+ *         plt.show()
+ * 
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_plt); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 220, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_grid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 220, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    __pyx_t_7 = NULL;
+    __pyx_t_11 = 0;
+    #if CYTHON_UNPACK_METHODS
+    if (unlikely(PyMethod_Check(__pyx_t_2))) {
+      __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_2);
+      if (likely(__pyx_t_7)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_7);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_2, function);
+        __pyx_t_11 = 1;
+      }
+    }
+    #endif
+    {
+      PyObject *__pyx_callargs[2] = {__pyx_t_7, Py_True};
+      __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_11, 1+__pyx_t_11);
+      __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 220, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":221
+ *         plt.legend()
+ *         plt.grid(True)
+ *         plt.show()             # <<<<<<<<<<<<<<
+ * 
+ *     return best_path
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 221, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_show); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 221, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = NULL;
+    __pyx_t_11 = 0;
+    #if CYTHON_UNPACK_METHODS
+    if (unlikely(PyMethod_Check(__pyx_t_7))) {
+      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_7);
+      if (likely(__pyx_t_2)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_7);
+        __Pyx_INCREF(__pyx_t_2);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_7, function);
+        __pyx_t_11 = 1;
+      }
+    }
+    #endif
+    {
+      PyObject *__pyx_callargs[2] = {__pyx_t_2, NULL};
+      __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_7, __pyx_callargs+1-__pyx_t_11, 0+__pyx_t_11);
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 221, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":209
+ *             best_path = fp
+ * 
+ *     if debug_mode:             # <<<<<<<<<<<<<<
+ *         plt.figure(figsize=(10, 10))
+ *         for fp in valid_fplist:
+ */
+  }
+
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":223
+ *         plt.show()
+ * 
+ *     return best_path             # <<<<<<<<<<<<<<
+ */
+  __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_best_path);
-  __pyx_r = ((struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *)__pyx_v_best_path);
+  __pyx_r = __pyx_v_best_path;
   goto __pyx_L0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":190
  *     return rx, ry, ryaw, rk, csp
  * 
- * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed):             # <<<<<<<<<<<<<<
+ * def frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed, bint debug_mode=False):             # <<<<<<<<<<<<<<
  *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, target_speed)
  *     fplist = calc_global_paths(fplist, csp)
  */
@@ -29449,1498 +30311,20 @@ static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_Fr
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ob.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
   __Pyx_AddTraceback("FrenetOptimalTrajectory.frenet_optimal_trajectory.frenet_optimal_planning", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = 0;
+  __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ob.rcbuffer->pybuffer);
   __pyx_L2:;
   __Pyx_XDECREF(__pyx_v_fplist);
+  __Pyx_XDECREF(__pyx_v_valid_fplist);
+  __Pyx_XDECREF(__pyx_v_max_time_frame);
+  __Pyx_XDECREF(__pyx_v_max_time_frame_paths);
   __Pyx_XDECREF(__pyx_v_min_cost);
   __Pyx_XDECREF(__pyx_v_best_path);
   __Pyx_XDECREF(__pyx_v_fp);
-  __Pyx_XGIVEREF((PyObject *)__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* Python wrapper */
-static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5frenet_optimal_planning(PyObject *__pyx_self, 
-#if CYTHON_METH_FASTCALL
-PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
-#else
-PyObject *__pyx_args, PyObject *__pyx_kwds
-#endif
-); /*proto*/
-static PyMethodDef __pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5frenet_optimal_planning = {"frenet_optimal_planning", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5frenet_optimal_planning, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5frenet_optimal_planning(PyObject *__pyx_self, 
-#if CYTHON_METH_FASTCALL
-PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
-#else
-PyObject *__pyx_args, PyObject *__pyx_kwds
-#endif
-) {
-  struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp = 0;
-  double __pyx_v_s0;
-  double __pyx_v_c_speed;
-  double __pyx_v_c_accel;
-  double __pyx_v_c_d;
-  double __pyx_v_c_d_d;
-  double __pyx_v_c_d_dd;
-  PyArrayObject *__pyx_v_ob = 0;
-  double __pyx_v_target_speed;
-  #if !CYTHON_METH_FASTCALL
-  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
-  #endif
-  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
-  PyObject* values[9] = {0,0,0,0,0,0,0,0,0};
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("frenet_optimal_planning (wrapper)", 0);
-  #if !CYTHON_METH_FASTCALL
-  #if CYTHON_ASSUME_SAFE_MACROS
-  __pyx_nargs = PyTuple_GET_SIZE(__pyx_args);
-  #else
-  __pyx_nargs = PyTuple_Size(__pyx_args); if (unlikely(__pyx_nargs < 0)) return NULL;
-  #endif
-  #endif
-  __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
-  {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_csp,&__pyx_n_s_s0,&__pyx_n_s_c_speed,&__pyx_n_s_c_accel,&__pyx_n_s_c_d,&__pyx_n_s_c_d_d,&__pyx_n_s_c_d_dd,&__pyx_n_s_ob,&__pyx_n_s_target_speed,0};
-    if (__pyx_kwds) {
-      Py_ssize_t kw_args;
-      switch (__pyx_nargs) {
-        case  9: values[8] = __Pyx_Arg_FASTCALL(__pyx_args, 8);
-        CYTHON_FALLTHROUGH;
-        case  8: values[7] = __Pyx_Arg_FASTCALL(__pyx_args, 7);
-        CYTHON_FALLTHROUGH;
-        case  7: values[6] = __Pyx_Arg_FASTCALL(__pyx_args, 6);
-        CYTHON_FALLTHROUGH;
-        case  6: values[5] = __Pyx_Arg_FASTCALL(__pyx_args, 5);
-        CYTHON_FALLTHROUGH;
-        case  5: values[4] = __Pyx_Arg_FASTCALL(__pyx_args, 4);
-        CYTHON_FALLTHROUGH;
-        case  4: values[3] = __Pyx_Arg_FASTCALL(__pyx_args, 3);
-        CYTHON_FALLTHROUGH;
-        case  3: values[2] = __Pyx_Arg_FASTCALL(__pyx_args, 2);
-        CYTHON_FALLTHROUGH;
-        case  2: values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
-        CYTHON_FALLTHROUGH;
-        case  1: values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
-        CYTHON_FALLTHROUGH;
-        case  0: break;
-        default: goto __pyx_L5_argtuple_error;
-      }
-      kw_args = __Pyx_NumKwargs_FASTCALL(__pyx_kwds);
-      switch (__pyx_nargs) {
-        case  0:
-        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_csp)) != 0)) {
-          (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
-          kw_args--;
-        }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
-        else goto __pyx_L5_argtuple_error;
-        CYTHON_FALLTHROUGH;
-        case  1:
-        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_s0)) != 0)) {
-          (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
-          kw_args--;
-        }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
-        else {
-          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 9, 9, 1); __PYX_ERR(0, 190, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case  2:
-        if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_c_speed)) != 0)) {
-          (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
-          kw_args--;
-        }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
-        else {
-          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 9, 9, 2); __PYX_ERR(0, 190, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case  3:
-        if (likely((values[3] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_c_accel)) != 0)) {
-          (void)__Pyx_Arg_NewRef_FASTCALL(values[3]);
-          kw_args--;
-        }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
-        else {
-          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 9, 9, 3); __PYX_ERR(0, 190, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case  4:
-        if (likely((values[4] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_c_d)) != 0)) {
-          (void)__Pyx_Arg_NewRef_FASTCALL(values[4]);
-          kw_args--;
-        }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
-        else {
-          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 9, 9, 4); __PYX_ERR(0, 190, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case  5:
-        if (likely((values[5] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_c_d_d)) != 0)) {
-          (void)__Pyx_Arg_NewRef_FASTCALL(values[5]);
-          kw_args--;
-        }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
-        else {
-          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 9, 9, 5); __PYX_ERR(0, 190, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case  6:
-        if (likely((values[6] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_c_d_dd)) != 0)) {
-          (void)__Pyx_Arg_NewRef_FASTCALL(values[6]);
-          kw_args--;
-        }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
-        else {
-          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 9, 9, 6); __PYX_ERR(0, 190, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case  7:
-        if (likely((values[7] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_ob)) != 0)) {
-          (void)__Pyx_Arg_NewRef_FASTCALL(values[7]);
-          kw_args--;
-        }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
-        else {
-          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 9, 9, 7); __PYX_ERR(0, 190, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case  8:
-        if (likely((values[8] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_target_speed)) != 0)) {
-          (void)__Pyx_Arg_NewRef_FASTCALL(values[8]);
-          kw_args--;
-        }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
-        else {
-          __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 9, 9, 8); __PYX_ERR(0, 190, __pyx_L3_error)
-        }
-      }
-      if (unlikely(kw_args > 0)) {
-        const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "frenet_optimal_planning") < 0)) __PYX_ERR(0, 190, __pyx_L3_error)
-      }
-    } else if (unlikely(__pyx_nargs != 9)) {
-      goto __pyx_L5_argtuple_error;
-    } else {
-      values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
-      values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
-      values[2] = __Pyx_Arg_FASTCALL(__pyx_args, 2);
-      values[3] = __Pyx_Arg_FASTCALL(__pyx_args, 3);
-      values[4] = __Pyx_Arg_FASTCALL(__pyx_args, 4);
-      values[5] = __Pyx_Arg_FASTCALL(__pyx_args, 5);
-      values[6] = __Pyx_Arg_FASTCALL(__pyx_args, 6);
-      values[7] = __Pyx_Arg_FASTCALL(__pyx_args, 7);
-      values[8] = __Pyx_Arg_FASTCALL(__pyx_args, 8);
-    }
-    __pyx_v_csp = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)values[0]);
-    __pyx_v_s0 = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_s0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
-    __pyx_v_c_speed = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_c_speed == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
-    __pyx_v_c_accel = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_c_accel == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
-    __pyx_v_c_d = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_c_d == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
-    __pyx_v_c_d_d = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_c_d_d == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
-    __pyx_v_c_d_dd = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_c_d_dd == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
-    __pyx_v_ob = ((PyArrayObject *)values[7]);
-    __pyx_v_target_speed = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_target_speed == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
-  }
-  goto __pyx_L6_skip;
-  __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("frenet_optimal_planning", 1, 9, 9, __pyx_nargs); __PYX_ERR(0, 190, __pyx_L3_error)
-  __pyx_L6_skip:;
-  goto __pyx_L4_argument_unpacking_done;
-  __pyx_L3_error:;
-  {
-    Py_ssize_t __pyx_temp;
-    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
-      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
-    }
-  }
-  __Pyx_AddTraceback("FrenetOptimalTrajectory.frenet_optimal_trajectory.frenet_optimal_planning", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __Pyx_RefNannyFinishContext();
-  return NULL;
-  __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_csp), __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D, 1, "csp", 0))) __PYX_ERR(0, 190, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ob), __pyx_ptype_5numpy_ndarray, 1, "ob", 0))) __PYX_ERR(0, 190, __pyx_L1_error)
-  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_4frenet_optimal_planning(__pyx_self, __pyx_v_csp, __pyx_v_s0, __pyx_v_c_speed, __pyx_v_c_accel, __pyx_v_c_d, __pyx_v_c_d_d, __pyx_v_c_d_dd, __pyx_v_ob, __pyx_v_target_speed);
-
-  /* function exit code */
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __pyx_r = NULL;
-  __pyx_L0:;
-  {
-    Py_ssize_t __pyx_temp;
-    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
-      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
-    }
-  }
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_4frenet_optimal_planning(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp, double __pyx_v_s0, double __pyx_v_c_speed, double __pyx_v_c_accel, double __pyx_v_c_d, double __pyx_v_c_d_d, double __pyx_v_c_d_dd, PyArrayObject *__pyx_v_ob, double __pyx_v_target_speed) {
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_ob;
-  __Pyx_Buffer __pyx_pybuffer_ob;
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("frenet_optimal_planning", 1);
-  __pyx_pybuffer_ob.pybuffer.buf = NULL;
-  __pyx_pybuffer_ob.refcount = 0;
-  __pyx_pybuffernd_ob.data = NULL;
-  __pyx_pybuffernd_ob.rcbuffer = &__pyx_pybuffer_ob;
-  {
-    __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ob.rcbuffer->pybuffer, (PyObject*)__pyx_v_ob, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 190, __pyx_L1_error)
-  }
-  __pyx_pybuffernd_ob.diminfo[0].strides = __pyx_pybuffernd_ob.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ob.diminfo[0].shape = __pyx_pybuffernd_ob.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_ob.diminfo[1].strides = __pyx_pybuffernd_ob.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_ob.diminfo[1].shape = __pyx_pybuffernd_ob.rcbuffer->pybuffer.shape[1];
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(__pyx_v_csp, __pyx_v_s0, __pyx_v_c_speed, __pyx_v_c_accel, __pyx_v_c_d, __pyx_v_c_d_d, __pyx_v_c_d_dd, __pyx_v_ob, __pyx_v_target_speed, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 190, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  { PyObject *__pyx_type, *__pyx_value, *__pyx_tb;
-    __Pyx_PyThreadState_declare
-    __Pyx_PyThreadState_assign
-    __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ob.rcbuffer->pybuffer);
-  __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("FrenetOptimalTrajectory.frenet_optimal_trajectory.frenet_optimal_planning", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  goto __pyx_L2;
-  __pyx_L0:;
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ob.rcbuffer->pybuffer);
-  __pyx_L2:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":205
- *     return best_path
- * 
- * def main():             # <<<<<<<<<<<<<<
- *     print(__file__ + " start!!")
- * 
- */
-
-/* Python wrapper */
-static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7main(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7main = {"main", (PyCFunction)__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7main, METH_NOARGS, 0};
-static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7main(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
-  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("main (wrapper)", 0);
-  __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_6main(__pyx_self);
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_6main(CYTHON_UNUSED PyObject *__pyx_self) {
-  PyObject *__pyx_v_wx = 0;
-  PyObject *__pyx_v_wy = 0;
-  PyArrayObject *__pyx_v_ob = 0;
-  double __pyx_v_target_speed;
-  PyObject *__pyx_v_target_course = 0;
-  PyObject *__pyx_v_tx = 0;
-  PyObject *__pyx_v_ty = 0;
-  CYTHON_UNUSED PyObject *__pyx_v_tyaw = 0;
-  CYTHON_UNUSED PyObject *__pyx_v_tc = 0;
-  struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *__pyx_v_csp = 0;
-  double __pyx_v_c_speed;
-  double __pyx_v_c_accel;
-  double __pyx_v_c_d;
-  double __pyx_v_c_d_d;
-  double __pyx_v_c_d_dd;
-  double __pyx_v_s0;
-  double __pyx_v_area;
-  struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *__pyx_v_path = 0;
-  int __pyx_v_i;
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_ob;
-  __Pyx_Buffer __pyx_pybuffer_ob;
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
-  PyObject *__pyx_t_3 = NULL;
-  PyObject *__pyx_t_4 = NULL;
-  PyObject *__pyx_t_5 = NULL;
-  PyObject *__pyx_t_6 = NULL;
-  PyObject *__pyx_t_7 = NULL;
-  PyArrayObject *__pyx_t_8 = NULL;
-  int __pyx_t_9;
-  int __pyx_t_10;
-  int __pyx_t_11;
-  double __pyx_t_12;
-  int __pyx_t_13;
-  int __pyx_t_14;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("main", 1);
-  __pyx_pybuffer_ob.pybuffer.buf = NULL;
-  __pyx_pybuffer_ob.refcount = 0;
-  __pyx_pybuffernd_ob.data = NULL;
-  __pyx_pybuffernd_ob.rcbuffer = &__pyx_pybuffer_ob;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":206
- * 
- * def main():
- *     print(__file__ + " start!!")             # <<<<<<<<<<<<<<
- * 
- *     # Waypoints
- */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_file); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 206, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_u_start_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 206, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 206, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":209
- * 
- *     # Waypoints
- *     cdef list wx = [0.0, 10.0, 20.5, 35.0, 70.5]             # <<<<<<<<<<<<<<
- *     cdef list wy = [0.0, -6.0, 5.0, 6.5, 0.0]
- * 
- */
-  __pyx_t_1 = PyList_New(5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_INCREF(__pyx_float_0_0);
-  __Pyx_GIVEREF(__pyx_float_0_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_float_0_0)) __PYX_ERR(0, 209, __pyx_L1_error);
-  __Pyx_INCREF(__pyx_float_10_0);
-  __Pyx_GIVEREF(__pyx_float_10_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 1, __pyx_float_10_0)) __PYX_ERR(0, 209, __pyx_L1_error);
-  __Pyx_INCREF(__pyx_float_20_5);
-  __Pyx_GIVEREF(__pyx_float_20_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 2, __pyx_float_20_5)) __PYX_ERR(0, 209, __pyx_L1_error);
-  __Pyx_INCREF(__pyx_float_35_0);
-  __Pyx_GIVEREF(__pyx_float_35_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 3, __pyx_float_35_0)) __PYX_ERR(0, 209, __pyx_L1_error);
-  __Pyx_INCREF(__pyx_float_70_5);
-  __Pyx_GIVEREF(__pyx_float_70_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 4, __pyx_float_70_5)) __PYX_ERR(0, 209, __pyx_L1_error);
-  __pyx_v_wx = ((PyObject*)__pyx_t_1);
-  __pyx_t_1 = 0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":210
- *     # Waypoints
- *     cdef list wx = [0.0, 10.0, 20.5, 35.0, 70.5]
- *     cdef list wy = [0.0, -6.0, 5.0, 6.5, 0.0]             # <<<<<<<<<<<<<<
- * 
- *     # Obstacle lists
- */
-  __pyx_t_1 = PyList_New(5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 210, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_INCREF(__pyx_float_0_0);
-  __Pyx_GIVEREF(__pyx_float_0_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_float_0_0)) __PYX_ERR(0, 210, __pyx_L1_error);
-  __Pyx_INCREF(__pyx_float_neg_6_0);
-  __Pyx_GIVEREF(__pyx_float_neg_6_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 1, __pyx_float_neg_6_0)) __PYX_ERR(0, 210, __pyx_L1_error);
-  __Pyx_INCREF(__pyx_float_5_0);
-  __Pyx_GIVEREF(__pyx_float_5_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 2, __pyx_float_5_0)) __PYX_ERR(0, 210, __pyx_L1_error);
-  __Pyx_INCREF(__pyx_float_6_5);
-  __Pyx_GIVEREF(__pyx_float_6_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 3, __pyx_float_6_5)) __PYX_ERR(0, 210, __pyx_L1_error);
-  __Pyx_INCREF(__pyx_float_0_0);
-  __Pyx_GIVEREF(__pyx_float_0_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 4, __pyx_float_0_0)) __PYX_ERR(0, 210, __pyx_L1_error);
-  __pyx_v_wy = ((PyObject*)__pyx_t_1);
-  __pyx_t_1 = 0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":213
- * 
- *     # Obstacle lists
- *     cdef cnp.ndarray[cnp.float64_t, ndim=2] ob = np.array([[20.0, 10.0],             # <<<<<<<<<<<<<<
- *                                                            [30.0, 6.0],
- *                                                            [30.0, 8.0],
- */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 213, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 213, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 213, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_INCREF(__pyx_float_20_0);
-  __Pyx_GIVEREF(__pyx_float_20_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_float_20_0)) __PYX_ERR(0, 213, __pyx_L1_error);
-  __Pyx_INCREF(__pyx_float_10_0);
-  __Pyx_GIVEREF(__pyx_float_10_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 1, __pyx_float_10_0)) __PYX_ERR(0, 213, __pyx_L1_error);
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":214
- *     # Obstacle lists
- *     cdef cnp.ndarray[cnp.float64_t, ndim=2] ob = np.array([[20.0, 10.0],
- *                                                            [30.0, 6.0],             # <<<<<<<<<<<<<<
- *                                                            [30.0, 8.0],
- *                                                            [35.0, 8.0],
- */
-  __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 214, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_float_30_0);
-  __Pyx_GIVEREF(__pyx_float_30_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_3, 0, __pyx_float_30_0)) __PYX_ERR(0, 214, __pyx_L1_error);
-  __Pyx_INCREF(__pyx_float_6_0);
-  __Pyx_GIVEREF(__pyx_float_6_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_3, 1, __pyx_float_6_0)) __PYX_ERR(0, 214, __pyx_L1_error);
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":215
- *     cdef cnp.ndarray[cnp.float64_t, ndim=2] ob = np.array([[20.0, 10.0],
- *                                                            [30.0, 6.0],
- *                                                            [30.0, 8.0],             # <<<<<<<<<<<<<<
- *                                                            [35.0, 8.0],
- *                                                            [50.0, 3.0]], dtype=np.float64)
- */
-  __pyx_t_4 = PyList_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 215, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_INCREF(__pyx_float_30_0);
-  __Pyx_GIVEREF(__pyx_float_30_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 0, __pyx_float_30_0)) __PYX_ERR(0, 215, __pyx_L1_error);
-  __Pyx_INCREF(__pyx_float_8_0);
-  __Pyx_GIVEREF(__pyx_float_8_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 1, __pyx_float_8_0)) __PYX_ERR(0, 215, __pyx_L1_error);
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":216
- *                                                            [30.0, 6.0],
- *                                                            [30.0, 8.0],
- *                                                            [35.0, 8.0],             # <<<<<<<<<<<<<<
- *                                                            [50.0, 3.0]], dtype=np.float64)
- * 
- */
-  __pyx_t_5 = PyList_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 216, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_INCREF(__pyx_float_35_0);
-  __Pyx_GIVEREF(__pyx_float_35_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 0, __pyx_float_35_0)) __PYX_ERR(0, 216, __pyx_L1_error);
-  __Pyx_INCREF(__pyx_float_8_0);
-  __Pyx_GIVEREF(__pyx_float_8_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 1, __pyx_float_8_0)) __PYX_ERR(0, 216, __pyx_L1_error);
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":217
- *                                                            [30.0, 8.0],
- *                                                            [35.0, 8.0],
- *                                                            [50.0, 3.0]], dtype=np.float64)             # <<<<<<<<<<<<<<
- * 
- *     cdef double target_speed = 0.5
- */
-  __pyx_t_6 = PyList_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 217, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_6);
-  __Pyx_INCREF(__pyx_float_50_0);
-  __Pyx_GIVEREF(__pyx_float_50_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_6, 0, __pyx_float_50_0)) __PYX_ERR(0, 217, __pyx_L1_error);
-  __Pyx_INCREF(__pyx_float_3_0);
-  __Pyx_GIVEREF(__pyx_float_3_0);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_6, 1, __pyx_float_3_0)) __PYX_ERR(0, 217, __pyx_L1_error);
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":213
- * 
- *     # Obstacle lists
- *     cdef cnp.ndarray[cnp.float64_t, ndim=2] ob = np.array([[20.0, 10.0],             # <<<<<<<<<<<<<<
- *                                                            [30.0, 6.0],
- *                                                            [30.0, 8.0],
- */
-  __pyx_t_7 = PyList_New(5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 213, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_7);
-  __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 0, __pyx_t_1)) __PYX_ERR(0, 213, __pyx_L1_error);
-  __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 1, __pyx_t_3)) __PYX_ERR(0, 213, __pyx_L1_error);
-  __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 2, __pyx_t_4)) __PYX_ERR(0, 213, __pyx_L1_error);
-  __Pyx_GIVEREF(__pyx_t_5);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 3, __pyx_t_5)) __PYX_ERR(0, 213, __pyx_L1_error);
-  __Pyx_GIVEREF(__pyx_t_6);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 4, __pyx_t_6)) __PYX_ERR(0, 213, __pyx_L1_error);
-  __pyx_t_1 = 0;
-  __pyx_t_3 = 0;
-  __pyx_t_4 = 0;
-  __pyx_t_5 = 0;
-  __pyx_t_6 = 0;
-  __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 213, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_6);
-  __Pyx_GIVEREF(__pyx_t_7);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_7)) __PYX_ERR(0, 213, __pyx_L1_error);
-  __pyx_t_7 = 0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":217
- *                                                            [30.0, 8.0],
- *                                                            [35.0, 8.0],
- *                                                            [50.0, 3.0]], dtype=np.float64)             # <<<<<<<<<<<<<<
- * 
- *     cdef double target_speed = 0.5
- */
-  __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 217, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_7);
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 217, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float64); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 217, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 217, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":213
- * 
- *     # Obstacle lists
- *     cdef cnp.ndarray[cnp.float64_t, ndim=2] ob = np.array([[20.0, 10.0],             # <<<<<<<<<<<<<<
- *                                                            [30.0, 6.0],
- *                                                            [30.0, 8.0],
- */
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 213, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 213, __pyx_L1_error)
-  __pyx_t_8 = ((PyArrayObject *)__pyx_t_4);
-  {
-    __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ob.rcbuffer->pybuffer, (PyObject*)__pyx_t_8, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
-      __pyx_v_ob = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_ob.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 213, __pyx_L1_error)
-    } else {__pyx_pybuffernd_ob.diminfo[0].strides = __pyx_pybuffernd_ob.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ob.diminfo[0].shape = __pyx_pybuffernd_ob.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_ob.diminfo[1].strides = __pyx_pybuffernd_ob.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_ob.diminfo[1].shape = __pyx_pybuffernd_ob.rcbuffer->pybuffer.shape[1];
-    }
-  }
-  __pyx_t_8 = 0;
-  __pyx_v_ob = ((PyArrayObject *)__pyx_t_4);
-  __pyx_t_4 = 0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":219
- *                                                            [50.0, 3.0]], dtype=np.float64)
- * 
- *     cdef double target_speed = 0.5             # <<<<<<<<<<<<<<
- * 
- *     # Generate target course
- */
-  __pyx_v_target_speed = 0.5;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":222
- * 
- *     # Generate target course
- *     cdef tuple target_course = generate_target_course(wx, wy)             # <<<<<<<<<<<<<<
- *     cdef list tx = target_course[0]
- *     cdef list ty = target_course[1]
- */
-  __pyx_t_4 = __pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_generate_target_course(__pyx_v_wx, __pyx_v_wy, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 222, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_v_target_course = ((PyObject*)__pyx_t_4);
-  __pyx_t_4 = 0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":223
- *     # Generate target course
- *     cdef tuple target_course = generate_target_course(wx, wy)
- *     cdef list tx = target_course[0]             # <<<<<<<<<<<<<<
- *     cdef list ty = target_course[1]
- *     cdef list tyaw = target_course[2]
- */
-  if (unlikely(__pyx_v_target_course == Py_None)) {
-    PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 223, __pyx_L1_error)
-  }
-  __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_target_course, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 223, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  if (!(likely(PyList_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_4))) __PYX_ERR(0, 223, __pyx_L1_error)
-  __pyx_v_tx = ((PyObject*)__pyx_t_4);
-  __pyx_t_4 = 0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":224
- *     cdef tuple target_course = generate_target_course(wx, wy)
- *     cdef list tx = target_course[0]
- *     cdef list ty = target_course[1]             # <<<<<<<<<<<<<<
- *     cdef list tyaw = target_course[2]
- *     cdef list tc = target_course[3]
- */
-  if (unlikely(__pyx_v_target_course == Py_None)) {
-    PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 224, __pyx_L1_error)
-  }
-  __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_target_course, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 224, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  if (!(likely(PyList_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_4))) __PYX_ERR(0, 224, __pyx_L1_error)
-  __pyx_v_ty = ((PyObject*)__pyx_t_4);
-  __pyx_t_4 = 0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":225
- *     cdef list tx = target_course[0]
- *     cdef list ty = target_course[1]
- *     cdef list tyaw = target_course[2]             # <<<<<<<<<<<<<<
- *     cdef list tc = target_course[3]
- *     cdef CubicSpline2D csp = target_course[4]
- */
-  if (unlikely(__pyx_v_target_course == Py_None)) {
-    PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 225, __pyx_L1_error)
-  }
-  __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_target_course, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 225, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  if (!(likely(PyList_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_4))) __PYX_ERR(0, 225, __pyx_L1_error)
-  __pyx_v_tyaw = ((PyObject*)__pyx_t_4);
-  __pyx_t_4 = 0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":226
- *     cdef list ty = target_course[1]
- *     cdef list tyaw = target_course[2]
- *     cdef list tc = target_course[3]             # <<<<<<<<<<<<<<
- *     cdef CubicSpline2D csp = target_course[4]
- * 
- */
-  if (unlikely(__pyx_v_target_course == Py_None)) {
-    PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 226, __pyx_L1_error)
-  }
-  __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_target_course, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 226, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  if (!(likely(PyList_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_4))) __PYX_ERR(0, 226, __pyx_L1_error)
-  __pyx_v_tc = ((PyObject*)__pyx_t_4);
-  __pyx_t_4 = 0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":227
- *     cdef list tyaw = target_course[2]
- *     cdef list tc = target_course[3]
- *     cdef CubicSpline2D csp = target_course[4]             # <<<<<<<<<<<<<<
- * 
- *     # Initial state
- */
-  if (unlikely(__pyx_v_target_course == Py_None)) {
-    PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 227, __pyx_L1_error)
-  }
-  __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_target_course, 4, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 227, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_11CubicSpline_20cubic_spline_planner_CubicSpline2D))))) __PYX_ERR(0, 227, __pyx_L1_error)
-  __pyx_v_csp = ((struct __pyx_obj_11CubicSpline_20cubic_spline_planner_CubicSpline2D *)__pyx_t_4);
-  __pyx_t_4 = 0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":230
- * 
- *     # Initial state
- *     cdef double c_speed = 0.01  # current speed [m/s]             # <<<<<<<<<<<<<<
- *     cdef double c_accel = 0.0  # current acceleration [m/ss]
- *     cdef double c_d = 0.0  # current lateral position [m]
- */
-  __pyx_v_c_speed = 0.01;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":231
- *     # Initial state
- *     cdef double c_speed = 0.01  # current speed [m/s]
- *     cdef double c_accel = 0.0  # current acceleration [m/ss]             # <<<<<<<<<<<<<<
- *     cdef double c_d = 0.0  # current lateral position [m]
- *     cdef double c_d_d = 0.0  # current lateral speed [m/s]
- */
-  __pyx_v_c_accel = 0.0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":232
- *     cdef double c_speed = 0.01  # current speed [m/s]
- *     cdef double c_accel = 0.0  # current acceleration [m/ss]
- *     cdef double c_d = 0.0  # current lateral position [m]             # <<<<<<<<<<<<<<
- *     cdef double c_d_d = 0.0  # current lateral speed [m/s]
- *     cdef double c_d_dd = 0.0  # current lateral acceleration [m/s]
- */
-  __pyx_v_c_d = 0.0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":233
- *     cdef double c_accel = 0.0  # current acceleration [m/ss]
- *     cdef double c_d = 0.0  # current lateral position [m]
- *     cdef double c_d_d = 0.0  # current lateral speed [m/s]             # <<<<<<<<<<<<<<
- *     cdef double c_d_dd = 0.0  # current lateral acceleration [m/s]
- *     cdef double s0 = 0.0  # current course position
- */
-  __pyx_v_c_d_d = 0.0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":234
- *     cdef double c_d = 0.0  # current lateral position [m]
- *     cdef double c_d_d = 0.0  # current lateral speed [m/s]
- *     cdef double c_d_dd = 0.0  # current lateral acceleration [m/s]             # <<<<<<<<<<<<<<
- *     cdef double s0 = 0.0  # current course position
- * 
- */
-  __pyx_v_c_d_dd = 0.0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":235
- *     cdef double c_d_d = 0.0  # current lateral speed [m/s]
- *     cdef double c_d_dd = 0.0  # current lateral acceleration [m/s]
- *     cdef double s0 = 0.0  # current course position             # <<<<<<<<<<<<<<
- * 
- *     cdef double area = 5.0  # animation area length [m]
- */
-  __pyx_v_s0 = 0.0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":237
- *     cdef double s0 = 0.0  # current course position
- * 
- *     cdef double area = 5.0  # animation area length [m]             # <<<<<<<<<<<<<<
- *     cdef FrenetPath path
- * 
- */
-  __pyx_v_area = 5.0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":240
- *     cdef FrenetPath path
- * 
- *     for i in range(SIM_LOOP):             # <<<<<<<<<<<<<<
- *         path = frenet_optimal_planning(csp, s0, c_speed, c_accel, c_d, c_d_d, c_d_dd, ob, target_speed)
- * 
- */
-  __pyx_t_9 = __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_SIM_LOOP;
-  __pyx_t_10 = __pyx_t_9;
-  for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
-    __pyx_v_i = __pyx_t_11;
-
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":241
- * 
- *     for i in range(SIM_LOOP):
- *         path = frenet_optimal_planning(csp, s0, c_speed, c_accel, c_d, c_d_d, c_d_dd, ob, target_speed)             # <<<<<<<<<<<<<<
- * 
- *         # Update state
- */
-    __pyx_t_4 = ((PyObject *)__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_frenet_optimal_planning(__pyx_v_csp, __pyx_v_s0, __pyx_v_c_speed, __pyx_v_c_accel, __pyx_v_c_d, __pyx_v_c_d_d, __pyx_v_c_d_dd, ((PyArrayObject *)__pyx_v_ob), __pyx_v_target_speed, 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 241, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_XDECREF_SET(__pyx_v_path, ((struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath *)__pyx_t_4));
-    __pyx_t_4 = 0;
-
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":244
- * 
- *         # Update state
- *         s0 = path.s[1]             # <<<<<<<<<<<<<<
- *         c_d = path.d[1]
- *         c_d_d = path.d_d[1]
- */
-    if (unlikely(__pyx_v_path->s == Py_None)) {
-      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 244, __pyx_L1_error)
-    }
-    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->s, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 244, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 244, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_v_s0 = __pyx_t_12;
-
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":245
- *         # Update state
- *         s0 = path.s[1]
- *         c_d = path.d[1]             # <<<<<<<<<<<<<<
- *         c_d_d = path.d_d[1]
- *         c_d_dd = path.d_dd[1]
- */
-    if (unlikely(__pyx_v_path->d == Py_None)) {
-      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 245, __pyx_L1_error)
-    }
-    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->d, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 245, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 245, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_v_c_d = __pyx_t_12;
-
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":246
- *         s0 = path.s[1]
- *         c_d = path.d[1]
- *         c_d_d = path.d_d[1]             # <<<<<<<<<<<<<<
- *         c_d_dd = path.d_dd[1]
- *         c_speed = path.s_d[1]
- */
-    if (unlikely(__pyx_v_path->d_d == Py_None)) {
-      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 246, __pyx_L1_error)
-    }
-    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->d_d, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 246, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_v_c_d_d = __pyx_t_12;
-
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":247
- *         c_d = path.d[1]
- *         c_d_d = path.d_d[1]
- *         c_d_dd = path.d_dd[1]             # <<<<<<<<<<<<<<
- *         c_speed = path.s_d[1]
- *         c_accel = path.s_dd[1]
- */
-    if (unlikely(__pyx_v_path->d_dd == Py_None)) {
-      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 247, __pyx_L1_error)
-    }
-    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->d_dd, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 247, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 247, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_v_c_d_dd = __pyx_t_12;
-
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":248
- *         c_d_d = path.d_d[1]
- *         c_d_dd = path.d_dd[1]
- *         c_speed = path.s_d[1]             # <<<<<<<<<<<<<<
- *         c_accel = path.s_dd[1]
- * 
- */
-    if (unlikely(__pyx_v_path->s_d == Py_None)) {
-      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 248, __pyx_L1_error)
-    }
-    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->s_d, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 248, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 248, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_v_c_speed = __pyx_t_12;
-
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":249
- *         c_d_dd = path.d_dd[1]
- *         c_speed = path.s_d[1]
- *         c_accel = path.s_dd[1]             # <<<<<<<<<<<<<<
- * 
- *         if np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0:
- */
-    if (unlikely(__pyx_v_path->s_dd == Py_None)) {
-      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 249, __pyx_L1_error)
-    }
-    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->s_dd, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 249, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 249, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_v_c_accel = __pyx_t_12;
-
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":251
- *         c_accel = path.s_dd[1]
- * 
- *         if np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0:             # <<<<<<<<<<<<<<
- *             print("Goal reached")
- *             break
- */
-    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 251, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_hypot); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 251, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(__pyx_v_path->x == Py_None)) {
-      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 251, __pyx_L1_error)
-    }
-    __pyx_t_7 = __Pyx_GetItemInt_List(__pyx_v_path->x, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 251, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    if (unlikely(__pyx_v_tx == Py_None)) {
-      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 251, __pyx_L1_error)
-    }
-    __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_tx, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 251, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_5 = PyNumber_Subtract(__pyx_t_7, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 251, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(__pyx_v_path->y == Py_None)) {
-      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 251, __pyx_L1_error)
-    }
-    __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_path->y, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 251, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    if (unlikely(__pyx_v_ty == Py_None)) {
-      PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 251, __pyx_L1_error)
-    }
-    __pyx_t_7 = __Pyx_GetItemInt_List(__pyx_v_ty, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 251, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_3 = PyNumber_Subtract(__pyx_t_2, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 251, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = NULL;
-    __pyx_t_13 = 0;
-    #if CYTHON_UNPACK_METHODS
-    if (unlikely(PyMethod_Check(__pyx_t_6))) {
-      __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_6);
-      if (likely(__pyx_t_7)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_6);
-        __Pyx_INCREF(__pyx_t_7);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_6, function);
-        __pyx_t_13 = 1;
-      }
-    }
-    #endif
-    {
-      PyObject *__pyx_callargs[3] = {__pyx_t_7, __pyx_t_5, __pyx_t_3};
-      __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_6, __pyx_callargs+1-__pyx_t_13, 2+__pyx_t_13);
-      __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 251, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    }
-    __pyx_t_6 = PyObject_RichCompare(__pyx_t_4, __pyx_float_1_0, Py_LE); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 251, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 251, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (__pyx_t_14) {
-
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":252
- * 
- *         if np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0:
- *             print("Goal reached")             # <<<<<<<<<<<<<<
- *             break
- * 
- */
-      __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__11, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 252, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":253
- *         if np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0:
- *             print("Goal reached")
- *             break             # <<<<<<<<<<<<<<
- * 
- *         if show_animation:
- */
-      goto __pyx_L4_break;
-
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":251
- *         c_accel = path.s_dd[1]
- * 
- *         if np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0:             # <<<<<<<<<<<<<<
- *             print("Goal reached")
- *             break
- */
-    }
-
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":255
- *             break
- * 
- *         if show_animation:             # <<<<<<<<<<<<<<
- *             plt.cla()
- *             plt.plot(tx, ty, label="Course")
- */
-    if (__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_show_animation) {
-
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":256
- * 
- *         if show_animation:
- *             plt.cla()             # <<<<<<<<<<<<<<
- *             plt.plot(tx, ty, label="Course")
- *             plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")
- */
-      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_plt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 256, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_cla); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 256, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = NULL;
-      __pyx_t_13 = 0;
-      #if CYTHON_UNPACK_METHODS
-      if (unlikely(PyMethod_Check(__pyx_t_3))) {
-        __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
-        if (likely(__pyx_t_4)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-          __Pyx_INCREF(__pyx_t_4);
-          __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_3, function);
-          __pyx_t_13 = 1;
-        }
-      }
-      #endif
-      {
-        PyObject *__pyx_callargs[2] = {__pyx_t_4, NULL};
-        __pyx_t_6 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_13, 0+__pyx_t_13);
-        __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 256, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_6);
-        __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      }
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":257
- *         if show_animation:
- *             plt.cla()
- *             plt.plot(tx, ty, label="Course")             # <<<<<<<<<<<<<<
- *             plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")
- *             plt.plot(path.x[1:], path.y[1:], "-or", label="Trajectory")
- */
-      __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_plt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 257, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_plot); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 257, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 257, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_INCREF(__pyx_v_tx);
-      __Pyx_GIVEREF(__pyx_v_tx);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_v_tx)) __PYX_ERR(0, 257, __pyx_L1_error);
-      __Pyx_INCREF(__pyx_v_ty);
-      __Pyx_GIVEREF(__pyx_v_ty);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_v_ty)) __PYX_ERR(0, 257, __pyx_L1_error);
-      __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 257, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_label, __pyx_n_u_Course) < 0) __PYX_ERR(0, 257, __pyx_L1_error)
-      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 257, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":258
- *             plt.cla()
- *             plt.plot(tx, ty, label="Course")
- *             plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")             # <<<<<<<<<<<<<<
- *             plt.plot(path.x[1:], path.y[1:], "-or", label="Trajectory")
- *             plt.xlim(path.x[1] - area, path.x[1] + area)
- */
-      __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_plt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 258, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_plot); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 258, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_ob), __pyx_tuple__12); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 258, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_6 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_ob), __pyx_tuple__13); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 258, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 258, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_GIVEREF(__pyx_t_5);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5)) __PYX_ERR(0, 258, __pyx_L1_error);
-      __Pyx_GIVEREF(__pyx_t_6);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_6)) __PYX_ERR(0, 258, __pyx_L1_error);
-      __Pyx_INCREF(__pyx_n_u_xk);
-      __Pyx_GIVEREF(__pyx_n_u_xk);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_n_u_xk)) __PYX_ERR(0, 258, __pyx_L1_error);
-      __pyx_t_5 = 0;
-      __pyx_t_6 = 0;
-      __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 258, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_label, __pyx_n_u_Obstacles) < 0) __PYX_ERR(0, 258, __pyx_L1_error)
-      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 258, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":259
- *             plt.plot(tx, ty, label="Course")
- *             plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")
- *             plt.plot(path.x[1:], path.y[1:], "-or", label="Trajectory")             # <<<<<<<<<<<<<<
- *             plt.xlim(path.x[1] - area, path.x[1] + area)
- *             plt.ylim(path.y[1] - area, path.y[1] + area)
- */
-      __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_plt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 259, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_plot); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 259, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(__pyx_v_path->x == Py_None)) {
-        PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 259, __pyx_L1_error)
-      }
-      __pyx_t_5 = __Pyx_PyList_GetSlice(__pyx_v_path->x, 1, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 259, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      if (unlikely(__pyx_v_path->y == Py_None)) {
-        PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 259, __pyx_L1_error)
-      }
-      __pyx_t_3 = __Pyx_PyList_GetSlice(__pyx_v_path->y, 1, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 259, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 259, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_GIVEREF(__pyx_t_5);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5)) __PYX_ERR(0, 259, __pyx_L1_error);
-      __Pyx_GIVEREF(__pyx_t_3);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_3)) __PYX_ERR(0, 259, __pyx_L1_error);
-      __Pyx_INCREF(__pyx_kp_u_or);
-      __Pyx_GIVEREF(__pyx_kp_u_or);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_kp_u_or)) __PYX_ERR(0, 259, __pyx_L1_error);
-      __pyx_t_5 = 0;
-      __pyx_t_3 = 0;
-      __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 259, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_label, __pyx_n_u_Trajectory) < 0) __PYX_ERR(0, 259, __pyx_L1_error)
-      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 259, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":260
- *             plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")
- *             plt.plot(path.x[1:], path.y[1:], "-or", label="Trajectory")
- *             plt.xlim(path.x[1] - area, path.x[1] + area)             # <<<<<<<<<<<<<<
- *             plt.ylim(path.y[1] - area, path.y[1] + area)
- *             plt.title(f"Time Step: {i}")
- */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_plt); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 260, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_xlim); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 260, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(__pyx_v_path->x == Py_None)) {
-        PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 260, __pyx_L1_error)
-      }
-      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_path->x, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 260, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_6 = PyFloat_FromDouble(__pyx_v_area); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 260, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_7 = PyNumber_Subtract(__pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 260, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_7);
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      if (unlikely(__pyx_v_path->x == Py_None)) {
-        PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 260, __pyx_L1_error)
-      }
-      __pyx_t_6 = __Pyx_GetItemInt_List(__pyx_v_path->x, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 260, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_area); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 260, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_2 = PyNumber_Add(__pyx_t_6, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 260, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = NULL;
-      __pyx_t_13 = 0;
-      #if CYTHON_UNPACK_METHODS
-      if (unlikely(PyMethod_Check(__pyx_t_4))) {
-        __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_4);
-        if (likely(__pyx_t_3)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-          __Pyx_INCREF(__pyx_t_3);
-          __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_4, function);
-          __pyx_t_13 = 1;
-        }
-      }
-      #endif
-      {
-        PyObject *__pyx_callargs[3] = {__pyx_t_3, __pyx_t_7, __pyx_t_2};
-        __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_13, 2+__pyx_t_13);
-        __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 260, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_5);
-        __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      }
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":261
- *             plt.plot(path.x[1:], path.y[1:], "-or", label="Trajectory")
- *             plt.xlim(path.x[1] - area, path.x[1] + area)
- *             plt.ylim(path.y[1] - area, path.y[1] + area)             # <<<<<<<<<<<<<<
- *             plt.title(f"Time Step: {i}")
- *             plt.pause(0.001)
- */
-      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_plt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 261, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_ylim); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 261, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(__pyx_v_path->y == Py_None)) {
-        PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 261, __pyx_L1_error)
-      }
-      __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_path->y, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 261, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_7 = PyFloat_FromDouble(__pyx_v_area); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 261, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_3 = PyNumber_Subtract(__pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 261, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (unlikely(__pyx_v_path->y == Py_None)) {
-        PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 261, __pyx_L1_error)
-      }
-      __pyx_t_7 = __Pyx_GetItemInt_List(__pyx_v_path->y, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 261, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_4 = PyFloat_FromDouble(__pyx_v_area); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 261, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_6 = PyNumber_Add(__pyx_t_7, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 261, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = NULL;
-      __pyx_t_13 = 0;
-      #if CYTHON_UNPACK_METHODS
-      if (unlikely(PyMethod_Check(__pyx_t_2))) {
-        __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_2);
-        if (likely(__pyx_t_4)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-          __Pyx_INCREF(__pyx_t_4);
-          __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_2, function);
-          __pyx_t_13 = 1;
-        }
-      }
-      #endif
-      {
-        PyObject *__pyx_callargs[3] = {__pyx_t_4, __pyx_t_3, __pyx_t_6};
-        __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_13, 2+__pyx_t_13);
-        __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 261, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_5);
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      }
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":262
- *             plt.xlim(path.x[1] - area, path.x[1] + area)
- *             plt.ylim(path.y[1] - area, path.y[1] + area)
- *             plt.title(f"Time Step: {i}")             # <<<<<<<<<<<<<<
- *             plt.pause(0.001)
- *             plt.legend()
- */
-      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_plt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 262, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_title); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 262, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_PyUnicode_From_int(__pyx_v_i, 0, ' ', 'd'); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 262, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_3 = __Pyx_PyUnicode_Concat(__pyx_kp_u_Time_Step, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 262, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = NULL;
-      __pyx_t_13 = 0;
-      #if CYTHON_UNPACK_METHODS
-      if (unlikely(PyMethod_Check(__pyx_t_6))) {
-        __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_6);
-        if (likely(__pyx_t_2)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_6);
-          __Pyx_INCREF(__pyx_t_2);
-          __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_6, function);
-          __pyx_t_13 = 1;
-        }
-      }
-      #endif
-      {
-        PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_t_3};
-        __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_6, __pyx_callargs+1-__pyx_t_13, 1+__pyx_t_13);
-        __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 262, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_5);
-        __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      }
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":263
- *             plt.ylim(path.y[1] - area, path.y[1] + area)
- *             plt.title(f"Time Step: {i}")
- *             plt.pause(0.001)             # <<<<<<<<<<<<<<
- *             plt.legend()
- * 
- */
-      __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_plt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 263, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_pause); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 263, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = NULL;
-      __pyx_t_13 = 0;
-      #if CYTHON_UNPACK_METHODS
-      if (unlikely(PyMethod_Check(__pyx_t_3))) {
-        __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_3);
-        if (likely(__pyx_t_6)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-          __Pyx_INCREF(__pyx_t_6);
-          __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_3, function);
-          __pyx_t_13 = 1;
-        }
-      }
-      #endif
-      {
-        PyObject *__pyx_callargs[2] = {__pyx_t_6, __pyx_float_0_001};
-        __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_13, 1+__pyx_t_13);
-        __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 263, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_5);
-        __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      }
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":264
- *             plt.title(f"Time Step: {i}")
- *             plt.pause(0.001)
- *             plt.legend()             # <<<<<<<<<<<<<<
- * 
- *     print("Finish")
- */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_plt); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 264, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_legend); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 264, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = NULL;
-      __pyx_t_13 = 0;
-      #if CYTHON_UNPACK_METHODS
-      if (unlikely(PyMethod_Check(__pyx_t_6))) {
-        __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_6);
-        if (likely(__pyx_t_3)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_6);
-          __Pyx_INCREF(__pyx_t_3);
-          __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_6, function);
-          __pyx_t_13 = 1;
-        }
-      }
-      #endif
-      {
-        PyObject *__pyx_callargs[2] = {__pyx_t_3, NULL};
-        __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_6, __pyx_callargs+1-__pyx_t_13, 0+__pyx_t_13);
-        __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 264, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_5);
-        __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      }
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-
-      /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":255
- *             break
- * 
- *         if show_animation:             # <<<<<<<<<<<<<<
- *             plt.cla()
- *             plt.plot(tx, ty, label="Course")
- */
-    }
-  }
-  __pyx_L4_break:;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":266
- *             plt.legend()
- * 
- *     print("Finish")             # <<<<<<<<<<<<<<
- *     if show_animation:
- *         plt.show()
- */
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__14, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 266, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":267
- * 
- *     print("Finish")
- *     if show_animation:             # <<<<<<<<<<<<<<
- *         plt.show()
- * 
- */
-  if (__pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_show_animation) {
-
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":268
- *     print("Finish")
- *     if show_animation:
- *         plt.show()             # <<<<<<<<<<<<<<
- * 
- * if __name__ == "__main__":
- */
-    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_plt); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_show); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 268, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = NULL;
-    __pyx_t_9 = 0;
-    #if CYTHON_UNPACK_METHODS
-    if (unlikely(PyMethod_Check(__pyx_t_3))) {
-      __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_3);
-      if (likely(__pyx_t_6)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-        __Pyx_INCREF(__pyx_t_6);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_3, function);
-        __pyx_t_9 = 1;
-      }
-    }
-    #endif
-    {
-      PyObject *__pyx_callargs[2] = {__pyx_t_6, NULL};
-      __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_9, 0+__pyx_t_9);
-      __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 268, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    }
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":267
- * 
- *     print("Finish")
- *     if show_animation:             # <<<<<<<<<<<<<<
- *         plt.show()
- * 
- */
-  }
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":205
- *     return best_path
- * 
- * def main():             # <<<<<<<<<<<<<<
- *     print(__file__ + " start!!")
- * 
- */
-
-  /* function exit code */
-  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_XDECREF(__pyx_t_7);
-  { PyObject *__pyx_type, *__pyx_value, *__pyx_tb;
-    __Pyx_PyThreadState_declare
-    __Pyx_PyThreadState_assign
-    __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ob.rcbuffer->pybuffer);
-  __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("FrenetOptimalTrajectory.frenet_optimal_trajectory.main", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  goto __pyx_L2;
-  __pyx_L0:;
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ob.rcbuffer->pybuffer);
-  __pyx_L2:;
-  __Pyx_XDECREF(__pyx_v_wx);
-  __Pyx_XDECREF(__pyx_v_wy);
-  __Pyx_XDECREF((PyObject *)__pyx_v_ob);
-  __Pyx_XDECREF(__pyx_v_target_course);
-  __Pyx_XDECREF(__pyx_v_tx);
-  __Pyx_XDECREF(__pyx_v_ty);
-  __Pyx_XDECREF(__pyx_v_tyaw);
-  __Pyx_XDECREF(__pyx_v_tc);
-  __Pyx_XDECREF((PyObject *)__pyx_v_csp);
-  __Pyx_XDECREF((PyObject *)__pyx_v_path);
+  __Pyx_XDECREF(__pyx_gb_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_23frenet_optimal_planning_2generator4);
+  __Pyx_XDECREF(__pyx_9genexpr18__pyx_v_fp);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
@@ -30953,15 +30337,15 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_9__pyx_unpickle_QuarticPolynomial(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7__pyx_unpickle_QuarticPolynomial(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_9__pyx_unpickle_QuarticPolynomial = {"__pyx_unpickle_QuarticPolynomial", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_9__pyx_unpickle_QuarticPolynomial, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_9__pyx_unpickle_QuarticPolynomial(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7__pyx_unpickle_QuarticPolynomial = {"__pyx_unpickle_QuarticPolynomial", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7__pyx_unpickle_QuarticPolynomial, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7__pyx_unpickle_QuarticPolynomial(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -31065,7 +30449,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_8__pyx_unpickle_QuarticPolynomial(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_6__pyx_unpickle_QuarticPolynomial(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -31078,7 +30462,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_8__pyx_unpickle_QuarticPolynomial(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_6__pyx_unpickle_QuarticPolynomial(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_v___pyx_PickleError = 0;
   PyObject *__pyx_v___pyx_result = 0;
   PyObject *__pyx_r = NULL;
@@ -31102,7 +30486,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
   __pyx_t_1 = __Pyx_PyInt_From_long(__pyx_v___pyx_checksum); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 4, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_t_1, __pyx_tuple__15, Py_NE)); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(1, 4, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_t_1, __pyx_tuple__14, Py_NE)); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(1, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
@@ -31431,15 +30815,15 @@ static PyObject *__pyx_f_23FrenetOptimalTrajectory_25frenet_optimal_trajectory__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11__pyx_unpickle_FrenetPath(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_9__pyx_unpickle_FrenetPath(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11__pyx_unpickle_FrenetPath = {"__pyx_unpickle_FrenetPath", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11__pyx_unpickle_FrenetPath, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11__pyx_unpickle_FrenetPath(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_9__pyx_unpickle_FrenetPath = {"__pyx_unpickle_FrenetPath", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_9__pyx_unpickle_FrenetPath, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_9__pyx_unpickle_FrenetPath(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -31543,7 +30927,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10__pyx_unpickle_FrenetPath(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_8__pyx_unpickle_FrenetPath(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -31556,7 +30940,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10__pyx_unpickle_FrenetPath(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_8__pyx_unpickle_FrenetPath(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_v___pyx_PickleError = 0;
   PyObject *__pyx_v___pyx_result = 0;
   PyObject *__pyx_r = NULL;
@@ -31580,7 +30964,7 @@ static PyObject *__pyx_pf_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_
  */
   __pyx_t_1 = __Pyx_PyInt_From_long(__pyx_v___pyx_checksum); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 4, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_t_1, __pyx_tuple__16, Py_NE)); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(1, 4, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_t_1, __pyx_tuple__15, Py_NE)); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(1, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
@@ -33447,6 +32831,175 @@ static PyTypeObject __pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajec
   #endif
 };
 #endif
+
+#if CYTHON_USE_FREELISTS
+static struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr *__pyx_freelist_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr[8];
+static int __pyx_freecount_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr = 0;
+#endif
+
+static PyObject *__pyx_tp_new_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  PyObject *o;
+  #if CYTHON_COMPILING_IN_LIMITED_API
+  allocfunc alloc_func = (allocfunc)PyType_GetSlot(t, Py_tp_alloc);
+  o = alloc_func(t, 0);
+  #else
+  #if CYTHON_USE_FREELISTS
+  if (likely((int)(__pyx_freecount_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr > 0) & (int)(t->tp_basicsize == sizeof(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr)))) {
+    o = (PyObject*)__pyx_freelist_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr[--__pyx_freecount_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr];
+    memset(o, 0, sizeof(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr));
+    (void) PyObject_INIT(o, t);
+    PyObject_GC_Track(o);
+  } else
+  #endif
+  {
+    o = (*t->tp_alloc)(t, 0);
+    if (unlikely(!o)) return 0;
+  }
+  #endif
+  return o;
+}
+
+static void __pyx_tp_dealloc_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr(PyObject *o) {
+  struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr *p = (struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr *)o;
+  #if CYTHON_USE_TP_FINALIZE
+  if (unlikely((PY_VERSION_HEX >= 0x03080000 || __Pyx_PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE)) && __Pyx_PyObject_GetSlot(o, tp_finalize, destructor)) && !__Pyx_PyObject_GC_IsFinalized(o)) {
+    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr) {
+      if (PyObject_CallFinalizerFromDealloc(o)) return;
+    }
+  }
+  #endif
+  PyObject_GC_UnTrack(o);
+  Py_CLEAR(p->__pyx_genexpr_arg_0);
+  Py_CLEAR(p->__pyx_v_fp);
+  Py_CLEAR(p->__pyx_t_0);
+  #if CYTHON_USE_FREELISTS
+  if (((int)(__pyx_freecount_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr < 8) & (int)(Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr)))) {
+    __pyx_freelist_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr[__pyx_freecount_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr++] = ((struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr *)o);
+  } else
+  #endif
+  {
+    #if CYTHON_USE_TYPE_SLOTS || CYTHON_COMPILING_IN_PYPY
+    (*Py_TYPE(o)->tp_free)(o);
+    #else
+    {
+      freefunc tp_free = (freefunc)PyType_GetSlot(Py_TYPE(o), Py_tp_free);
+      if (tp_free) tp_free(o);
+    }
+    #endif
+  }
+}
+
+static int __pyx_tp_traverse_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr(PyObject *o, visitproc v, void *a) {
+  int e;
+  struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr *p = (struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr *)o;
+  if (p->__pyx_genexpr_arg_0) {
+    e = (*v)(p->__pyx_genexpr_arg_0, a); if (e) return e;
+  }
+  if (p->__pyx_v_fp) {
+    e = (*v)(p->__pyx_v_fp, a); if (e) return e;
+  }
+  if (p->__pyx_t_0) {
+    e = (*v)(p->__pyx_t_0, a); if (e) return e;
+  }
+  return 0;
+}
+#if CYTHON_USE_TYPE_SPECS
+static PyType_Slot __pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr_slots[] = {
+  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr},
+  {Py_tp_traverse, (void *)__pyx_tp_traverse_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr},
+  {Py_tp_new, (void *)__pyx_tp_new_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr},
+  {0, 0},
+};
+static PyType_Spec __pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr_spec = {
+  "FrenetOptimalTrajectory.frenet_optimal_trajectory.__pyx_scope_struct_4_genexpr",
+  sizeof(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr),
+  0,
+  Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_HAVE_FINALIZE,
+  __pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr_slots,
+};
+#else
+
+static PyTypeObject __pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr = {
+  PyVarObject_HEAD_INIT(0, 0)
+  "FrenetOptimalTrajectory.frenet_optimal_trajectory.""__pyx_scope_struct_4_genexpr", /*tp_name*/
+  sizeof(struct __pyx_obj_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr), /*tp_basicsize*/
+  0, /*tp_itemsize*/
+  __pyx_tp_dealloc_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr, /*tp_dealloc*/
+  #if PY_VERSION_HEX < 0x030800b4
+  0, /*tp_print*/
+  #endif
+  #if PY_VERSION_HEX >= 0x030800b4
+  0, /*tp_vectorcall_offset*/
+  #endif
+  0, /*tp_getattr*/
+  0, /*tp_setattr*/
+  #if PY_MAJOR_VERSION < 3
+  0, /*tp_compare*/
+  #endif
+  #if PY_MAJOR_VERSION >= 3
+  0, /*tp_as_async*/
+  #endif
+  0, /*tp_repr*/
+  0, /*tp_as_number*/
+  0, /*tp_as_sequence*/
+  0, /*tp_as_mapping*/
+  0, /*tp_hash*/
+  0, /*tp_call*/
+  0, /*tp_str*/
+  0, /*tp_getattro*/
+  0, /*tp_setattro*/
+  0, /*tp_as_buffer*/
+  Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_HAVE_FINALIZE, /*tp_flags*/
+  0, /*tp_doc*/
+  __pyx_tp_traverse_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr, /*tp_traverse*/
+  0, /*tp_clear*/
+  0, /*tp_richcompare*/
+  0, /*tp_weaklistoffset*/
+  0, /*tp_iter*/
+  0, /*tp_iternext*/
+  0, /*tp_methods*/
+  0, /*tp_members*/
+  0, /*tp_getset*/
+  0, /*tp_base*/
+  0, /*tp_dict*/
+  0, /*tp_descr_get*/
+  0, /*tp_descr_set*/
+  #if !CYTHON_USE_TYPE_SPECS
+  0, /*tp_dictoffset*/
+  #endif
+  0, /*tp_init*/
+  0, /*tp_alloc*/
+  __pyx_tp_new_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr, /*tp_new*/
+  0, /*tp_free*/
+  0, /*tp_is_gc*/
+  0, /*tp_bases*/
+  0, /*tp_mro*/
+  0, /*tp_cache*/
+  0, /*tp_subclasses*/
+  0, /*tp_weaklist*/
+  0, /*tp_del*/
+  0, /*tp_version_tag*/
+  #if PY_VERSION_HEX >= 0x030400a1
+  #if CYTHON_USE_TP_FINALIZE
+  0, /*tp_finalize*/
+  #else
+  NULL, /*tp_finalize*/
+  #endif
+  #endif
+  #if PY_VERSION_HEX >= 0x030800b1 && (!CYTHON_COMPILING_IN_PYPY || PYPY_VERSION_NUM >= 0x07030800)
+  0, /*tp_vectorcall*/
+  #endif
+  #if __PYX_NEED_TP_PRINT_SLOT == 1
+  0, /*tp_print*/
+  #endif
+  #if PY_VERSION_HEX >= 0x030C0000
+  0, /*tp_watched*/
+  #endif
+  #if CYTHON_COMPILING_IN_PYPY && PY_VERSION_HEX >= 0x03090000 && PY_VERSION_HEX < 0x030a0000
+  0, /*tp_pypy_flags*/
+  #endif
+};
+#endif
 static struct __pyx_vtabstruct_array __pyx_vtable_array;
 
 static PyObject *__pyx_tp_new_array(PyTypeObject *t, PyObject *a, PyObject *k) {
@@ -34414,23 +33967,22 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_ASCII, __pyx_k_ASCII, sizeof(__pyx_k_ASCII), 0, 0, 1, 1},
     {&__pyx_kp_s_All_dimensions_preceding_dimensi, __pyx_k_All_dimensions_preceding_dimensi, sizeof(__pyx_k_All_dimensions_preceding_dimensi), 0, 0, 1, 0},
     {&__pyx_n_s_AssertionError, __pyx_k_AssertionError, sizeof(__pyx_k_AssertionError), 0, 0, 1, 1},
+    {&__pyx_kp_u_Best_Path, __pyx_k_Best_Path, sizeof(__pyx_k_Best_Path), 0, 1, 0, 0},
     {&__pyx_kp_s_Buffer_view_does_not_expose_stri, __pyx_k_Buffer_view_does_not_expose_stri, sizeof(__pyx_k_Buffer_view_does_not_expose_stri), 0, 0, 1, 0},
     {&__pyx_kp_s_Can_only_create_a_buffer_that_is, __pyx_k_Can_only_create_a_buffer_that_is, sizeof(__pyx_k_Can_only_create_a_buffer_that_is), 0, 0, 1, 0},
     {&__pyx_kp_s_Cannot_assign_to_read_only_memor, __pyx_k_Cannot_assign_to_read_only_memor, sizeof(__pyx_k_Cannot_assign_to_read_only_memor), 0, 0, 1, 0},
     {&__pyx_kp_s_Cannot_create_writable_memory_vi, __pyx_k_Cannot_create_writable_memory_vi, sizeof(__pyx_k_Cannot_create_writable_memory_vi), 0, 0, 1, 0},
     {&__pyx_kp_u_Cannot_index_with_type, __pyx_k_Cannot_index_with_type, sizeof(__pyx_k_Cannot_index_with_type), 0, 1, 0, 0},
     {&__pyx_kp_s_Cannot_transpose_memoryview_with, __pyx_k_Cannot_transpose_memoryview_with, sizeof(__pyx_k_Cannot_transpose_memoryview_with), 0, 0, 1, 0},
-    {&__pyx_n_u_Course, __pyx_k_Course, sizeof(__pyx_k_Course), 0, 1, 0, 1},
     {&__pyx_kp_s_Dimension_d_is_not_direct, __pyx_k_Dimension_d_is_not_direct, sizeof(__pyx_k_Dimension_d_is_not_direct), 0, 0, 1, 0},
     {&__pyx_n_s_Ellipsis, __pyx_k_Ellipsis, sizeof(__pyx_k_Ellipsis), 0, 0, 1, 1},
     {&__pyx_kp_s_Empty_shape_tuple_for_cython_arr, __pyx_k_Empty_shape_tuple_for_cython_arr, sizeof(__pyx_k_Empty_shape_tuple_for_cython_arr), 0, 0, 1, 0},
-    {&__pyx_n_u_Finish, __pyx_k_Finish, sizeof(__pyx_k_Finish), 0, 1, 0, 1},
     {&__pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_k_FrenetOptimalTrajectory_frenet_o, sizeof(__pyx_k_FrenetOptimalTrajectory_frenet_o), 0, 0, 1, 1},
     {&__pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_k_FrenetOptimalTrajectory_frenet_o_2, sizeof(__pyx_k_FrenetOptimalTrajectory_frenet_o_2), 0, 0, 1, 0},
     {&__pyx_n_s_FrenetPath, __pyx_k_FrenetPath, sizeof(__pyx_k_FrenetPath), 0, 0, 1, 1},
     {&__pyx_n_s_FrenetPath___reduce_cython, __pyx_k_FrenetPath___reduce_cython, sizeof(__pyx_k_FrenetPath___reduce_cython), 0, 0, 1, 1},
     {&__pyx_n_s_FrenetPath___setstate_cython, __pyx_k_FrenetPath___setstate_cython, sizeof(__pyx_k_FrenetPath___setstate_cython), 0, 0, 1, 1},
-    {&__pyx_kp_u_Goal_reached, __pyx_k_Goal_reached, sizeof(__pyx_k_Goal_reached), 0, 1, 0, 0},
+    {&__pyx_kp_u_Frenet_Paths, __pyx_k_Frenet_Paths, sizeof(__pyx_k_Frenet_Paths), 0, 1, 0, 0},
     {&__pyx_n_s_ImportError, __pyx_k_ImportError, sizeof(__pyx_k_ImportError), 0, 0, 1, 1},
     {&__pyx_kp_s_Incompatible_checksums_0x_x_vs_0, __pyx_k_Incompatible_checksums_0x_x_vs_0, sizeof(__pyx_k_Incompatible_checksums_0x_x_vs_0), 0, 0, 1, 0},
     {&__pyx_kp_s_Incompatible_checksums_0x_x_vs_0_2, __pyx_k_Incompatible_checksums_0x_x_vs_0_2, sizeof(__pyx_k_Incompatible_checksums_0x_x_vs_0_2), 0, 0, 1, 0},
@@ -34457,28 +34009,27 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_Sequence, __pyx_k_Sequence, sizeof(__pyx_k_Sequence), 0, 0, 1, 1},
     {&__pyx_kp_s_Step_may_not_be_zero_axis_d, __pyx_k_Step_may_not_be_zero_axis_d, sizeof(__pyx_k_Step_may_not_be_zero_axis_d), 0, 0, 1, 0},
     {&__pyx_n_s_Ti, __pyx_k_Ti, sizeof(__pyx_k_Ti), 0, 0, 1, 1},
-    {&__pyx_kp_u_Time_Step, __pyx_k_Time_Step, sizeof(__pyx_k_Time_Step), 0, 1, 0, 0},
-    {&__pyx_n_u_Trajectory, __pyx_k_Trajectory, sizeof(__pyx_k_Trajectory), 0, 1, 0, 1},
     {&__pyx_n_s_TypeError, __pyx_k_TypeError, sizeof(__pyx_k_TypeError), 0, 0, 1, 1},
     {&__pyx_kp_s_Unable_to_convert_item_to_object, __pyx_k_Unable_to_convert_item_to_object, sizeof(__pyx_k_Unable_to_convert_item_to_object), 0, 0, 1, 0},
     {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
     {&__pyx_n_s_View_MemoryView, __pyx_k_View_MemoryView, sizeof(__pyx_k_View_MemoryView), 0, 0, 1, 1},
     {&__pyx_kp_u__2, __pyx_k__2, sizeof(__pyx_k__2), 0, 1, 0, 0},
     {&__pyx_n_s__3, __pyx_k__3, sizeof(__pyx_k__3), 0, 0, 1, 1},
-    {&__pyx_n_s__50, __pyx_k__50, sizeof(__pyx_k__50), 0, 0, 1, 1},
+    {&__pyx_n_s__47, __pyx_k__47, sizeof(__pyx_k__47), 0, 0, 1, 1},
     {&__pyx_kp_u__6, __pyx_k__6, sizeof(__pyx_k__6), 0, 1, 0, 0},
     {&__pyx_kp_u__7, __pyx_k__7, sizeof(__pyx_k__7), 0, 1, 0, 0},
     {&__pyx_n_s_abc, __pyx_k_abc, sizeof(__pyx_k_abc), 0, 0, 1, 1},
     {&__pyx_n_s_allocate_buffer, __pyx_k_allocate_buffer, sizeof(__pyx_k_allocate_buffer), 0, 0, 1, 1},
+    {&__pyx_n_s_alpha, __pyx_k_alpha, sizeof(__pyx_k_alpha), 0, 0, 1, 1},
     {&__pyx_kp_u_and, __pyx_k_and, sizeof(__pyx_k_and), 0, 1, 0, 0},
     {&__pyx_n_s_arange, __pyx_k_arange, sizeof(__pyx_k_arange), 0, 0, 1, 1},
-    {&__pyx_n_s_area, __pyx_k_area, sizeof(__pyx_k_area), 0, 0, 1, 1},
     {&__pyx_n_s_args, __pyx_k_args, sizeof(__pyx_k_args), 0, 0, 1, 1},
     {&__pyx_n_s_array, __pyx_k_array, sizeof(__pyx_k_array), 0, 0, 1, 1},
     {&__pyx_n_s_asyncio_coroutines, __pyx_k_asyncio_coroutines, sizeof(__pyx_k_asyncio_coroutines), 0, 0, 1, 1},
     {&__pyx_n_s_axe, __pyx_k_axe, sizeof(__pyx_k_axe), 0, 0, 1, 1},
     {&__pyx_n_s_axs, __pyx_k_axs, sizeof(__pyx_k_axs), 0, 0, 1, 1},
     {&__pyx_n_s_base, __pyx_k_base, sizeof(__pyx_k_base), 0, 0, 1, 1},
+    {&__pyx_n_s_best_path, __pyx_k_best_path, sizeof(__pyx_k_best_path), 0, 0, 1, 1},
     {&__pyx_n_s_c, __pyx_k_c, sizeof(__pyx_k_c), 0, 0, 1, 1},
     {&__pyx_n_u_c, __pyx_k_c, sizeof(__pyx_k_c), 0, 1, 0, 1},
     {&__pyx_n_s_c_accel, __pyx_k_c_accel, sizeof(__pyx_k_c_accel), 0, 0, 1, 1},
@@ -34494,7 +34045,6 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_cf, __pyx_k_cf, sizeof(__pyx_k_cf), 0, 0, 1, 1},
     {&__pyx_n_s_check_collision_locals_genexpr, __pyx_k_check_collision_locals_genexpr, sizeof(__pyx_k_check_collision_locals_genexpr), 0, 0, 1, 1},
     {&__pyx_n_s_check_paths_locals_genexpr, __pyx_k_check_paths_locals_genexpr, sizeof(__pyx_k_check_paths_locals_genexpr), 0, 0, 1, 1},
-    {&__pyx_n_s_cla, __pyx_k_cla, sizeof(__pyx_k_cla), 0, 0, 1, 1},
     {&__pyx_n_s_class, __pyx_k_class, sizeof(__pyx_k_class), 0, 0, 1, 1},
     {&__pyx_n_s_class_getitem, __pyx_k_class_getitem, sizeof(__pyx_k_class_getitem), 0, 0, 1, 1},
     {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
@@ -34506,6 +34056,9 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_copy, __pyx_k_copy, sizeof(__pyx_k_copy), 0, 0, 1, 1},
     {&__pyx_n_s_count, __pyx_k_count, sizeof(__pyx_k_count), 0, 0, 1, 1},
     {&__pyx_n_s_csp, __pyx_k_csp, sizeof(__pyx_k_csp), 0, 0, 1, 1},
+    {&__pyx_n_s_d, __pyx_k_d, sizeof(__pyx_k_d), 0, 0, 1, 1},
+    {&__pyx_kp_u_d_m, __pyx_k_d_m, sizeof(__pyx_k_d_m), 0, 1, 0, 0},
+    {&__pyx_n_s_debug_mode, __pyx_k_debug_mode, sizeof(__pyx_k_debug_mode), 0, 0, 1, 1},
     {&__pyx_n_s_deepcopy, __pyx_k_deepcopy, sizeof(__pyx_k_deepcopy), 0, 0, 1, 1},
     {&__pyx_n_s_di, __pyx_k_di, sizeof(__pyx_k_di), 0, 0, 1, 1},
     {&__pyx_n_s_dict, __pyx_k_dict, sizeof(__pyx_k_dict), 0, 0, 1, 1},
@@ -34517,23 +34070,26 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_encode, __pyx_k_encode, sizeof(__pyx_k_encode), 0, 0, 1, 1},
     {&__pyx_n_s_enumerate, __pyx_k_enumerate, sizeof(__pyx_k_enumerate), 0, 0, 1, 1},
     {&__pyx_n_s_error, __pyx_k_error, sizeof(__pyx_k_error), 0, 0, 1, 1},
-    {&__pyx_n_s_file, __pyx_k_file, sizeof(__pyx_k_file), 0, 0, 1, 1},
+    {&__pyx_n_s_figsize, __pyx_k_figsize, sizeof(__pyx_k_figsize), 0, 0, 1, 1},
+    {&__pyx_n_s_figure, __pyx_k_figure, sizeof(__pyx_k_figure), 0, 0, 1, 1},
     {&__pyx_n_s_flags, __pyx_k_flags, sizeof(__pyx_k_flags), 0, 0, 1, 1},
     {&__pyx_n_s_float64, __pyx_k_float64, sizeof(__pyx_k_float64), 0, 0, 1, 1},
     {&__pyx_n_s_format, __pyx_k_format, sizeof(__pyx_k_format), 0, 0, 1, 1},
     {&__pyx_n_s_fortran, __pyx_k_fortran, sizeof(__pyx_k_fortran), 0, 0, 1, 1},
     {&__pyx_n_u_fortran, __pyx_k_fortran, sizeof(__pyx_k_fortran), 0, 1, 0, 1},
     {&__pyx_n_s_fp, __pyx_k_fp, sizeof(__pyx_k_fp), 0, 0, 1, 1},
+    {&__pyx_n_s_fplist, __pyx_k_fplist, sizeof(__pyx_k_fplist), 0, 0, 1, 1},
     {&__pyx_n_s_frenet_optimal_planning, __pyx_k_frenet_optimal_planning, sizeof(__pyx_k_frenet_optimal_planning), 0, 0, 1, 1},
+    {&__pyx_n_s_frenet_optimal_planning_locals_g, __pyx_k_frenet_optimal_planning_locals_g, sizeof(__pyx_k_frenet_optimal_planning_locals_g), 0, 0, 1, 1},
     {&__pyx_n_s_frenet_paths, __pyx_k_frenet_paths, sizeof(__pyx_k_frenet_paths), 0, 0, 1, 1},
+    {&__pyx_kp_u_g, __pyx_k_g, sizeof(__pyx_k_g), 0, 1, 0, 0},
     {&__pyx_kp_u_gc, __pyx_k_gc, sizeof(__pyx_k_gc), 0, 1, 0, 0},
     {&__pyx_n_s_generate_target_course, __pyx_k_generate_target_course, sizeof(__pyx_k_generate_target_course), 0, 0, 1, 1},
     {&__pyx_n_s_genexpr, __pyx_k_genexpr, sizeof(__pyx_k_genexpr), 0, 0, 1, 1},
     {&__pyx_n_s_getstate, __pyx_k_getstate, sizeof(__pyx_k_getstate), 0, 0, 1, 1},
     {&__pyx_kp_u_got, __pyx_k_got, sizeof(__pyx_k_got), 0, 1, 0, 0},
     {&__pyx_kp_u_got_differing_extents_in_dimensi, __pyx_k_got_differing_extents_in_dimensi, sizeof(__pyx_k_got_differing_extents_in_dimensi), 0, 1, 0, 0},
-    {&__pyx_n_s_hypot, __pyx_k_hypot, sizeof(__pyx_k_hypot), 0, 0, 1, 1},
-    {&__pyx_n_s_i, __pyx_k_i, sizeof(__pyx_k_i), 0, 0, 1, 1},
+    {&__pyx_n_s_grid, __pyx_k_grid, sizeof(__pyx_k_grid), 0, 0, 1, 1},
     {&__pyx_n_s_id, __pyx_k_id, sizeof(__pyx_k_id), 0, 0, 1, 1},
     {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
     {&__pyx_n_s_index, __pyx_k_index, sizeof(__pyx_k_index), 0, 0, 1, 1},
@@ -34547,13 +34103,16 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_lat_qp, __pyx_k_lat_qp, sizeof(__pyx_k_lat_qp), 0, 0, 1, 1},
     {&__pyx_n_s_legend, __pyx_k_legend, sizeof(__pyx_k_legend), 0, 0, 1, 1},
     {&__pyx_n_s_linalg, __pyx_k_linalg, sizeof(__pyx_k_linalg), 0, 0, 1, 1},
+    {&__pyx_n_s_linewidth, __pyx_k_linewidth, sizeof(__pyx_k_linewidth), 0, 0, 1, 1},
     {&__pyx_n_s_lon_qp, __pyx_k_lon_qp, sizeof(__pyx_k_lon_qp), 0, 0, 1, 1},
     {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
-    {&__pyx_n_u_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 1, 0, 1},
-    {&__pyx_n_s_main_2, __pyx_k_main_2, sizeof(__pyx_k_main_2), 0, 0, 1, 1},
     {&__pyx_n_s_matplotlib, __pyx_k_matplotlib, sizeof(__pyx_k_matplotlib), 0, 0, 1, 1},
     {&__pyx_n_s_matplotlib_pyplot, __pyx_k_matplotlib_pyplot, sizeof(__pyx_k_matplotlib_pyplot), 0, 0, 1, 1},
+    {&__pyx_n_s_max, __pyx_k_max, sizeof(__pyx_k_max), 0, 0, 1, 1},
+    {&__pyx_n_s_max_time_frame, __pyx_k_max_time_frame, sizeof(__pyx_k_max_time_frame), 0, 0, 1, 1},
+    {&__pyx_n_s_max_time_frame_paths, __pyx_k_max_time_frame_paths, sizeof(__pyx_k_max_time_frame_paths), 0, 0, 1, 1},
     {&__pyx_n_s_memview, __pyx_k_memview, sizeof(__pyx_k_memview), 0, 0, 1, 1},
+    {&__pyx_n_s_min_cost, __pyx_k_min_cost, sizeof(__pyx_k_min_cost), 0, 0, 1, 1},
     {&__pyx_n_s_mode, __pyx_k_mode, sizeof(__pyx_k_mode), 0, 0, 1, 1},
     {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
     {&__pyx_n_s_name_2, __pyx_k_name_2, sizeof(__pyx_k_name_2), 0, 0, 1, 1},
@@ -34566,14 +34125,10 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_kp_u_numpy_core_umath_failed_to_impor, __pyx_k_numpy_core_umath_failed_to_impor, sizeof(__pyx_k_numpy_core_umath_failed_to_impor), 0, 1, 0, 0},
     {&__pyx_n_s_ob, __pyx_k_ob, sizeof(__pyx_k_ob), 0, 0, 1, 1},
     {&__pyx_n_s_obj, __pyx_k_obj, sizeof(__pyx_k_obj), 0, 0, 1, 1},
-    {&__pyx_kp_u_or, __pyx_k_or, sizeof(__pyx_k_or), 0, 1, 0, 0},
     {&__pyx_n_s_pack, __pyx_k_pack, sizeof(__pyx_k_pack), 0, 0, 1, 1},
-    {&__pyx_n_s_path, __pyx_k_path, sizeof(__pyx_k_path), 0, 0, 1, 1},
-    {&__pyx_n_s_pause, __pyx_k_pause, sizeof(__pyx_k_pause), 0, 0, 1, 1},
     {&__pyx_n_s_pickle, __pyx_k_pickle, sizeof(__pyx_k_pickle), 0, 0, 1, 1},
     {&__pyx_n_s_plot, __pyx_k_plot, sizeof(__pyx_k_plot), 0, 0, 1, 1},
     {&__pyx_n_s_plt, __pyx_k_plt, sizeof(__pyx_k_plt), 0, 0, 1, 1},
-    {&__pyx_n_s_print, __pyx_k_print, sizeof(__pyx_k_print), 0, 0, 1, 1},
     {&__pyx_n_s_pyplot, __pyx_k_pyplot, sizeof(__pyx_k_pyplot), 0, 0, 1, 1},
     {&__pyx_n_s_pyx_PickleError, __pyx_k_pyx_PickleError, sizeof(__pyx_k_pyx_PickleError), 0, 0, 1, 1},
     {&__pyx_n_s_pyx_checksum, __pyx_k_pyx_checksum, sizeof(__pyx_k_pyx_checksum), 0, 0, 1, 1},
@@ -34584,14 +34139,17 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_pyx_unpickle_FrenetPath, __pyx_k_pyx_unpickle_FrenetPath, sizeof(__pyx_k_pyx_unpickle_FrenetPath), 0, 0, 1, 1},
     {&__pyx_n_s_pyx_unpickle_QuarticPolynomial, __pyx_k_pyx_unpickle_QuarticPolynomial, sizeof(__pyx_k_pyx_unpickle_QuarticPolynomial), 0, 0, 1, 1},
     {&__pyx_n_s_pyx_vtable, __pyx_k_pyx_vtable, sizeof(__pyx_k_pyx_vtable), 0, 0, 1, 1},
+    {&__pyx_kp_u_r, __pyx_k_r, sizeof(__pyx_k_r), 0, 1, 0, 0},
     {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
     {&__pyx_n_s_reduce, __pyx_k_reduce, sizeof(__pyx_k_reduce), 0, 0, 1, 1},
     {&__pyx_n_s_reduce_cython, __pyx_k_reduce_cython, sizeof(__pyx_k_reduce_cython), 0, 0, 1, 1},
     {&__pyx_n_s_reduce_ex, __pyx_k_reduce_ex, sizeof(__pyx_k_reduce_ex), 0, 0, 1, 1},
     {&__pyx_n_s_register, __pyx_k_register, sizeof(__pyx_k_register), 0, 0, 1, 1},
+    {&__pyx_n_s_s, __pyx_k_s, sizeof(__pyx_k_s), 0, 0, 1, 1},
     {&__pyx_n_s_s0, __pyx_k_s0, sizeof(__pyx_k_s0), 0, 0, 1, 1},
     {&__pyx_n_s_s_d, __pyx_k_s_d, sizeof(__pyx_k_s_d), 0, 0, 1, 1},
     {&__pyx_n_s_s_dd, __pyx_k_s_dd, sizeof(__pyx_k_s_dd), 0, 0, 1, 1},
+    {&__pyx_kp_u_s_m, __pyx_k_s_m, sizeof(__pyx_k_s_m), 0, 1, 0, 0},
     {&__pyx_n_s_self, __pyx_k_self, sizeof(__pyx_k_self), 0, 0, 1, 1},
     {&__pyx_n_s_send, __pyx_k_send, sizeof(__pyx_k_send), 0, 0, 1, 1},
     {&__pyx_n_s_setstate, __pyx_k_setstate, sizeof(__pyx_k_setstate), 0, 0, 1, 1},
@@ -34602,7 +34160,6 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_solve, __pyx_k_solve, sizeof(__pyx_k_solve), 0, 0, 1, 1},
     {&__pyx_n_s_spec, __pyx_k_spec, sizeof(__pyx_k_spec), 0, 0, 1, 1},
     {&__pyx_n_s_start, __pyx_k_start, sizeof(__pyx_k_start), 0, 0, 1, 1},
-    {&__pyx_kp_u_start_2, __pyx_k_start_2, sizeof(__pyx_k_start_2), 0, 1, 0, 0},
     {&__pyx_n_s_state, __pyx_k_state, sizeof(__pyx_k_state), 0, 0, 1, 1},
     {&__pyx_n_s_step, __pyx_k_step, sizeof(__pyx_k_step), 0, 0, 1, 1},
     {&__pyx_n_s_stop, __pyx_k_stop, sizeof(__pyx_k_stop), 0, 0, 1, 1},
@@ -34614,23 +34171,19 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_sum, __pyx_k_sum, sizeof(__pyx_k_sum), 0, 0, 1, 1},
     {&__pyx_n_s_sys, __pyx_k_sys, sizeof(__pyx_k_sys), 0, 0, 1, 1},
     {&__pyx_n_s_t, __pyx_k_t, sizeof(__pyx_k_t), 0, 0, 1, 1},
-    {&__pyx_n_s_target_course, __pyx_k_target_course, sizeof(__pyx_k_target_course), 0, 0, 1, 1},
     {&__pyx_n_s_target_speed, __pyx_k_target_speed, sizeof(__pyx_k_target_speed), 0, 0, 1, 1},
-    {&__pyx_n_s_tc, __pyx_k_tc, sizeof(__pyx_k_tc), 0, 0, 1, 1},
     {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
     {&__pyx_n_s_tfp, __pyx_k_tfp, sizeof(__pyx_k_tfp), 0, 0, 1, 1},
     {&__pyx_n_s_throw, __pyx_k_throw, sizeof(__pyx_k_throw), 0, 0, 1, 1},
     {&__pyx_n_s_time, __pyx_k_time, sizeof(__pyx_k_time), 0, 0, 1, 1},
     {&__pyx_n_s_title, __pyx_k_title, sizeof(__pyx_k_title), 0, 0, 1, 1},
     {&__pyx_n_s_tv, __pyx_k_tv, sizeof(__pyx_k_tv), 0, 0, 1, 1},
-    {&__pyx_n_s_tx, __pyx_k_tx, sizeof(__pyx_k_tx), 0, 0, 1, 1},
-    {&__pyx_n_s_ty, __pyx_k_ty, sizeof(__pyx_k_ty), 0, 0, 1, 1},
-    {&__pyx_n_s_tyaw, __pyx_k_tyaw, sizeof(__pyx_k_tyaw), 0, 0, 1, 1},
     {&__pyx_kp_s_unable_to_allocate_array_data, __pyx_k_unable_to_allocate_array_data, sizeof(__pyx_k_unable_to_allocate_array_data), 0, 0, 1, 0},
     {&__pyx_kp_s_unable_to_allocate_shape_and_str, __pyx_k_unable_to_allocate_shape_and_str, sizeof(__pyx_k_unable_to_allocate_shape_and_str), 0, 0, 1, 0},
     {&__pyx_n_s_unpack, __pyx_k_unpack, sizeof(__pyx_k_unpack), 0, 0, 1, 1},
     {&__pyx_n_s_update, __pyx_k_update, sizeof(__pyx_k_update), 0, 0, 1, 1},
     {&__pyx_n_s_use_setstate, __pyx_k_use_setstate, sizeof(__pyx_k_use_setstate), 0, 0, 1, 1},
+    {&__pyx_n_s_valid_fplist, __pyx_k_valid_fplist, sizeof(__pyx_k_valid_fplist), 0, 0, 1, 1},
     {&__pyx_n_s_version_info, __pyx_k_version_info, sizeof(__pyx_k_version_info), 0, 0, 1, 1},
     {&__pyx_n_s_vxe, __pyx_k_vxe, sizeof(__pyx_k_vxe), 0, 0, 1, 1},
     {&__pyx_n_s_vxs, __pyx_k_vxs, sizeof(__pyx_k_vxs), 0, 0, 1, 1},
@@ -34638,9 +34191,9 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_wy, __pyx_k_wy, sizeof(__pyx_k_wy), 0, 0, 1, 1},
     {&__pyx_n_s_x, __pyx_k_x, sizeof(__pyx_k_x), 0, 0, 1, 1},
     {&__pyx_n_u_xk, __pyx_k_xk, sizeof(__pyx_k_xk), 0, 1, 0, 1},
-    {&__pyx_n_s_xlim, __pyx_k_xlim, sizeof(__pyx_k_xlim), 0, 0, 1, 1},
+    {&__pyx_n_s_xlabel, __pyx_k_xlabel, sizeof(__pyx_k_xlabel), 0, 0, 1, 1},
     {&__pyx_n_s_xs, __pyx_k_xs, sizeof(__pyx_k_xs), 0, 0, 1, 1},
-    {&__pyx_n_s_ylim, __pyx_k_ylim, sizeof(__pyx_k_ylim), 0, 0, 1, 1},
+    {&__pyx_n_s_ylabel, __pyx_k_ylabel, sizeof(__pyx_k_ylabel), 0, 0, 1, 1},
     {&__pyx_n_s_zip, __pyx_k_zip, sizeof(__pyx_k_zip), 0, 0, 1, 1},
     {0, 0, 0, 0, 0, 0, 0}
   };
@@ -34651,7 +34204,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_sum = __Pyx_GetBuiltinName(__pyx_n_s_sum); if (!__pyx_builtin_sum) __PYX_ERR(0, 112, __pyx_L1_error)
   __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 126, __pyx_L1_error)
   __pyx_builtin_zip = __Pyx_GetBuiltinName(__pyx_n_s_zip); if (!__pyx_builtin_zip) __PYX_ERR(0, 155, __pyx_L1_error)
-  __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 206, __pyx_L1_error)
+  __pyx_builtin_max = __Pyx_GetBuiltinName(__pyx_n_s_max); if (!__pyx_builtin_max) __PYX_ERR(0, 196, __pyx_L1_error)
   __pyx_builtin___import__ = __Pyx_GetBuiltinName(__pyx_n_s_import); if (!__pyx_builtin___import__) __PYX_ERR(1, 100, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(1, 141, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(1, 156, __pyx_L1_error)
@@ -34661,7 +34214,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_Ellipsis = __Pyx_GetBuiltinName(__pyx_n_s_Ellipsis); if (!__pyx_builtin_Ellipsis) __PYX_ERR(1, 408, __pyx_L1_error)
   __pyx_builtin_id = __Pyx_GetBuiltinName(__pyx_n_s_id); if (!__pyx_builtin_id) __PYX_ERR(1, 618, __pyx_L1_error)
   __pyx_builtin_IndexError = __Pyx_GetBuiltinName(__pyx_n_s_IndexError); if (!__pyx_builtin_IndexError) __PYX_ERR(1, 914, __pyx_L1_error)
-  __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(2, 966, __pyx_L1_error)
+  __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(2, 984, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -34708,63 +34261,52 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":966
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":984
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
  * 
  * cdef inline int import_umath() except -1:
  */
-  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_kp_u_numpy_core_multiarray_failed_to); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(2, 966, __pyx_L1_error)
+  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_kp_u_numpy_core_multiarray_failed_to); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(2, 984, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
 
-  /* "../../../../../../usr/local/lib/python3.6/dist-packages/numpy/__init__.cython-30.pxd":972
+  /* "../../../../../../../miniconda3/lib/python3.11/site-packages/numpy/__init__.cython-30.pxd":990
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
  * 
  * cdef inline int import_ufunc() except -1:
  */
-  __pyx_tuple__10 = PyTuple_Pack(1, __pyx_kp_u_numpy_core_umath_failed_to_impor); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(2, 972, __pyx_L1_error)
+  __pyx_tuple__10 = PyTuple_Pack(1, __pyx_kp_u_numpy_core_umath_failed_to_impor); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(2, 990, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":252
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":210
  * 
- *         if np.hypot(path.x[1] - tx[-1], path.y[1] - ty[-1]) <= 1.0:
- *             print("Goal reached")             # <<<<<<<<<<<<<<
- *             break
- * 
+ *     if debug_mode:
+ *         plt.figure(figsize=(10, 10))             # <<<<<<<<<<<<<<
+ *         for fp in valid_fplist:
+ *             plt.plot(fp.s, fp.d, '-r', alpha=0.3)
  */
-  __pyx_tuple__11 = PyTuple_Pack(1, __pyx_kp_u_Goal_reached); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 252, __pyx_L1_error)
+  __pyx_tuple__11 = PyTuple_Pack(2, __pyx_int_10, __pyx_int_10); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
 
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":258
- *             plt.cla()
- *             plt.plot(tx, ty, label="Course")
- *             plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")             # <<<<<<<<<<<<<<
- *             plt.plot(path.x[1:], path.y[1:], "-or", label="Trajectory")
- *             plt.xlim(path.x[1] - area, path.x[1] + area)
+  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":215
+ *         if best_path:
+ *             plt.plot(best_path.s, best_path.d, '-g', linewidth=2, label="Best Path")
+ *         plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")             # <<<<<<<<<<<<<<
+ *         plt.xlabel('s [m]')
+ *         plt.ylabel('d [m]')
  */
-  __pyx_tuple__12 = PyTuple_Pack(2, __pyx_slice__5, __pyx_int_0); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 258, __pyx_L1_error)
+  __pyx_tuple__12 = PyTuple_Pack(2, __pyx_slice__5, __pyx_int_0); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 215, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
-  __pyx_tuple__13 = PyTuple_Pack(2, __pyx_slice__5, __pyx_int_1); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 258, __pyx_L1_error)
+  __pyx_tuple__13 = PyTuple_Pack(2, __pyx_slice__5, __pyx_int_1); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 215, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":266
- *             plt.legend()
- * 
- *     print("Finish")             # <<<<<<<<<<<<<<
- *     if show_animation:
- *         plt.show()
- */
-  __pyx_tuple__14 = PyTuple_Pack(1, __pyx_n_u_Finish); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 266, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__14);
-  __Pyx_GIVEREF(__pyx_tuple__14);
 
   /* "(tree fragment)":4
  *     cdef object __pyx_PickleError
@@ -34773,12 +34315,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *         from pickle import PickleError as __pyx_PickleError
  *         raise __pyx_PickleError, "Incompatible checksums (0x%x vs (0x5b74447, 0x259e754, 0xacea279) = (a0, a1, a2, a3, a4))" % __pyx_checksum
  */
-  __pyx_tuple__15 = PyTuple_Pack(3, __pyx_int_95896647, __pyx_int_39446356, __pyx_int_181314169); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(1, 4, __pyx_L1_error)
+  __pyx_tuple__14 = PyTuple_Pack(3, __pyx_int_95896647, __pyx_int_39446356, __pyx_int_181314169); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(1, 4, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__14);
+  __Pyx_GIVEREF(__pyx_tuple__14);
+  __pyx_tuple__15 = PyTuple_Pack(3, __pyx_int_155166693, __pyx_int_70765620, __pyx_int_161839282); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(1, 4, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
-  __pyx_tuple__16 = PyTuple_Pack(3, __pyx_int_155166693, __pyx_int_70765620, __pyx_int_161839282); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(1, 4, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__16);
-  __Pyx_GIVEREF(__pyx_tuple__16);
 
   /* "View.MemoryView":100
  * cdef object __pyx_collections_abc_Sequence "__pyx_collections_abc_Sequence"
@@ -34787,12 +34329,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *         __pyx_collections_abc_Sequence = __import__("collections.abc").abc.Sequence
  *     else:
  */
-  __pyx_tuple__17 = PyTuple_Pack(1, __pyx_n_s_sys); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(1, 100, __pyx_L1_error)
+  __pyx_tuple__16 = PyTuple_Pack(1, __pyx_n_s_sys); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(1, 100, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__16);
+  __Pyx_GIVEREF(__pyx_tuple__16);
+  __pyx_tuple__17 = PyTuple_Pack(2, __pyx_int_3, __pyx_int_3); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(1, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
-  __pyx_tuple__18 = PyTuple_Pack(2, __pyx_int_3, __pyx_int_3); if (unlikely(!__pyx_tuple__18)) __PYX_ERR(1, 100, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__18);
-  __Pyx_GIVEREF(__pyx_tuple__18);
 
   /* "View.MemoryView":101
  * try:
@@ -34801,9 +34343,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *     else:
  *         __pyx_collections_abc_Sequence = __import__("collections").Sequence
  */
-  __pyx_tuple__19 = PyTuple_Pack(1, __pyx_kp_s_collections_abc); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(1, 101, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__19);
-  __Pyx_GIVEREF(__pyx_tuple__19);
+  __pyx_tuple__18 = PyTuple_Pack(1, __pyx_kp_s_collections_abc); if (unlikely(!__pyx_tuple__18)) __PYX_ERR(1, 101, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__18);
+  __Pyx_GIVEREF(__pyx_tuple__18);
 
   /* "View.MemoryView":103
  *         __pyx_collections_abc_Sequence = __import__("collections.abc").abc.Sequence
@@ -34812,9 +34354,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * except:
  * 
  */
-  __pyx_tuple__20 = PyTuple_Pack(1, __pyx_n_s_collections); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(1, 103, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__20);
-  __Pyx_GIVEREF(__pyx_tuple__20);
+  __pyx_tuple__19 = PyTuple_Pack(1, __pyx_n_s_collections); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(1, 103, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__19);
+  __Pyx_GIVEREF(__pyx_tuple__19);
 
   /* "View.MemoryView":309
  *         return self.name
@@ -34823,9 +34365,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * cdef strided = Enum("<strided and direct>") # default
  * cdef indirect = Enum("<strided and indirect>")
  */
-  __pyx_tuple__21 = PyTuple_Pack(1, __pyx_kp_s_strided_and_direct_or_indirect); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(1, 309, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__21);
-  __Pyx_GIVEREF(__pyx_tuple__21);
+  __pyx_tuple__20 = PyTuple_Pack(1, __pyx_kp_s_strided_and_direct_or_indirect); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(1, 309, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__20);
+  __Pyx_GIVEREF(__pyx_tuple__20);
 
   /* "View.MemoryView":310
  * 
@@ -34834,9 +34376,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * cdef indirect = Enum("<strided and indirect>")
  * 
  */
-  __pyx_tuple__22 = PyTuple_Pack(1, __pyx_kp_s_strided_and_direct); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(1, 310, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__22);
-  __Pyx_GIVEREF(__pyx_tuple__22);
+  __pyx_tuple__21 = PyTuple_Pack(1, __pyx_kp_s_strided_and_direct); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(1, 310, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__21);
+  __Pyx_GIVEREF(__pyx_tuple__21);
 
   /* "View.MemoryView":311
  * cdef generic = Enum("<strided and direct or indirect>")
@@ -34845,9 +34387,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * 
  * 
  */
-  __pyx_tuple__23 = PyTuple_Pack(1, __pyx_kp_s_strided_and_indirect); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(1, 311, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__23);
-  __Pyx_GIVEREF(__pyx_tuple__23);
+  __pyx_tuple__22 = PyTuple_Pack(1, __pyx_kp_s_strided_and_indirect); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(1, 311, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__22);
+  __Pyx_GIVEREF(__pyx_tuple__22);
 
   /* "View.MemoryView":314
  * 
@@ -34856,9 +34398,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * cdef indirect_contiguous = Enum("<contiguous and indirect>")
  * 
  */
-  __pyx_tuple__24 = PyTuple_Pack(1, __pyx_kp_s_contiguous_and_direct); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(1, 314, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__24);
-  __Pyx_GIVEREF(__pyx_tuple__24);
+  __pyx_tuple__23 = PyTuple_Pack(1, __pyx_kp_s_contiguous_and_direct); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(1, 314, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__23);
+  __Pyx_GIVEREF(__pyx_tuple__23);
 
   /* "View.MemoryView":315
  * 
@@ -34867,19 +34409,19 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * 
  * 
  */
-  __pyx_tuple__25 = PyTuple_Pack(1, __pyx_kp_s_contiguous_and_indirect); if (unlikely(!__pyx_tuple__25)) __PYX_ERR(1, 315, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__25);
-  __Pyx_GIVEREF(__pyx_tuple__25);
+  __pyx_tuple__24 = PyTuple_Pack(1, __pyx_kp_s_contiguous_and_indirect); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(1, 315, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__24);
+  __Pyx_GIVEREF(__pyx_tuple__24);
 
   /* "(tree fragment)":1
  * def __pyx_unpickle_Enum(__pyx_type, long __pyx_checksum, __pyx_state):             # <<<<<<<<<<<<<<
  *     cdef object __pyx_PickleError
  *     cdef object __pyx_result
  */
-  __pyx_tuple__26 = PyTuple_Pack(5, __pyx_n_s_pyx_type, __pyx_n_s_pyx_checksum, __pyx_n_s_pyx_state, __pyx_n_s_pyx_PickleError, __pyx_n_s_pyx_result); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(1, 1, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__26);
-  __Pyx_GIVEREF(__pyx_tuple__26);
-  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle_Enum, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_tuple__25 = PyTuple_Pack(5, __pyx_n_s_pyx_type, __pyx_n_s_pyx_checksum, __pyx_n_s_pyx_state, __pyx_n_s_pyx_PickleError, __pyx_n_s_pyx_result); if (unlikely(!__pyx_tuple__25)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__25);
+  __Pyx_GIVEREF(__pyx_tuple__25);
+  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle_Enum, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(1, 1, __pyx_L1_error)
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":8
  * import numpy as np
@@ -34888,9 +34430,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * 
  * from CubicSpline.cubic_spline_planner cimport CubicSpline2D
  */
-  __pyx_tuple__28 = PyTuple_Pack(2, __pyx_n_s_matplotlib, __pyx_n_s_pyplot); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 8, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__28);
-  __Pyx_GIVEREF(__pyx_tuple__28);
+  __pyx_tuple__27 = PyTuple_Pack(2, __pyx_n_s_matplotlib, __pyx_n_s_pyplot); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__27);
+  __Pyx_GIVEREF(__pyx_tuple__27);
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":46
  *         self.a4 = x[1]
@@ -34899,10 +34441,10 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *         return self.a0 + self.a1 * t + self.a2 * t ** 2 + self.a3 * t ** 3 + self.a4 * t ** 4
  * 
  */
-  __pyx_tuple__29 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_t); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 46, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__29);
-  __Pyx_GIVEREF(__pyx_tuple__29);
-  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_point, 46, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 46, __pyx_L1_error)
+  __pyx_tuple__28 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_t); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 46, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__28);
+  __Pyx_GIVEREF(__pyx_tuple__28);
+  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_point, 46, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 46, __pyx_L1_error)
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":49
  *         return self.a0 + self.a1 * t + self.a2 * t ** 2 + self.a3 * t ** 3 + self.a4 * t ** 4
@@ -34911,7 +34453,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *         return self.a1 + 2 * self.a2 * t + 3 * self.a3 * t ** 2 + 4 * self.a4 * t ** 3
  * 
  */
-  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_first_derivative, 49, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_first_derivative, 49, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 49, __pyx_L1_error)
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":52
  *         return self.a1 + 2 * self.a2 * t + 3 * self.a3 * t ** 2 + 4 * self.a4 * t ** 3
@@ -34920,7 +34462,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *         return 2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t ** 2
  * 
  */
-  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_second_derivative, 52, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_second_derivative, 52, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 52, __pyx_L1_error)
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":55
  *         return 2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t ** 2
@@ -34929,17 +34471,17 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *         return 6 * self.a3 + 24 * self.a4 * t
  * 
  */
-  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_third_derivative, 55, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 55, __pyx_L1_error)
+  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_third_derivative, 55, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 55, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
  *     cdef tuple state
  *     cdef object _dict
  */
-  __pyx_tuple__34 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_state, __pyx_n_s_dict_2, __pyx_n_s_use_setstate); if (unlikely(!__pyx_tuple__34)) __PYX_ERR(1, 1, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__34);
-  __Pyx_GIVEREF(__pyx_tuple__34);
-  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_reduce_cython, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_tuple__33 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_state, __pyx_n_s_dict_2, __pyx_n_s_use_setstate); if (unlikely(!__pyx_tuple__33)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__33);
+  __Pyx_GIVEREF(__pyx_tuple__33);
+  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_reduce_cython, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(1, 1, __pyx_L1_error)
 
   /* "(tree fragment)":16
  *     else:
@@ -34947,17 +34489,17 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     __pyx_unpickle_QuarticPolynomial__set_state(self, __pyx_state)
  */
-  __pyx_tuple__36 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_pyx_state); if (unlikely(!__pyx_tuple__36)) __PYX_ERR(1, 16, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__36);
-  __Pyx_GIVEREF(__pyx_tuple__36);
-  __pyx_codeobj__37 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__36, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__37)) __PYX_ERR(1, 16, __pyx_L1_error)
+  __pyx_tuple__35 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_pyx_state); if (unlikely(!__pyx_tuple__35)) __PYX_ERR(1, 16, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__35);
+  __Pyx_GIVEREF(__pyx_tuple__35);
+  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(1, 16, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
  *     cdef tuple state
  *     cdef object _dict
  */
-  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_reduce_cython, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_codeobj__37 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_reduce_cython, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__37)) __PYX_ERR(1, 1, __pyx_L1_error)
 
   /* "(tree fragment)":16
  *     else:
@@ -34965,7 +34507,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     __pyx_unpickle_FrenetPath__set_state(self, __pyx_state)
  */
-  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__36, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(1, 16, __pyx_L1_error)
+  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(1, 16, __pyx_L1_error)
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":81
  * # Functions to generate Frenet paths, calculate global paths, and perform collision checks
@@ -34974,10 +34516,10 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *     cdef list frenet_paths = []
  *     cdef double di, Ti
  */
-  __pyx_tuple__40 = PyTuple_Pack(26, __pyx_n_s_c_speed, __pyx_n_s_c_accel, __pyx_n_s_c_d, __pyx_n_s_c_d_d, __pyx_n_s_c_d_dd, __pyx_n_s_s0, __pyx_n_s_target_speed, __pyx_n_s_frenet_paths, __pyx_n_s_di, __pyx_n_s_Ti, __pyx_n_s_fp, __pyx_n_s_lat_qp, __pyx_n_s_lon_qp, __pyx_n_s_tfp, __pyx_n_s_tv, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_x, __pyx_n_s_x); if (unlikely(!__pyx_tuple__40)) __PYX_ERR(0, 81, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__40);
-  __Pyx_GIVEREF(__pyx_tuple__40);
-  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(7, 0, 0, 26, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_frenet_paths, 81, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_tuple__39 = PyTuple_Pack(26, __pyx_n_s_c_speed, __pyx_n_s_c_accel, __pyx_n_s_c_d, __pyx_n_s_c_d_d, __pyx_n_s_c_d_dd, __pyx_n_s_s0, __pyx_n_s_target_speed, __pyx_n_s_frenet_paths, __pyx_n_s_di, __pyx_n_s_Ti, __pyx_n_s_fp, __pyx_n_s_lat_qp, __pyx_n_s_lon_qp, __pyx_n_s_tfp, __pyx_n_s_tv, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_t, __pyx_n_s_x, __pyx_n_s_x); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 81, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__39);
+  __Pyx_GIVEREF(__pyx_tuple__39);
+  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(7, 0, 0, 26, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_calc_frenet_paths, 81, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 81, __pyx_L1_error)
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":176
  *     return [fplist[i] for i in ok_ind]
@@ -34986,42 +34528,30 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *     csp = CubicSpline2D(np.array(wx, dtype=np.float64), np.array(wy, dtype=np.float64))
  *     s = np.arange(0, csp.s[-1], 0.1)
  */
-  __pyx_tuple__42 = PyTuple_Pack(2, __pyx_n_s_wx, __pyx_n_s_wy); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 176, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__42);
-  __Pyx_GIVEREF(__pyx_tuple__42);
-  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_generate_target_course, 176, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 176, __pyx_L1_error)
+  __pyx_tuple__41 = PyTuple_Pack(2, __pyx_n_s_wx, __pyx_n_s_wy); if (unlikely(!__pyx_tuple__41)) __PYX_ERR(0, 176, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__41);
+  __Pyx_GIVEREF(__pyx_tuple__41);
+  __pyx_codeobj__42 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__41, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_generate_target_course, 176, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__42)) __PYX_ERR(0, 176, __pyx_L1_error)
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":190
  *     return rx, ry, ryaw, rk, csp
  * 
- * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed):             # <<<<<<<<<<<<<<
+ * def frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed, bint debug_mode=False):             # <<<<<<<<<<<<<<
  *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, target_speed)
  *     fplist = calc_global_paths(fplist, csp)
  */
-  __pyx_tuple__44 = PyTuple_Pack(9, __pyx_n_s_csp, __pyx_n_s_s0, __pyx_n_s_c_speed, __pyx_n_s_c_accel, __pyx_n_s_c_d, __pyx_n_s_c_d_d, __pyx_n_s_c_d_dd, __pyx_n_s_ob, __pyx_n_s_target_speed); if (unlikely(!__pyx_tuple__44)) __PYX_ERR(0, 190, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__44);
-  __Pyx_GIVEREF(__pyx_tuple__44);
-  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(9, 0, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_frenet_optimal_planning, 190, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 190, __pyx_L1_error)
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":205
- *     return best_path
- * 
- * def main():             # <<<<<<<<<<<<<<
- *     print(__file__ + " start!!")
- * 
- */
-  __pyx_tuple__46 = PyTuple_Pack(19, __pyx_n_s_wx, __pyx_n_s_wy, __pyx_n_s_ob, __pyx_n_s_target_speed, __pyx_n_s_target_course, __pyx_n_s_tx, __pyx_n_s_ty, __pyx_n_s_tyaw, __pyx_n_s_tc, __pyx_n_s_csp, __pyx_n_s_c_speed, __pyx_n_s_c_accel, __pyx_n_s_c_d, __pyx_n_s_c_d_d, __pyx_n_s_c_d_dd, __pyx_n_s_s0, __pyx_n_s_area, __pyx_n_s_path, __pyx_n_s_i); if (unlikely(!__pyx_tuple__46)) __PYX_ERR(0, 205, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__46);
-  __Pyx_GIVEREF(__pyx_tuple__46);
-  __pyx_codeobj__47 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 19, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__46, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_main_2, 205, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__47)) __PYX_ERR(0, 205, __pyx_L1_error)
+  __pyx_tuple__43 = PyTuple_Pack(20, __pyx_n_s_csp, __pyx_n_s_s0, __pyx_n_s_c_speed, __pyx_n_s_c_accel, __pyx_n_s_c_d, __pyx_n_s_c_d_d, __pyx_n_s_c_d_dd, __pyx_n_s_ob, __pyx_n_s_target_speed, __pyx_n_s_debug_mode, __pyx_n_s_fplist, __pyx_n_s_valid_fplist, __pyx_n_s_max_time_frame, __pyx_n_s_max_time_frame_paths, __pyx_n_s_min_cost, __pyx_n_s_best_path, __pyx_n_s_fp, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_fp); if (unlikely(!__pyx_tuple__43)) __PYX_ERR(0, 190, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__43);
+  __Pyx_GIVEREF(__pyx_tuple__43);
+  __pyx_codeobj__44 = (PyObject*)__Pyx_PyCode_New(10, 0, 0, 20, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__43, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_FrenetOptimalTrajectory_frenet_o_2, __pyx_n_s_frenet_optimal_planning, 190, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__44)) __PYX_ERR(0, 190, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __pyx_unpickle_QuarticPolynomial(__pyx_type, long __pyx_checksum, __pyx_state):             # <<<<<<<<<<<<<<
  *     cdef object __pyx_PickleError
  *     cdef object __pyx_result
  */
-  __pyx_codeobj__48 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle_QuarticPolynomial, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__48)) __PYX_ERR(1, 1, __pyx_L1_error)
-  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle_FrenetPath, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle_QuarticPolynomial, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_codeobj__46 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle_FrenetPath, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__46)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -35034,24 +34564,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitConstants(void) {
   if (__Pyx_CreateStringTabAndInitStrings() < 0) __PYX_ERR(0, 1, __pyx_L1_error);
   __pyx_float_0_0 = PyFloat_FromDouble(0.0); if (unlikely(!__pyx_float_0_0)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_float_0_1 = PyFloat_FromDouble(0.1); if (unlikely(!__pyx_float_0_1)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_float_1_0 = PyFloat_FromDouble(1.0); if (unlikely(!__pyx_float_1_0)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_float_3_0 = PyFloat_FromDouble(3.0); if (unlikely(!__pyx_float_3_0)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_float_5_0 = PyFloat_FromDouble(5.0); if (unlikely(!__pyx_float_5_0)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_float_6_0 = PyFloat_FromDouble(6.0); if (unlikely(!__pyx_float_6_0)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_float_6_5 = PyFloat_FromDouble(6.5); if (unlikely(!__pyx_float_6_5)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_float_8_0 = PyFloat_FromDouble(8.0); if (unlikely(!__pyx_float_8_0)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_float_10_0 = PyFloat_FromDouble(10.0); if (unlikely(!__pyx_float_10_0)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_float_20_0 = PyFloat_FromDouble(20.0); if (unlikely(!__pyx_float_20_0)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_float_20_5 = PyFloat_FromDouble(20.5); if (unlikely(!__pyx_float_20_5)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_float_30_0 = PyFloat_FromDouble(30.0); if (unlikely(!__pyx_float_30_0)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_float_35_0 = PyFloat_FromDouble(35.0); if (unlikely(!__pyx_float_35_0)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_float_50_0 = PyFloat_FromDouble(50.0); if (unlikely(!__pyx_float_50_0)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_float_70_5 = PyFloat_FromDouble(70.5); if (unlikely(!__pyx_float_70_5)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_float_0_001 = PyFloat_FromDouble(0.001); if (unlikely(!__pyx_float_0_001)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_float_neg_6_0 = PyFloat_FromDouble(-6.0); if (unlikely(!__pyx_float_neg_6_0)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_float_0_3 = PyFloat_FromDouble(0.3); if (unlikely(!__pyx_float_0_3)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_0 = PyInt_FromLong(0); if (unlikely(!__pyx_int_0)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_1 = PyInt_FromLong(1); if (unlikely(!__pyx_int_1)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_int_2 = PyInt_FromLong(2); if (unlikely(!__pyx_int_2)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_3 = PyInt_FromLong(3); if (unlikely(!__pyx_int_3)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_int_10 = PyInt_FromLong(10); if (unlikely(!__pyx_int_10)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_39446356 = PyInt_FromLong(39446356L); if (unlikely(!__pyx_int_39446356)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_70765620 = PyInt_FromLong(70765620L); if (unlikely(!__pyx_int_70765620)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_95896647 = PyInt_FromLong(95896647L); if (unlikely(!__pyx_int_95896647)) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -35276,6 +34794,25 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_3_genexpr->tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   #endif
+  #if CYTHON_USE_TYPE_SPECS
+  __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr_spec, NULL); if (unlikely(!__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr)) __PYX_ERR(0, 196, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr_spec, __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr) < 0) __PYX_ERR(0, 196, __pyx_L1_error)
+  #else
+  __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr = &__pyx_type_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr;
+  #endif
+  #if !CYTHON_COMPILING_IN_LIMITED_API
+  #endif
+  #if !CYTHON_USE_TYPE_SPECS
+  if (__Pyx_PyType_Ready(__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr) < 0) __PYX_ERR(0, 196, __pyx_L1_error)
+  #endif
+  #if PY_MAJOR_VERSION < 3
+  __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr->tp_print = 0;
+  #endif
+  #if !CYTHON_COMPILING_IN_LIMITED_API
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr->tp_dictoffset && __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr->tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory___pyx_scope_struct_4_genexpr->tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
+  }
+  #endif
   __pyx_vtabptr_array = &__pyx_vtable_array;
   __pyx_vtable_array.get_memview = (PyObject *(*)(struct __pyx_array_obj *))__pyx_array_get_memview;
   #if CYTHON_USE_TYPE_SPECS
@@ -35444,13 +34981,23 @@ static int __Pyx_modinit_type_import_code(void) {
   #endif
   __Pyx_ImportType_CheckSize_Warn_3_0_10); if (!__pyx_ptype_7cpython_4type_type) __PYX_ERR(4, 9, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyImport_ImportModule("numpy"); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 203, __pyx_L1_error)
+  __pyx_t_1 = PyImport_ImportModule("numpy"); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 202, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_ptype_5numpy_dtype = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "dtype", sizeof(PyArray_Descr), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyArray_Descr),__Pyx_ImportType_CheckSize_Ignore_3_0_10); if (!__pyx_ptype_5numpy_dtype) __PYX_ERR(2, 203, __pyx_L1_error)
-  __pyx_ptype_5numpy_flatiter = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "flatiter", sizeof(PyArrayIterObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyArrayIterObject),__Pyx_ImportType_CheckSize_Ignore_3_0_10); if (!__pyx_ptype_5numpy_flatiter) __PYX_ERR(2, 226, __pyx_L1_error)
-  __pyx_ptype_5numpy_broadcast = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "broadcast", sizeof(PyArrayMultiIterObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyArrayMultiIterObject),__Pyx_ImportType_CheckSize_Ignore_3_0_10); if (!__pyx_ptype_5numpy_broadcast) __PYX_ERR(2, 230, __pyx_L1_error)
-  __pyx_ptype_5numpy_ndarray = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "ndarray", sizeof(PyArrayObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyArrayObject),__Pyx_ImportType_CheckSize_Ignore_3_0_10); if (!__pyx_ptype_5numpy_ndarray) __PYX_ERR(2, 239, __pyx_L1_error)
-  __pyx_ptype_5numpy_ufunc = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "ufunc", sizeof(PyUFuncObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyUFuncObject),__Pyx_ImportType_CheckSize_Ignore_3_0_10); if (!__pyx_ptype_5numpy_ufunc) __PYX_ERR(2, 846, __pyx_L1_error)
+  __pyx_ptype_5numpy_dtype = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "dtype", sizeof(PyArray_Descr), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyArray_Descr),__Pyx_ImportType_CheckSize_Ignore_3_0_10); if (!__pyx_ptype_5numpy_dtype) __PYX_ERR(2, 202, __pyx_L1_error)
+  __pyx_ptype_5numpy_flatiter = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "flatiter", sizeof(PyArrayIterObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyArrayIterObject),__Pyx_ImportType_CheckSize_Ignore_3_0_10); if (!__pyx_ptype_5numpy_flatiter) __PYX_ERR(2, 225, __pyx_L1_error)
+  __pyx_ptype_5numpy_broadcast = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "broadcast", sizeof(PyArrayMultiIterObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyArrayMultiIterObject),__Pyx_ImportType_CheckSize_Ignore_3_0_10); if (!__pyx_ptype_5numpy_broadcast) __PYX_ERR(2, 229, __pyx_L1_error)
+  __pyx_ptype_5numpy_ndarray = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "ndarray", sizeof(PyArrayObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyArrayObject),__Pyx_ImportType_CheckSize_Ignore_3_0_10); if (!__pyx_ptype_5numpy_ndarray) __PYX_ERR(2, 238, __pyx_L1_error)
+  __pyx_ptype_5numpy_generic = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "generic", sizeof(PyObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyObject),__Pyx_ImportType_CheckSize_Warn_3_0_10); if (!__pyx_ptype_5numpy_generic) __PYX_ERR(2, 809, __pyx_L1_error)
+  __pyx_ptype_5numpy_number = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "number", sizeof(PyObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyObject),__Pyx_ImportType_CheckSize_Warn_3_0_10); if (!__pyx_ptype_5numpy_number) __PYX_ERR(2, 811, __pyx_L1_error)
+  __pyx_ptype_5numpy_integer = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "integer", sizeof(PyObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyObject),__Pyx_ImportType_CheckSize_Warn_3_0_10); if (!__pyx_ptype_5numpy_integer) __PYX_ERR(2, 813, __pyx_L1_error)
+  __pyx_ptype_5numpy_signedinteger = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "signedinteger", sizeof(PyObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyObject),__Pyx_ImportType_CheckSize_Warn_3_0_10); if (!__pyx_ptype_5numpy_signedinteger) __PYX_ERR(2, 815, __pyx_L1_error)
+  __pyx_ptype_5numpy_unsignedinteger = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "unsignedinteger", sizeof(PyObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyObject),__Pyx_ImportType_CheckSize_Warn_3_0_10); if (!__pyx_ptype_5numpy_unsignedinteger) __PYX_ERR(2, 817, __pyx_L1_error)
+  __pyx_ptype_5numpy_inexact = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "inexact", sizeof(PyObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyObject),__Pyx_ImportType_CheckSize_Warn_3_0_10); if (!__pyx_ptype_5numpy_inexact) __PYX_ERR(2, 819, __pyx_L1_error)
+  __pyx_ptype_5numpy_floating = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "floating", sizeof(PyObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyObject),__Pyx_ImportType_CheckSize_Warn_3_0_10); if (!__pyx_ptype_5numpy_floating) __PYX_ERR(2, 821, __pyx_L1_error)
+  __pyx_ptype_5numpy_complexfloating = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "complexfloating", sizeof(PyObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyObject),__Pyx_ImportType_CheckSize_Warn_3_0_10); if (!__pyx_ptype_5numpy_complexfloating) __PYX_ERR(2, 823, __pyx_L1_error)
+  __pyx_ptype_5numpy_flexible = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "flexible", sizeof(PyObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyObject),__Pyx_ImportType_CheckSize_Warn_3_0_10); if (!__pyx_ptype_5numpy_flexible) __PYX_ERR(2, 825, __pyx_L1_error)
+  __pyx_ptype_5numpy_character = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "character", sizeof(PyObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyObject),__Pyx_ImportType_CheckSize_Warn_3_0_10); if (!__pyx_ptype_5numpy_character) __PYX_ERR(2, 827, __pyx_L1_error)
+  __pyx_ptype_5numpy_ufunc = __Pyx_ImportType_3_0_10(__pyx_t_1, "numpy", "ufunc", sizeof(PyUFuncObject), __PYX_GET_STRUCT_ALIGNMENT_3_0_10(PyUFuncObject),__Pyx_ImportType_CheckSize_Ignore_3_0_10); if (!__pyx_ptype_5numpy_ufunc) __PYX_ERR(2, 866, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = PyImport_ImportModule("CubicSpline.cubic_spline_planner"); if (unlikely(!__pyx_t_1)) __PYX_ERR(5, 6, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -35795,12 +35342,12 @@ if (!__Pyx_RefNanny) {
  *         __pyx_collections_abc_Sequence = __import__("collections.abc").abc.Sequence
  *     else:
  */
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin___import__, __pyx_tuple__17, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 100, __pyx_L2_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin___import__, __pyx_tuple__16, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 100, __pyx_L2_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_version_info); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 100, __pyx_L2_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = PyObject_RichCompare(__pyx_t_5, __pyx_tuple__18, Py_GE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 100, __pyx_L2_error)
+      __pyx_t_4 = PyObject_RichCompare(__pyx_t_5, __pyx_tuple__17, Py_GE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 100, __pyx_L2_error)
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(1, 100, __pyx_L2_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -35813,7 +35360,7 @@ if (!__Pyx_RefNanny) {
  *     else:
  *         __pyx_collections_abc_Sequence = __import__("collections").Sequence
  */
-        __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin___import__, __pyx_tuple__19, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 101, __pyx_L2_error)
+        __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin___import__, __pyx_tuple__18, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 101, __pyx_L2_error)
         __Pyx_GOTREF(__pyx_t_4);
         __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_abc); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 101, __pyx_L2_error)
         __Pyx_GOTREF(__pyx_t_5);
@@ -35844,7 +35391,7 @@ if (!__Pyx_RefNanny) {
  * 
  */
       /*else*/ {
-        __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin___import__, __pyx_tuple__20, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 103, __pyx_L2_error)
+        __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin___import__, __pyx_tuple__19, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 103, __pyx_L2_error)
         __Pyx_GOTREF(__pyx_t_4);
         __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_Sequence); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 103, __pyx_L2_error)
         __Pyx_GOTREF(__pyx_t_5);
@@ -36009,7 +35556,7 @@ if (!__Pyx_RefNanny) {
  * cdef strided = Enum("<strided and direct>") # default
  * cdef indirect = Enum("<strided and indirect>")
  */
-  __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__21, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 309, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__20, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 309, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_XGOTREF(generic);
   __Pyx_DECREF_SET(generic, __pyx_t_7);
@@ -36023,7 +35570,7 @@ if (!__Pyx_RefNanny) {
  * cdef indirect = Enum("<strided and indirect>")
  * 
  */
-  __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__22, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 310, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__21, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 310, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_XGOTREF(strided);
   __Pyx_DECREF_SET(strided, __pyx_t_7);
@@ -36037,7 +35584,7 @@ if (!__Pyx_RefNanny) {
  * 
  * 
  */
-  __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__23, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 311, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__22, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 311, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_XGOTREF(indirect);
   __Pyx_DECREF_SET(indirect, __pyx_t_7);
@@ -36051,7 +35598,7 @@ if (!__Pyx_RefNanny) {
  * cdef indirect_contiguous = Enum("<contiguous and indirect>")
  * 
  */
-  __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__24, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 314, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__23, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 314, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_XGOTREF(contiguous);
   __Pyx_DECREF_SET(contiguous, __pyx_t_7);
@@ -36065,7 +35612,7 @@ if (!__Pyx_RefNanny) {
  * 
  * 
  */
-  __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__25, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 315, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)__pyx_MemviewEnum_type), __pyx_tuple__24, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 315, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_XGOTREF(indirect_contiguous);
   __Pyx_DECREF_SET(indirect_contiguous, __pyx_t_7);
@@ -36325,7 +35872,7 @@ if (!__Pyx_RefNanny) {
  * 
  * from CubicSpline.cubic_spline_planner cimport CubicSpline2D
  */
-  __pyx_t_4 = __Pyx_ImportDottedModule(__pyx_n_s_matplotlib_pyplot, __pyx_tuple__28); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_ImportDottedModule(__pyx_n_s_matplotlib_pyplot, __pyx_tuple__27); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_plt, __pyx_t_4) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -36344,7 +35891,7 @@ if (!__Pyx_RefNanny) {
  * cdef double MAX_SPEED = 1.0 # maximum speed [m/s]
  * cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]             # <<<<<<<<<<<<<<
  * cdef double MAX_CURVATURE = 2.5  # 1 / 0.4
- * cdef double MAX_ROAD_WIDTH = 7.0 # maximum road width [m]
+ * cdef double MAX_ROAD_WIDTH = 0.2 # maximum road width [m]
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_ACCEL = 1.0;
 
@@ -36352,77 +35899,77 @@ if (!__Pyx_RefNanny) {
  * cdef double MAX_SPEED = 1.0 # maximum speed [m/s]
  * cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]
  * cdef double MAX_CURVATURE = 2.5  # 1 / 0.4             # <<<<<<<<<<<<<<
- * cdef double MAX_ROAD_WIDTH = 7.0 # maximum road width [m]
- * cdef double D_ROAD_W = 1.0 # road width sampling length [m]
+ * cdef double MAX_ROAD_WIDTH = 0.2 # maximum road width [m]
+ * cdef double D_ROAD_W = 0.005 # road width sampling length [m]
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_CURVATURE = 2.5;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":16
  * cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]
  * cdef double MAX_CURVATURE = 2.5  # 1 / 0.4
- * cdef double MAX_ROAD_WIDTH = 7.0 # maximum road width [m]             # <<<<<<<<<<<<<<
- * cdef double D_ROAD_W = 1.0 # road width sampling length [m]
+ * cdef double MAX_ROAD_WIDTH = 0.2 # maximum road width [m]             # <<<<<<<<<<<<<<
+ * cdef double D_ROAD_W = 0.005 # road width sampling length [m]
  * cdef double DT = 0.2 # time tick [s]
  */
-  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_ROAD_WIDTH = 7.0;
+  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_ROAD_WIDTH = 0.2;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":17
  * cdef double MAX_CURVATURE = 2.5  # 1 / 0.4
- * cdef double MAX_ROAD_WIDTH = 7.0 # maximum road width [m]
- * cdef double D_ROAD_W = 1.0 # road width sampling length [m]             # <<<<<<<<<<<<<<
+ * cdef double MAX_ROAD_WIDTH = 0.2 # maximum road width [m]
+ * cdef double D_ROAD_W = 0.005 # road width sampling length [m]             # <<<<<<<<<<<<<<
  * cdef double DT = 0.2 # time tick [s]
- * cdef double MAX_T = 4.0 # max prediction time [s]
+ * cdef double MAX_T = 5.0 # max prediction time [s]
  */
-  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_ROAD_W = 1.0;
+  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_ROAD_W = 0.005;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":18
- * cdef double MAX_ROAD_WIDTH = 7.0 # maximum road width [m]
- * cdef double D_ROAD_W = 1.0 # road width sampling length [m]
+ * cdef double MAX_ROAD_WIDTH = 0.2 # maximum road width [m]
+ * cdef double D_ROAD_W = 0.005 # road width sampling length [m]
  * cdef double DT = 0.2 # time tick [s]             # <<<<<<<<<<<<<<
- * cdef double MAX_T = 4.0 # max prediction time [s]
- * cdef double MIN_T = 2.0 # min prediction time [s]
+ * cdef double MAX_T = 5.0 # max prediction time [s]
+ * cdef double MIN_T = 3.0 # min prediction time [s]
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_DT = 0.2;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":19
- * cdef double D_ROAD_W = 1.0 # road width sampling length [m]
+ * cdef double D_ROAD_W = 0.005 # road width sampling length [m]
  * cdef double DT = 0.2 # time tick [s]
- * cdef double MAX_T = 4.0 # max prediction time [s]             # <<<<<<<<<<<<<<
- * cdef double MIN_T = 2.0 # min prediction time [s]
- * cdef double D_T_S = 5.0 / 3.6 # target speed sampling length [m/s]
+ * cdef double MAX_T = 5.0 # max prediction time [s]             # <<<<<<<<<<<<<<
+ * cdef double MIN_T = 3.0 # min prediction time [s]
+ * cdef double D_T_S = 0.05 # target speed sampling length [m/s]
  */
-  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_T = 4.0;
+  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MAX_T = 5.0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":20
  * cdef double DT = 0.2 # time tick [s]
- * cdef double MAX_T = 4.0 # max prediction time [s]
- * cdef double MIN_T = 2.0 # min prediction time [s]             # <<<<<<<<<<<<<<
- * cdef double D_T_S = 5.0 / 3.6 # target speed sampling length [m/s]
- * cdef int N_S_SAMPLE = 1 # sampling number of target speed
+ * cdef double MAX_T = 5.0 # max prediction time [s]
+ * cdef double MIN_T = 3.0 # min prediction time [s]             # <<<<<<<<<<<<<<
+ * cdef double D_T_S = 0.05 # target speed sampling length [m/s]
+ * cdef double N_S_SAMPLE = 1.0 # sampling number of target speed
  */
-  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MIN_T = 2.0;
+  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_MIN_T = 3.0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":21
- * cdef double MAX_T = 4.0 # max prediction time [s]
- * cdef double MIN_T = 2.0 # min prediction time [s]
- * cdef double D_T_S = 5.0 / 3.6 # target speed sampling length [m/s]             # <<<<<<<<<<<<<<
- * cdef int N_S_SAMPLE = 1 # sampling number of target speed
+ * cdef double MAX_T = 5.0 # max prediction time [s]
+ * cdef double MIN_T = 3.0 # min prediction time [s]
+ * cdef double D_T_S = 0.05 # target speed sampling length [m/s]             # <<<<<<<<<<<<<<
+ * cdef double N_S_SAMPLE = 1.0 # sampling number of target speed
  * cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
  */
-  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_T_S = (5.0 / 3.6);
+  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_D_T_S = 0.05;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":22
- * cdef double MIN_T = 2.0 # min prediction time [s]
- * cdef double D_T_S = 5.0 / 3.6 # target speed sampling length [m/s]
- * cdef int N_S_SAMPLE = 1 # sampling number of target speed             # <<<<<<<<<<<<<<
+ * cdef double MIN_T = 3.0 # min prediction time [s]
+ * cdef double D_T_S = 0.05 # target speed sampling length [m/s]
+ * cdef double N_S_SAMPLE = 1.0 # sampling number of target speed             # <<<<<<<<<<<<<<
  * cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
  * 
  */
-  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_N_S_SAMPLE = 1;
+  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_N_S_SAMPLE = 1.0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":23
- * cdef double D_T_S = 5.0 / 3.6 # target speed sampling length [m/s]
- * cdef int N_S_SAMPLE = 1 # sampling number of target speed
+ * cdef double D_T_S = 0.05 # target speed sampling length [m/s]
+ * cdef double N_S_SAMPLE = 1.0 # sampling number of target speed
  * cdef double ROBOT_RADIUS = 0.2 # robot radius [m]             # <<<<<<<<<<<<<<
  * 
  * cdef double K_J = 0.1 # weight of jerk
@@ -36434,7 +35981,7 @@ if (!__Pyx_RefNanny) {
  * 
  * cdef double K_J = 0.1 # weight of jerk             # <<<<<<<<<<<<<<
  * cdef double K_T = 0.1 # weight of time
- * cdef double K_D = 1.0 # weight of square of d
+ * cdef double K_D = 0.1 # weight of square of d
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_J = 0.1;
 
@@ -36442,32 +35989,32 @@ if (!__Pyx_RefNanny) {
  * 
  * cdef double K_J = 0.1 # weight of jerk
  * cdef double K_T = 0.1 # weight of time             # <<<<<<<<<<<<<<
- * cdef double K_D = 1.0 # weight of square of d
- * cdef double K_LAT = 1.0 # weight of lateral direction
+ * cdef double K_D = 0.1 # weight of square of d
+ * cdef double K_LAT = 0.5 # weight of lateral direction
  */
   __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_T = 0.1;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":27
  * cdef double K_J = 0.1 # weight of jerk
  * cdef double K_T = 0.1 # weight of time
- * cdef double K_D = 1.0 # weight of square of d             # <<<<<<<<<<<<<<
- * cdef double K_LAT = 1.0 # weight of lateral direction
+ * cdef double K_D = 0.1 # weight of square of d             # <<<<<<<<<<<<<<
+ * cdef double K_LAT = 0.5 # weight of lateral direction
  * cdef double K_LON = 1.0 # weight of longitudinal direction
  */
-  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_D = 1.0;
+  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_D = 0.1;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":28
  * cdef double K_T = 0.1 # weight of time
- * cdef double K_D = 1.0 # weight of square of d
- * cdef double K_LAT = 1.0 # weight of lateral direction             # <<<<<<<<<<<<<<
+ * cdef double K_D = 0.1 # weight of square of d
+ * cdef double K_LAT = 0.5 # weight of lateral direction             # <<<<<<<<<<<<<<
  * cdef double K_LON = 1.0 # weight of longitudinal direction
  * 
  */
-  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_LAT = 1.0;
+  __pyx_v_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_K_LAT = 0.5;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":29
- * cdef double K_D = 1.0 # weight of square of d
- * cdef double K_LAT = 1.0 # weight of lateral direction
+ * cdef double K_D = 0.1 # weight of square of d
+ * cdef double K_LAT = 0.5 # weight of lateral direction
  * cdef double K_LON = 1.0 # weight of longitudinal direction             # <<<<<<<<<<<<<<
  * 
  * cdef bint show_animation = True
@@ -36499,7 +36046,7 @@ if (!__Pyx_RefNanny) {
  *         return self.a0 + self.a1 * t + self.a2 * t ** 2 + self.a3 * t ** 3 + self.a4 * t ** 4
  * 
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_3calc_point, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial_calc_point, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__30)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 46, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_3calc_point, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial_calc_point, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__29)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial, __pyx_n_s_calc_point, __pyx_t_4) < 0) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -36512,7 +36059,7 @@ if (!__Pyx_RefNanny) {
  *         return self.a1 + 2 * self.a2 * t + 3 * self.a3 * t ** 2 + 4 * self.a4 * t ** 3
  * 
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_5calc_first_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial_calc_first_der, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_5calc_first_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial_calc_first_der, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__30)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial, __pyx_n_s_calc_first_derivative, __pyx_t_4) < 0) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -36525,7 +36072,7 @@ if (!__Pyx_RefNanny) {
  *         return 2 * self.a2 + 6 * self.a3 * t + 12 * self.a4 * t ** 2
  * 
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_7calc_second_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial_calc_second_de, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__32)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_7calc_second_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial_calc_second_de, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial, __pyx_n_s_calc_second_derivative, __pyx_t_4) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -36538,7 +36085,7 @@ if (!__Pyx_RefNanny) {
  *         return 6 * self.a3 + 24 * self.a4 * t
  * 
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_9calc_third_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial_calc_third_der, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__33)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 55, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_9calc_third_derivative, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial_calc_third_der, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__32)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 55, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial, __pyx_n_s_calc_third_derivative, __pyx_t_4) < 0) __PYX_ERR(0, 55, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -36549,7 +36096,7 @@ if (!__Pyx_RefNanny) {
  *     cdef tuple state
  *     cdef object _dict
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_11__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial___reduce_cytho, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__35)); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_11__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial___reduce_cytho, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__34)); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial, __pyx_n_s_reduce_cython, __pyx_t_4) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -36561,7 +36108,7 @@ if (!__Pyx_RefNanny) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     __pyx_unpickle_QuarticPolynomial__set_state(self, __pyx_state)
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_13__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial___setstate_cyt, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__37)); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 16, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_17QuarticPolynomial_13__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_QuarticPolynomial___setstate_cyt, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_QuarticPolynomial, __pyx_n_s_setstate_cython, __pyx_t_4) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -36572,7 +36119,7 @@ if (!__Pyx_RefNanny) {
  *     cdef tuple state
  *     cdef object _dict
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10FrenetPath_3__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_FrenetPath___reduce_cython, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10FrenetPath_3__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_FrenetPath___reduce_cython, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__37)); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath, __pyx_n_s_reduce_cython, __pyx_t_4) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -36584,7 +36131,7 @@ if (!__Pyx_RefNanny) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     __pyx_unpickle_FrenetPath__set_state(self, __pyx_state)
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10FrenetPath_5__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_FrenetPath___setstate_cython, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__39)); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 16, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_10FrenetPath_5__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_FrenetPath___setstate_cython, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_FrenetPath, __pyx_n_s_setstate_cython, __pyx_t_4) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -36597,7 +36144,7 @@ if (!__Pyx_RefNanny) {
  *     cdef list frenet_paths = []
  *     cdef double di, Ti
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_1calc_frenet_paths, 0, __pyx_n_s_calc_frenet_paths, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__41)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_1calc_frenet_paths, 0, __pyx_n_s_calc_frenet_paths, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__40)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 81, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_calc_frenet_paths, __pyx_t_4) < 0) __PYX_ERR(0, 81, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -36609,7 +36156,7 @@ if (!__Pyx_RefNanny) {
  *     csp = CubicSpline2D(np.array(wx, dtype=np.float64), np.array(wy, dtype=np.float64))
  *     s = np.arange(0, csp.s[-1], 0.1)
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_3generate_target_course, 0, __pyx_n_s_generate_target_course, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__43)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 176, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_3generate_target_course, 0, __pyx_n_s_generate_target_course, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__42)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 176, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_generate_target_course, __pyx_t_4) < 0) __PYX_ERR(0, 176, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -36617,68 +36164,33 @@ if (!__Pyx_RefNanny) {
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":190
  *     return rx, ry, ryaw, rk, csp
  * 
- * cpdef FrenetPath frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed):             # <<<<<<<<<<<<<<
+ * def frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, cnp.ndarray[cnp.float64_t, ndim=2] ob, double target_speed, bint debug_mode=False):             # <<<<<<<<<<<<<<
  *     fplist = calc_frenet_paths(c_speed, c_accel, c_d, c_d_d, c_d_dd, s0, target_speed)
  *     fplist = calc_global_paths(fplist, csp)
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5frenet_optimal_planning, 0, __pyx_n_s_frenet_optimal_planning, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__45)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 190, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyBool_FromLong(((int)0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_7 = PyTuple_New(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 190, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  __Pyx_GIVEREF(__pyx_t_4);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_4)) __PYX_ERR(0, 190, __pyx_L1_error);
+  __pyx_t_4 = 0;
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_5frenet_optimal_planning, 0, __pyx_n_s_frenet_optimal_planning, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__44)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 190, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_4, __pyx_t_7);
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_frenet_optimal_planning, __pyx_t_4) < 0) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":205
- *     return best_path
- * 
- * def main():             # <<<<<<<<<<<<<<
- *     print(__file__ + " start!!")
- * 
- */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7main, 0, __pyx_n_s_main_2, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__47)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 205, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_main_2, __pyx_t_4) < 0) __PYX_ERR(0, 205, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-
-  /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":270
- *         plt.show()
- * 
- * if __name__ == "__main__":             # <<<<<<<<<<<<<<
- *     main()
- */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_name_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 270, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_6 = (__Pyx_PyUnicode_Equals(__pyx_t_4, __pyx_n_u_main, Py_EQ)); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 270, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (__pyx_t_6) {
-
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":271
- * 
- * if __name__ == "__main__":
- *     main()             # <<<<<<<<<<<<<<
- */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_main_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 271, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_7 = __Pyx_PyObject_CallNoArg(__pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 271, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-
-    /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":270
- *         plt.show()
- * 
- * if __name__ == "__main__":             # <<<<<<<<<<<<<<
- *     main()
- */
-  }
 
   /* "(tree fragment)":1
  * def __pyx_unpickle_QuarticPolynomial(__pyx_type, long __pyx_checksum, __pyx_state):             # <<<<<<<<<<<<<<
  *     cdef object __pyx_PickleError
  *     cdef object __pyx_result
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_9__pyx_unpickle_QuarticPolynomial, 0, __pyx_n_s_pyx_unpickle_QuarticPolynomial, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__48)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_7);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_QuarticPolynomial, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_7__pyx_unpickle_QuarticPolynomial, 0, __pyx_n_s_pyx_unpickle_QuarticPolynomial, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__45)); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_QuarticPolynomial, __pyx_t_4) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
   /* "(tree fragment)":11
  *         __pyx_unpickle_QuarticPolynomial__set_state(<QuarticPolynomial> __pyx_result, __pyx_state)
@@ -36687,20 +36199,20 @@ if (!__Pyx_RefNanny) {
  *     __pyx_result.a0 = __pyx_state[0]; __pyx_result.a1 = __pyx_state[1]; __pyx_result.a2 = __pyx_state[2]; __pyx_result.a3 = __pyx_state[3]; __pyx_result.a4 = __pyx_state[4]
  *     if len(__pyx_state) > 5 and hasattr(__pyx_result, '__dict__'):
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_11__pyx_unpickle_FrenetPath, 0, __pyx_n_s_pyx_unpickle_FrenetPath, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__49)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_7);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_FrenetPath, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23FrenetOptimalTrajectory_25frenet_optimal_trajectory_9__pyx_unpickle_FrenetPath, 0, __pyx_n_s_pyx_unpickle_FrenetPath, NULL, __pyx_n_s_FrenetOptimalTrajectory_frenet_o, __pyx_d, ((PyObject *)__pyx_codeobj__46)); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_FrenetPath, __pyx_t_4) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
   /* "FrenetOptimalTrajectory/frenet_optimal_trajectory.pyx":1
  * # cython: language_level=3             # <<<<<<<<<<<<<<
  * 
  * from libc.math cimport cos, sin, atan2, pow, fabs, sqrt, pi
  */
-  __pyx_t_7 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_7);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_7) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_4) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
   /*--- Wrapped vars code ---*/
 
@@ -39942,40 +39454,6 @@ CYTHON_UNUSED static double __Pyx__PyBytes_AsDouble(PyObject *obj, const char* s
 fallback:
     return __Pyx_SlowPyString_AsDouble(obj);
 }
-
-/* SliceTupleAndList */
-  #if CYTHON_COMPILING_IN_CPYTHON
-static CYTHON_INLINE void __Pyx_crop_slice(Py_ssize_t* _start, Py_ssize_t* _stop, Py_ssize_t* _length) {
-    Py_ssize_t start = *_start, stop = *_stop, length = *_length;
-    if (start < 0) {
-        start += length;
-        if (start < 0)
-            start = 0;
-    }
-    if (stop < 0)
-        stop += length;
-    else if (stop > length)
-        stop = length;
-    *_length = stop - start;
-    *_start = start;
-    *_stop = stop;
-}
-static CYTHON_INLINE PyObject* __Pyx_PyList_GetSlice(
-            PyObject* src, Py_ssize_t start, Py_ssize_t stop) {
-    Py_ssize_t length = PyList_GET_SIZE(src);
-    __Pyx_crop_slice(&start, &stop, &length);
-    if (length <= 0) {
-        return PyList_New(0);
-    }
-    return __Pyx_PyList_FromArray(((PyListObject*)src)->ob_item + start, length);
-}
-static CYTHON_INLINE PyObject* __Pyx_PyTuple_GetSlice(
-            PyObject* src, Py_ssize_t start, Py_ssize_t stop) {
-    Py_ssize_t length = PyTuple_GET_SIZE(src);
-    __Pyx_crop_slice(&start, &stop, &length);
-    return __Pyx_PyTuple_FromArray(((PyTupleObject*)src)->ob_item + start, length);
-}
-#endif
 
 /* PyObject_GenericGetAttrNoDict */
   #if CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP && PY_VERSION_HEX < 0x03070000
@@ -44017,7 +43495,7 @@ __Pyx_PyType_GetName(PyTypeObject* tp)
     if (unlikely(name == NULL) || unlikely(!PyUnicode_Check(name))) {
         PyErr_Clear();
         Py_XDECREF(name);
-        name = __Pyx_NewRef(__pyx_n_s__50);
+        name = __Pyx_NewRef(__pyx_n_s__47);
     }
     return name;
 }

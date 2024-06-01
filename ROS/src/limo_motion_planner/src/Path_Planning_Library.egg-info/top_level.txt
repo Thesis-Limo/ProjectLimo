@@ -1,3 +1,4 @@
 CubicSpline
+DWA
 FrenetOptimalTrajectory
 QuinticPolynomialsPlanner
