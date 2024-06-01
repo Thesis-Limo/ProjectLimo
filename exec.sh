@@ -11,6 +11,6 @@ limo_ip() {
 }
 
 build_planner() {
-    cd ROS/src/limo_motion_planner/src && python3 setup.py build
+    cd ROS/src/limo_motion_planner/src && python3 setup.py install
     cd ../../../../
 }
