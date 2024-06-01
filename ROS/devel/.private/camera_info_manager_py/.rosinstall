@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/thesis/ROS/devel/.private/camera_info_manager_py/setup.sh

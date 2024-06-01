@@ -1,0 +1,1 @@
+/home/thesis/ROS/devel/.private/lifter_ctr/share/roseus/ros/lifter_ctr/manifest.l

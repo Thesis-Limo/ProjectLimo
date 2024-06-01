@@ -1,0 +1,8 @@
+prefix=/home/thesis/ROS/devel/.private/limo_motion_controller
+
+Name: limo_motion_controller
+Description: Description of limo_motion_controller
+Version: 0.0.0
+Cflags: -I/home/thesis/ROS/devel/.private/limo_motion_controller/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime roscpp

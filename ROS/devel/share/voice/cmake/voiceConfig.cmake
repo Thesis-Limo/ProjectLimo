@@ -1,0 +1,1 @@
+/home/thesis/ROS/devel/.private/voice/share/voice/cmake/voiceConfig.cmake

@@ -1,0 +1,1 @@
+set(ORDERED_PATHS "/home/thesis/ROS/devel/.private/cv_bridge/lib;/opt/ros/melodic/lib")

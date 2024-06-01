@@ -1,0 +1,1 @@
+/home/thesis/ROS/devel/.private/vision/lib/pkgconfig/vision.pc

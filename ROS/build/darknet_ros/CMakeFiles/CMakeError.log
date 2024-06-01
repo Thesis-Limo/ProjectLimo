@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/thesis/ROS/build/darknet_ros/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_66dff/fast"
+/usr/bin/make -f CMakeFiles/cmTC_66dff.dir/build.make CMakeFiles/cmTC_66dff.dir/build
+make[1]: Entering directory '/home/thesis/ROS/build/darknet_ros/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_66dff.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC     -o CMakeFiles/cmTC_66dff.dir/CheckSymbolExists.c.o   -c /home/thesis/ROS/build/darknet_ros/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_66dff
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66dff.dir/link.txt --verbose=1
+/usr/bin/cc -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC      -rdynamic CMakeFiles/cmTC_66dff.dir/CheckSymbolExists.c.o  -o cmTC_66dff 
+CMakeFiles/cmTC_66dff.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_66dff.dir/build.make:97: recipe for target 'cmTC_66dff' failed
+make[1]: *** [cmTC_66dff] Error 1
+make[1]: Leaving directory '/home/thesis/ROS/build/darknet_ros/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_66dff/fast' failed
+make: *** [cmTC_66dff/fast] Error 2
+
+File /home/thesis/ROS/build/darknet_ros/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/thesis/ROS/build/darknet_ros/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ec1c1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ec1c1.dir/build.make CMakeFiles/cmTC_ec1c1.dir/build
+make[1]: Entering directory '/home/thesis/ROS/build/darknet_ros/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ec1c1.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ec1c1.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ec1c1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ec1c1.dir/link.txt --verbose=1
+/usr/bin/cc -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_ec1c1.dir/CheckFunctionExists.c.o  -o cmTC_ec1c1 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ec1c1.dir/build.make:97: recipe for target 'cmTC_ec1c1' failed
+make[1]: *** [cmTC_ec1c1] Error 1
+make[1]: Leaving directory '/home/thesis/ROS/build/darknet_ros/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_ec1c1/fast' failed
+make: *** [cmTC_ec1c1/fast] Error 2
+
+

@@ -1,0 +1,3 @@
+Symlinking /home/thesis/ROS/devel/lib/pkgconfig/limo_yolo.pc
+Symlinking /home/thesis/ROS/devel/share/limo_yolo/cmake/limo_yoloConfig.cmake
+Symlinking /home/thesis/ROS/devel/share/limo_yolo/cmake/limo_yoloConfig-version.cmake

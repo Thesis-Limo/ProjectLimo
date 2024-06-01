@@ -1,0 +1,55 @@
+[  0%] Built target actionlib_msgs_generate_messages_py
+[  0%] Built target _limo_motion_controller_generate_messages_check_deps_MotionPlan
+[  0%] Built target _limo_motion_controller_generate_messages_check_deps_OverrideMotion
+[  0%] Built target _limo_motion_controller_generate_messages_check_deps_MovementController
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target rosgraph_msgs_generate_messages_py
+[  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[  0%] Built target rosgraph_msgs_generate_messages_lisp
+[  0%] Built target rosgraph_msgs_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[  0%] Built target rosgraph_msgs_generate_messages_cpp
+[  0%] Built target roscpp_generate_messages_py
+[  0%] Built target nav_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target roscpp_generate_messages_nodejs
+[  0%] Built target roscpp_generate_messages_eus
+[  0%] Built target roscpp_generate_messages_lisp
+[  0%] Built target nav_msgs_generate_messages_lisp
+[  0%] Built target roscpp_generate_messages_cpp
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target nav_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  4%] Built target nav_msgs_generate_messages_cpp
+[  4%] Built target geometry_msgs_generate_messages_py
+[ 14%] Built target limo_motion_controller_generate_messages_lisp
+[ 14%] Built target nav_msgs_generate_messages_eus
+[ 14%] Built target actionlib_msgs_generate_messages_eus
+[ 38%] Built target limo_motion_controller_generate_messages_py
+[ 38%] Built target actionlib_msgs_generate_messages_lisp
+[ 57%] Built target limo_motion_controller_generate_messages_eus
+[ 71%] Built target limo_motion_controller_generate_messages_cpp
+[ 85%] Built target limo_motion_controller_generate_messages_nodejs
+[35m[1mScanning dependencies of target limo_motion_controller[0m
+[ 85%] Built target limo_motion_controller_generate_messages
+[ 90%] [32mBuilding CXX object CMakeFiles/limo_motion_controller.dir/src/Controller.cpp.o[0m
+[01m[K/home/thesis/ROS/src/limo_motion_controller/src/Controller.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::Twist Controller::CalculateMovement(const Motion*)[m[K’:
+[01m[K/home/thesis/ROS/src/limo_motion_controller/src/Controller.cpp:163:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kv_l[m[K’ was not declared in this scope
+     float v_a = ([01;31m[Kv_l[m[K * tan(currentAngle)) / wheelBase;
+                  [01;31m[K^~~[m[K
+[01m[K/home/thesis/ROS/src/limo_motion_controller/src/Controller.cpp:163:18:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kv_a[m[K’
+     float v_a = ([01;36m[Kv_l[m[K * tan(currentAngle)) / wheelBase;
+                  [01;36m[K^~~[m[K
+                  [32m[Kv_a[m[K
+CMakeFiles/limo_motion_controller.dir/build.make:86: recipe for target 'CMakeFiles/limo_motion_controller.dir/src/Controller.cpp.o' failed
+make[2]: *** [CMakeFiles/limo_motion_controller.dir/src/Controller.cpp.o] Error 1
+CMakeFiles/Makefile2:101: recipe for target 'CMakeFiles/limo_motion_controller.dir/all' failed
+make[1]: *** [CMakeFiles/limo_motion_controller.dir/all] Error 2
+Makefile:140: recipe for target 'all' failed
+make: *** [all] Error 2

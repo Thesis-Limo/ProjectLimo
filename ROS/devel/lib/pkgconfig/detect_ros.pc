@@ -1,0 +1,1 @@
+/home/thesis/ROS/devel/.private/detect_ros/lib/pkgconfig/detect_ros.pc

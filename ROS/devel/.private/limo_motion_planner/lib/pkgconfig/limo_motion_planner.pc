@@ -1,0 +1,8 @@
+prefix=/home/thesis/ROS/devel/.private/limo_motion_planner
+
+Name: limo_motion_planner
+Description: Description of limo_motion_planner
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

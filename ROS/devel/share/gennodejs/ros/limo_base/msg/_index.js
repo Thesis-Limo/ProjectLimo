@@ -1,0 +1,1 @@
+/home/thesis/ROS/devel/.private/limo_base/share/gennodejs/ros/limo_base/msg/_index.js

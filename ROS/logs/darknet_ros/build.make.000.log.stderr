@@ -1,0 +1,111 @@
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/activations.c:[m[K In function ‘[01m[Kactivate[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/activations.c:79:5:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KRELU6[m[K’ not handled in switch [[01;35m[K-Wswitch[m[K]
+     [01;35m[Kswitch[m[K(a){
+     [01;35m[K^~~~~~[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/activations.c:79:5:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KSWISH[m[K’ not handled in switch [[01;35m[K-Wswitch[m[K]
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/activations.c:79:5:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KMISH[m[K’ not handled in switch [[01;35m[K-Wswitch[m[K]
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/activations.c:79:5:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KHARD_MISH[m[K’ not handled in switch [[01;35m[K-Wswitch[m[K]
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/activations.c:79:5:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KNORM_CHAN[m[K’ not handled in switch [[01;35m[K-Wswitch[m[K]
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/activations.c:79:5:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KNORM_CHAN_SOFTMAX[m[K’ not handled in switch [[01;35m[K-Wswitch[m[K]
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/activations.c:79:5:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KNORM_CHAN_SOFTMAX_MAXVAL[m[K’ not handled in switch [[01;35m[K-Wswitch[m[K]
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/activations.c:[m[K In function ‘[01m[Kgradient[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/activations.c:310:5:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KSWISH[m[K’ not handled in switch [[01;35m[K-Wswitch[m[K]
+     [01;35m[Kswitch[m[K(a){
+     [01;35m[K^~~~~~[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/activations.c:310:5:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KMISH[m[K’ not handled in switch [[01;35m[K-Wswitch[m[K]
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/activations.c:310:5:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KHARD_MISH[m[K’ not handled in switch [[01;35m[K-Wswitch[m[K]
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/blas.c:[m[K In function ‘[01m[Kfind_sim[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/blas.c:597:59:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 2 has type ‘[01m[Ksize_t {aka long unsigned int}[m[K’ [[01;35m[K-Wformat=[m[K]
+         printf(" Error: find_sim(): sim isn't found: i = [01;35m[K%d[m[K, j = %d, z = %d \n", i, j, z);
+                                                          [01;35m[K~^[m[K
+                                                          [32m[K%ld[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/blas.c:597:67:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 3 has type ‘[01m[Ksize_t {aka long unsigned int}[m[K’ [[01;35m[K-Wformat=[m[K]
+         printf(" Error: find_sim(): sim isn't found: i = %d, j = [01;35m[K%d[m[K, z = %d \n", i, j, z);
+                                                                  [01;35m[K~^[m[K
+                                                                  [32m[K%ld[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/blas.c:597:75:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 4 has type ‘[01m[Ksize_t {aka long unsigned int}[m[K’ [[01;35m[K-Wformat=[m[K]
+         printf(" Error: find_sim(): sim isn't found: i = %d, j = %d, z = [01;35m[K%d[m[K \n", i, j, z);
+                                                                          [01;35m[K~^[m[K
+                                                                          [32m[K%ld[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/blas.c:[m[K In function ‘[01m[Kfind_P_constrastive[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/blas.c:611:68:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 2 has type ‘[01m[Ksize_t {aka long unsigned int}[m[K’ [[01;35m[K-Wformat=[m[K]
+         printf(" Error: find_P_constrastive(): P isn't found: i = [01;35m[K%d[m[K, j = %d, z = %d \n", i, j, z);
+                                                                   [01;35m[K~^[m[K
+                                                                   [32m[K%ld[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/blas.c:611:76:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 3 has type ‘[01m[Ksize_t {aka long unsigned int}[m[K’ [[01;35m[K-Wformat=[m[K]
+         printf(" Error: find_P_constrastive(): P isn't found: i = %d, j = [01;35m[K%d[m[K, z = %d \n", i, j, z);
+                                                                           [01;35m[K~^[m[K
+                                                                           [32m[K%ld[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/blas.c:611:84:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 4 has type ‘[01m[Ksize_t {aka long unsigned int}[m[K’ [[01;35m[K-Wformat=[m[K]
+         printf(" Error: find_P_constrastive(): P isn't found: i = %d, j = %d, z = [01;35m[K%d[m[K \n", i, j, z);
+                                                                                   [01;35m[K~^[m[K
+                                                                                   [32m[K%ld[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/blas.c:[m[K In function ‘[01m[KP_constrastive_f[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/blas.c:651:79:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 3 has type ‘[01m[Ksize_t {aka long unsigned int}[m[K’ [[01;35m[K-Wformat=[m[K]
+         fprintf(stderr, " Error: in P_constrastive must be i != l, while i = [01;35m[K%d[m[K, l = %d \n", i, l);
+                                                                              [01;35m[K~^[m[K
+                                                                              [32m[K%ld[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/blas.c:651:87:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 4 has type ‘[01m[Ksize_t {aka long unsigned int}[m[K’ [[01;35m[K-Wformat=[m[K]
+         fprintf(stderr, " Error: in P_constrastive must be i != l, while i = %d, l = [01;35m[K%d[m[K \n", i, l);
+                                                                                      [01;35m[K~^[m[K
+                                                                                      [32m[K%ld[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/blas.c:[m[K In function ‘[01m[KP_constrastive[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/blas.c:780:79:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 3 has type ‘[01m[Ksize_t {aka long unsigned int}[m[K’ [[01;35m[K-Wformat=[m[K]
+         fprintf(stderr, " Error: in P_constrastive must be i != l, while i = [01;35m[K%d[m[K, l = %d \n", i, l);
+                                                                              [01;35m[K~^[m[K
+                                                                              [32m[K%ld[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/blas.c:780:87:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 4 has type ‘[01m[Ksize_t {aka long unsigned int}[m[K’ [[01;35m[K-Wformat=[m[K]
+         fprintf(stderr, " Error: in P_constrastive must be i != l, while i = %d, l = [01;35m[K%d[m[K \n", i, l);
+                                                                                      [01;35m[K~^[m[K
+                                                                                      [32m[K%ld[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/box.c:[m[K In function ‘[01m[Kbox_iou_kind[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/box.c:154:5:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KMSE[m[K’ not handled in switch [[01;35m[K-Wswitch[m[K]
+     [01;35m[Kswitch[m[K(iou_kind) {
+     [01;35m[K^~~~~~[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/network.c:1213:14:[m[K [01;35m[Kwarning: [m[K‘[01m[Krelu[m[K’ defined but not used [[01;35m[K-Wunused-function[m[K]
+ static float [01;35m[Krelu[m[K(float src) {
+              [01;35m[K^~~~[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/data.c:[m[K In function ‘[01m[Kload_data_detection[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/data.c:1090:43:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kr_scale[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+     float r1 = 0, r2 = 0, r3 = 0, r4 = 0, [01;35m[Kr_scale[m[K = 0;
+                                           [01;35m[K^~~~~~~[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/softmax_layer.c:[m[K In function ‘[01m[Kmake_contrastive_layer[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/softmax_layer.c:202:101:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 9 has type ‘[01m[Ksize_t {aka const long unsigned int}[m[K’ [[01;35m[K-Wformat=[m[K]
+     fprintf(stderr, "contrastive %4d x%4d x%4d x emb_size %4d x batch: %4d  classes = %4d, step = [01;35m[K%4d[m[K \n", w, h, l.n, l.embedding_size, batch, l.classes, step);
+                                                                                                   [01;35m[K~~^[m[K
+                                                                                                   [32m[K%4ld[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/softmax_layer.c:[m[K In function ‘[01m[Kforward_contrastive_layer[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/softmax_layer.c:243:27:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kmax_truth[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+                     float [01;35m[Kmax_truth[m[K = 0;
+                           [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/utils.c:[m[K In function ‘[01m[Kcustom_hash[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/utils.c:1040:12:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K-Wparentheses[m[K]
+     while ([01;35m[Kc[m[K = *str++)
+            [01;35m[K^[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/detector.c:[m[K In function ‘[01m[Kprint_cocos[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/detector.c:477:29:[m[K [01;35m[Kwarning: [m[Kformat not a string literal and no format arguments [[01;35m[K-Wformat-security[m[K]
+                 fprintf(fp, [01;35m[Kbuff[m[K);
+                             [01;35m[K^~~~[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/detector.c:[m[K In function ‘[01m[Keliminate_bdd[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/detector.c:570:21:[m[K [01;35m[Kwarning: [m[Kstatement with no effect [[01;35m[K-Wunused-value[m[K]
+                     [01;35m[Kfor[m[K (k; buf[k + n] != '\0'; k++)
+                     [01;35m[K^~~[m[K
+At top level:
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/detector.c:443:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kget_coco_image_id[m[K’ defined but not used [[01;35m[K-Wunused-function[m[K]
+ static int [01;35m[Kget_coco_image_id[m[K(char *filename)
+            [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/http_stream.cpp:580:0[m[K:
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/httplib.h:129:0:[m[K [01;35m[Kwarning: [m[K"INVALID_SOCKET" redefined
+ #define INVALID_SOCKET (-1)
+ 
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/http_stream.cpp:73:0:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+ #define INVALID_SOCKET -1
+ 
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/yolo_layer.c:[m[K In function ‘[01m[Kforward_yolo_layer[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/yolo_layer.c:390:25:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kbest_match_t[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+                     int [01;35m[Kbest_match_t[m[K = 0;
+                         [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/http_stream.cpp:[m[K In member function ‘[01m[Kbool MJPG_sender::write(const cv::Mat&)[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/src/darknet_ros/darknet/src/http_stream.cpp:507:113:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%zu[m[K’ expects argument of type ‘[01m[Ksize_t[m[K’, but argument 3 has type ‘[01m[Kint[m[K’ [[01;35m[K-Wformat=[m[K]
+                 sprintf(head, "--mjpegstream\r\nContent-Type: image/jpeg\r\nContent-Length: %zu\r\n\r\n", outlen[01;35m[K)[m[K;
+                                                                                                                 [01;35m[K^[m[K

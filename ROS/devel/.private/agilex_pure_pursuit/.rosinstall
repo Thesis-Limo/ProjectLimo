@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/thesis/ROS/devel/.private/agilex_pure_pursuit/setup.sh

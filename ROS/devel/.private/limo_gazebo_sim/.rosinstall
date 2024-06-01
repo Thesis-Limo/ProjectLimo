@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/thesis/ROS/devel/.private/limo_gazebo_sim/setup.sh

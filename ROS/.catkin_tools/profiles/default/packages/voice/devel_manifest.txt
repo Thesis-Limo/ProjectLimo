@@ -1,0 +1,5 @@
+LimoDefault/voice
+/home/thesis/ROS/devel/.private/voice/cmake.lock /home/thesis/ROS/devel/./cmake.lock
+/home/thesis/ROS/devel/.private/voice/lib/pkgconfig/voice.pc /home/thesis/ROS/devel/lib/pkgconfig/voice.pc
+/home/thesis/ROS/devel/.private/voice/share/voice/cmake/voiceConfig.cmake /home/thesis/ROS/devel/share/voice/cmake/voiceConfig.cmake
+/home/thesis/ROS/devel/.private/voice/share/voice/cmake/voiceConfig-version.cmake /home/thesis/ROS/devel/share/voice/cmake/voiceConfig-version.cmake

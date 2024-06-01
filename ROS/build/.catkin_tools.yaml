@@ -1,0 +1,6 @@
+devel_space: /home/thesis/ROS/devel
+install: false
+install_space: /home/thesis/ROS/install
+profile: default
+source_space: /home/thesis/ROS/src
+workspace: /home/thesis/ROS

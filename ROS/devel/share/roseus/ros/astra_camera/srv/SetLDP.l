@@ -1,0 +1,1 @@
+/home/thesis/ROS/devel/.private/astra_camera/share/roseus/ros/astra_camera/srv/SetLDP.l

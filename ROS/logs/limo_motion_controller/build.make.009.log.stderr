@@ -1,0 +1,11 @@
+[01m[K/home/thesis/ROS/src/limo_motion_controller/src/Controller.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::Twist Controller::CalculateMovement(const Motion*)[m[K’:
+[01m[K/home/thesis/ROS/src/limo_motion_controller/src/Controller.cpp:163:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kv_l[m[K’ was not declared in this scope
+     float v_a = ([01;31m[Kv_l[m[K * tan(currentAngle)) / wheelBase;
+                  [01;31m[K^~~[m[K
+[01m[K/home/thesis/ROS/src/limo_motion_controller/src/Controller.cpp:163:18:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kv_a[m[K’
+     float v_a = ([01;36m[Kv_l[m[K * tan(currentAngle)) / wheelBase;
+                  [01;36m[K^~~[m[K
+                  [32m[Kv_a[m[K
+make[2]: *** [CMakeFiles/limo_motion_controller.dir/src/Controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/limo_motion_controller.dir/all] Error 2
+make: *** [all] Error 2

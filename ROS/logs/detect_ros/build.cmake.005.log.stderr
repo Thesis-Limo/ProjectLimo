@@ -1,0 +1,25 @@
+** WARNING ** io features related to ensenso will be disabled
+** WARNING ** io features related to davidSDK will be disabled
+** WARNING ** io features related to dssdk will be disabled
+** WARNING ** io features related to pcap will be disabled
+** WARNING ** io features related to png will be disabled
+** WARNING ** io features related to libusb-1.0 will be disabled
+** WARNING ** visualization features related to ensenso will be disabled
+** WARNING ** visualization features related to davidSDK will be disabled
+** WARNING ** visualization features related to dssdk will be disabled
+** WARNING ** visualization features related to rssdk will be disabled
+[31m[1mCMake Error[0m at /opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake:83 (find_package):
+  Could not find a package configuration file provided by
+  "ar_track_alvar_msgs" with any of the following names:
+
+    ar_track_alvar_msgsConfig.cmake
+    ar_track_alvar_msgs-config.cmake
+
+  Add the installation prefix of "ar_track_alvar_msgs" to CMAKE_PREFIX_PATH
+  or set "ar_track_alvar_msgs_DIR" to a directory containing one of the above
+  files.  If "ar_track_alvar_msgs" provides a separate development package or
+  SDK, be sure it has been installed.
+[36mCall Stack (most recent call first):[0m
+  CMakeLists.txt:5 (find_package)
+
+

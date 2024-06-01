@@ -1,0 +1,1 @@
+/home/thesis/ROS/devel/.private/lifter_ctr/share/gennodejs/ros/lifter_ctr/msg/_index.js

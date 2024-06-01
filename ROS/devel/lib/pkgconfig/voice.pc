@@ -1,0 +1,1 @@
+/home/thesis/ROS/devel/.private/voice/lib/pkgconfig/voice.pc

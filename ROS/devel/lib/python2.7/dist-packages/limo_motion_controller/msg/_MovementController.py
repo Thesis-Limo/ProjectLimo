@@ -1,0 +1,1 @@
+/home/thesis/ROS/devel/.private/limo_motion_controller/lib/python2.7/dist-packages/limo_motion_controller/msg/_MovementController.py

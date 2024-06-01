@@ -1,0 +1,1 @@
+/home/thesis/ROS/devel/.private/limo_s2_description/lib/pkgconfig/limo_s2_description.pc

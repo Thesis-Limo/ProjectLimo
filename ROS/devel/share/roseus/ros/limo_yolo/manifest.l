@@ -1,0 +1,1 @@
+/home/thesis/ROS/devel/.private/limo_yolo/share/roseus/ros/limo_yolo/manifest.l

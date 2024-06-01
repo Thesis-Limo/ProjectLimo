@@ -1,0 +1,1 @@
+/home/thesis/ROS/devel/.private/limo_yolo/share/gennodejs/ros/limo_yolo/_index.js

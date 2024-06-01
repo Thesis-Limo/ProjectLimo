@@ -1,0 +1,32 @@
+[01m[K/home/thesis/ROS/src/LimoDefault/ydlidar_ros/sdk/src/lock.c:[m[K In function ‘[01m[Kfhs_lock[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/ydlidar_ros/sdk/src/lock.c:243:3:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kwrite[m[K’, declared with attribute warn_unused_result [[01;35m[K-Wunused-result[m[K]
+   [01;35m[Kwrite(fd, lockinfo, 11)[m[K;
+   [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/ydlidar_ros/sdk/src/lock.c:[m[K In function ‘[01m[Kuucp_lock[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/ydlidar_ros/sdk/src/lock.c:328:3:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kwrite[m[K’, declared with attribute warn_unused_result [[01;35m[K-Wunused-result[m[K]
+   [01;35m[Kwrite(fd, lockinfo, 11)[m[K;
+   [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/ydlidar_ros/sdk/src/lock.c:[m[K In function ‘[01m[Kis_device_locked[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/ydlidar_ros/sdk/src/lock.c:773:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kread[m[K’, declared with attribute warn_unused_result [[01;35m[K-Wunused-result[m[K]
+     [01;35m[Kread(fd, pid_buffer, 11)[m[K;
+     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/thesis/ROS/src/LimoDefault/ydlidar_ros/sdk/src/CYdLidar.cpp:[m[K In member function ‘[01m[Kvoid CYdLidar::handleDeviceInfoPackage(int)[m[K’:
+[01m[K/home/thesis/ROS/src/LimoDefault/ydlidar_ros/sdk/src/CYdLidar.cpp:347:6:[m[K [01;35m[Kwarning: [m[K‘[01m[K__builtin___sprintf_chk[m[K’ writing a terminating nul past the end of the destination [[01;35m[K-Wformat-overflow=[m[K]
+ void [01;35m[KCYdLidar[m[K::handleDeviceInfoPackage(int count) {
+      [01;35m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/stdio.h:862:0[m[K,
+                 from [01m[K/usr/include/c++/7/cstdio:42[m[K,
+                 from [01m[K/usr/include/c++/7/ext/string_conversions.h:43[m[K,
+                 from [01m[K/usr/include/c++/7/bits/basic_string.h:6361[m[K,
+                 from [01m[K/usr/include/c++/7/string:52[m[K,
+                 from [01m[K/usr/include/c++/7/stdexcept:39[m[K,
+                 from [01m[K/usr/include/c++/7/array:39[m[K,
+                 from [01m[K/usr/include/c++/7/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/7/bits/stl_map.h:63[m[K,
+                 from [01m[K/usr/include/c++/7/map:61[m[K,
+                 from [01m[K/home/thesis/ROS/src/LimoDefault/ydlidar_ros/sdk/include/ydlidar_driver.h:53[m[K,
+                 from [01m[K/home/thesis/ROS/src/LimoDefault/ydlidar_ros/sdk/include/CYdLidar.h:54[m[K,
+                 from [01m[K/home/thesis/ROS/src/LimoDefault/ydlidar_ros/sdk/src/CYdLidar.cpp:34[m[K:
+[01m[K/usr/include/x86_64-linux-gnu/bits/stdio2.h:34:43:[m[K [01;36m[Knote: [m[K‘[01m[K__builtin___sprintf_chk[m[K’ output 9 bytes into a destination of size 8
+       __bos (__s), __fmt, __va_arg_pack ()[01;36m[K)[m[K;
+                                           [01;36m[K^[m[K

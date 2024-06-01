@@ -1,0 +1,1 @@
+/home/thesis/ROS/devel/.private/lifter_ctr/include/lifter_ctr/lifter_mode.h

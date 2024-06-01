@@ -1,0 +1,1 @@
+/home/thesis/ROS/devel/.private/lifter_ctr/lib/python2.7/dist-packages/lifter_ctr/msg/__init__.py

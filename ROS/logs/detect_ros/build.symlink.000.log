@@ -1,0 +1,4 @@
+Symlinking /home/thesis/ROS/devel/lib/detect_ros/lifter
+Symlinking /home/thesis/ROS/devel/lib/pkgconfig/detect_ros.pc
+Symlinking /home/thesis/ROS/devel/share/detect_ros/cmake/detect_rosConfig-version.cmake
+Symlinking /home/thesis/ROS/devel/share/detect_ros/cmake/detect_rosConfig.cmake

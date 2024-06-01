@@ -1,0 +1,1 @@
+/home/thesis/ROS/devel/.private/lifter_ctr/share/lifter_ctr/cmake/lifter_ctr-msg-extras.cmake

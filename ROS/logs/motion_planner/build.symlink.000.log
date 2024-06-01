@@ -1,0 +1,3 @@
+Symlinking /home/thesis/ROS/devel/lib/pkgconfig/motion_planner.pc
+Symlinking /home/thesis/ROS/devel/share/motion_planner/cmake/motion_plannerConfig.cmake
+Symlinking /home/thesis/ROS/devel/share/motion_planner/cmake/motion_plannerConfig-version.cmake

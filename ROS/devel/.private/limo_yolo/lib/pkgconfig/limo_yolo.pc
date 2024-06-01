@@ -1,0 +1,8 @@
+prefix=/home/thesis/ROS/devel/.private/limo_yolo
+
+Name: limo_yolo
+Description: Description of limo_yolo
+Version: 0.0.0
+Cflags: -I/home/thesis/ROS/devel/.private/limo_yolo/include
+Libs: -L${prefix}/lib 
+Requires: roscpp darknet_ros limo_behaviour_tree image_transport image_geometry message_runtime

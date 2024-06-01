@@ -1,0 +1,8 @@
+prefix=/home/thesis/ROS/devel/.private/limo_gazebo_sim
+
+Name: limo_gazebo_sim
+Description: Description of limo_gazebo_sim
+Version: 0.0.1
+Cflags: -I/home/thesis/ROS/src/ugv_sim/limo/limo_gazebo_sim/include
+Libs: -L${prefix}/lib -lgazebo_ros_ackerman
+Requires: roscpp sensor_msgs

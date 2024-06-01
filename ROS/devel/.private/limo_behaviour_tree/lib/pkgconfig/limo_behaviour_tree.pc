@@ -1,0 +1,8 @@
+prefix=/home/thesis/ROS/devel/.private/limo_behaviour_tree
+
+Name: limo_behaviour_tree
+Description: Description of limo_behaviour_tree
+Version: 0.0.0
+Cflags: -I/home/thesis/ROS/devel/.private/limo_behaviour_tree/include
+Libs: -L${prefix}/lib 
+Requires: roscpp limo_base limo_motion_controller message_runtime

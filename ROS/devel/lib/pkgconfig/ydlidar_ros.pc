@@ -1,0 +1,1 @@
+/home/thesis/ROS/devel/.private/ydlidar_ros/lib/pkgconfig/ydlidar_ros.pc

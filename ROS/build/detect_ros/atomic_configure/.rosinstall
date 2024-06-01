@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/thesis/ROS/devel/.private/detect_ros/setup.sh

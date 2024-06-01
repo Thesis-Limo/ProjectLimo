@@ -1,0 +1,4 @@
+[01m[K/home/thesis/ROS/src/limo_yolo/src/YoloProjection.cpp:[m[K In member function ‘[01m[Kvoid YoloProjection::CallbackImageAndLidar(const Image&, const LaserScan&)[m[K’:
+[01m[K/home/thesis/ROS/src/limo_yolo/src/YoloProjection.cpp:55:22:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((YoloProjection*)this)->YoloProjection::id[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kuint32_t {aka unsigned int}[m[K’ inside { } [[01;35m[K-Wnarrowing[m[K]
+     DataFrame newImg{[01;35m[Kid[m[K, laser, image, currentPose};
+                      [01;35m[K^~[m[K
