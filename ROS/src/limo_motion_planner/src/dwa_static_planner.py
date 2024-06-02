@@ -115,7 +115,7 @@ class MotionPlanner:
             circle = plt.Circle((x, y), 0.2, color="k", fill=False)
             plt.gca().add_patch(circle)
         for path in self.motion_plan:
-            plt.plot(path.x, path.y, "-b")
+            plt.plot(path.x[:2], path.y[:2], "-b")
         plt.plot(self.goal_pose.x, self.goal_pose.y, "xr")
         plt.grid(True)
         plt.axis("equal")
