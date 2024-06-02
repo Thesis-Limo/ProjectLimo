@@ -17,7 +17,7 @@ NodeStatus CreatePath::Tick()
     mesg.request.speed = 0;
     mesg.request.angle = __FLT_MAX__;
     mesg.request.duration = 0;
-    client.call(mesg);
+    controllerClient.call(mesg);
     limo_behaviour_tree::PathType msg;
     msg.request.pathType = 0;
     if(client.call(msg))
