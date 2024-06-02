@@ -19,11 +19,12 @@ class Pose:
 
 
 class State:
-    def __init__(self, x, y, yaw, speed):
+    def __init__(self, x, y, yaw, speed, omega):
         self.x = x
         self.y = y
         self.yaw = yaw
         self.speed = speed
+        self.omega = omega
 
 
 class MotionPlanner:
@@ -32,7 +33,7 @@ class MotionPlanner:
         goal_pose: Pose,
         start_pose: Pose = Pose(0.0, 0.0),
         obstacleList: list = [],
-        initial_state: State = State(0.0, 0.0, 0.0, 0.0),
+        initial_state: State = State(0.0, 0.0, 0.0, 0.0, 0.0),
         dt=0.1,
     ):
         self.start_pose = start_pose
@@ -80,6 +81,7 @@ class MotionPlanner:
             state.y,
             state.yaw,
             state.speed,
+            state.omega,
             ob,
             gx,
             gy,
@@ -99,6 +101,7 @@ class MotionPlanner:
         state.y += v * math.sin(state.yaw) * self.dt
         state.yaw += omega * self.dt
         state.speed = v
+        state.omega = omega
         return state
 
     def plot(self):

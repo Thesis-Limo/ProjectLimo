@@ -25,11 +25,12 @@ class Pose:
 
 
 class State:
-    def __init__(self, x, y, yaw, speed):
+    def __init__(self, x, y, yaw, speed, omega):
         self.x = x
         self.y = y
         self.yaw = yaw
         self.speed = speed
+        self.omega = omega
 
 
 class MotionPlanner:
@@ -43,7 +44,7 @@ class MotionPlanner:
 
         self.obstacleList = None
 
-        self.initial_state = State(0.0, 0.0, 0.0, 0.0)
+        self.initial_state = State(0.0, 0.0, 0.0, 0.0, 0.0)
 
         self.lock = threading.Lock()
         self.publisher = publisher
@@ -104,6 +105,7 @@ class MotionPlanner:
             state.y,
             state.yaw,
             state.speed,
+            state.omega,
             ob,
             gx,
             gy,
@@ -123,6 +125,7 @@ class MotionPlanner:
         state.y += v * math.sin(state.yaw) * self.dt
         state.yaw += omega * self.dt
         state.speed = v
+        state.omega = omega
         return state
 
     def main_loop(self):
@@ -138,7 +141,9 @@ class MotionPlanner:
             try:
                 distance_to_goal = math.hypot(state.x - gx, state.y - gy)
                 target_speed = (
-                    TARGET_SPEED if distance_to_goal > 0.4 else TARGET_SPEED / 2
+                    TARGET_SPEED
+                    if distance_to_goal > 0.4
+                    else TARGET_SPEED * distance_to_goal
                 )
                 state, path, goal_reached = self.run_dwa_step(
                     state, gx, gy, target_speed
@@ -163,6 +168,7 @@ class MotionPlanner:
                 print("Updated Goal: ", self.goal_pose)
                 self.publish_motion(motion_plan)
                 motion_plan = []
+                state = State(0.0, 0.0, 0.0, state.speed, state.omega)
                 continue
 
 

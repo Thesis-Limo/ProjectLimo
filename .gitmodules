@@ -1,3 +1,0 @@
-[submodule "ROS/src/MotionPlanning"]
-	path = ROS/src/MotionPlanning
-	url = https://github.com/Thesis-Limo/MotionPlanning.git
