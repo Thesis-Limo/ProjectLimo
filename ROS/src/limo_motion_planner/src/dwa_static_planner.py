@@ -12,7 +12,7 @@ from sensor_msgs.msg import LaserScan
 
 WHEELBASE = 0.2  # [m]
 SIM_LOOP = 500
-TARGET_SPEED = 0.25  # [m/s]
+TARGET_SPEED = 0.1  # [m/s]
 
 
 class Pose:
@@ -22,11 +22,12 @@ class Pose:
 
 
 class State:
-    def __init__(self, x, y, yaw, speed):
+    def __init__(self, x, y, yaw, speed, omega):
         self.x = x
         self.y = y
         self.yaw = yaw
         self.speed = speed
+        self.omega = omega
 
 
 class MotionPlanner:
@@ -35,7 +36,7 @@ class MotionPlanner:
         goal_pose: Pose,
         start_pose: Pose = Pose(0.0, 0.0),
         obstacleList: list = [],
-        initial_state: State = State(0.0, 0.0, 0.0, 0.0),
+        initial_state: State = State(0.0, 0.0, 0.0, 0.0, 0.0),
         dt=0.1,
     ):
         self.start_pose = start_pose
@@ -57,7 +58,9 @@ class MotionPlanner:
             try:
                 distance_to_goal = math.hypot(state.x - gx, state.y - gy)
                 target_speed = (
-                    TARGET_SPEED if distance_to_goal > 0.4 else TARGET_SPEED / 2
+                    TARGET_SPEED
+                    if distance_to_goal > 0.4
+                    else TARGET_SPEED * distance_to_goal
                 )
                 state, path, goal_reached = self.run_dwa_step(
                     state, gx, gy, target_speed
@@ -83,6 +86,7 @@ class MotionPlanner:
             state.y,
             state.yaw,
             state.speed,
+            state.omega,
             ob,
             gx,
             gy,
@@ -102,6 +106,7 @@ class MotionPlanner:
         state.y += v * math.sin(state.yaw) * self.dt
         state.yaw += omega * self.dt
         state.speed = v
+        state.omega = omega
         return state
 
     def plot(self):
@@ -156,7 +161,7 @@ def callback(lidar_msg, publisher):
         goal_x, goal_y = [float(num) for num in goal_values.split()]
 
         goal_pose = Pose(goal_x, goal_y)
-        initial_state = State(0.0, 0.0, 0.0, 0.0)
+        initial_state = State(0.0, 0.0, 0.0, 0.0, 0.0)
         planner = MotionPlanner(
             goal_pose, obstacleList=obstacles, initial_state=initial_state
         )
@@ -175,7 +180,7 @@ def callback(lidar_msg, publisher):
 
         tick = True
 
-        # planner.plot()
+        planner.plot()
 
 
 if __name__ == "__main__":

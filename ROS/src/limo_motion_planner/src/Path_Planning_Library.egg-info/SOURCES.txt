@@ -1,5 +1,6 @@
 setup.py
 CubicSpline/cubic_spline_planner.c
+DWA/dwa.c
 FrenetOptimalTrajectory/frenet_optimal_trajectory.c
 Path_Planning_Library.egg-info/PKG-INFO
 Path_Planning_Library.egg-info/SOURCES.txt
