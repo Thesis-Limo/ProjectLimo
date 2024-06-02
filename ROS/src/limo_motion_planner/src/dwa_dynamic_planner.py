@@ -37,7 +37,7 @@ class MotionPlanner:
     def __init__(
         self,
         publisher: rospy.Publisher,
-        dt=0.01,
+        dt=0.1,
     ):
         self.goal_pose = None
         self.goal_updated = False
@@ -142,7 +142,7 @@ class MotionPlanner:
                 distance_to_goal = math.hypot(state.x - gx, state.y - gy)
                 target_speed = (
                     TARGET_SPEED
-                    if distance_to_goal > 0.4
+                    if distance_to_goal > 1
                     else TARGET_SPEED * distance_to_goal
                 )
                 state, path, goal_reached = self.run_dwa_step(

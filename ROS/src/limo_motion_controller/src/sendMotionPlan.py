@@ -14,26 +14,23 @@ if __name__ == '__main__':
         rate.sleep()
         plan = MotionPlan()
         cont = MovementController()
-        cont.speed = 1
-        cont.angle = angle
+        cont.speed = 0.4
+        cont.angle = 0
         cont.duration = 0.2
         plan.sequence.append(cont)
+
         cont = MovementController()
-        cont.speed = 1
-        cont.angle = angle
+        cont.speed = 0.4
+        cont.angle = 0
         cont.duration = 2.4
         plan.sequence.append(cont)
+
+        cont = MovementController()
+        cont.speed = 0
+        cont.angle = 0
+        cont.duration = 1
+        plan.sequence.append(cont)
         
-        cont = MovementController()
-        cont.speed = 1
-        cont.angle = 0
-        cont.duration = 0.2
-        plan.sequence.append(cont)
-        cont = MovementController()
-        cont.speed = 1
-        cont.angle = 0
-        cont.duration = 2
-        plan.sequence.append(cont)
         # cont = MovementController()
         # cont.speed = 1
         # cont.angle = -angle

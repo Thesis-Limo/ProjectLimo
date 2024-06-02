@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from functools import lru_cache
 
 cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]
-cdef double ROBOT_RADIUS = 0.3 # robot radius [m]
+cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
 cdef double DT = 0.1 # default time tick [s]
 cdef double DWA_V_MIN = 0.0
 cdef double DWA_OMEGA_MIN = -pi / 6
@@ -17,7 +17,7 @@ cdef double DWA_OMEGA_RESOLUTION = pi / 90
 cdef double PREDICT_TIME = 2.0  # Predict 2 seconds ahead
 cdef double TO_GOAL_COST_GAIN = 1.0
 cdef double SPEED_COST_GAIN = 1.0
-cdef double OBSTACLE_COST_GAIN = 1.0
+cdef double OBSTACLE_COST_GAIN = 0.5
 cdef double TURN_COST_GAIN = 0.05
 
 cdef class DWAPath:
