@@ -7,16 +7,17 @@ import matplotlib.pyplot as plt
 from functools import lru_cache
 
 cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]
+cdef double TARGET_ACCEL = 0.2 # target acceleration [m/ss]
 cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
 cdef double DT = 0.1 # default time tick [s]
 cdef double DWA_V_MIN = 0.0
-cdef double DWA_V_RESOLUTION = 0.05
+cdef double DWA_V_RESOLUTION = 0.02
 cdef double DWA_OMEGA_RESOLUTION = pi / 90
-cdef double PREDICT_TIME = 2.0  # Predict 2 seconds ahead
+cdef double PREDICT_TIME = 3.5  #  predict time [s]
 cdef double TO_GOAL_COST_GAIN = 1.0
-cdef double SPEED_COST_GAIN = 1.0
+cdef double SPEED_COST_GAIN = 0.5
 cdef double OBSTACLE_COST_GAIN = 0.5
-cdef double TURN_COST_GAIN = 0.05
+cdef double TURN_COST_GAIN = 0.5
 cdef double TURN_RADIUS = 0.4 # turning radius [m]
 
 cdef class DWAPath:
@@ -41,7 +42,7 @@ def generate_trajectory(double v, double omega, double x, double y, double yaw, 
 
     for _ in range(predict_steps):
         time += dt
-        v_t = min(current_speed + MAX_ACCEL * time, target_speed)
+        v_t = min(current_speed + TARGET_ACCEL * time, target_speed)
         x_ = x + v_t * cos(yaw) * dt
         y_ = y + v_t * sin(yaw) * dt
         yaw_ = yaw + omega * dt
