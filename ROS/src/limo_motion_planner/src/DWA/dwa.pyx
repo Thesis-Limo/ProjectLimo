@@ -10,8 +10,6 @@ cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]
 cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
 cdef double DT = 0.1 # default time tick [s]
 cdef double DWA_V_MIN = 0.0
-cdef double DWA_OMEGA_MIN = -pi / 6
-cdef double DWA_OMEGA_MAX = pi / 6
 cdef double DWA_V_RESOLUTION = 0.05
 cdef double DWA_OMEGA_RESOLUTION = pi / 90
 cdef double PREDICT_TIME = 2.0  # Predict 2 seconds ahead
@@ -19,6 +17,7 @@ cdef double TO_GOAL_COST_GAIN = 1.0
 cdef double SPEED_COST_GAIN = 1.0
 cdef double OBSTACLE_COST_GAIN = 0.5
 cdef double TURN_COST_GAIN = 0.05
+cdef double TURN_RADIUS = 0.4 # turning radius [m]
 
 cdef class DWAPath:
     def __init__(self):
@@ -81,7 +80,6 @@ cdef bint check_collision(DWAPath path, cnp.ndarray[cnp.float64_t, ndim=2] ob):
 
 def dwa_planning(double x, double y, double yaw, double current_speed, double current_omega, cnp.ndarray[cnp.float64_t, ndim=2] ob, double gx, double gy, double target_speed, double dt=DT, bint debug_mode=False):
     cdef int v_steps = int((target_speed - DWA_V_MIN) / DWA_V_RESOLUTION + 1)
-    cdef int omega_steps = int((DWA_OMEGA_MAX - DWA_OMEGA_MIN) / DWA_OMEGA_RESOLUTION + 1)
     cdef list[DWAPath] paths = []
     cdef DWAPath best_path = None
     cdef double min_cost = float("inf")
@@ -90,6 +88,10 @@ def dwa_planning(double x, double y, double yaw, double current_speed, double cu
 
     for i in range(v_steps):
         v = DWA_V_MIN + i * DWA_V_RESOLUTION
+        DWA_OMEGA_MIN = -v / TURN_RADIUS
+        DWA_OMEGA_MAX = v / TURN_RADIUS
+        omega_steps = int((DWA_OMEGA_MAX - DWA_OMEGA_MIN) / DWA_OMEGA_RESOLUTION + 1)
+        
         for j in range(omega_steps):
             omega = DWA_OMEGA_MIN + j * DWA_OMEGA_RESOLUTION
             path = generate_trajectory(v, omega, x, y, yaw, current_speed, target_speed, dt)
