@@ -55,7 +55,9 @@ class MotionPlanner:
             try:
                 distance_to_goal = math.hypot(state.x - gx, state.y - gy)
                 target_speed = (
-                    TARGET_SPEED if distance_to_goal > 0.4 else TARGET_SPEED / 2
+                    TARGET_SPEED
+                    if distance_to_goal > 1.0
+                    else TARGET_SPEED * distance_to_goal
                 )
                 state, path, goal_reached = self.run_dwa_step(
                     state, gx, gy, target_speed
@@ -92,16 +94,18 @@ class MotionPlanner:
         if dwa_path is None:
             raise RuntimeError("No valid path found.")
 
-        state = self.update(state, dwa_path.v, dwa_path.omega)
-        goal_reached = math.hypot(state.x - gx, state.y - gy) <= 0.3
+        state = self.update(dwa_path)
+        goal_reached = math.hypot(state.x - gx, state.y - gy) <= 0.2
         return state, dwa_path, goal_reached
 
-    def update(self, state, v, omega):
-        state.x += v * math.cos(state.yaw) * self.dt
-        state.y += v * math.sin(state.yaw) * self.dt
-        state.yaw += omega * self.dt
-        state.speed = v
-        state.omega = omega
+    def update(self, dwa_path):
+        state = State(
+            dwa_path.x[0],
+            dwa_path.y[0],
+            dwa_path.yaw[0],
+            dwa_path.v[0],
+            dwa_path.omega,
+        )
         return state
 
     def plot(self):
@@ -114,6 +118,9 @@ class MotionPlanner:
         plt.plot(self.goal_pose.x, self.goal_pose.y, "xr")
         plt.grid(True)
         plt.axis("equal")
+        plt.show()
+
+        plt.plot([plan.v[0] for plan in self.motion_plan])
         plt.show()
 
 
@@ -154,7 +161,7 @@ def callback(lidar_msg):
     planner.calculate_dwa()
 
     for plan in planner.motion_plan:
-        print(f"Speed: {plan.v}, Angle: {plan.omega}, Duration: {planner.dt}")
+        print(f"Speed: {plan.v[0]}, Angle: {plan.omega}, Duration: {planner.dt}")
 
     planner.plot()
 
