@@ -60,7 +60,7 @@ class MotionPlanner:
                 target_speed = (
                     TARGET_SPEED
                     if distance_to_goal > 0.5
-                    else TARGET_SPEED * distance_to_goal
+                    else TARGET_SPEED * distance_to_goal * 2
                 )
                 state, path, goal_reached = self.run_dwa_step(
                     state, gx, gy, target_speed
