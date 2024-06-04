@@ -105,14 +105,24 @@ void YoloProjection::CallbackYoloResult(const darknet_ros_msgs::BoundingBoxes::C
     
         for(int i=0;i<end(msg->bounding_boxes)-begin(msg->bounding_boxes);i++){
             if(bounding_boxes[i].id != objectId) continue;
-            if(box.size() > 0 && box[0].probability > bounding_boxes[i].probability) {
-                box.clear();
-                box.push_back(bounding_boxes[i]);
+            //First check if there is a target, if not take the most probable one
+            if(targetPositions.size() <=0 )
+            {
+                if(box.size() > 0 && box[0].probability > bounding_boxes[i].probability) {
+                    box.clear();
+                    box.push_back(bounding_boxes[i]);
+                    }
+                else {
+                    box.push_back(bounding_boxes[i]);
                 }
-            else {
-                box.push_back(bounding_boxes[i]);
             }
+            else{
+                //if there is already one we check the previous position and compare it
+                    box.push_back(bounding_boxes[i]);
+            }
+            
         }
+
         if(box.size() <= 0) {
             objectFound = false;
             ROS_INFO("TargetNotFound");
@@ -122,6 +132,7 @@ void YoloProjection::CallbackYoloResult(const darknet_ros_msgs::BoundingBoxes::C
         float startRadObject = -M_PI;
         float endRadObject = -M_PI;
         float currentDistance = __FLT_MAX__;
+        float currentAngle = 0;
         for (int i = 0; i < box.size(); i++)
         {
             //Calculate angle
@@ -129,7 +140,7 @@ void YoloProjection::CallbackYoloResult(const darknet_ros_msgs::BoundingBoxes::C
             float rad = PixelToRad(pointX,currentDataframe.currentImage.width);
             float id = (rad - currentDataframe.lidar.angle_min) / currentDataframe.lidar.angle_increment;
             id = round(id);
-
+            currentAngle = rad;
             if(currentDistance > currentDataframe.lidar.ranges[id])
             {
                 currentDistance = currentDataframe.lidar.ranges[id];
@@ -138,6 +149,7 @@ void YoloProjection::CallbackYoloResult(const darknet_ros_msgs::BoundingBoxes::C
                 std::cout << currentDataframe.currentImage.width << "\n";
             }            
         }   
+
         if(currentDistance == __FLT_MAX__)
         {
             ROS_INFO("TargetNotInReach");
@@ -147,7 +159,7 @@ void YoloProjection::CallbackYoloResult(const darknet_ros_msgs::BoundingBoxes::C
         }    
         objectFound = true;    
         ROS_INFO("TargetFound");
-        PublishAndMap(currentDataframe, startRadObject, endRadObject);
+        PublishAndMap(currentDataframe, startRadObject, endRadObject, currentAngle);
     }
 } 
 
@@ -235,7 +247,7 @@ limo_yolo::map YoloProjection::ConvertToLidar(const LaserScan& laser, const floa
     return map;
 }
 
-void YoloProjection::PublishAndMap(const DataFrame& dataframe, float minAngle, float maxAngle)
+void YoloProjection::PublishAndMap(const DataFrame& dataframe, float minAngle, float maxAngle, float currentAngle)
 {
     limo_yolo::map map;
     if(minAngle == __FLT_MAX__ && targetPositions.size() == 0)
@@ -254,6 +266,7 @@ void YoloProjection::PublishAndMap(const DataFrame& dataframe, float minAngle, f
         double yaw = QuaternionToYaw(dataframe.currentPose.orientation);
         yaw -= QuaternionToYaw(lastKnownPos.orientation); 
         auto updatedPos = UpdateTargetPositions(changePos, -yaw);
+        std::cout << yaw <<"-\n";
         
         //take previous target with updated position
         float min  = __FLT_MAX__;
@@ -277,37 +290,10 @@ void YoloProjection::PublishAndMap(const DataFrame& dataframe, float minAngle, f
         map = this->ConvertToLidar(dataframe.lidar, minAngle - angleDeadzone, maxAngle + angleDeadzone);
         targetPositions.clear();
         targetPositions = map.goal;
+        currentAngleCamera = currentAngle;
         lastKnownPos = dataframe.currentPose;
     }
     mapPub.publish(map);
-    // geometry_msgs::PolygonStamped path;
-    // path.header.frame_id = laserFrame;
-    // std::vector<geometry_msgs::Point32> p;
-    // for (int i = 0; i < map.goal.size(); i++)
-    // {
-    //     geometry_msgs::Point32 pe;
-    //     pe.x = map.goal[i].point.x -0.105;
-    //     pe.y = map.goal[i].point.y;
-    //     pe.z = map.goal[i].point.z -0.08;
-    //     p.push_back(pe);
-    // }
-    // path.polygon.points = p;
-    // mapPub.publish(path);
-    // //TODO temp
-    // geometry_msgs::PolygonStamped path2;
-
-    // path2.header.frame_id = laserFrame;
-    // std::vector<geometry_msgs::Point32> pt;
-    // for (int i = 0; i < map.obstacles.size(); i++)
-    // {
-    //     geometry_msgs::Point32 pe;
-    //     pe.x = map.obstacles[i].point.x -0.105;
-    //     pe.y = map.obstacles[i].point.y;
-    //     pe.z = map.obstacles[i].point.z -0.08;
-    //     pt.push_back(pe);
-    // }
-    // path2.polygon.points = pt;
-    // mapTempPub.publish(path2);
     ROS_INFO("map published");
 }
 
