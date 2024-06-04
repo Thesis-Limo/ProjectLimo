@@ -175,7 +175,7 @@ def callback(lidar_msg, publisher):
         executable_plan = MotionPlan()
         for plan in planner.motion_plan:
             cont = MovementController()
-            cont.speed = plan.v
+            cont.speed = plan.v[0]
             cont.angle = plan.omega
             cont.duration = planner.dt
             executable_plan.sequence.append(cont)
