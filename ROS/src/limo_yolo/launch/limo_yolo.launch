@@ -2,7 +2,7 @@
   <arg name="screen" default="screen"/>
   <arg name="baseLinkFrame" default="base_link" />
   <arg name="laserFrame" default="laser_link" />
-  <arg name="ObjectId" default="39"/>
+  <arg name="ObjectId" default="0"/>
 
   <node name="limo_yolo" pkg="limo_yolo" type="limo_yolo" output="$(arg screen)">
     <param name="baseLinkFrame" value="$(arg baseLinkFrame)"/>

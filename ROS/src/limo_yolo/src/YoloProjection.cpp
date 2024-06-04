@@ -141,13 +141,24 @@ void YoloProjection::CallbackYoloResult(const darknet_ros_msgs::BoundingBoxes::C
             float id = (rad - currentDataframe.lidar.angle_min) / currentDataframe.lidar.angle_increment;
             id = round(id);
             currentAngle = rad;
-            if(currentDistance > currentDataframe.lidar.ranges[id])
+
+            float tempStartRadObject =  PixelToRad(box[i].xmax,currentDataframe.currentImage.width);
+            float tempEndRadObject = PixelToRad(box[i].xmin, currentDataframe.currentImage.width);
+            if(targetPositions.size() <=0 )
             {
                 currentDistance = currentDataframe.lidar.ranges[id];
                 startRadObject =  PixelToRad(box[i].xmax,currentDataframe.currentImage.width);
                 endRadObject = PixelToRad(box[i].xmin, currentDataframe.currentImage.width);
-                std::cout << currentDataframe.currentImage.width << "\n";
-            }            
+            }
+            else if(abs(currentAngleCamera - rad) <= 0.04 || abs(currentAngleCamera - tempStartRadObject) <= 0.04 || abs(currentAngleCamera - tempEndRadObject) <= 0.04 )
+            {
+                //Last person
+                startRadObject = tempStartRadObject;
+                endRadObject = tempEndRadObject;
+                currentDistance = currentDataframe.lidar.ranges[id];
+                ROS_INFO("person back in view");
+            }          
+            std::cout << abs(currentAngleCamera - rad)  <<"\n";
         }   
 
         if(currentDistance == __FLT_MAX__)
@@ -266,8 +277,6 @@ void YoloProjection::PublishAndMap(const DataFrame& dataframe, float minAngle, f
         double yaw = QuaternionToYaw(dataframe.currentPose.orientation);
         yaw -= QuaternionToYaw(lastKnownPos.orientation); 
         auto updatedPos = UpdateTargetPositions(changePos, -yaw);
-        std::cout << yaw <<"-\n";
-        
         //take previous target with updated position
         float min  = __FLT_MAX__;
         float max = -__FLT_MAX__;
@@ -279,11 +288,8 @@ void YoloProjection::PublishAndMap(const DataFrame& dataframe, float minAngle, f
             if(temp > max)
                 max = temp;
         }
-        std::cout << min << "-" << max <<"\n";
-        //TODO testing
         map = this->ConvertToLidar(dataframe.lidar, min, max, true, updatedPos);
         map.goal = updatedPos;
-
     }
     else{
         std::cout << minAngle  << "-" << maxAngle   <<"\n";
