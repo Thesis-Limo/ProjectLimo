@@ -366,7 +366,7 @@ void LimoDriver::twistCmdCallback(const geometry_msgs::TwistConstPtr& msg) {
                 steering_angle = inner_angle / right_angle_scale_;
             }
 
-            setMotionCommand(msg->linear.x, 0, 0, steering_angle);
+            setMotionCommand(msg->linear.x, 0, 0, 3.1415926 / 6);
             break;
         }
         case MODE_MCNAMU: {
