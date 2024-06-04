@@ -9,7 +9,7 @@ import yaml
 
 WHEELBASE = 0.2  # [m]
 SIM_LOOP = 500
-TARGET_SPEED = 0.5  # [m/s]
+TARGET_SPEED = 1.0  # [m/s]
 
 
 class Pose:

@@ -9,15 +9,16 @@ from functools import lru_cache
 cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]
 cdef double TARGET_ACCEL = 0.2 # target acceleration [m/ss]
 cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
-cdef double DT = 0.1 # default time tick [s]
+cdef double DT = 0.2 # default time tick [s]
 cdef double DWA_V_MIN = 0.0
-cdef double DWA_V_RESOLUTION = 0.02
+cdef double DWA_V_RESOLUTION = 0.25
 cdef double DWA_OMEGA_RESOLUTION = pi / 90
-cdef double PREDICT_TIME = 3.5  #  predict time [s]
+cdef double PREDICT_TIME = 2.0  #  predict time [s]
+cdef double PREDICT_TIME_STEP = 0.5  #  predict time step [s]
 cdef double TO_GOAL_COST_GAIN = 1.0
-cdef double SPEED_COST_GAIN = 0.5
+cdef double SPEED_COST_GAIN = 0.05
 cdef double OBSTACLE_COST_GAIN = 0.5
-cdef double TURN_COST_GAIN = 0.5
+cdef double TURN_COST_GAIN = 0.01
 cdef double TURN_RADIUS = 0.4 # turning radius [m]
 
 cdef class DWAPath:
@@ -30,11 +31,11 @@ cdef class DWAPath:
         self.cost = 0.0
 
 @lru_cache(None)
-def generate_trajectory(double v, double omega, double x, double y, double yaw, double current_speed, double target_speed, double dt):
+def generate_trajectory(double v, double omega, double x, double y, double yaw, double current_speed, double target_speed, double dt, double time_step):
     cdef DWAPath path = DWAPath()
     path.omega = omega
     cdef double time = 0.0
-    cdef int predict_steps = int(PREDICT_TIME / dt)
+    cdef int predict_steps = int(time_step / dt)
     cdef double x_ = x
     cdef double y_ = y
     cdef double yaw_ = yaw
@@ -98,13 +99,16 @@ def dwa_planning(double x, double y, double yaw, double current_speed, double cu
         
         for j in range(omega_steps):
             omega = DWA_OMEGA_MIN + j * DWA_OMEGA_RESOLUTION
-            path = generate_trajectory(v, omega, x, y, yaw, current_speed, target_speed, dt)
-            if check_collision(path, ob):
-                cost = calculate_cost(path, ob, gx, gy, target_speed, current_speed, current_omega)
-                paths.append(path)
-                if cost < min_cost:
-                    min_cost = cost
-                    best_path = path
+            time_steps = int(PREDICT_TIME / PREDICT_TIME_STEP)
+            for k in range(time_steps):
+                time = PREDICT_TIME_STEP * (k + 1)
+                path = generate_trajectory(v, omega, x, y, yaw, current_speed, target_speed, dt, time)
+                if check_collision(path, ob):
+                    cost = calculate_cost(path, ob, gx, gy, target_speed, current_speed, current_omega)
+                    paths.append(path)
+                    if cost < min_cost:
+                        min_cost = cost
+                        best_path = path
 
     if debug_mode:
         plt.figure(figsize=(10, 10))
