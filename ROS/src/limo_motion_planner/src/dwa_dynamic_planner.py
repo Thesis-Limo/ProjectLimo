@@ -137,18 +137,18 @@ class MotionPlanner:
             if not self.goal_pose:
                 continue
 
-            gx, gy = self.goal_pose.x, self.goal_pose.y
-
             start = time.time()
             try:
-                distance_to_goal = math.hypot(state.x - gx, state.y - gy)
+                distance_to_goal = math.hypot(
+                    state.x - self.goal_pose.x, state.y - self.goal_pose.y
+                )
                 target_speed = (
                     TARGET_SPEED
-                    if distance_to_goal > 1
+                    if distance_to_goal > 0.5
                     else TARGET_SPEED * distance_to_goal
                 )
                 state, path, goal_reached = self.run_dwa_step(
-                    state, gx, gy, target_speed
+                    state, self.goal_pose.x, self.goal_pose.y, target_speed
                 )
                 motion_plan.append(path)
 
@@ -161,7 +161,6 @@ class MotionPlanner:
 
             if goal_reached:
                 print("Goal Reached")
-                self.publish_motion(motion_plan)
                 motion_plan = []
                 continue
 

@@ -59,7 +59,7 @@ class MotionPlanner:
                 distance_to_goal = math.hypot(state.x - gx, state.y - gy)
                 target_speed = (
                     TARGET_SPEED
-                    if distance_to_goal > 1.0
+                    if distance_to_goal > 0.5
                     else TARGET_SPEED * distance_to_goal
                 )
                 state, path, goal_reached = self.run_dwa_step(
