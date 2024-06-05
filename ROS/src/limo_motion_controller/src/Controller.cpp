@@ -162,15 +162,16 @@ geometry_msgs::Twist Controller::CalculateMovement(const Motion *currentMotion)
 
     float currentSpeed = currentMotion->speed;
     float currentAngle = currentMotion->angle;
-
+    currentMovement.linear.x = currentSpeed;
+    currentMovement.angular.z = currentAngle;
     this->currentSteeringAngle = currentAngle;
     this->currentSpeed = currentSpeed;
 
-    float v_l = (currentSpeed);
-    float v_a = (v_l * tan(currentAngle)) / wheelBase;
+    // float v_l = (currentSpeed);
+    // float v_a = (v_l * tan(currentAngle)) / wheelBase;
 
-    currentMovement.linear.x = v_l;
-    currentMovement.angular.z = v_a;
+    // currentMovement.linear.x = v_l;
+    // currentMovement.angular.z = v_a;
 
     return currentMovement;
 }

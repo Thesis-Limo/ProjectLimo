@@ -4,5 +4,5 @@ from libc.stdlib cimport free
 import numpy as cnp
 
 cdef class DWAPath:
-    cdef public list x, y, yaw
-    cdef public double v, omega, cost
+    cdef public list x, y, yaw, v
+    cdef public double omega, cost

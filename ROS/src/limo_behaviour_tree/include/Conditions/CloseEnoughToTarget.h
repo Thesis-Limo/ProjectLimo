@@ -12,6 +12,9 @@ private:
     Point3D currentPos;
     Point3D targetPos;
     float distanceToClose;
+    ros::Time prevTimestamp;
+    geometry_msgs::Point prevPos;
+    float speedSqr = 0;
 
     void CallBackTarget(const geometry_msgs::Point::ConstPtr& msg);
     void CallBackPosition(const nav_msgs::Odometry::ConstPtr& msg);
