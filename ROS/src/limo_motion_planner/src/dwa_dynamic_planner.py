@@ -12,7 +12,7 @@ from limo_motion_controller.msg import MotionPlan, MovementController
 from limo_yolo.msg import map
 
 SIM_LOOP = 500
-TARGET_SPEED = 0.1  # [m/s]
+TARGET_SPEED = 0.5  # [m/s]
 DEBUG_MODE = False
 
 
