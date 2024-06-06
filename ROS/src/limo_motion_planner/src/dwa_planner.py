@@ -9,7 +9,7 @@ import yaml
 
 SIM_LOOP = 500
 TARGET_SPEED = 0.5  # [m/s]
-DEBUG_MODE = True
+DEBUG_MODE = False
 
 
 class Pose:

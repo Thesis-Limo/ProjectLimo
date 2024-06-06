@@ -7,17 +7,17 @@ import matplotlib.pyplot as plt
 from functools import lru_cache
 
 cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]
-cdef double TARGET_ACCEL = 0.05 # target acceleration [m/ss]
+cdef double TARGET_ACCEL = 0.2 # target acceleration [m/ss]
 cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
 cdef double DT = 0.2 # default time tick [s]
 cdef double DWA_V_MIN = 0.0
-cdef double DWA_V_RESOLUTION = 0.1
-cdef double DWA_OMEGA_RESOLUTION = pi / 45
+cdef double DWA_V_RESOLUTION = 0.25
+cdef double DWA_OMEGA_RESOLUTION = pi / 90
 cdef double PREDICT_TIME = 2.0  #  predict time [s]
-cdef double PREDICT_TIME_STEP = 1.0  #  predict time step [s]
+cdef double PREDICT_TIME_STEP = 0.5  #  predict time step [s]
 cdef double TO_GOAL_COST_GAIN = 1.0
 cdef double SPEED_COST_GAIN = 0.05
-cdef double OBSTACLE_COST_GAIN = 1.0
+cdef double OBSTACLE_COST_GAIN = 0.0
 cdef double TURN_COST_GAIN = 0.01
 cdef double TURN_RADIUS = 0.4 # turning radius [m]
 

@@ -11,7 +11,7 @@ from limo_motion_controller.msg import MotionPlan, MovementController
 from sensor_msgs.msg import LaserScan
 
 SIM_LOOP = 500
-TARGET_SPEED = 0.1  # [m/s]
+TARGET_SPEED = 0.3  # [m/s]
 DEBUG_MODE = False
 
 
@@ -59,9 +59,10 @@ class MotionPlanner:
                 distance_to_goal = math.hypot(state.x - gx, state.y - gy)
                 target_speed = (
                     TARGET_SPEED
-                    if distance_to_goal > 0.5
-                    else TARGET_SPEED * distance_to_goal * 2
+                    if distance_to_goal > TARGET_SPEED * 3
+                    else TARGET_SPEED * distance_to_goal / 3
                 )
+                target_speed = max(target_speed, 0.1)
                 state, path, goal_reached = self.run_dwa_step(
                     state, gx, gy, target_speed
                 )
