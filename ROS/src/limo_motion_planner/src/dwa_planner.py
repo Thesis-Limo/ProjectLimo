@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import yaml
 
-WHEELBASE = 0.2  # [m]
 SIM_LOOP = 500
-TARGET_SPEED = 1.0  # [m/s]
+TARGET_SPEED = 0.5  # [m/s]
+DEBUG_MODE = False
 
 
 class Pose:
@@ -89,7 +89,7 @@ class MotionPlanner:
             gy,
             target_speed,
             self.dt,
-            debug_mode=False,
+            debug_mode=DEBUG_MODE,
         )
         if dwa_path is None:
             raise RuntimeError("No valid path found.")

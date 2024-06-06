@@ -17,7 +17,7 @@ cdef double PREDICT_TIME = 2.0  #  predict time [s]
 cdef double PREDICT_TIME_STEP = 0.5  #  predict time step [s]
 cdef double TO_GOAL_COST_GAIN = 1.0
 cdef double SPEED_COST_GAIN = 0.05
-cdef double OBSTACLE_COST_GAIN = 0.5
+cdef double OBSTACLE_COST_GAIN = 1.0
 cdef double TURN_COST_GAIN = 0.01
 cdef double TURN_RADIUS = 0.4 # turning radius [m]
 
@@ -90,6 +90,7 @@ def dwa_planning(double x, double y, double yaw, double current_speed, double cu
     cdef double min_cost = float("inf")
     cdef double v, omega, cost
     cdef DWAPath path
+    cdef list[DWAPath] invalidPaths = []
 
     for i in range(v_steps):
         v = DWA_V_MIN + i * DWA_V_RESOLUTION
@@ -109,11 +110,15 @@ def dwa_planning(double x, double y, double yaw, double current_speed, double cu
                     if cost < min_cost:
                         min_cost = cost
                         best_path = path
+                else:
+                    invalidPaths.append(path)
 
     if debug_mode:
         plt.figure(figsize=(10, 10))
         for path in paths:
             plt.plot(path.x, path.y, '-b', alpha=0.3)
+        for path in invalidPaths:
+            plt.plot(path.x, path.y, '-r', alpha=0.3)
         if best_path:
             plt.plot(best_path.x, best_path.y, '-g', linewidth=2, label="Best Path")
         plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")

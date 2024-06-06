@@ -10,9 +10,9 @@ import yaml
 from limo_motion_controller.msg import MotionPlan, MovementController
 from sensor_msgs.msg import LaserScan
 
-WHEELBASE = 0.2  # [m]
 SIM_LOOP = 500
 TARGET_SPEED = 0.1  # [m/s]
+DEBUG_MODE = False
 
 
 class Pose:
@@ -92,7 +92,7 @@ class MotionPlanner:
             gy,
             target_speed,
             self.dt,
-            debug_mode=False,
+            debug_mode=DEBUG_MODE,
         )
         if dwa_path is None:
             raise RuntimeError("No valid path found.")
