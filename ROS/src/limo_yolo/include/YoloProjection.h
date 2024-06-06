@@ -60,6 +60,7 @@ private:
 
     geometry_msgs::Pose currentPose;
     std::vector<geometry_msgs::PointStamped> targetPositions;
+    float currentAngleCamera = 0;
     geometry_msgs::Pose lastKnownPos;
     float currentYaw;
 
@@ -72,7 +73,7 @@ private:
     bool SwitchTarget(limo_behaviour_tree::TypeObjectTracking::Request& req, limo_behaviour_tree::TypeObjectTracking::Response& res);
 
     limo_yolo::map ConvertToLidar(const LaserScan& laser, const float& startAngleObject, const float& endAngleObject, bool checkPrevTarget = false, const std::vector<geometry_msgs::PointStamped>& target = std::vector<geometry_msgs::PointStamped>());
-    void PublishAndMap(const DataFrame& dataframe, float minAngle= __FLT_MAX__, float maxAngle = __FLT_MAX__);
+    void PublishAndMap(const DataFrame& dataframe, float minAngle= __FLT_MAX__, float maxAngle = __FLT_MAX__, float currentAngle = __FLT_MAX__);
     std::vector<geometry_msgs::PointStamped> UpdateTargetPositions(const geometry_msgs::Point& transformation, float yawRotation);
 
     float QuaternionToYaw(const geometry_msgs::Quaternion& quaternion);

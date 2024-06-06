@@ -9,7 +9,6 @@ class CreatePath: public Node
 {
 private:
   ros::ServiceClient client;
-  ros::ServiceClient controllerClient;
 
 public:
     CreatePath(const ros::NodeHandle& nodehandle, const ros::Publisher& logPub);

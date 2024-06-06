@@ -6,7 +6,7 @@ MoveBack::MoveBack(const ros::NodeHandle& nodehandle, const ros::Publisher& logP
   this->MoveBackService = nh.serviceClient<limo_motion_controller::OverrideMotion>("/override_plan");
   this->moveMsg.request.speed = nh.param<float>("SpeedGoingBack",-0.1);;
   this->moveMsg.request.angle = __FLT_MAX__;
-  this->moveMsg.request.duration = -1;
+  this->moveMsg.request.duration = 0.1;
   this->moveMsg.request.sameSpeedStart = true;
 }
 
