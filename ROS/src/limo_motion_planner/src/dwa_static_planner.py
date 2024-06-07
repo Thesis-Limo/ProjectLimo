@@ -10,9 +10,9 @@ import yaml
 from limo_motion_controller.msg import MotionPlan, MovementController
 from sensor_msgs.msg import LaserScan
 
-WHEELBASE = 0.2  # [m]
 SIM_LOOP = 500
-TARGET_SPEED = 0.1  # [m/s]
+TARGET_SPEED = 0.3  # [m/s]
+DEBUG_MODE = False
 
 
 class Pose:
@@ -59,9 +59,10 @@ class MotionPlanner:
                 distance_to_goal = math.hypot(state.x - gx, state.y - gy)
                 target_speed = (
                     TARGET_SPEED
-                    if distance_to_goal > 0.5
-                    else TARGET_SPEED * distance_to_goal * 2
+                    if distance_to_goal > TARGET_SPEED * 3
+                    else TARGET_SPEED * distance_to_goal / 3
                 )
+                target_speed = max(target_speed, 0.1)
                 state, path, goal_reached = self.run_dwa_step(
                     state, gx, gy, target_speed
                 )
@@ -92,7 +93,7 @@ class MotionPlanner:
             gy,
             target_speed,
             self.dt,
-            debug_mode=False,
+            debug_mode=DEBUG_MODE,
         )
         if dwa_path is None:
             raise RuntimeError("No valid path found.")

@@ -10,9 +10,11 @@ import numpy as np
 import rospy
 from limo_motion_controller.msg import MotionPlan, MovementController
 from limo_yolo.msg import map
+from nav_msgs.msg import Odometry
 
 SIM_LOOP = 500
-TARGET_SPEED = 0.1  # [m/s]
+TARGET_SPEED = 0.4  # [m/s]
+DEBUG_MODE = False
 
 
 class Pose:
@@ -44,7 +46,7 @@ class MotionPlanner:
 
         self.obstacleList = None
 
-        self.initial_state = State(0.0, 0.0, 0.0, 0.0, 0.0)
+        self.state = State(0.0, 0.0, 0.0, 0.0, 0.0)
 
         self.lock = threading.Lock()
         self.publisher = publisher
@@ -111,7 +113,7 @@ class MotionPlanner:
             gy,
             target_speed,
             self.dt,
-            debug_mode=False,
+            debug_mode=DEBUG_MODE,
         )
         if dwa_path is None:
             raise RuntimeError("No valid path found.")
@@ -130,8 +132,12 @@ class MotionPlanner:
         )
         return state
 
+    def odom_update(self, odom):
+        speed = odom.twist.twist.linear.x
+        omega = odom.twist.twist.angular.z
+        self.state = State(self.state.x, self.state.y, self.state.yaw, speed, omega)
+
     def main_loop(self):
-        state = self.initial_state
         motion_plan = []
         while True:
             if not self.goal_pose:
@@ -140,15 +146,16 @@ class MotionPlanner:
             start = time.time()
             try:
                 distance_to_goal = math.hypot(
-                    state.x - self.goal_pose.x, state.y - self.goal_pose.y
+                    self.state.x - self.goal_pose.x, self.state.y - self.goal_pose.y
                 )
                 target_speed = (
                     TARGET_SPEED
-                    if distance_to_goal > 0.5
-                    else TARGET_SPEED * distance_to_goal * 2
+                    if distance_to_goal > TARGET_SPEED * 3
+                    else TARGET_SPEED * distance_to_goal / (TARGET_SPEED * 3)
                 )
-                state, path, goal_reached = self.run_dwa_step(
-                    state, self.goal_pose.x, self.goal_pose.y, target_speed
+                target_speed = max(target_speed, 0.1)
+                self.state, path, goal_reached = self.run_dwa_step(
+                    self.state, self.goal_pose.x, self.goal_pose.y, target_speed
                 )
                 motion_plan.append(path)
 
@@ -169,7 +176,7 @@ class MotionPlanner:
                 print("Updated Goal: ", self.goal_pose)
                 self.publish_motion(motion_plan)
                 motion_plan = []
-                state = State(0.0, 0.0, 0.0, state.speed, state.omega)
+                self.state = State(0.0, 0.0, 0.0, self.state.speed, self.state.omega)
                 continue
 
 
@@ -179,7 +186,8 @@ if __name__ == "__main__":
 
     pub = rospy.Publisher("/limo_motionplan", MotionPlan, queue_size=10)
     planner = MotionPlanner(pub)
-    s = rospy.Subscriber("/map", map, lambda map: planner.update_map(map))
+    rospy.Subscriber("/map", map, lambda map: planner.update_map(map))
+    rospy.Subscriber("/odom", Odometry, lambda odom: planner.odom_update(odom))
 
     planner_thread = threading.Thread(target=planner.main_loop)
     planner_thread.start()
