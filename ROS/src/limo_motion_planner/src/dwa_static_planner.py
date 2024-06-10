@@ -11,7 +11,7 @@ from limo_motion_controller.msg import MotionPlan, MovementController
 from sensor_msgs.msg import LaserScan
 
 SIM_LOOP = 500
-TARGET_SPEED = 0.3  # [m/s]
+TARGET_SPEED = 0.4  # [m/s]
 DEBUG_MODE = False
 
 
