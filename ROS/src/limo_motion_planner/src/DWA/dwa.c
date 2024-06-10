@@ -10612,7 +10612,7 @@ if (!__Pyx_RefNanny) {
  * 
  * cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]             # <<<<<<<<<<<<<<
  * cdef double TARGET_ACCEL = 0.2 # target acceleration [m/ss]
- * cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
+ * cdef double ROBOT_RADIUS = 0.20 # robot radius [m]
  */
   __pyx_v_3DWA_3dwa_MAX_ACCEL = 1.0;
 
@@ -10620,32 +10620,32 @@ if (!__Pyx_RefNanny) {
  * 
  * cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]
  * cdef double TARGET_ACCEL = 0.2 # target acceleration [m/ss]             # <<<<<<<<<<<<<<
- * cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
- * cdef double DT = 0.2 # default time tick [s]
+ * cdef double ROBOT_RADIUS = 0.20 # robot radius [m]
+ * cdef double DT = 0.1 # default time tick [s]
  */
   __pyx_v_3DWA_3dwa_TARGET_ACCEL = 0.2;
 
   /* "DWA/dwa.pyx":11
  * cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]
  * cdef double TARGET_ACCEL = 0.2 # target acceleration [m/ss]
- * cdef double ROBOT_RADIUS = 0.2 # robot radius [m]             # <<<<<<<<<<<<<<
- * cdef double DT = 0.2 # default time tick [s]
+ * cdef double ROBOT_RADIUS = 0.20 # robot radius [m]             # <<<<<<<<<<<<<<
+ * cdef double DT = 0.1 # default time tick [s]
  * cdef double DWA_V_MIN = 0.0
  */
-  __pyx_v_3DWA_3dwa_ROBOT_RADIUS = 0.2;
+  __pyx_v_3DWA_3dwa_ROBOT_RADIUS = 0.20;
 
   /* "DWA/dwa.pyx":12
  * cdef double TARGET_ACCEL = 0.2 # target acceleration [m/ss]
- * cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
- * cdef double DT = 0.2 # default time tick [s]             # <<<<<<<<<<<<<<
+ * cdef double ROBOT_RADIUS = 0.20 # robot radius [m]
+ * cdef double DT = 0.1 # default time tick [s]             # <<<<<<<<<<<<<<
  * cdef double DWA_V_MIN = 0.0
  * cdef double DWA_V_RESOLUTION = 0.25
  */
-  __pyx_v_3DWA_3dwa_DT = 0.2;
+  __pyx_v_3DWA_3dwa_DT = 0.1;
 
   /* "DWA/dwa.pyx":13
- * cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
- * cdef double DT = 0.2 # default time tick [s]
+ * cdef double ROBOT_RADIUS = 0.20 # robot radius [m]
+ * cdef double DT = 0.1 # default time tick [s]
  * cdef double DWA_V_MIN = 0.0             # <<<<<<<<<<<<<<
  * cdef double DWA_V_RESOLUTION = 0.25
  * cdef double DWA_OMEGA_RESOLUTION = pi / 90
@@ -10653,7 +10653,7 @@ if (!__Pyx_RefNanny) {
   __pyx_v_3DWA_3dwa_DWA_V_MIN = 0.0;
 
   /* "DWA/dwa.pyx":14
- * cdef double DT = 0.2 # default time tick [s]
+ * cdef double DT = 0.1 # default time tick [s]
  * cdef double DWA_V_MIN = 0.0
  * cdef double DWA_V_RESOLUTION = 0.25             # <<<<<<<<<<<<<<
  * cdef double DWA_OMEGA_RESOLUTION = pi / 90
@@ -10693,7 +10693,7 @@ if (!__Pyx_RefNanny) {
  * cdef double PREDICT_TIME_STEP = 0.5  #  predict time step [s]
  * cdef double TO_GOAL_COST_GAIN = 1.0             # <<<<<<<<<<<<<<
  * cdef double SPEED_COST_GAIN = 0.05
- * cdef double OBSTACLE_COST_GAIN = 0.0
+ * cdef double OBSTACLE_COST_GAIN = 0.1
  */
   __pyx_v_3DWA_3dwa_TO_GOAL_COST_GAIN = 1.0;
 
@@ -10701,32 +10701,32 @@ if (!__Pyx_RefNanny) {
  * cdef double PREDICT_TIME_STEP = 0.5  #  predict time step [s]
  * cdef double TO_GOAL_COST_GAIN = 1.0
  * cdef double SPEED_COST_GAIN = 0.05             # <<<<<<<<<<<<<<
- * cdef double OBSTACLE_COST_GAIN = 0.0
- * cdef double TURN_COST_GAIN = 0.01
+ * cdef double OBSTACLE_COST_GAIN = 0.1
+ * cdef double TURN_COST_GAIN = 0.1
  */
   __pyx_v_3DWA_3dwa_SPEED_COST_GAIN = 0.05;
 
   /* "DWA/dwa.pyx":20
  * cdef double TO_GOAL_COST_GAIN = 1.0
  * cdef double SPEED_COST_GAIN = 0.05
- * cdef double OBSTACLE_COST_GAIN = 0.0             # <<<<<<<<<<<<<<
- * cdef double TURN_COST_GAIN = 0.01
+ * cdef double OBSTACLE_COST_GAIN = 0.1             # <<<<<<<<<<<<<<
+ * cdef double TURN_COST_GAIN = 0.1
  * cdef double TURN_RADIUS = 0.4 # turning radius [m]
  */
-  __pyx_v_3DWA_3dwa_OBSTACLE_COST_GAIN = 0.0;
+  __pyx_v_3DWA_3dwa_OBSTACLE_COST_GAIN = 0.1;
 
   /* "DWA/dwa.pyx":21
  * cdef double SPEED_COST_GAIN = 0.05
- * cdef double OBSTACLE_COST_GAIN = 0.0
- * cdef double TURN_COST_GAIN = 0.01             # <<<<<<<<<<<<<<
+ * cdef double OBSTACLE_COST_GAIN = 0.1
+ * cdef double TURN_COST_GAIN = 0.1             # <<<<<<<<<<<<<<
  * cdef double TURN_RADIUS = 0.4 # turning radius [m]
  * 
  */
-  __pyx_v_3DWA_3dwa_TURN_COST_GAIN = 0.01;
+  __pyx_v_3DWA_3dwa_TURN_COST_GAIN = 0.1;
 
   /* "DWA/dwa.pyx":22
- * cdef double OBSTACLE_COST_GAIN = 0.0
- * cdef double TURN_COST_GAIN = 0.01
+ * cdef double OBSTACLE_COST_GAIN = 0.1
+ * cdef double TURN_COST_GAIN = 0.1
  * cdef double TURN_RADIUS = 0.4 # turning radius [m]             # <<<<<<<<<<<<<<
  * 
  * cdef class DWAPath:
