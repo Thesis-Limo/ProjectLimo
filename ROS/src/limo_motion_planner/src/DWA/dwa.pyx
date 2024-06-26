@@ -121,10 +121,13 @@ def dwa_planning(double x, double y, double yaw, double current_speed, double cu
             plt.plot(path.x, path.y, '-r', alpha=0.3)
         if best_path:
             plt.plot(best_path.x, best_path.y, '-g', linewidth=2, label="Best Path")
-        plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")
+        #plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")
+        for x, y in ob:
+            circle = plt.Circle((x, y), 0.2, color="k", fill=False)
+            plt.gca().add_patch(circle)
         plt.xlabel('x [m]')
         plt.ylabel('y [m]')
-        plt.title('Dynamic Window Approach Paths')
+        plt.title('Dynamic Window Approach Candidate Trajectories')
         plt.legend()
         plt.grid(True)
         plt.show()

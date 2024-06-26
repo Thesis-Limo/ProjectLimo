@@ -8,7 +8,7 @@ import numpy as np
 import yaml
 
 SIM_LOOP = 500
-TARGET_SPEED = 0.5  # [m/s]
+TARGET_SPEED = 0.4  # [m/s]
 DEBUG_MODE = False
 
 
@@ -54,11 +54,11 @@ class MotionPlanner:
             step_start = time.time()
             try:
                 distance_to_goal = math.hypot(state.x - gx, state.y - gy)
-                target_speed = (
-                    TARGET_SPEED
-                    if distance_to_goal > 1.0
-                    else TARGET_SPEED * distance_to_goal
+                target_speed = min(
+                    TARGET_SPEED,
+                    TARGET_SPEED * distance_to_goal / (TARGET_SPEED * 3),
                 )
+
                 state, path, goal_reached = self.run_dwa_step(
                     state, gx, gy, target_speed
                 )
@@ -118,9 +118,38 @@ class MotionPlanner:
         plt.plot(self.goal_pose.x, self.goal_pose.y, "xr")
         plt.grid(True)
         plt.axis("equal")
+        plt.title("Dynamic Window Approach path")
         plt.show()
 
-        plt.plot([plan.v[0] for plan in self.motion_plan])
+        start_time = 0
+        time_step = self.dt
+
+        for path_index, path in enumerate(self.motion_plan):
+            if path_index < len(self.motion_plan) - 1:
+                next_path = self.motion_plan[path_index + 1]
+                plt.plot(
+                    [start_time, start_time + time_step],
+                    [path.v[0], next_path.v[0]],
+                    "-b",
+                )
+                start_time += time_step
+            else:
+                for i in range(len(path.v) - 1):
+                    plt.plot(
+                        [start_time, start_time + time_step],
+                        [path.v[i], path.v[i + 1]],
+                        "-b",
+                    )
+                    start_time += time_step
+                # Plot the last point to itself to maintain continuity
+                plt.plot(
+                    [start_time, start_time + time_step], [path.v[-1], path.v[-1]], "-b"
+                )
+
+        plt.xlabel("Time [s]")
+        plt.ylabel("Linear Velocity [m/s]")
+        plt.grid(True)
+        plt.title("Linear Velocity over Time")
         plt.show()
 
 
@@ -150,6 +179,16 @@ def callback(lidar_msg):
             obstacles.append((x, y))
     obstacles = np.array(obstacles)
 
+    # print all obstacles with lines and points where the color changes depending on range
+    for x, y in obstacles:
+        plt.plot([0, x], [0, y], "go")
+        plt.plot([0, x], [0, y], "-b")
+    # name axes x and y with m for the unit
+    plt.xlabel("x [m]")
+    plt.ylabel("y [m]")
+    plt.title("Lidar scan")
+    plt.show()
+
     goal_values = input("Enter goal (x y): ")
     if goal_values == "":
         return
@@ -167,6 +206,6 @@ def callback(lidar_msg):
 
 
 if __name__ == "__main__":
-    lidar_msg = read_laser_scan_from_file("scan_data.txt")
+    lidar_msg = read_laser_scan_from_file("scan_static_1.txt")
     callback(lidar_msg)
     print("running planner")

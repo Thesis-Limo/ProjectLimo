@@ -6,6 +6,7 @@ from copy import deepcopy
 import numpy as np
 cimport numpy as cnp
 import matplotlib.pyplot as plt
+from functools import lru_cache
 
 from CubicSpline.cubic_spline_planner cimport CubicSpline2D
 from QuinticPolynomialsPlanner.quintic_polynomials_planner cimport QuinticPolynomial
@@ -13,12 +14,12 @@ from QuinticPolynomialsPlanner.quintic_polynomials_planner cimport QuinticPolyno
 cdef double MAX_SPEED = 1.0 # maximum speed [m/s]
 cdef double MAX_ACCEL = 1.0 # maximum acceleration [m/ss]
 cdef double MAX_CURVATURE = 2.5  # 1 / 0.4
-cdef double MAX_ROAD_WIDTH = 0.2 # maximum road width [m]
-cdef double D_ROAD_W = 0.005 # road width sampling length [m]
+cdef double MAX_ROAD_WIDTH = 1.0 # maximum road width [m]
+cdef double D_ROAD_W = 0.05 # road width sampling length [m]
 cdef double DT = 0.2 # time tick [s]
-cdef double MAX_T = 5.0 # max prediction time [s]
+cdef double MAX_T = 4.0 # max prediction time [s]
 cdef double MIN_T = 3.0 # min prediction time [s]
-cdef double D_T_S = 0.05 # target speed sampling length [m/s]
+cdef double D_T_S = 0.1 # target speed sampling length [m/s]
 cdef double N_S_SAMPLE = 1.0 # sampling number of target speed
 cdef double ROBOT_RADIUS = 0.2 # robot radius [m]
 
@@ -77,7 +78,7 @@ cdef class FrenetPath:
         self.c = []
 
 # Functions to generate Frenet paths, calculate global paths, and perform collision checks
-
+@lru_cache(None)
 def calc_frenet_paths(double c_speed, double c_accel, double c_d, double c_d_d, double c_d_dd, double s0, double target_speed):
     cdef list frenet_paths = []
     cdef double di, Ti
@@ -207,15 +208,26 @@ def frenet_optimal_planning(CubicSpline2D csp, double s0, double c_speed, double
             best_path = fp
 
     if debug_mode:
-        plt.figure(figsize=(10, 10))
+        s_vals = np.arange(0, csp.s[-1], 0.1)
+        ref_x = [csp.calc_position(s)[0] for s in s_vals]
+        ref_y = [csp.calc_position(s)[1] for s in s_vals]
+
+        valid_indices = set(id(fp) for fp in valid_fplist)
+        for fp in fplist:
+            if id(fp) not in valid_indices:
+                plt.plot(fp.x, fp.y, '-r', alpha=0.3)
+
+        plt.plot(ref_x, ref_y, '-k', label="Reference Path")
         for fp in valid_fplist:
-            plt.plot(fp.s, fp.d, '-r', alpha=0.3)
+            plt.plot(fp.s, fp.d, '-b', alpha=0.3)
         if best_path:
             plt.plot(best_path.s, best_path.d, '-g', linewidth=2, label="Best Path")
-        plt.plot(ob[:, 0], ob[:, 1], "xk", label="Obstacles")
+        for x, y in ob:
+            circle = plt.Circle((x, y), 0.2, color="k", fill=False)
+            plt.gca().add_patch(circle)
         plt.xlabel('s [m]')
         plt.ylabel('d [m]')
-        plt.title('Frenet Paths')
+        plt.title('Frenet Candidate Trajectories')
         plt.legend()
         plt.grid(True)
         plt.show()

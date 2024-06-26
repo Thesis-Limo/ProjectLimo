@@ -10,7 +10,7 @@ from Dubins.dubins_path_planner import plan_dubins_path
 
 WHEELBASE = 0.2  # [m]
 SIM_LOOP = 500
-TARGET_SPEED = 0.2  # [m/s]
+TARGET_SPEED = 0.4  # [m/s]
 
 
 class FrenetPath:
@@ -108,7 +108,7 @@ class MotionPlanner:
         print(f"Time taken to plan: {end - start:.2f} seconds")
 
     def run_frenet_iteration(self, csp, state, tx, ty, obstacles):
-        goal_dist = np.hypot(tx[-1] - state.c_x, ty[-1] - state.c_y)
+        distance_to_goal = np.hypot(tx[-1] - state.c_x, ty[-1] - state.c_y)
 
         try:
             path = frenet_optimal_trajectory.frenet_optimal_planning(
@@ -120,8 +120,10 @@ class MotionPlanner:
                 state.c_d_d,
                 state.c_d_dd,
                 obstacles,
-                TARGET_SPEED if goal_dist > 0.4 else TARGET_SPEED * (goal_dist / 0.4),
-                debug_mode=False,
+                target_speed=min(
+                    TARGET_SPEED, TARGET_SPEED * distance_to_goal / (TARGET_SPEED * 3)
+                ),
+                debug_mode=True,
             )
 
             updated_state = FrenetState(
@@ -146,19 +148,42 @@ class MotionPlanner:
 
     def plot(self, motion_plan, goal_pose=None, area=5.0):
         goal_pose = goal_pose or self.goal_pose
+        plt.cla()
+        for x, y in self.obstacleList:
+            circle = plt.Circle((x, y), 0.2, color="k", fill=False)
+            plt.gca().add_patch(circle)
         for path in motion_plan:
-            plt.cla()
-            for x, y in self.obstacleList:
-                circle = plt.Circle((x, y), 0.2, color="k", fill=False)
-                plt.gca().add_patch(circle)
-            plt.plot(goal_pose.x, goal_pose.y, "xg")
-            plt.plot(path.x[1:], path.y[1:], "-or")
-            plt.plot(path.x[1], path.y[1], "vc")
-            plt.xlim(path.x[1] - area, path.x[1] + area)
-            plt.ylim(path.y[1] - area, path.y[1] + area)
-            plt.title("v[m/s]:" + str(path.s_d[1])[0:4])
-            plt.grid(True)
-            plt.pause(0.0001)
+            plt.plot(path.x[:2], path.y[:2], "-b")
+        plt.plot(goal_pose.x, goal_pose.y, "xr")
+        plt.grid(True)
+        plt.title("Frenet Optimal Trajectory path")
+        plt.show()
+
+        start_time = 0
+        time_step = 0.2
+
+        for path_index, path in enumerate(motion_plan):
+            if path_index < len(motion_plan) - 1:
+                next_path = motion_plan[path_index + 1]
+                plt.plot(
+                    [start_time, start_time + time_step],
+                    [path.s_d[0], next_path.s_d[0]],
+                    "-b",
+                )
+                start_time += time_step
+            else:
+                for i in range(len(path.t) - 1):
+                    plt.plot(
+                        [start_time, start_time + time_step],
+                        [path.s_d[i], path.s_d[i + 1]],
+                        "-b",
+                    )
+                    start_time += time_step
+
+        plt.xlabel("Time [s]")
+        plt.ylabel("Linear Velocity [m/s]")
+        plt.grid(True)
+        plt.title("Linear Velocity over Time")
         plt.show()
 
     def generate_course_and_state_initialization(self, path):
@@ -284,6 +309,6 @@ def callback(lidar_msg):
 
 
 if __name__ == "__main__":
-    lidar_msg = read_laser_scan_from_file("scan_data.txt")
+    lidar_msg = read_laser_scan_from_file("scan_static_1.txt")
     callback(lidar_msg)
     print("running planner")
